@@ -1,10 +1,10 @@
 [
  {
   "InstFile" : "D:/programs/Neuromophic_FPGA/sources/Neuromorphic_FPGA/src/ffn_network.v",
-  "InstLine" : 3,
+  "InstLine" : 4,
   "InstName" : "ffn_22_netwok",
   "ModuleFile" : "D:/programs/Neuromophic_FPGA/sources/Neuromorphic_FPGA/src/ffn_network.v",
-  "ModuleLine" : 3,
+  "ModuleLine" : 4,
   "ModuleName" : "ffn_22_netwok"
  }
 ]

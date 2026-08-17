@@ -1,6 +1,6 @@
 <testsuites name="results">
   <testsuite name="all" package="all">
-    <property name="random_seed" value="1786990574" />
-    <testcase name="test_ffn" classname="test_ffn_verilog" file="D:\programs\Neuromophic_FPGA\testbemch\test_ffn_verilog.py" lineno="6" time="0.01643085479736328" sim_time_ns="23.0" ratio_time="1399.8054443090139" />
+    <property name="random_seed" value="1786992865" />
+    <testcase name="test_ffn" classname="test_ffn_verilog" file="D:\programs\Neuromophic_FPGA\testbemch\test_ffn_verilog.py" lineno="6" time="0.004808902740478516" sim_time_ns="23.0" ratio_time="4782.795835399108" />
   </testsuite>
 </testsuites>

@@ -1,0 +1,31 @@
+Reading netlist file: "D:\programs\Neuromophic_FPGA\sources\Neuromorphic_FPGA\impl\gwsynthesis\Neuromorphic_FPGA.vg"
+Parsing netlist file "D:\programs\Neuromophic_FPGA\sources\Neuromorphic_FPGA\impl\gwsynthesis\Neuromorphic_FPGA.vg" completed
+Processing netlist completed
+Reading constraint file: "D:\programs\Neuromophic_FPGA\sources\Neuromorphic_FPGA\src\Neuromorphic_FPGA.cst"
+Physical Constraint parsed completed
+Running placement......
+[10%] Placement Phase 0 completed
+[20%] Placement Phase 1 completed
+[30%] Placement Phase 2 completed
+WARN  (TA1132) :  'sys_clk' was determined to be a clock but was not created.
+WARN  (TA1132) :  'tick' was determined to be a clock but was not created.
+[50%] Placement Phase 3 completed
+Running routing......
+[60%] Routing Phase 0 completed
+[70%] Routing Phase 1 completed
+[80%] Routing Phase 2 completed
+[90%] Routing Phase 3 completed
+Running timing analysis......
+[95%] Timing analysis completed
+Placement and routing completed
+Bitstream generation in progress......
+Bitstream generation completed
+Running power analysis......
+[100%] Power analysis completed
+Generate file "D:\programs\Neuromophic_FPGA\sources\Neuromorphic_FPGA\impl\pnr\Neuromorphic_FPGA.power.html" completed
+Generate file "D:\programs\Neuromophic_FPGA\sources\Neuromorphic_FPGA\impl\pnr\Neuromorphic_FPGA.pin.html" completed
+Generate file "D:\programs\Neuromophic_FPGA\sources\Neuromorphic_FPGA\impl\pnr\Neuromorphic_FPGA.rpt.html" completed
+Generate file "D:\programs\Neuromophic_FPGA\sources\Neuromorphic_FPGA\impl\pnr\Neuromorphic_FPGA.rpt.txt" completed
+Generate file "D:\programs\Neuromophic_FPGA\sources\Neuromorphic_FPGA\impl\pnr\Neuromorphic_FPGA.tr.html" completed
+Mon Aug 17 22:48:19 2026
+
