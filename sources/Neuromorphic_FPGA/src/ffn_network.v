@@ -43,6 +43,12 @@ assign clk = tick;
 
 reg reset = 1;
 
+reg u1_reset = 0;
+reg u2_reset = 0;
+
+//reg signed [9:0] u1_next = 10'sd0;
+//reg signed [9:0] u2_next = 10'sd0;
+
 always @(posedge sys_clk) begin
         if (count == 25'd27000000 - 1) begin
             count <= 25'd0;
@@ -63,6 +69,7 @@ always @(posedge clk) begin
         reset = 0;
      end
 
+
     // calculating potentils
     if ($signed(u1_new) < $signed(threshold)) begin
         out1 <= 0;
@@ -71,7 +78,13 @@ always @(posedge clk) begin
 
     if ($signed(u1_new) >= $signed(threshold)) begin
         out1 <= 1;
-        u1 <= 10'sd0;
+        if (u1_reset) begin
+            u1 <= 10'sd0;
+            u1_reset <= 0;
+        end else begin
+            u1 <= u1_new[9:0];
+            u1_reset <= 1;
+        end
     end
 
     if ($signed(u2_new) < $signed(threshold)) begin
@@ -81,7 +94,13 @@ always @(posedge clk) begin
 
     if ($signed(u2_new) >= $signed(threshold)) begin
         out2 <= 1;
-        u2 <= 10'sd0;
+        if (u2_reset) begin
+            u2 <= 10'sd0;
+            u2_reset <= 0;
+        end else begin
+            u2 <= u2_new[9:0];
+            u2_reset <= 1;
+        end
     end
     
 end
