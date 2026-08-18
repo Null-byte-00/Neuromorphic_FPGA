@@ -1,0 +1,5 @@
+#Start recording tcl command: 8/18/2026 06:28:04
+#Project Location: D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice; Project name: Neuromorphic_Lattice
+prj_create -name "Neuromorphic_Lattice" -impl "impl_1" -dev LIFCL-40-9BG400C -performance "9_High-Performance_1.0V" -synthesis "lse"
+prj_save 
+#Stop recording: 8/18/2026 06:28:09

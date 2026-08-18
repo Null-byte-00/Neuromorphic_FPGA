@@ -1,0 +1,547 @@
+<HTML>
+<HEAD>
+<TITLE>Synthesis Report</TITLE>
+<link href="file:///D:/lscc/radiant/2026.1/data/theme/css/light/report.css" rel="stylesheet" type="text/css" media="screen"/>
+<link href="file:///D:/lscc/radiant/2026.1/data/theme/css/print/report.css" rel="stylesheet" type="text/css" media="print"/>
+<style type="text/css">
+#toc {
+  position: fixed;
+  right: 2px;
+  top: 2px;
+  padding: 2px 5px 2px 5px;
+  background-color:rgba(210,210,210,0.1);
+  border-style: solid;
+  border-color: rgba(192,192,192,0.8);
+  border-width:1px;
+}
+#toc_list {
+  display: none;
+  }
+</style>
+
+<script type="text/javascript">
+<!--
+function showTocList() {
+var a = document.getElementById("toc_list");
+a.style.display = "block";
+}
+
+function hideTocList() {
+var a = document.getElementById("toc_list");
+if (a)
+    a.style.display = "none";
+}
+
+//-->
+</script>
+
+</HEAD>
+
+<BODY>
+
+<DIV id="content" onclick="hideTocList()"><PRE>
+<A name="Syn"></A><B><U><big>Synthesis Report</big></U></B>
+synthesis:  version Radiant Software (64-bit) 2026.1.0.37.0
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2026 Lattice Semiconductor Corporation,  All rights reserved.
+Tue Aug 18 22:13:20 2026
+
+
+Command Line:  D:\lscc\radiant\2026.1\ispfpga\bin\nt64\synthesis.exe -f D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice/impl_1/Neuromorphic_Lattice_impl_1_lattice.synproj -logfile Neuromorphic_Lattice_impl_1_lattice.srp -gui -msgset D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice/promote.xml 
+
+Lattice Synthesis Engine launched.
+
+Synthesis options:
+The -a option is LIFCL.
+The -t option is CABGA400.
+The -sp option is 9_High-Performance_1.0V.
+The -p option is LIFCL-40.
+
+###################### Device Information ######################
+----------------------------------------------------------------
+Lattice Family        | LIFCL
+----------------------------------------------------------------
+Device                | LIFCL-40
+----------------------------------------------------------------
+Package               | CABGA400
+----------------------------------------------------------------
+Performance Grade     | 9_High-Performance_1.0V
+----------------------------------------------------------------
+################################################################
+
+####################### Device Resources #######################
+----------------------------------------------------------------
+Logic Cells           | 32256
+----------------------------------------------------------------
+RAM Blocks            | 84
+----------------------------------------------------------------
+DSP Blocks            | 462
+----------------------------------------------------------------
+PLLs                  | 3
+----------------------------------------------------------------
+I/O Pins              | 185
+----------------------------------------------------------------
+################################################################
+
+Resolving user-selected strategy settings...
+
+
+###################### Strategy Settings #######################
+----------------------------------------------------------------
+Optimization Goal     | Timing
+----------------------------------------------------------------
+Top-level Module Name | binary_mac_arry
+----------------------------------------------------------------
+Target Frequency      | 200.000 MHz
+----------------------------------------------------------------
+Maximum Fanout        | 1000
+----------------------------------------------------------------
+Timing Path Count     | 3
+----------------------------------------------------------------
+RAM Read/Write Check  | False
+----------------------------------------------------------------
+BRAM Utilization      | 100.0%
+----------------------------------------------------------------
+DSP Usage             | True
+----------------------------------------------------------------
+DSP Utilization       | 100.0%
+----------------------------------------------------------------
+FSM Encoding Style    | Auto
+----------------------------------------------------------------
+Resolve Mixed Drivers | False
+----------------------------------------------------------------
+Fix Gated Clocks      | True
+----------------------------------------------------------------
+Mux Style             | Auto
+----------------------------------------------------------------
+Use Carry Chain       | True
+----------------------------------------------------------------
+Carry Chain Length    | Infinite
+----------------------------------------------------------------
+Loop Limit            | 1950
+----------------------------------------------------------------
+Use I/O Insertion     | True
+----------------------------------------------------------------
+Use I/O Registers     | False
+----------------------------------------------------------------
+Resource Sharing      | True
+----------------------------------------------------------------
+Propagate Constants   | True
+----------------------------------------------------------------
+Remove Duplicate Reg  | True
+----------------------------------------------------------------
+Force GSR             | False
+----------------------------------------------------------------
+ROM Style             | Auto
+----------------------------------------------------------------
+RAM Style             | Auto
+----------------------------------------------------------------
+Remove LOC Properties | False
+----------------------------------------------------------------
+Partition Flow        | False
+----------------------------------------------------------------
+Use DCC Insertion     | None
+----------------------------------------------------------------
+################################################################
+
+
+The -comp option is FALSE.
+The -syn option is FALSE.
+Hardtimer checking is enabled (default). The -dt option is not used.
+
+Output HDL filename: Neuromorphic_Lattice_impl_1.vm
+-sdc option: SDC file input is Neuromorphic_Lattice_impl_1_cpe.ldc.
+-path . (searchpath added)
+-path .. (searchpath added)
+-path ../source/impl_1 (searchpath added)
+-path D:/lscc/radiant/2026.1/ispfpga/je5d00/data (searchpath added)
+Mixed language design
+Verilog design file: D:/lscc/radiant/2026.1/ip/pmi/pmi_lifcl.v
+Verilog design file: ../source/impl_1/binary_mac_unit.v
+Verilog design file: ../source/impl_1/binary_mac_array.v
+VHDL library: pmi
+VHDL design file: D:/lscc/radiant/2026.1/ip/pmi/pmi_lifcl.vhd
+
+Compiling design...
+
+Analyzing Verilog file D:/lscc/radiant/2026.1/ispfpga\..\cae_library\synthesis\verilog\generic.v. VERI-1482
+Analyzing Verilog file D:/lscc/radiant/2026.1/ispfpga\..\cae_library\synthesis\verilog\lifcl.v. VERI-1482
+Analyzing Verilog file D:/lscc/radiant/2026.1/ispfpga\..\cae_library\synthesis\verilog\lifcl.v. VERI-1482
+Analyzing Verilog file D:/lscc/radiant/2026.1/ispfpga\..\cae_library\simulation\verilog\lifcl\lifcl_sp.v. VERI-1482
+Analyzing Verilog file D:/lscc/radiant/2026.1/ispfpga\..\cae_library\simulation\verilog\uaplatform\uaplatform_sp.v. VERI-1482
+Analyzing Verilog file D:/lscc/radiant/2026.1/ip/pmi/pmi_lifcl.v. VERI-1482
+Analyzing Verilog file ../source/impl_1/binary_mac_unit.v. VERI-1482
+Analyzing Verilog file ../source/impl_1/binary_mac_array.v. VERI-1482
+Top module name (Verilog): binary_mac_arry
+INFO <35901018> - synthesis: ../source/impl_1/binary_mac_array.v(1): compiling module binary_mac_arry. VERI-1018
+INFO <35901018> - synthesis: ../source/impl_1/binary_mac_unit.v(1): compiling module binary_mac_unit. VERI-1018
+WARNING <35931000> - synthesis: ../source/impl_1/binary_mac_array.v(41): net 'unflatten_outputs[2][7]' is constantly driven from multiple places. VDB-1000
+WARNING <35931001> - synthesis: ../source/impl_1/binary_mac_array.v(41): another driver from here. VDB-1001
+
+<A name="lse_parameter"></A><B><U><big>Parameter Setting</big></U></B>
+
+[Parameter Setting Section Start]
+
+	[Parameter Settings for top-level module]
+	(Module: binary_mac_arry)
+		IN_SIZE                   2
+		OUT_SIZE                  3
+		unflatten_weights[0].i    0
+		unflatten_weights[1].i    1
+		unflatten_weights[2].i    2
+		unflatten_weights[3].i    3
+		unflatten_weights[4].i    4
+		unflatten_weights[5].i    5
+		genblk2[0].k              0
+		genblk2[1].k              1
+		genblk2[2].k              2
+		genblk3[0].j              0
+		genblk3[0].genblk1[0].z   0
+		genblk3[0].genblk1[1].z   1
+		genblk3[1].j              1
+		genblk3[1].genblk1[0].z   0
+		genblk3[1].genblk1[1].z   1
+		genblk3[2].j              2
+		genblk3[2].genblk1[0].z   0
+		genblk3[2].genblk1[1].z   1
+
+[Parameter Setting Section End]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: clk
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: reset
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[47]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[46]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[45]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[44]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[43]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[42]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[41]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[40]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[39]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[38]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[37]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[36]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[35]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[34]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[33]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[32]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[31]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[30]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[29]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[28]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[27]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[26]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[25]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[24]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[23]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[22]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[21]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[20]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[19]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[18]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[17]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[16]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[15]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[14]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[13]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[12]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[11]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[10]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[9]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[8]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[7]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[6]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[5]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[4]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[3]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[2]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[1]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[0]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: input_signals[1]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: input_signals[0]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: added_outputs[23]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: added_outputs[22]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: added_outputs[21]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: added_outputs[20]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: added_outputs[19]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: added_outputs[18]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: added_outputs[17]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: added_outputs[16]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: added_outputs[15]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: added_outputs[14]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: added_outputs[13]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: added_outputs[12]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: added_outputs[11]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: added_outputs[10]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: added_outputs[9]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: added_outputs[8]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: added_outputs[7]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: added_outputs[6]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: added_outputs[5]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: added_outputs[4]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: added_outputs[3]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: added_outputs[2]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: added_outputs[1]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: added_outputs[0]
+######## Missing driver on net added_outputs[23]. Patching with GND.
+######## Missing driver on net added_outputs[22]. Patching with GND.
+######## Missing driver on net added_outputs[21]. Patching with GND.
+######## Missing driver on net added_outputs[20]. Patching with GND.
+######## Missing driver on net added_outputs[19]. Patching with GND.
+######## Missing driver on net added_outputs[18]. Patching with GND.
+######## Missing driver on net added_outputs[17]. Patching with GND.
+######## Missing driver on net added_outputs[16]. Patching with GND.
+######## Missing driver on net added_outputs[15]. Patching with GND.
+######## Missing driver on net added_outputs[14]. Patching with GND.
+######## Missing driver on net added_outputs[13]. Patching with GND.
+######## Missing driver on net added_outputs[12]. Patching with GND.
+######## Missing driver on net added_outputs[11]. Patching with GND.
+######## Missing driver on net added_outputs[10]. Patching with GND.
+######## Missing driver on net added_outputs[9]. Patching with GND.
+######## Missing driver on net added_outputs[8]. Patching with GND.
+######## Missing driver on net added_outputs[7]. Patching with GND.
+######## Missing driver on net added_outputs[6]. Patching with GND.
+######## Missing driver on net added_outputs[5]. Patching with GND.
+######## Missing driver on net added_outputs[4]. Patching with GND.
+######## Missing driver on net added_outputs[3]. Patching with GND.
+######## Missing driver on net added_outputs[2]. Patching with GND.
+######## Missing driver on net added_outputs[1]. Patching with GND.
+######## Missing driver on net added_outputs[0]. Patching with GND.
+
+
+
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: clk
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: reset
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[47]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[46]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[45]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[44]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[43]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[42]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[41]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[40]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[39]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[38]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[37]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[36]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[35]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[34]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[33]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[32]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[31]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[30]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[29]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[28]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[27]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[26]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[25]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[24]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[23]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[22]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[21]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[20]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[19]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[18]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[17]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[16]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[15]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[14]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[13]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[12]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[11]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[10]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[9]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[8]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[7]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[6]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[5]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[4]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[3]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[2]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[1]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[0]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: input_signals[1]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: input_signals[0]
+Starting design annotation....
+
+Starting full timing analysis...
+Starting design annotation....
+
+Starting full timing analysis...
+Starting design annotation....
+
+Starting full timing analysis...
+Starting design annotation....
+
+Starting full timing analysis...
+
+
+<A name="lse_area"></A><B><U><big>Area Report</big></U></B>
+
+################### Begin Area Report (binary_mac_arry)######################
+Number of register bits => 0 of 32256 (0 % )
+GSR => 1
+OB => 24
+################### End Area Report ##################
+Number of odd-length carry chains : 0
+Number of even-length carry chains : 0
+
+
+<A name="lse_clock"></A><B><U><big>Clock Report</big></U></B>
+
+################### Begin Clock Report ######################
+Clock Nets
+Number of Clocks: 0
+Clock Enable Nets
+Number of Clock Enables: 0
+Highest fanout non-clock nets
+Top 10 highest fanout non-clock nets:
+  Net : VCC_net, loads : 1
+  Net : added_outputs[23], loads : 0
+  Net : added_outputs[22], loads : 0
+  Net : added_outputs[21], loads : 0
+  Net : added_outputs[20], loads : 0
+  Net : added_outputs[19], loads : 0
+  Net : added_outputs[18], loads : 0
+  Net : added_outputs[17], loads : 0
+  Net : added_outputs[16], loads : 0
+  Net : added_outputs[15], loads : 0
+################### End Clock Report ##################
+
+
+<A name="lse_constraint"></A><B><U><big>Constraint Report</big></U></B>
+
+################### Begin Constraint Report ######################
+Constraint Summary:
+  Total number of constraints: 0
+  Total number of constraints dropped: 0
+###################  End Constraint Report  ######################
+
+Peak Memory Usage: 200 MB
+
+--------------------------------------------------------------
+Total CPU Time: 2 secs 
+Total REAL Time: 3 secs 
+--------------------------------------------------------------
+Checksum -- synthesis -- netlist: 8b11f586f45fe4c35265dc50c972ca6e818644e9
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></DIV>
+
+<DIV id="toc" class="radiant"><span onmousemove="showTocList()">Contents</span>
+<UL id="toc_list">
+<LI><A href=#Syn>Top</A></LI>
+<LI><A href=#lse_parameter>Parameter Setting</A></LI>
+<LI><A href=#lse_area>Area Report</A></LI>
+<LI><A href=#lse_clock>Clock Report</A></LI>
+<LI><A href=#lse_constraint>Constraint Report</A></LI>
+</UL>
+</DIV>
+
+<button id="back_to_top" class="radiant" onclick="scrollToTop()">&lt;</button>
+<script type="text/javascript">
+<!--
+var scrollStep = 0;
+function scrollToTop(){
+  var funScroll = function() {
+    var top = document.body.scrollTop;
+    if (top == 0) {
+      scrollStep = 0;
+      return;
+    }
+    if (scrollStep == 0)
+      scrollStep = top/20 + 1;
+    top -= scrollStep;
+    if (top < 0)
+      top = 0;
+    document.body.scrollTop = top;
+    requestAnimationFrame(funScroll);
+  };
+  funScroll();
+}
+
+window.addEventListener('scroll', function(e) {
+  var backToTop = document.getElementById('back_to_top')
+  if (document.body.scrollTop > 0) {
+    backToTop.style.display = 'block';
+  } else {	backToTop.style.display = 'none'  }});
+
+//-->
+</script>
+
+<style type="text/css">
+#back_to_top {
+  bottom:20px; right:20px;
+  width:30px; height:30px;
+  font-size: 20px;
+  padding: 2px 5px 2px 5px;
+  position:fixed;
+  background-color:rgba(210,210,210,0.1);
+  border-style: solid;
+  border-color: rgba(192,192,192,0.8);
+  border-width:1px;
+  display:none;
+  -webkit-transform: rotate(90deg);
+  -webkit-transform-origin:50% 50%;
+}
+#back_to_top:focus {
+  outline-width:0px;
+}
+</style>
+
+</BODY>
+

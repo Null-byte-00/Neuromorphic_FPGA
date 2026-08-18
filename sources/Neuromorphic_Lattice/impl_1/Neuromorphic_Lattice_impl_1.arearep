@@ -1,0 +1,9 @@
+----------------------------------------------------------------------
+Report for cell binary_mac_arry.TECH
+Register bits:  0 of 32256 (0.000%)
+I/O cells:      24
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                                GSR         1          100.0
+                                 OB        24          100.0
+                              TOTAL        25

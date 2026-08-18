@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<userSetting name="D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice/promote.xml" version="Diamond (64-bit) 2026.1.0.37.0" date="Tue Aug 18 22:13:24 2026" vendor="Lattice Semiconductor Corporation" >
+  <msg mid="2043138" type="Error" internal="true" />
+  <msg mid="2044344" type="Error" internal="true" />
+  <msg mid="35901328" type="Info" internal="true" />
+  <msg mid="35901627" type="Warning" internal="true" />
+  <msg mid="2044223" type="Warning" internal="true" />
+  <msg mid="2043018" type="Info" internal="true" />
+  <msg mid="2043137" type="Error" internal="true" />
+  <msg mid="2043128" type="Error" internal="true" />
+  <msg mid="2043627" type="Warning" internal="true" />
+  <msg mid="35931001" type="Warning" internal="true" />
+  <msg mid="2043072" type="Error" internal="true" />
+  <msg mid="2044523" type="Error" internal="true" />
+  <msg mid="2043385" type="Error" internal="true" />
+  <msg mid="2043289" type="Error" internal="true" />
+  <msg mid="35931000" type="Warning" internal="true" />
+</userSetting>

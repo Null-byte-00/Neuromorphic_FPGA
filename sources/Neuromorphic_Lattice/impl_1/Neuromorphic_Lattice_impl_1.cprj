@@ -1,0 +1,8 @@
+-ver "D:/lscc/radiant/2026.1/ip/pmi/pmi_lifcl.v"
+-lib pmi -vhd "D:/lscc/radiant/2026.1/ip/pmi/pmi_lifcl.vhd"
+-ver "D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice/source/impl_1/binary_mac_unit.v" "D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice/source/impl_1/binary_mac_array.v"
+-path "D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice" "D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice"
+-top binary_mac_arry
+-isTop
+-a "LIFCL"
+-t "LIFCL-40"
