@@ -2,11 +2,11 @@
 // made to run on tang nano 9k
 
 module ffn_22_netwok #(
-    parameter w1 = 8'sd5,
-    parameter w2 = 8'sd6,
-    parameter w3 = 8'sd7,
-    parameter w4 = 8'sd8,
-    parameter threshold = 11'sd50,
+    parameter w1 = 8'sd4,
+    parameter w2 = 8'sd3,
+    parameter w3 = 8'sd2,
+    parameter w4 = 8'sd5,
+    parameter threshold = 10'sd50,
     parameter beta_shift = 4
 )(
     input wire sys_clk,
@@ -72,33 +72,35 @@ always @(posedge clk) begin
 
     // calculating potentils
     if ($signed(u1_new) < $signed(threshold)) begin
-        out1 <= 0;
         u1 <= u1_new[9:0];
+        out1 <= 0;
     end
 
     if ($signed(u1_new) >= $signed(threshold)) begin
         out1 <= 1;
         if (u1_reset) begin
-            u1 <= 10'sd0;
+            u1 <= u1_new[9:0] - threshold;
             u1_reset <= 0;
         end else begin
             u1 <= u1_new[9:0];
+            out1 <= 0;
             u1_reset <= 1;
         end
     end
 
     if ($signed(u2_new) < $signed(threshold)) begin
-        out2 <= 0;
         u2 <= u2_new[9:0];
+        out2 <= 0;
     end
 
     if ($signed(u2_new) >= $signed(threshold)) begin
         out2 <= 1;
         if (u2_reset) begin
-            u2 <= 10'sd0;
+            u2 <= u2_new[9:0] - threshold;
             u2_reset <= 0;
         end else begin
             u2 <= u2_new[9:0];
+            out2 <= 0;
             u2_reset <= 1;
         end
     end
