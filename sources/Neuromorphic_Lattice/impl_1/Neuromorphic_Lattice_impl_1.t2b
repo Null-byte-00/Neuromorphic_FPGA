@@ -1,0 +1,4 @@
+-gui
+-msgset "D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice/promote.xml"
+
+-g REGISTER_INIT:ON

@@ -42,10 +42,16 @@
 -lib pmi -vhd "D:/lscc/radiant/2026.1/ip/pmi/pmi_lifcl.vhd"
 
 # Source Files
--ver "../source/impl_1/binary_mac_unit.v"
--ver "../source/impl_1/binary_mac_array.v"
+-ver "../source/impl_1/weight_multiply_unit.v"
+-ver "../source/impl_1/weight_multiply_array.v"
+-ver "../source/impl_1/ram.v"
+-ver "../source/impl_1/weight_manager_unit.v"
+-ver "../source/impl_1/network_tb.v"
+-ver "../source/impl_1/spike_neuron.v"
+-ver "../source/impl_1/spike_array.v"
+-ver "../source/impl_1/constants.vh"
 -path ".."
--top binary_mac_arry
+-top network_tb
 # Output Configuration
 -udb "Neuromorphic_Lattice_impl_1_rtl.udb"
 -output_hdl "Neuromorphic_Lattice_impl_1.vm"

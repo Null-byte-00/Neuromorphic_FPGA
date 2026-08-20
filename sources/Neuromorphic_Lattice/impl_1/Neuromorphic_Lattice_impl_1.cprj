@@ -1,8 +1,8 @@
 -ver "D:/lscc/radiant/2026.1/ip/pmi/pmi_lifcl.v"
 -lib pmi -vhd "D:/lscc/radiant/2026.1/ip/pmi/pmi_lifcl.vhd"
--ver "D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice/source/impl_1/binary_mac_unit.v" "D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice/source/impl_1/binary_mac_array.v"
+-ver "D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice/source/impl_1/weight_multiply_unit.v" "D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice/source/impl_1/weight_multiply_array.v" "D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice/source/impl_1/ram.v" "D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice/source/impl_1/weight_manager_unit.v" "D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice/source/impl_1/network_tb.v" "D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice/source/impl_1/spike_neuron.v" "D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice/source/impl_1/spike_array.v" "D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice/source/impl_1/constants.vh"
 -path "D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice" "D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice"
--top binary_mac_arry
+-top network_tb
 -isTop
 -a "LIFCL"
 -t "LIFCL-40"

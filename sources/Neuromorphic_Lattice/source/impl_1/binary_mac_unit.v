@@ -1,4 +1,4 @@
-module binary_mac_unit (
+module weight_multiply_unit (
 input wire clk,
 input wire reset,
 input wire signed [7:0] weight,

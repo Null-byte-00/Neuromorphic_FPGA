@@ -7,7 +7,17 @@ Command Line: postsyn -a LIFCL -p LIFCL-40 -t CABGA400 -sp 9_High-Performance_1.
 Reading input file 'Neuromorphic_Lattice_impl_1.vm' ...
 Reading constraint file 'Neuromorphic_Lattice_impl_1.ldc' ...
 Removing unused logic ...
-INFO <35811146> - Signal GSR_INST.GSROUT undriven or does not drive anything - clipped
+INFO <35811146> - Signal wma/GEN_OUTPUT[0].GEN_INPUT[0].wmu/out__i2.intGnd undriven or does not drive anything - clipped
+INFO <35811146> - Signal wma/GEN_OUTPUT[0].GEN_INPUT[0].wmu/out__i3.intGnd undriven or does not drive anything - clipped
+INFO <35811146> - Signal wma/GEN_OUTPUT[0].GEN_INPUT[0].wmu/out__i4.intGnd undriven or does not drive anything - clipped
+INFO <35811146> - Signal wma/GEN_OUTPUT[0].GEN_INPUT[0].wmu/out__i5.intGnd undriven or does not drive anything - clipped
+INFO <35811146> - Signal wma/GEN_OUTPUT[0].GEN_INPUT[0].wmu/out__i6.intGnd undriven or does not drive anything - clipped
+INFO <35811146> - Signal wma/GEN_OUTPUT[0].GEN_INPUT[0].wmu/out__i7.intGnd undriven or does not drive anything - clipped
+INFO <35811146> - Signal wma/GEN_OUTPUT[0].GEN_INPUT[0].wmu/out__i0.intGnd undriven or does not drive anything - clipped
+INFO <35811146> - Signal wma/GEN_OUTPUT[0].GEN_INPUT[0].wmu/out__i1.intGnd undriven or does not drive anything - clipped
+INFO <35811146> - Signal wma/GEN_OUTPUT[0].GEN_INPUT[1].wmu/out__i0.intGnd undriven or does not drive anything - clipped
+INFO <35811146> - Signal wma/GEN_OUTPUT[0].GEN_INPUT[1].wmu/out__i1.intGnd undriven or does not drive anything - clipped
+INFO <35811149> - ... More signals are undriven or does not drive anything - clipped
 Starting design annotation....
  
 Constraint Summary:
@@ -16,7 +26,7 @@ Constraint Summary:
  
 Writing output file 'Neuromorphic_Lattice_impl_1_syn.udb'.
 POSTSYN finished successfully.
-Total CPU Time: 0 secs 
+Total CPU Time: 1 secs 
 Total REAL Time: 0 secs 
-Peak Memory Usage: 154 MB
-Checksum -- postsyn: 511cfdf5475a9a3698b75237ff4da3cbdea5195
+Peak Memory Usage: 158 MB
+Checksum -- postsyn: 7a571e8e493b2fdcb57898a28c7d0a522ac04fd2

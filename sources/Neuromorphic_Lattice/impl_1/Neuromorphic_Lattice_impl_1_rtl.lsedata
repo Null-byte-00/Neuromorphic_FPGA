@@ -1,4 +1,4 @@
-<top name = "binary_mac_arry"  library = "work"  arch = ""  entry = "Verilog">
+<top name = "network_tb"  library = "work"  arch = ""  entry = "Verilog">
 
 <clocks>
     <clockitem name = "clk"  type = "port" />

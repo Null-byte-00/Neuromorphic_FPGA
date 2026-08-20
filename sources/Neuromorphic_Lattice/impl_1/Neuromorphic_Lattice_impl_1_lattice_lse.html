@@ -48,7 +48,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2026 Lattice Semiconductor Corporation,  All rights reserved.
-Tue Aug 18 22:13:20 2026
+Thu Aug 20 21:47:46 2026
 
 
 Command Line:  D:\lscc\radiant\2026.1\ispfpga\bin\nt64\synthesis.exe -f D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice/impl_1/Neuromorphic_Lattice_impl_1_lattice.synproj -logfile Neuromorphic_Lattice_impl_1_lattice.srp -gui -msgset D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice/promote.xml 
@@ -94,7 +94,7 @@ Resolving user-selected strategy settings...
 ----------------------------------------------------------------
 Optimization Goal     | Timing
 ----------------------------------------------------------------
-Top-level Module Name | binary_mac_arry
+Top-level Module Name | network_tb
 ----------------------------------------------------------------
 Target Frequency      | 200.000 MHz
 ----------------------------------------------------------------
@@ -161,8 +161,14 @@ Output HDL filename: Neuromorphic_Lattice_impl_1.vm
 -path D:/lscc/radiant/2026.1/ispfpga/je5d00/data (searchpath added)
 Mixed language design
 Verilog design file: D:/lscc/radiant/2026.1/ip/pmi/pmi_lifcl.v
-Verilog design file: ../source/impl_1/binary_mac_unit.v
-Verilog design file: ../source/impl_1/binary_mac_array.v
+Verilog design file: ../source/impl_1/weight_multiply_unit.v
+Verilog design file: ../source/impl_1/weight_multiply_array.v
+Verilog design file: ../source/impl_1/ram.v
+Verilog design file: ../source/impl_1/weight_manager_unit.v
+Verilog design file: ../source/impl_1/network_tb.v
+Verilog design file: ../source/impl_1/spike_neuron.v
+Verilog design file: ../source/impl_1/spike_array.v
+Verilog design file: ../source/impl_1/constants.vh
 VHDL library: pmi
 VHDL design file: D:/lscc/radiant/2026.1/ip/pmi/pmi_lifcl.vhd
 
@@ -173,242 +179,187 @@ Analyzing Verilog file D:/lscc/radiant/2026.1/ispfpga\..\cae_library\synthesis\v
 Analyzing Verilog file D:/lscc/radiant/2026.1/ispfpga\..\cae_library\synthesis\verilog\lifcl.v. VERI-1482
 Analyzing Verilog file D:/lscc/radiant/2026.1/ispfpga\..\cae_library\simulation\verilog\lifcl\lifcl_sp.v. VERI-1482
 Analyzing Verilog file D:/lscc/radiant/2026.1/ispfpga\..\cae_library\simulation\verilog\uaplatform\uaplatform_sp.v. VERI-1482
+Analyzing Verilog file ../source/impl_1/constants.vh. VERI-1482
 Analyzing Verilog file D:/lscc/radiant/2026.1/ip/pmi/pmi_lifcl.v. VERI-1482
-Analyzing Verilog file ../source/impl_1/binary_mac_unit.v. VERI-1482
-Analyzing Verilog file ../source/impl_1/binary_mac_array.v. VERI-1482
-Top module name (Verilog): binary_mac_arry
-INFO <35901018> - synthesis: ../source/impl_1/binary_mac_array.v(1): compiling module binary_mac_arry. VERI-1018
-INFO <35901018> - synthesis: ../source/impl_1/binary_mac_unit.v(1): compiling module binary_mac_unit. VERI-1018
-WARNING <35931000> - synthesis: ../source/impl_1/binary_mac_array.v(41): net 'unflatten_outputs[2][7]' is constantly driven from multiple places. VDB-1000
-WARNING <35931001> - synthesis: ../source/impl_1/binary_mac_array.v(41): another driver from here. VDB-1001
+Analyzing Verilog file ../source/impl_1/weight_multiply_unit.v. VERI-1482
+Analyzing Verilog file ../source/impl_1/weight_multiply_array.v. VERI-1482
+Analyzing Verilog file ../source/impl_1/ram.v. VERI-1482
+Analyzing Verilog file ../source/impl_1/weight_manager_unit.v. VERI-1482
+Analyzing Verilog file ../source/impl_1/network_tb.v. VERI-1482
+Analyzing Verilog file ../source/impl_1/spike_neuron.v. VERI-1482
+Analyzing Verilog file ../source/impl_1/spike_array.v. VERI-1482
+Top module name (Verilog): network_tb
+INFO <35901018> - synthesis: ../source/impl_1/network_tb.v(3): compiling module network_tb. VERI-1018
+WARNING <35901220> - synthesis: ../source/impl_1/network_tb.v(20): using initial value of ram_data_in since it is never assigned. VERI-1220
+INFO <35901018> - synthesis: ../source/impl_1/weight_multiply_array.v(3): compiling module weight_multiply_array. VERI-1018
+INFO <35901018> - synthesis: ../source/impl_1/weight_multiply_unit.v(1): compiling module weight_multiply_unit. VERI-1018
+INFO <35901018> - synthesis: ../source/impl_1/weight_manager_unit.v(3): compiling module weight_manager_unit. VERI-1018
+WARNING <35901209> - synthesis: ../source/impl_1/weight_manager_unit.v(23): expression size 32 truncated to fit in target size 4. VERI-1209
+INFO <35901018> - synthesis: ../source/impl_1/ram.v(2): compiling module single_port_ram. VERI-1018
+INFO <35901018> - synthesis: ../source/impl_1/spike_array.v(3): compiling module spike_array. VERI-1018
+INFO <35901018> - synthesis: ../source/impl_1/spike_neuron.v(1): compiling module spike_neuron. VERI-1018
 
 <A name="lse_parameter"></A><B><U><big>Parameter Setting</big></U></B>
 
 [Parameter Setting Section Start]
 
-	[Parameter Settings for top-level module]
-	(Module: binary_mac_arry)
+	[Parameter Settings for Instance(s): wma]
+	(Module: weight_multiply_array)
 		IN_SIZE                   2
 		OUT_SIZE                  3
-		unflatten_weights[0].i    0
-		unflatten_weights[1].i    1
-		unflatten_weights[2].i    2
-		unflatten_weights[3].i    3
-		unflatten_weights[4].i    4
-		unflatten_weights[5].i    5
-		genblk2[0].k              0
-		genblk2[1].k              1
-		genblk2[2].k              2
-		genblk3[0].j              0
-		genblk3[0].genblk1[0].z   0
-		genblk3[0].genblk1[1].z   1
-		genblk3[1].j              1
-		genblk3[1].genblk1[0].z   0
-		genblk3[1].genblk1[1].z   1
-		genblk3[2].j              2
-		genblk3[2].genblk1[0].z   0
-		genblk3[2].genblk1[1].z   1
+		NUM_UNITS                 6
+		GEN_WEIGHTS[0].i          0
+		GEN_WEIGHTS[1].i          1
+		GEN_WEIGHTS[2].i          2
+		GEN_WEIGHTS[3].i          3
+		GEN_WEIGHTS[4].i          4
+		GEN_WEIGHTS[5].i          5
+		GEN_OUTPUT[0].j           0
+		GEN_OUTPUT[0].GEN_INPUT[0].z 0
+		GEN_OUTPUT[0].GEN_INPUT[1].z 1
+		GEN_OUTPUT[1].j           1
+		GEN_OUTPUT[1].GEN_INPUT[0].z 0
+		GEN_OUTPUT[1].GEN_INPUT[1].z 1
+		GEN_OUTPUT[2].j           2
+		GEN_OUTPUT[2].GEN_INPUT[0].z 0
+		GEN_OUTPUT[2].GEN_INPUT[1].z 1
+
+	[Parameter Settings for Instance(s): wmu]
+	(Module: weight_manager_unit)
+		NUM_WEIGHTS               6
+
+	[Parameter Settings for Instance(s): ram]
+	(Module: single_port_ram)
+		DATA_WIDTH                8
+		ADDR_WIDTH                4
+
+	[Parameter Settings for Instance(s): sa]
+	(Module: spike_array)
+		SIZE                      3
+		genblk1[0].i              0
+		genblk1[1].i              1
+		genblk1[2].i              2
+
+	[Parameter Settings for Instance(s): genblk1[0].sn, genblk1[1].sn, genblk1[2].sn]
+	(Module: spike_neuron)
+		threshold                 50
+		beta_shift                8
 
 [Parameter Setting Section End]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: clk
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: reset
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[47]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[46]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[45]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[44]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[43]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[42]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[41]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[40]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[39]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[38]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[37]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[36]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[35]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[34]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[33]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[32]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[31]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[30]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[29]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[28]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[27]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[26]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[25]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[24]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[23]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[22]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[21]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[20]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[19]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[18]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[17]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[16]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[15]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[14]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[13]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[12]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[11]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[10]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[9]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[8]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[7]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[6]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[5]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[4]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[3]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[2]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[1]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[0]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: input_signals[1]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: input_signals[0]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: added_outputs[23]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: added_outputs[22]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: added_outputs[21]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: added_outputs[20]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: added_outputs[19]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: added_outputs[18]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: added_outputs[17]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: added_outputs[16]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: added_outputs[15]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: added_outputs[14]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: added_outputs[13]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: added_outputs[12]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: added_outputs[11]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: added_outputs[10]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: added_outputs[9]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: added_outputs[8]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: added_outputs[7]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: added_outputs[6]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: added_outputs[5]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: added_outputs[4]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: added_outputs[3]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: added_outputs[2]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: added_outputs[1]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: added_outputs[0]
-######## Missing driver on net added_outputs[23]. Patching with GND.
-######## Missing driver on net added_outputs[22]. Patching with GND.
-######## Missing driver on net added_outputs[21]. Patching with GND.
-######## Missing driver on net added_outputs[20]. Patching with GND.
-######## Missing driver on net added_outputs[19]. Patching with GND.
-######## Missing driver on net added_outputs[18]. Patching with GND.
-######## Missing driver on net added_outputs[17]. Patching with GND.
-######## Missing driver on net added_outputs[16]. Patching with GND.
-######## Missing driver on net added_outputs[15]. Patching with GND.
-######## Missing driver on net added_outputs[14]. Patching with GND.
-######## Missing driver on net added_outputs[13]. Patching with GND.
-######## Missing driver on net added_outputs[12]. Patching with GND.
-######## Missing driver on net added_outputs[11]. Patching with GND.
-######## Missing driver on net added_outputs[10]. Patching with GND.
-######## Missing driver on net added_outputs[9]. Patching with GND.
-######## Missing driver on net added_outputs[8]. Patching with GND.
-######## Missing driver on net added_outputs[7]. Patching with GND.
-######## Missing driver on net added_outputs[6]. Patching with GND.
-######## Missing driver on net added_outputs[5]. Patching with GND.
-######## Missing driver on net added_outputs[4]. Patching with GND.
-######## Missing driver on net added_outputs[3]. Patching with GND.
-######## Missing driver on net added_outputs[2]. Patching with GND.
-######## Missing driver on net added_outputs[1]. Patching with GND.
-######## Missing driver on net added_outputs[0]. Patching with GND.
+WARNING <35001771> - synthesis: Initial value found on net gnd will be ignored due to unrecognized driver type
+WARNING <35935040> - synthesis: Register write_enable clock is stuck at Zero. VDB-5040
 
 
 
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: clk
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: reset
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[47]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[46]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[45]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[44]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[43]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[42]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[41]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[40]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[39]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[38]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[37]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[36]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[35]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[34]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[33]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[32]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[31]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[30]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[29]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[28]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[27]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[26]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[25]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[24]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[23]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[22]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[21]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[20]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[19]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[18]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[17]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[16]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[15]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[14]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[13]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[12]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[11]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[10]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[9]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[8]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[7]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[6]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[5]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[4]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[3]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[2]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[1]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: weights_in[0]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: input_signals[1]
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: input_signals[0]
+WARNING <35935040> - synthesis: Register \wma/add_12_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \wma/add_14_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \wmu/next_addr_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \wma/add_14_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \sa/genblk1[0].sn/sub_5_add_2_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \sa/genblk1[0].sn/sub_5_add_2_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \sa/genblk1[2].sn/sub_5_add_2_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \sa/genblk1[2].sn/sub_5_add_2_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \sa/genblk1[1].sn/sub_5_add_2_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \sa/genblk1[1].sn/sub_5_add_2_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \wmu/next_addr_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \wma/add_12_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \wma/add_10_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \wma/add_10_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \sa/genblk1[0].sn/add_4_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \sa/genblk1[0].sn/add_4_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \sa/genblk1[2].sn/add_4_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \sa/genblk1[2].sn/add_4_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \sa/genblk1[1].sn/add_4_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \sa/genblk1[1].sn/add_4_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \wma/add_14_add_12_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \wma/add_10_add_12_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \sa/genblk1[1].sn/add_4_add_12_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register add_132_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \sa/genblk1[0].sn/add_4_add_12_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \sa/genblk1[0].sn/add_4_add_12_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \sa/genblk1[2].sn/add_4_add_12_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register add_132_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \wma/add_14_add_12_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \sa/genblk1[2].sn/add_4_add_12_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register add_131_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \wma/add_10_add_12_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \wma/add_12_add_12_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register add_131_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register add_130_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \wmu/next_addr_e3_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \sa/genblk1[1].sn/add_4_add_12_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \wma/add_12_add_12_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register add_130_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \wmu/next_addr_e3_i2 clock is stuck at Zero. VDB-5040
+######## Found 1 RTL RAMs in the design.
+######## Mapping RTL RAM \ram/memory to 2 Distributed blocks in SINGLE_PORT Mode
+
 Starting design annotation....
+WARNING <70009502> - synthesis: The preferred point for defining clocks is top level ports and driver pins. Pad delays will not be taken into consideration if clocks are defined on nets.
 
 Starting full timing analysis...
 Starting design annotation....
+WARNING <70009502> - synthesis: The preferred point for defining clocks is top level ports and driver pins. Pad delays will not be taken into consideration if clocks are defined on nets.
 
 Starting full timing analysis...
 Starting design annotation....
+WARNING <70009502> - synthesis: The preferred point for defining clocks is top level ports and driver pins. Pad delays will not be taken into consideration if clocks are defined on nets.
 
 Starting full timing analysis...
 Starting design annotation....
+WARNING <70009502> - synthesis: The preferred point for defining clocks is top level ports and driver pins. Pad delays will not be taken into consideration if clocks are defined on nets.
 
 Starting full timing analysis...
 
 
 <A name="lse_area"></A><B><U><big>Area Report</big></U></B>
 
-################### Begin Area Report (binary_mac_arry)######################
-Number of register bits => 0 of 32256 (0 % )
+################### Begin Area Report (network_tb)######################
+Number of register bits => 225 of 32256 (0 % )
+CCU2 => 117
+FD1P3DX => 67
+FD1P3IX => 158
 GSR => 1
-OB => 24
+IB => 3
+LUT4 => 104
+OB => 3
+SPR16X4 => 2
 ################### End Area Report ##################
 Number of odd-length carry chains : 0
-Number of even-length carry chains : 0
+Number of even-length carry chains : 9
 
 
 <A name="lse_clock"></A><B><U><big>Clock Report</big></U></B>
 
 ################### Begin Clock Report ######################
 Clock Nets
-Number of Clocks: 0
+Number of Clocks: 1
+  Net : clk_c, loads : 227
 Clock Enable Nets
-Number of Clock Enables: 0
+Number of Clock Enables: 20
+Top 10 highest fanout Clock Enables:
+  Net : sa/genblk1[2].sn/VCC_net, loads : 103
+  Net : sa/genblk1[1].sn/VCC_net, loads : 103
+  Net : sa/genblk1[0].sn/VCC_net, loads : 103
+  Net : wmu/read_mode, loads : 18
+  Net : wmu/clk_c_enable_19, loads : 8
+  Net : wmu/clk_c_enable_43, loads : 8
+  Net : wmu/clk_c_enable_52, loads : 8
+  Net : wmu/clk_c_enable_51, loads : 8
+  Net : ram/VCC_net, loads : 8
+  Net : wma/GEN_OUTPUT[2].GEN_INPUT[1].wmu/VCC_net, loads : 8
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : VCC_net, loads : 1
-  Net : added_outputs[23], loads : 0
-  Net : added_outputs[22], loads : 0
-  Net : added_outputs[21], loads : 0
-  Net : added_outputs[20], loads : 0
-  Net : added_outputs[19], loads : 0
-  Net : added_outputs[18], loads : 0
-  Net : added_outputs[17], loads : 0
-  Net : added_outputs[16], loads : 0
-  Net : added_outputs[15], loads : 0
+  Net : sa/genblk1[2].sn/VCC_net, loads : 103
+  Net : sa/genblk1[1].sn/VCC_net, loads : 103
+  Net : sa/genblk1[0].sn/VCC_net, loads : 103
+  Net : reset, loads : 60
+  Net : sa/genblk1[2].sn/n225, loads : 58
+  Net : sa/genblk1[1].sn/n223, loads : 57
+  Net : sa/genblk1[0].sn/n227, loads : 57
+  Net : n1057, loads : 53
+  Net : wma/VCC_net, loads : 33
+  Net : sa/genblk1[2].sn/potential_new[31], loads : 28
 ################### End Clock Report ##################
 
 
@@ -420,13 +371,13 @@ Constraint Summary:
   Total number of constraints dropped: 0
 ###################  End Constraint Report  ######################
 
-Peak Memory Usage: 200 MB
+Peak Memory Usage: 201 MB
 
 --------------------------------------------------------------
-Total CPU Time: 2 secs 
-Total REAL Time: 3 secs 
+Total CPU Time: 3 secs 
+Total REAL Time: 4 secs 
 --------------------------------------------------------------
-Checksum -- synthesis -- netlist: 8b11f586f45fe4c35265dc50c972ca6e818644e9
+Checksum -- synthesis -- netlist: 5fcb8ee08fa895e1843d442d87b11efebd5fa48d
 
 
 

@@ -1,0 +1,281 @@
+<HTML>
+<HEAD>
+<TITLE>Map Report</TITLE>
+<link href="" rel="stylesheet" type="text/css" media="screen"/>
+<link href="" rel="stylesheet" type="text/css" media="print"/>
+<style type="text/css">
+#toc {
+  position: fixed;
+  right: 2px;
+  top: 2px;
+  padding: 2px 5px 2px 5px;
+  background-color:rgba(210,210,210,0.1);
+  border-style: solid;
+  border-color: rgba(192,192,192,0.8);
+  border-width:1px;
+}
+#toc_list {
+  display: none;
+  }
+</style>
+
+<script type="text/javascript">
+<!--
+function showTocList() {
+var a = document.getElementById("toc_list");
+a.style.display = "block";
+}
+
+function hideTocList() {
+var a = document.getElementById("toc_list");
+if (a)
+    a.style.display = "none";
+}
+
+//-->
+</script>
+
+</HEAD>
+
+<BODY>
+
+<DIV id="content" onclick="hideTocList()"><PRE>
+<A name="Mrp"></A>                         Lattice Mapping Report File
+
+Design:  network_tb
+Family:  LIFCL
+Device:  LIFCL-40
+Package: CABGA400
+Performance Grade:  9_High-Performance_1.0V
+
+Mapper:    version Radiant Software (64-bit) 2026.1.0.37.0
+Mapped on: Thu Aug 20 21:54:03 2026
+
+<A name="mrp_di"></A><B><U><big>Design Information</big></U></B>
+
+Command line:   map -i Neuromorphic_Lattice_impl_1_syn.udb -o
+     Neuromorphic_Lattice_impl_1_map.udb -mp Neuromorphic_Lattice_impl_1.mrp
+     -hierrpt -gui -msgset
+     D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice/promote.xml
+
+<A name="mrp_ds"></A><B><U><big>Design Summary</big></U></B>
+
+   Number of registers:         225 out of 32811 (1%)
+      Number of SLICE         registers:  225 out of 32256 (1%)
+      Number of PIO Input     registers:    0 out of   185 (0%)
+      Number of PIO Output    registers:    0 out of   185 (0%)
+      Number of PIO Tri-State registers:    0 out of   185 (0%)
+   Number of LUT4s:             351 out of 32256 (1%)
+      Number used as logic LUT4s:                        105
+      Number used as distributed RAM:                     12 (6 per 16X4 RAM)
+      Number used as ripple logic:                       234 (2 per CCU2)
+   Number of PIOs used/reserved:   13 out of   185 (7%)
+      Number of PIOs reserved:      7 (per sysConfig and/or prohibit constraint)
+      Number of PIOs used:          6
+        Number of PIOs used for single ended IO:         6
+        Number of PIO pairs used for differential IO:    0
+        Number allocated to regular speed PIOs:     6 out of  111 (5%)
+        Number allocated to high speed PIOs:        0 out of   74 (0%)
+   Number of Dedicated IO used for ADC/PCIE/DPHY:    0 out of   32 (0%)
+   Number of IDDR/ODDR/TDDR functions used:      0 out of   444 (0%)
+   Number of IOs using at least one DDR function: 0 (0 differential)
+   Number of Block RAMs:          0 out of 84 (0%)
+   Number of Large RAMs:          0 out of 2 (0%)
+   Number of Logical DSP Functions:
+      Number of Pre-Adders (9+9):    0 out of 112 (0%)
+      Number of Multipliers (18x18): 0 out of 56 (0%)
+         Number of 9X9:        0 (1 18x18 = 2   9x9)
+         Number of 18x18:      0 (1 18x18 = 1 18x18)
+         Number of 18x36:      0 (2 18x18 = 1 18x36)
+         Number of 36x36:      0 (4 18x18 = 1 36x36)
+      Number of 54-bit Accumulators: 0 out of 28 (0%)
+      Number of 18-bit Registers:    0 out of 112 (0%)
+   Number of Physical DSP Components:
+      Number of PREADD9:             0 out of 112 (0%)
+      Number of MULT9:               0 out of 112 (0%)
+      Number of MULT18:              0 out of 56 (0%)
+      Number of MULT18X36:           0 out of 28 (0%)
+      Number of MULT36:              0 out of 14 (0%)
+      Number of ACC54:               0 out of 28 (0%)
+      Number of REG18:               0 out of 112 (0%)
+   Number of ALUREGs:             0 out of 1 (0%)
+   Number of PLLs:                0 out of 3 (0%)
+   Number of DDRDLLs:             0 out of 2 (0%)
+   Number of DLLDELs:             0 out of 10 (0%)
+   Number of DQSs:                0 out of 4 (0%)
+   Number of DCSs:                0 out of 1 (0%)
+   Number of DCCs:                0 out of 62 (0%)
+   Number of PCLKDIVs:            0 out of 1 (0%)
+   Number of ECLKDIVs:            0 out of 12 (0%)
+   Number of ECLKSYNCs:           0 out of 12 (0%)
+   Number of ADC Blocks:          0 out of 1 (0%)
+   Number of SGMIICDRs:           0 out of 2 (0%)
+   Number of PMUs:                0 out of 1 (0%)
+   Number of BNKREF18s:           0 out of 3 (0%)
+   Number of BNKREF33s:           0 out of 5 (0%)
+   Number of I2CFIFOs:            0 out of 1 (0%)
+   Number of DPHYs:               0 out of 2 (0%)
+   Number of Oscillator:          0 out of 1 (0%)
+   Number of GSR:                 0 out of 1 (0%)
+   Number of Cryptographic Block: 0 out of 1 (0%)
+   Number of Config IP:           0 out of 1 (0%)
+                 TSALL:           0 out of 1 (0%)
+   Number of JTAG:                0 out of 1 (0%)
+   Number of Config LMMI:         0 out of 1 (0%)
+   Number of Config MULTIBOOT:    0 out of 1 (0%)
+   Number of SED:                 0 out of 1 (0%)
+   Number of Config WDT:          0 out of 1 (0%)
+   Number of PCIEs:               0 out of 1 (0%)
+   Number of Clocks:  1
+      Net clk_c: 227 loads, 227 rising, 0 falling (Driver: Port clk)
+   Number of Clock Enables:  7
+      Net wmu.read_mode: 15 loads, 15 SLICEs
+      Net wmu.clk_c_enable_51: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_43: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_35: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_19: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_27: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_52: 8 loads, 8 SLICEs
+   Number of LSRs:  8
+      Net reset: 54 loads, 54 SLICEs
+      Net sa.genblk1[2].sn.n543: 1 loads, 1 SLICEs
+      Net sa.genblk1[2].sn.n225: 32 loads, 32 SLICEs
+      Net sa.genblk1[1].sn.n545: 1 loads, 1 SLICEs
+      Net sa.genblk1[1].sn.n223: 32 loads, 32 SLICEs
+      Net sa.genblk1[0].sn.n227: 32 loads, 32 SLICEs
+      Net sa.genblk1[0].sn.n541: 1 loads, 1 SLICEs
+      Net n1057: 53 loads, 53 SLICEs
+   Top 10 highest fanout non-clock nets:
+      Net reset: 60 loads
+      Net n1057: 53 loads
+      Net sa.genblk1[0].sn.n227: 32 loads
+      Net sa.genblk1[1].sn.n223: 32 loads
+      Net sa.genblk1[2].sn.n225: 32 loads
+      Net wma_outputs[15]: 26 loads
+      Net wma_outputs[23]: 26 loads
+      Net wma_outputs[7]: 26 loads
+      Net network_inputs_c[0]: 24 loads
+      Net network_inputs_c[1]: 24 loads
+
+   Number of warnings:  0
+   Number of criticals: 0
+   Number of errors:    0
+
+<A name="mrp_dwe"></A><B><U><big>Design Errors/Criticals/Warnings</big></U></B>
+
+   No error, critical, or warning presents.
+
+<A name="mrp_ioa"></A><B><U><big>IO (PIO) Attributes</big></U></B>
+
++---------------------+-----------+-----------+-------+-------+-----------+
+| IO Name             | Direction | Levelmode |  IO   |  IO   | Special   |
+|                     |           |  IO_TYPE  |  REG  |  DDR  | IO Buffer |
++---------------------+-----------+-----------+-------+-------+-----------+
+| network_outputs[0]  | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| network_inputs[1]   | INPUT     |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| network_inputs[0]   | INPUT     |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| network_outputs[2]  | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| network_outputs[1]  | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| clk                 | INPUT     |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+
+<A name="mrp_rm"></A><B><U><big>Removed logic</big></U></B>
+
+Block GSR_INST undriven or does not drive anything - clipped.
+Block i14 was optimized away.
+
+<A name="mrp_asic"></A><B><U><big>ASIC Components</big></U></B>
+
+
+<A name="mrp_consum"></A><B><U><big>Constraint Summary</big></U></B>
+
+   Total number of constraints: 1
+   Total number of constraints dropped: 0
+
+<A name="mrp_runtime"></A><B><U><big>Run Time and Memory Usage</big></U></B>
+
+   Total CPU Time: 2 secs
+   Total REAL Time: 3 secs
+   Peak Memory Usage: 341 MB
+Checksum -- map: 499150ad37a1cfaf54aa1fd822b0d3939b91763
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995
+     AT&amp;T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent
+     Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems
+     All rights reserved.
+Copyright (c) 2002-2026 Lattice Semiconductor
+     Corporation,  All rights reserved.
+</PRE></DIV>
+<DIV id="toc" class="radiant"><span onmousemove="showTocList()">Contents</span>
+<UL id="toc_list">
+<LI><A href=#mrp_di>Design Information</A></LI>
+<LI><A href=#mrp_ds>Design Summary</A></LI>
+<LI><A href=#mrp_dwe>Design Errors/Criticals/Warnings</A></LI>
+<LI><A href=#mrp_ioa>IO (PIO) Attributes</A></LI>
+<LI><A href=#mrp_rm>Removed logic</A></LI>
+<LI><A href=#mrp_asic>ASIC Components</A></LI>
+<LI><A href=#mrp_consum>Constraint Summary</A></LI>
+<LI><A href=#mrp_runtime>Run Time and Memory Usage</A></LI>
+</UL>
+</DIV>
+
+<button id="back_to_top" class="radiant" onclick="scrollToTop()">&lt;</button>
+<script type="text/javascript">
+<!--
+var scrollStep = 0;
+function scrollToTop(){
+  var funScroll = function() {
+    var top = document.body.scrollTop;
+    if (top == 0) {
+      scrollStep = 0;
+      return;
+    }
+    if (scrollStep == 0)
+      scrollStep = top/20 + 1;
+    top -= scrollStep;
+    if (top < 0)
+      top = 0;
+    document.body.scrollTop = top;
+    requestAnimationFrame(funScroll);
+  };
+  funScroll();
+}
+
+window.addEventListener('scroll', function(e) {
+  var backToTop = document.getElementById('back_to_top')
+  if (document.body.scrollTop > 0) {
+    backToTop.style.display = 'block';
+  } else {	backToTop.style.display = 'none'  }});
+
+//-->
+</script>
+
+<style type="text/css">
+#back_to_top {
+  bottom:20px; right:20px;
+  width:30px; height:30px;
+  font-size: 20px;
+  padding: 2px 5px 2px 5px;
+  position:fixed;
+  background-color:rgba(210,210,210,0.1);
+  border-style: solid;
+  border-color: rgba(192,192,192,0.8);
+  border-width:1px;
+  display:none;
+  -webkit-transform: rotate(90deg);
+  -webkit-transform-origin:50% 50%;
+}
+#back_to_top:focus {
+  outline-width:0px;
+}
+</style>
+
+</BODY>
+

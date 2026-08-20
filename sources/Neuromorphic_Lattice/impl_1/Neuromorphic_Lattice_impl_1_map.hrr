@@ -1,0 +1,139 @@
+---------------------------------------------------
+Report for cell network_tb
+   Instance path: network_tb
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	        351        100.0
+                               LUTGATE	        105        100.0
+                                LUTRAM	         12        100.0
+                                LUTCCU	        234        100.0
+                                 IOBUF	          6        100.0
+                                PFUREG	        225        100.0
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+                       single_port_ram	          1         3.4
+                           spike_array	          1        70.9
+                   weight_manager_unit	          1         3.1
+                 weight_multiply_array	          1        22.2
+---------------------------------------------------
+Report for cell spike_array
+   Instance path: network_tb/sa
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	        249        70.9
+                               LUTGATE	         45        42.9
+                                LUTCCU	        204        87.2
+                                PFUREG	         99        44.0
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+                          spike_neuron	          1        23.6
+                       spike_neuron_U5	          1        23.6
+                       spike_neuron_U6	          1        23.6
+---------------------------------------------------
+Report for cell spike_neuron
+   Instance path: network_tb/sa/genblk1[2].sn
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         83        23.6
+                               LUTGATE	         15        14.3
+                                LUTCCU	         68        29.1
+                                PFUREG	         33        14.7
+---------------------------------------------------
+Report for cell spike_neuron_U5
+   Instance path: network_tb/sa/genblk1[1].sn
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         83        23.6
+                               LUTGATE	         15        14.3
+                                LUTCCU	         68        29.1
+                                PFUREG	         33        14.7
+---------------------------------------------------
+Report for cell spike_neuron_U6
+   Instance path: network_tb/sa/genblk1[0].sn
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         83        23.6
+                               LUTGATE	         15        14.3
+                                LUTCCU	         68        29.1
+                                PFUREG	         33        14.7
+---------------------------------------------------
+Report for cell single_port_ram
+   Instance path: network_tb/ram
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         12         3.4
+                                LUTRAM	         12        100.0
+                                PFUREG	          8         3.6
+---------------------------------------------------
+Report for cell weight_manager_unit
+   Instance path: network_tb/wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         11         3.1
+                               LUTGATE	         11        10.5
+                                PFUREG	         64        28.4
+---------------------------------------------------
+Report for cell weight_multiply_array
+   Instance path: network_tb/wma
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         78        22.2
+                               LUTGATE	         48        45.7
+                                LUTCCU	         30        12.8
+                                PFUREG	         48        21.3
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+                  weight_multiply_unit	          1         2.3
+               weight_multiply_unit_U0	          1         2.3
+               weight_multiply_unit_U1	          1         2.3
+               weight_multiply_unit_U2	          1         2.3
+               weight_multiply_unit_U3	          1         2.3
+               weight_multiply_unit_U4	          1         2.3
+---------------------------------------------------
+Report for cell weight_multiply_unit
+   Instance path: network_tb/wma/GEN_OUTPUT[2].GEN_INPUT[1].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          8         2.3
+                               LUTGATE	          8         7.6
+                                PFUREG	          8         3.6
+---------------------------------------------------
+Report for cell weight_multiply_unit_U0
+   Instance path: network_tb/wma/GEN_OUTPUT[2].GEN_INPUT[0].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          8         2.3
+                               LUTGATE	          8         7.6
+                                PFUREG	          8         3.6
+---------------------------------------------------
+Report for cell weight_multiply_unit_U1
+   Instance path: network_tb/wma/GEN_OUTPUT[1].GEN_INPUT[1].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          8         2.3
+                               LUTGATE	          8         7.6
+                                PFUREG	          8         3.6
+---------------------------------------------------
+Report for cell weight_multiply_unit_U2
+   Instance path: network_tb/wma/GEN_OUTPUT[1].GEN_INPUT[0].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          8         2.3
+                               LUTGATE	          8         7.6
+                                PFUREG	          8         3.6
+---------------------------------------------------
+Report for cell weight_multiply_unit_U3
+   Instance path: network_tb/wma/GEN_OUTPUT[0].GEN_INPUT[1].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          8         2.3
+                               LUTGATE	          8         7.6
+                                PFUREG	          8         3.6
+---------------------------------------------------
+Report for cell weight_multiply_unit_U4
+   Instance path: network_tb/wma/GEN_OUTPUT[0].GEN_INPUT[0].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          8         2.3
+                               LUTGATE	          8         7.6
+                                PFUREG	          8         3.6

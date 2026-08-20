@@ -1,9 +1,150 @@
 ----------------------------------------------------------------------
-Report for cell binary_mac_arry.TECH
-Register bits:  0 of 32256 (0.000%)
-I/O cells:      24
+Report for cell network_tb.TECH
+Register bits:  225 of 32256 (0.698%)
+I/O cells:      6
                                   Cell usage:
                                cell     count   Res Usage(%)
+                               CCU2       117          100.0
+                            FD1P3DX        67          100.0
+                            FD1P3IX       158          100.0
                                 GSR         1          100.0
-                                 OB        24          100.0
-                              TOTAL        25
+                                 IB         3          100.0
+                               LUT4       104          100.0
+                                 OB         3          100.0
+                            SPR16X4         2          100.0
+SUB MODULES
+                    single_port_ram         1
+                        spike_array         1
+                       spike_neuron         1
+                    spike_neuron_U5         1
+                    spike_neuron_U6         1
+                weight_manager_unit         1
+              weight_multiply_array         1
+               weight_multiply_unit         1
+            weight_multiply_unit_U0         1
+            weight_multiply_unit_U1         1
+            weight_multiply_unit_U2         1
+            weight_multiply_unit_U3         1
+            weight_multiply_unit_U4         1
+                              TOTAL       468
+----------------------------------------------------------------------
+Report for cell spike_array.v1
+Instance Path : sa
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               CCU2       102           87.2
+                            FD1P3IX        99           62.7
+                               LUT4        45           43.3
+SUB MODULES
+                       spike_neuron         1
+                    spike_neuron_U5         1
+                    spike_neuron_U6         1
+                              TOTAL       249
+----------------------------------------------------------------------
+Report for cell spike_neuron.v1
+Instance Path : sa.genblk1[2].sn
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               CCU2        34           29.1
+                            FD1P3IX        33           20.9
+                               LUT4        15           14.4
+                              TOTAL        82
+----------------------------------------------------------------------
+Report for cell spike_neuron_U5.v1
+Instance Path : sa.genblk1[1].sn
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               CCU2        34           29.1
+                            FD1P3IX        33           20.9
+                               LUT4        15           14.4
+                              TOTAL        82
+----------------------------------------------------------------------
+Report for cell spike_neuron_U6.v1
+Instance Path : sa.genblk1[0].sn
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               CCU2        34           29.1
+                            FD1P3IX        33           20.9
+                               LUT4        15           14.4
+                              TOTAL        82
+----------------------------------------------------------------------
+Report for cell single_port_ram.v1
+Instance Path : ram
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3DX         8           11.9
+                            SPR16X4         2          100.0
+                              TOTAL        10
+----------------------------------------------------------------------
+Report for cell weight_manager_unit.v1
+Instance Path : wmu
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3DX         5            7.5
+                            FD1P3IX        59           37.3
+                               LUT4        11           10.6
+                              TOTAL        75
+----------------------------------------------------------------------
+Report for cell weight_multiply_array.v1
+Instance Path : wma
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               CCU2        15           12.8
+                            FD1P3DX        48           71.6
+                               LUT4        48           46.2
+SUB MODULES
+               weight_multiply_unit         1
+            weight_multiply_unit_U0         1
+            weight_multiply_unit_U1         1
+            weight_multiply_unit_U2         1
+            weight_multiply_unit_U3         1
+            weight_multiply_unit_U4         1
+                              TOTAL       117
+----------------------------------------------------------------------
+Report for cell weight_multiply_unit.v1
+Instance Path : wma.GEN_OUTPUT[2].GEN_INPUT[1].wmu
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3DX         8           11.9
+                               LUT4         8            7.7
+                              TOTAL        16
+----------------------------------------------------------------------
+Report for cell weight_multiply_unit_U0.v1
+Instance Path : wma.GEN_OUTPUT[2].GEN_INPUT[0].wmu
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3DX         8           11.9
+                               LUT4         8            7.7
+                              TOTAL        16
+----------------------------------------------------------------------
+Report for cell weight_multiply_unit_U1.v1
+Instance Path : wma.GEN_OUTPUT[1].GEN_INPUT[1].wmu
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3DX         8           11.9
+                               LUT4         8            7.7
+                              TOTAL        16
+----------------------------------------------------------------------
+Report for cell weight_multiply_unit_U2.v1
+Instance Path : wma.GEN_OUTPUT[1].GEN_INPUT[0].wmu
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3DX         8           11.9
+                               LUT4         8            7.7
+                              TOTAL        16
+----------------------------------------------------------------------
+Report for cell weight_multiply_unit_U3.v1
+Instance Path : wma.GEN_OUTPUT[0].GEN_INPUT[1].wmu
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3DX         8           11.9
+                               LUT4         8            7.7
+                              TOTAL        16
+----------------------------------------------------------------------
+Report for cell weight_multiply_unit_U4.v1
+Instance Path : wma.GEN_OUTPUT[0].GEN_INPUT[0].wmu
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3DX         8           11.9
+                               LUT4         8            7.7
+                              TOTAL        16

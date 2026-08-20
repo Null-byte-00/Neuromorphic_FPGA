@@ -1,4 +1,4 @@
-module binary_mac_arry #(
+module weight_multiply_arry #(
 	parameter IN_SIZE = 2,
 	parameter OUT_SIZE = 3
 )(

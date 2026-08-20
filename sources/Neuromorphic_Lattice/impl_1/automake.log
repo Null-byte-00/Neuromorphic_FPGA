@@ -1,598 +1,676 @@
 
-"D:/lscc/radiant/2026.1/tcltk/windows/bin/tclsh" "Neuromorphic_Lattice_impl_1_synthesize.tcl"
-
-cpe -syn lse -f Neuromorphic_Lattice_impl_1.cprj -a LIFCL -o Neuromorphic_Lattice_impl_1_cpe.ldc
-CPE: Constraint Propagation Engine: starting
-INFO <35831038> - Setting binary_mac_arry as top module.
-Analyzing VHDL file D:/lscc/radiant/2026.1/ispfpga\vhdl_packages\standard.vhd. VHDL-1481
-Analyzing VHDL file D:/lscc/radiant/2026.1/ispfpga\vhdl_packages\standard.vhd
-
-INFO <35921014> - D:/lscc/radiant/2026.1/ispfpga\vhdl_packages\standard.vhd(9): analyzing package standard. VHDL-1014
-Analyzing VHDL file D:/lscc/radiant/2026.1/ispfpga\vhdl_packages\std_1164.vhd. VHDL-1481
-Analyzing VHDL file D:/lscc/radiant/2026.1/ispfpga\vhdl_packages\std_1164.vhd
-
-INFO <35921014> - D:/lscc/radiant/2026.1/ispfpga\vhdl_packages\std_1164.vhd(15): analyzing package std_logic_1164. VHDL-1014
-INFO <35921013> - D:/lscc/radiant/2026.1/ispfpga\vhdl_packages\std_1164.vhd(178): analyzing package body std_logic_1164. VHDL-1013
-Analyzing VHDL file D:/lscc/radiant/2026.1/ispfpga\vhdl_packages\mgc_qsim.vhd. VHDL-1481
-Analyzing VHDL file D:/lscc/radiant/2026.1/ispfpga\vhdl_packages\mgc_qsim.vhd
-
-INFO <35921014> - D:/lscc/radiant/2026.1/ispfpga\vhdl_packages\mgc_qsim.vhd(18): analyzing package qsim_logic. VHDL-1014
-INFO <35921013> - D:/lscc/radiant/2026.1/ispfpga\vhdl_packages\mgc_qsim.vhd(753): analyzing package body qsim_logic. VHDL-1013
-Analyzing VHDL file D:/lscc/radiant/2026.1/ispfpga\vhdl_packages\numeric_bit.vhd. VHDL-1481
-Analyzing VHDL file D:/lscc/radiant/2026.1/ispfpga\vhdl_packages\numeric_bit.vhd
-
-INFO <35921014> - D:/lscc/radiant/2026.1/ispfpga\vhdl_packages\numeric_bit.vhd(54): analyzing package numeric_bit. VHDL-1014
-INFO <35921013> - D:/lscc/radiant/2026.1/ispfpga\vhdl_packages\numeric_bit.vhd(834): analyzing package body numeric_bit. VHDL-1013
-Analyzing VHDL file D:/lscc/radiant/2026.1/ispfpga\vhdl_packages\numeric_std.vhd. VHDL-1481
-Analyzing VHDL file D:/lscc/radiant/2026.1/ispfpga\vhdl_packages\numeric_std.vhd
-
-INFO <35921014> - D:/lscc/radiant/2026.1/ispfpga\vhdl_packages\numeric_std.vhd(57): analyzing package numeric_std. VHDL-1014
-INFO <35921013> - D:/lscc/radiant/2026.1/ispfpga\vhdl_packages\numeric_std.vhd(874): analyzing package body numeric_std. VHDL-1013
-Analyzing VHDL file D:/lscc/radiant/2026.1/ispfpga\vhdl_packages\textio.vhd. VHDL-1481
-Analyzing VHDL file D:/lscc/radiant/2026.1/ispfpga\vhdl_packages\textio.vhd
-
-INFO <35921014> - D:/lscc/radiant/2026.1/ispfpga\vhdl_packages\textio.vhd(13): analyzing package textio. VHDL-1014
-INFO <35921013> - D:/lscc/radiant/2026.1/ispfpga\vhdl_packages\textio.vhd(114): analyzing package body textio. VHDL-1013
-Analyzing VHDL file D:/lscc/radiant/2026.1/ispfpga\vhdl_packages\std_logic_textio.vhd. VHDL-1481
-Analyzing VHDL file D:/lscc/radiant/2026.1/ispfpga\vhdl_packages\std_logic_textio.vhd
-
-INFO <35921014> - D:/lscc/radiant/2026.1/ispfpga\vhdl_packages\std_logic_textio.vhd(26): analyzing package std_logic_textio. VHDL-1014
-INFO <35921013> - D:/lscc/radiant/2026.1/ispfpga\vhdl_packages\std_logic_textio.vhd(72): analyzing package body std_logic_textio. VHDL-1013
-Analyzing VHDL file D:/lscc/radiant/2026.1/ispfpga\vhdl_packages\syn_misc.vhd. VHDL-1481
-Analyzing VHDL file D:/lscc/radiant/2026.1/ispfpga\vhdl_packages\syn_misc.vhd
-
-INFO <35921014> - D:/lscc/radiant/2026.1/ispfpga\vhdl_packages\syn_misc.vhd(30): analyzing package std_logic_misc. VHDL-1014
-INFO <35921013> - D:/lscc/radiant/2026.1/ispfpga\vhdl_packages\syn_misc.vhd(182): analyzing package body std_logic_misc. VHDL-1013
-Analyzing VHDL file D:/lscc/radiant/2026.1/ispfpga\vhdl_packages\math_real.vhd. VHDL-1481
-INFO <35921014> - D:/lscc/radiant/2026.1/ispfpga\vhdl_packages\math_real.vhd(56): analyzing package math_real. VHDL-1014
-INFO <35921013> - D:/lscc/radiant/2026.1/ispfpga\vhdl_packages\math_real.vhd(685): analyzing package body math_real. VHDL-1013
-Analyzing VHDL file D:/lscc/radiant/2026.1/ispfpga\vhdl_packages\mixed_lang_vltype.vhd. VHDL-1481
-Analyzing VHDL file D:/lscc/radiant/2026.1/ispfpga\vhdl_packages\mixed_lang_vltype.vhd
-
-INFO <35921014> - D:/lscc/radiant/2026.1/ispfpga\vhdl_packages\mixed_lang_vltype.vhd(9): analyzing package vl_types. VHDL-1014
-INFO <35921013> - D:/lscc/radiant/2026.1/ispfpga\vhdl_packages\mixed_lang_vltype.vhd(88): analyzing package body vl_types. VHDL-1013
-Analyzing VHDL file D:/lscc/radiant/2026.1/ispfpga\vhdl_packages\syn_arit.vhd. VHDL-1481
-Analyzing VHDL file D:/lscc/radiant/2026.1/ispfpga\vhdl_packages\syn_arit.vhd
-
-INFO <35921014> - D:/lscc/radiant/2026.1/ispfpga\vhdl_packages\syn_arit.vhd(25): analyzing package std_logic_arith. VHDL-1014
-INFO <35921013> - D:/lscc/radiant/2026.1/ispfpga\vhdl_packages\syn_arit.vhd(206): analyzing package body std_logic_arith. VHDL-1013
-Analyzing VHDL file D:/lscc/radiant/2026.1/ispfpga\vhdl_packages\syn_attr.vhd. VHDL-1481
-Analyzing VHDL file D:/lscc/radiant/2026.1/ispfpga\vhdl_packages\syn_attr.vhd
-
-INFO <35921014> - D:/lscc/radiant/2026.1/ispfpga\vhdl_packages\syn_attr.vhd(39): analyzing package attributes. VHDL-1014
-Analyzing VHDL file D:/lscc/radiant/2026.1/ispfpga\vhdl_packages\syn_sign.vhd. VHDL-1481
-Analyzing VHDL file D:/lscc/radiant/2026.1/ispfpga\vhdl_packages\syn_sign.vhd
-
-INFO <35921014> - D:/lscc/radiant/2026.1/ispfpga\vhdl_packages\syn_sign.vhd(35): analyzing package std_logic_signed. VHDL-1014
-INFO <35921013> - D:/lscc/radiant/2026.1/ispfpga\vhdl_packages\syn_sign.vhd(96): analyzing package body std_logic_signed. VHDL-1013
-Analyzing VHDL file D:/lscc/radiant/2026.1/ispfpga\vhdl_packages\syn_unsi.vhd. VHDL-1481
-Analyzing VHDL file D:/lscc/radiant/2026.1/ispfpga\vhdl_packages\syn_unsi.vhd
-
-INFO <35921014> - D:/lscc/radiant/2026.1/ispfpga\vhdl_packages\syn_unsi.vhd(35): analyzing package std_logic_unsigned. VHDL-1014
-INFO <35921013> - D:/lscc/radiant/2026.1/ispfpga\vhdl_packages\syn_unsi.vhd(94): analyzing package body std_logic_unsigned. VHDL-1013
-Analyzing VHDL file D:/lscc/radiant/2026.1/ispfpga\vhdl_packages\synattr.vhd. VHDL-1481
-Analyzing VHDL file D:/lscc/radiant/2026.1/ispfpga\vhdl_packages\synattr.vhd
-
-INFO <35921014> - D:/lscc/radiant/2026.1/ispfpga\vhdl_packages\synattr.vhd(50): analyzing package attributes. VHDL-1014
-Analyzing VHDL file D:/lscc/radiant/2026.1/ispfpga\..\cae_library\synthesis\vhdl\lifcl.vhd. VHDL-1481
-Analyzing VHDL file D:/lscc/radiant/2026.1/ispfpga\..\cae_library\synthesis\vhdl\lifcl.vhd
-
-Analyzing Verilog file D:/lscc/radiant/2026.1/ispfpga\..\cae_library\synthesis\verilog\lifcl.v. VERI-1482
-Analyzing Verilog file D:/lscc/radiant/2026.1/ip/pmi/pmi_lifcl.v. VERI-1482
-INFO <35901328> - D:/lscc/radiant/2026.1/ip/pmi/pmi_lifcl.v(1): analyzing included file D:/lscc/radiant/2026.1/ip/pmi/pmi_addsub.v. VERI-1328
-INFO <35901328> - D:/lscc/radiant/2026.1/ip/pmi/pmi_addsub.v(40): analyzing included file D:/lscc/radiant/2026.1/ip/pmi/../common/adder_subtractor/rtl/lscc_add_sub.v. VERI-1328
-INFO <35901328> - D:/lscc/radiant/2026.1/ip/pmi/pmi_lifcl.v(2): analyzing included file D:/lscc/radiant/2026.1/ip/pmi/pmi_add.v. VERI-1328
-INFO <35901328> - D:/lscc/radiant/2026.1/ip/pmi/pmi_add.v(50): analyzing included file D:/lscc/radiant/2026.1/ip/pmi/../common/adder/rtl/lscc_adder.v. VERI-1328
-INFO <35901328> - D:/lscc/radiant/2026.1/ip/pmi/pmi_lifcl.v(3): analyzing included file D:/lscc/radiant/2026.1/ip/pmi/pmi_complex_mult.v. VERI-1328
-INFO <35901328> - D:/lscc/radiant/2026.1/ip/pmi/pmi_complex_mult.v(52): analyzing included file D:/lscc/radiant/2026.1/ip/pmi/../common/complex_mult/rtl/lscc_complex_mult.v. VERI-1328
-INFO <35901328> - D:/lscc/radiant/2026.1/ip/pmi/pmi_lifcl.v(4): analyzing included file D:/lscc/radiant/2026.1/ip/pmi/pmi_counter.v. VERI-1328
-INFO <35901328> - D:/lscc/radiant/2026.1/ip/pmi/pmi_counter.v(39): analyzing included file D:/lscc/radiant/2026.1/ip/pmi/../common/counter/rtl/lscc_cntr.v. VERI-1328
-INFO <35901328> - D:/lscc/radiant/2026.1/ip/pmi/pmi_lifcl.v(5): analyzing included file D:/lscc/radiant/2026.1/ip/pmi/pmi_distributed_dpram.v. VERI-1328
-INFO <35901328> - D:/lscc/radiant/2026.1/ip/pmi/pmi_distributed_dpram.v(43): analyzing included file D:/lscc/radiant/2026.1/ip/pmi/../common/distributed_dpram/rtl/lscc_distributed_dpram.v. VERI-1328
-INFO <35901328> - D:/lscc/radiant/2026.1/ip/pmi/pmi_lifcl.v(6): analyzing included file D:/lscc/radiant/2026.1/ip/pmi/pmi_distributed_spram.v. VERI-1328
-INFO <35901328> - D:/lscc/radiant/2026.1/ip/pmi/pmi_distributed_spram.v(42): analyzing included file D:/lscc/radiant/2026.1/ip/pmi/../common/distributed_spram/rtl/lscc_distributed_spram.v. VERI-1328
-INFO <35901328> - D:/lscc/radiant/2026.1/ip/pmi/pmi_lifcl.v(7): analyzing included file D:/lscc/radiant/2026.1/ip/pmi/pmi_distributed_rom.v. VERI-1328
-INFO <35901328> - D:/lscc/radiant/2026.1/ip/pmi/pmi_distributed_rom.v(42): analyzing included file D:/lscc/radiant/2026.1/ip/pmi/../common/distributed_rom/rtl/lscc_distributed_rom.v. VERI-1328
-INFO <35901328> - D:/lscc/radiant/2026.1/ip/pmi/pmi_lifcl.v(8): analyzing included file D:/lscc/radiant/2026.1/ip/pmi/pmi_distributed_shift_reg.v. VERI-1328
-INFO <35901328> - D:/lscc/radiant/2026.1/ip/pmi/pmi_distributed_shift_reg.v(41): analyzing included file D:/lscc/radiant/2026.1/ip/pmi/../common/ram_shift_reg/rtl/lscc_shift_register.v. VERI-1328
-INFO <35901328> - D:/lscc/radiant/2026.1/ip/pmi/pmi_lifcl.v(9): analyzing included file D:/lscc/radiant/2026.1/ip/pmi/pmi_fifo.v. VERI-1328
-INFO <35901328> - D:/lscc/radiant/2026.1/ip/pmi/pmi_fifo.v(44): analyzing included file D:/lscc/radiant/2026.1/ip/pmi/../common/fifo/rtl/lscc_fifo.v. VERI-1328
-INFO <35901328> - D:/lscc/radiant/2026.1/ip/pmi/pmi_lifcl.v(10): analyzing included file D:/lscc/radiant/2026.1/ip/pmi/pmi_fifo_dc.v. VERI-1328
-INFO <35901328> - D:/lscc/radiant/2026.1/ip/pmi/pmi_fifo_dc.v(47): analyzing included file D:/lscc/radiant/2026.1/ip/pmi/../common/fifo_dc/rtl/lscc_fifo_dc.v. VERI-1328
-INFO <35901328> - D:/lscc/radiant/2026.1/ip/pmi/pmi_fifo_dc.v(48): analyzing included file D:/lscc/radiant/2026.1/ip/pmi/../LFMXO4/fifo_dc/rtl/lscc_lfmxo4_fifo_dc.v. VERI-1328
-INFO <35901328> - D:/lscc/radiant/2026.1/ip/pmi/../LFMXO4/fifo_dc/rtl/lscc_lfmxo4_fifo_dc.v(128): analyzing included file D:/lscc/radiant/2026.1/ip/pmi/../LFMXO4/fifo_dc/rtl/lscc_lfmxo4_fifo_dc_distributed_ram.v. VERI-1328
-INFO <35901328> - D:/lscc/radiant/2026.1/ip/pmi/../LFMXO4/fifo_dc/rtl/lscc_lfmxo4_fifo_dc.v(129): analyzing included file D:/lscc/radiant/2026.1/ip/pmi/../LFMXO4/fifo_dc/rtl/lscc_lfmxo4_fifo_dc_ecc.v. VERI-1328
-INFO <35901328> - D:/lscc/radiant/2026.1/ip/pmi/../LFMXO4/fifo_dc/rtl/lscc_lfmxo4_fifo_dc.v(130): analyzing included file D:/lscc/radiant/2026.1/ip/pmi/../LFMXO4/fifo_dc/rtl/lscc_lfmxo4_fifo_dc_flag_and_cnts_logic.v. VERI-1328
-INFO <35901328> - D:/lscc/radiant/2026.1/ip/pmi/../LFMXO4/fifo_dc/rtl/lscc_lfmxo4_fifo_dc.v(131): analyzing included file D:/lscc/radiant/2026.1/ip/pmi/../LFMXO4/fifo_dc/rtl/lscc_lfmxo4_fifo_dc_gray_reg.v. VERI-1328
-INFO <35901328> - D:/lscc/radiant/2026.1/ip/pmi/../LFMXO4/fifo_dc/rtl/lscc_lfmxo4_fifo_dc.v(132): analyzing included file D:/lscc/radiant/2026.1/ip/pmi/../LFMXO4/fifo_dc/rtl/lscc_lfmxo4_fifo_dc_gray_synchronizer.v. VERI-1328
-INFO <35901328> - D:/lscc/radiant/2026.1/ip/pmi/../LFMXO4/fifo_dc/rtl/lscc_lfmxo4_fifo_dc.v(133): analyzing included file D:/lscc/radiant/2026.1/ip/pmi/../LFMXO4/fifo_dc/rtl/lscc_lfmxo4_fifo_dc_harden_prim.v. VERI-1328
-INFO <35901328> - D:/lscc/radiant/2026.1/ip/pmi/../LFMXO4/fifo_dc/rtl/lscc_lfmxo4_fifo_dc.v(134): analyzing included file D:/lscc/radiant/2026.1/ip/pmi/../LFMXO4/fifo_dc/rtl/lscc_lfmxo4_fifo_dc_harden_rd_ctrl_logic.v. VERI-1328
-INFO <35901328> - D:/lscc/radiant/2026.1/ip/pmi/../LFMXO4/fifo_dc/rtl/lscc_lfmxo4_fifo_dc.v(135): analyzing included file D:/lscc/radiant/2026.1/ip/pmi/../LFMXO4/fifo_dc/rtl/lscc_lfmxo4_fifo_dc_harden_rd_output_logic.v. VERI-1328
-INFO <35901328> - D:/lscc/radiant/2026.1/ip/pmi/../LFMXO4/fifo_dc/rtl/lscc_lfmxo4_fifo_dc.v(136): analyzing included file D:/lscc/radiant/2026.1/ip/pmi/../LFMXO4/fifo_dc/rtl/lscc_lfmxo4_fifo_dc_harden_ring_counter.v. VERI-1328
-INFO <35901328> - D:/lscc/radiant/2026.1/ip/pmi/../LFMXO4/fifo_dc/rtl/lscc_lfmxo4_fifo_dc.v(137): analyzing included file D:/lscc/radiant/2026.1/ip/pmi/../LFMXO4/fifo_dc/rtl/lscc_lfmxo4_fifo_dc_harden_wr_ctrl_logic.v. VERI-1328
-INFO <35901328> - D:/lscc/radiant/2026.1/ip/pmi/../LFMXO4/fifo_dc/rtl/lscc_lfmxo4_fifo_dc.v(138): analyzing included file D:/lscc/radiant/2026.1/ip/pmi/../LFMXO4/fifo_dc/rtl/lscc_lfmxo4_fifo_dc_harden.v. VERI-1328
-INFO <35901328> - D:/lscc/radiant/2026.1/ip/pmi/../LFMXO4/fifo_dc/rtl/lscc_lfmxo4_fifo_dc.v(139): analyzing included file D:/lscc/radiant/2026.1/ip/pmi/../LFMXO4/fifo_dc/rtl/lscc_lfmxo4_fifo_dc_prim_gen.v. VERI-1328
-INFO <35901328> - D:/lscc/radiant/2026.1/ip/pmi/../LFMXO4/fifo_dc/rtl/lscc_lfmxo4_fifo_dc.v(140): analyzing included file D:/lscc/radiant/2026.1/ip/pmi/../LFMXO4/fifo_dc/rtl/lscc_lfmxo4_fifo_dc_rd_ctrl_logic.v. VERI-1328
-INFO <35901328> - D:/lscc/radiant/2026.1/ip/pmi/../LFMXO4/fifo_dc/rtl/lscc_lfmxo4_fifo_dc.v(141): analyzing included file D:/lscc/radiant/2026.1/ip/pmi/../LFMXO4/fifo_dc/rtl/lscc_lfmxo4_fifo_dc_wr_ctrl_logic.v. VERI-1328
-INFO <35901328> - D:/lscc/radiant/2026.1/ip/pmi/pmi_lifcl.v(11): analyzing included file D:/lscc/radiant/2026.1/ip/pmi/pmi_mac.v. VERI-1328
-INFO <35901328> - D:/lscc/radiant/2026.1/ip/pmi/pmi_mac.v(52): analyzing included file D:/lscc/radiant/2026.1/ip/pmi/../common/mult_accumulate/rtl/lscc_mult_accumulate.v. VERI-1328
-INFO <35901328> - D:/lscc/radiant/2026.1/ip/pmi/pmi_lifcl.v(12): analyzing included file D:/lscc/radiant/2026.1/ip/pmi/pmi_multaddsubsum.v. VERI-1328
-INFO <35901328> - D:/lscc/radiant/2026.1/ip/pmi/pmi_multaddsubsum.v(53): analyzing included file D:/lscc/radiant/2026.1/ip/pmi/../common/mult_add_sub_sum/rtl/lscc_mult_add_sub_sum.v. VERI-1328
-INFO <35901328> - D:/lscc/radiant/2026.1/ip/pmi/pmi_lifcl.v(13): analyzing included file D:/lscc/radiant/2026.1/ip/pmi/pmi_multaddsub.v. VERI-1328
-INFO <35901328> - D:/lscc/radiant/2026.1/ip/pmi/pmi_multaddsub.v(52): analyzing included file D:/lscc/radiant/2026.1/ip/pmi/../common/mult_add_sub/rtl/lscc_mult_add_sub.v. VERI-1328
-INFO <35901328> - D:/lscc/radiant/2026.1/ip/pmi/pmi_lifcl.v(14): analyzing included file D:/lscc/radiant/2026.1/ip/pmi/pmi_mult.v. VERI-1328
-INFO <35901328> - D:/lscc/radiant/2026.1/ip/pmi/pmi_mult.v(51): analyzing included file D:/lscc/radiant/2026.1/ip/pmi/../common/multiplier/rtl/lscc_multiplier.v. VERI-1328
-INFO <35901328> - D:/lscc/radiant/2026.1/ip/pmi/pmi_lifcl.v(15): analyzing included file D:/lscc/radiant/2026.1/ip/pmi/pmi_ram_dp.v. VERI-1328
-INFO <35901328> - D:/lscc/radiant/2026.1/ip/pmi/pmi_ram_dp.v(48): analyzing included file D:/lscc/radiant/2026.1/ip/pmi/../common/ram_dp/rtl/lscc_ram_dp.v. VERI-1328
-INFO <35901328> - D:/lscc/radiant/2026.1/ip/pmi/pmi_ram_dp.v(49): analyzing included file D:/lscc/radiant/2026.1/ip/pmi/../LFMXO4/ram_dp/rtl/lscc_lfmxo4_ram_dp.v. VERI-1328
-INFO <35901328> - D:/lscc/radiant/2026.1/ip/pmi/../LFMXO4/ram_dp/rtl/lscc_lfmxo4_ram_dp.v(438): analyzing included file D:/lscc/radiant/2026.1/ip/pmi/../LFMXO4/ram_dp/rtl/lscc_lfmxo4_ram_dp_impl.v. VERI-1328
-INFO <35901328> - D:/lscc/radiant/2026.1/ip/pmi/../LFMXO4/ram_dp/rtl/lscc_lfmxo4_ram_dp_impl.v(64): analyzing included file D:/lscc/radiant/2026.1/ip/pmi/../LFMXO4/ram_dp/rtl/lscc_lfmxo4_ram_dp_behavioral.v. VERI-1328
-INFO <35901328> - D:/lscc/radiant/2026.1/ip/pmi/../LFMXO4/ram_dp/rtl/lscc_lfmxo4_ram_dp_impl.v(66): analyzing included file D:/lscc/radiant/2026.1/ip/pmi/../LFMXO4/ram_dp/rtl/lscc_lfmxo4_ram_dp_lut_decode.v. VERI-1328
-INFO <35901328> - D:/lscc/radiant/2026.1/ip/pmi/../LFMXO4/ram_dp/rtl/lscc_lfmxo4_ram_dp_impl.v(478): analyzing included file D:/lscc/radiant/2026.1/ip/pmi/../LFMXO4/ram_dp/rtl/lscc_lfmxo4_ram_dp_functions.vh. VERI-1328
-INFO <35901328> - D:/lscc/radiant/2026.1/ip/pmi/../LFMXO4/ram_dp/rtl/lscc_lfmxo4_ram_dp_impl.v(609): analyzing included file D:/lscc/radiant/2026.1/ip/pmi/../LFMXO4/ram_dp/rtl/lscc_lfmxo4_ram_dp_functions.vh. VERI-1328
-INFO <35901328> - D:/lscc/radiant/2026.1/ip/pmi/../LFMXO4/ram_dp/rtl/lscc_lfmxo4_ram_dp_impl.v(1511): analyzing included file D:/lscc/radiant/2026.1/ip/pmi/../LFMXO4/ram_dp/rtl/lscc_lfmxo4_ram_dp_functions.vh. VERI-1328
-INFO <35901328> - D:/lscc/radiant/2026.1/ip/pmi/../LFMXO4/ram_dp/rtl/lscc_lfmxo4_ram_dp_impl.v(2456): analyzing included file D:/lscc/radiant/2026.1/ip/pmi/../LFMXO4/ram_dp/rtl/lscc_lfmxo4_ram_dp_functions.vh. VERI-1328
-INFO <35901328> - D:/lscc/radiant/2026.1/ip/pmi/../LFMXO4/ram_dp/rtl/lscc_lfmxo4_ram_dp_impl.v(4673): analyzing included file D:/lscc/radiant/2026.1/ip/pmi/../LFMXO4/ram_dp/rtl/lscc_lfmxo4_ram_dp_functions.vh. VERI-1328
-INFO <35901328> - D:/lscc/radiant/2026.1/ip/pmi/pmi_lifcl.v(16): analyzing included file D:/lscc/radiant/2026.1/ip/pmi/pmi_ram_dp_be.v. VERI-1328
-INFO <35901328> - D:/lscc/radiant/2026.1/ip/pmi/pmi_ram_dp_be.v(49): analyzing included file D:/lscc/radiant/2026.1/ip/pmi/../common/ram_dp/rtl/lscc_ram_dp.v. VERI-1328
-INFO <35901328> - D:/lscc/radiant/2026.1/ip/pmi/pmi_ram_dp_be.v(50): analyzing included file D:/lscc/radiant/2026.1/ip/pmi/../LFMXO4/ram_dp/rtl/lscc_lfmxo4_ram_dp.v. VERI-1328
-INFO <35901328> - D:/lscc/radiant/2026.1/ip/pmi/../LFMXO4/ram_dp/rtl/lscc_lfmxo4_ram_dp.v(438): analyzing included file D:/lscc/radiant/2026.1/ip/pmi/../LFMXO4/ram_dp/rtl/lscc_lfmxo4_ram_dp_impl.v. VERI-1328
-INFO <35901328> - D:/lscc/radiant/2026.1/ip/pmi/pmi_lifcl.v(17): analyzing included file D:/lscc/radiant/2026.1/ip/pmi/pmi_ram_dp_true.v. VERI-1328
-INFO <35901328> - D:/lscc/radiant/2026.1/ip/pmi/pmi_ram_dp_true.v(49): analyzing included file D:/lscc/radiant/2026.1/ip/pmi/../common/ram_dp_true/rtl/lscc_ram_dp_true.v. VERI-1328
-INFO <35901328> - D:/lscc/radiant/2026.1/ip/pmi/pmi_ram_dp_true.v(50): analyzing included file D:/lscc/radiant/2026.1/ip/pmi/../LFMXO4/ram_dp_true/rtl/lscc_lfmxo4_ram_dp_true.v. VERI-1328
-INFO <35901328> - D:/lscc/radiant/2026.1/ip/pmi/../LFMXO4/ram_dp_true/rtl/lscc_lfmxo4_ram_dp_true.v(517): analyzing included file D:/lscc/radiant/2026.1/ip/pmi/../LFMXO4/ram_dp_true/rtl/lscc_lfmxo4_ram_dp_true_impl.v. VERI-1328
-INFO <35901328> - D:/lscc/radiant/2026.1/ip/pmi/../LFMXO4/ram_dp_true/rtl/lscc_lfmxo4_ram_dp_true_impl.v(58): analyzing included file D:/lscc/radiant/2026.1/ip/pmi/../LFMXO4/ram_dp_true/rtl/lscc_lfmxo4_ram_dp_true_behavioral.v. VERI-1328
-INFO <35901328> - D:/lscc/radiant/2026.1/ip/pmi/../LFMXO4/ram_dp_true/rtl/lscc_lfmxo4_ram_dp_true_impl.v(61): analyzing included file D:/lscc/radiant/2026.1/ip/pmi/../LFMXO4/ram_dp_true/rtl/lscc_lfmxo4_ram_dp_true_lut_decode.v. VERI-1328
-INFO <35901328> - D:/lscc/radiant/2026.1/ip/pmi/../LFMXO4/ram_dp_true/rtl/lscc_lfmxo4_ram_dp_true_impl.v(257): analyzing included file D:/lscc/radiant/2026.1/ip/pmi/../LFMXO4/ram_dp_true/rtl/lscc_lfmxo4_ram_dp_true_functions.vh. VERI-1328
-INFO <35901328> - D:/lscc/radiant/2026.1/ip/pmi/../LFMXO4/ram_dp_true/rtl/lscc_lfmxo4_ram_dp_true_impl.v(620): analyzing included file D:/lscc/radiant/2026.1/ip/pmi/../LFMXO4/ram_dp_true/rtl/lscc_lfmxo4_ram_dp_true_functions.vh. VERI-1328
-INFO <35901328> - D:/lscc/radiant/2026.1/ip/pmi/../LFMXO4/ram_dp_true/rtl/lscc_lfmxo4_ram_dp_true_impl.v(748): analyzing included file D:/lscc/radiant/2026.1/ip/pmi/../LFMXO4/ram_dp_true/rtl/lscc_lfmxo4_ram_dp_true_functions.vh. VERI-1328
-INFO <35901328> - D:/lscc/radiant/2026.1/ip/pmi/../LFMXO4/ram_dp_true/rtl/lscc_lfmxo4_ram_dp_true_impl.v(1336): analyzing included file D:/lscc/radiant/2026.1/ip/pmi/../LFMXO4/ram_dp_true/rtl/lscc_lfmxo4_ram_dp_true_functions.vh. VERI-1328
-INFO <35901328> - D:/lscc/radiant/2026.1/ip/pmi/../LFMXO4/ram_dp_true/rtl/lscc_lfmxo4_ram_dp_true_impl.v(2535): analyzing included file D:/lscc/radiant/2026.1/ip/pmi/../LFMXO4/ram_dp_true/rtl/lscc_lfmxo4_ram_dp_true_functions.vh. VERI-1328
-INFO <35901328> - D:/lscc/radiant/2026.1/ip/pmi/../LFMXO4/ram_dp_true/rtl/lscc_lfmxo4_ram_dp_true.v(518): analyzing included file D:/lscc/radiant/2026.1/ip/pmi/../LFMXO4/ram_dp_true/rtl/lscc_lfmxo4_ram_dp_true_ecc_decoder.v. VERI-1328
-INFO <35901328> - D:/lscc/radiant/2026.1/ip/pmi/pmi_lifcl.v(18): analyzing included file D:/lscc/radiant/2026.1/ip/pmi/pmi_ram_dq.v. VERI-1328
-INFO <35901328> - D:/lscc/radiant/2026.1/ip/pmi/pmi_ram_dq.v(45): analyzing included file D:/lscc/radiant/2026.1/ip/pmi/../common/ram_dq/rtl/lscc_ram_dq.v. VERI-1328
-INFO <35901328> - D:/lscc/radiant/2026.1/ip/pmi/pmi_ram_dq.v(46): analyzing included file D:/lscc/radiant/2026.1/ip/pmi/../LFMXO4/ram_dq/rtl/lscc_lfmxo4_ram_dq.v. VERI-1328
-INFO <35901328> - D:/lscc/radiant/2026.1/ip/pmi/../LFMXO4/ram_dq/rtl/lscc_lfmxo4_ram_dq.v(2839): analyzing included file D:/lscc/radiant/2026.1/ip/pmi/../LFMXO4/ram_dq/rtl/hsiao_ecc_encoder.v. VERI-1328
-INFO <35901328> - D:/lscc/radiant/2026.1/ip/pmi/../LFMXO4/ram_dq/rtl/lscc_lfmxo4_ram_dq.v(2840): analyzing included file D:/lscc/radiant/2026.1/ip/pmi/../LFMXO4/ram_dq/rtl/hsiao_ecc_decoder.v. VERI-1328
-INFO <35901328> - D:/lscc/radiant/2026.1/ip/pmi/../LFMXO4/ram_dq/rtl/lscc_lfmxo4_ram_dq.v(2841): analyzing included file D:/lscc/radiant/2026.1/ip/pmi/../LFMXO4/ram_dq/rtl/lscc_lfmxo4_ram_dq_lut_decode.v. VERI-1328
-INFO <35901328> - D:/lscc/radiant/2026.1/ip/pmi/pmi_lifcl.v(19): analyzing included file D:/lscc/radiant/2026.1/ip/pmi/pmi_ram_dq_be.v. VERI-1328
-INFO <35901328> - D:/lscc/radiant/2026.1/ip/pmi/pmi_ram_dq_be.v(45): analyzing included file D:/lscc/radiant/2026.1/ip/pmi/../common/ram_dq/rtl/lscc_ram_dq.v. VERI-1328
-INFO <35901328> - D:/lscc/radiant/2026.1/ip/pmi/pmi_ram_dq_be.v(46): analyzing included file D:/lscc/radiant/2026.1/ip/pmi/../LFMXO4/ram_dq/rtl/lscc_lfmxo4_ram_dq.v. VERI-1328
-INFO <35901328> - D:/lscc/radiant/2026.1/ip/pmi/../LFMXO4/ram_dq/rtl/lscc_lfmxo4_ram_dq.v(2839): analyzing included file D:/lscc/radiant/2026.1/ip/pmi/../LFMXO4/ram_dq/rtl/hsiao_ecc_encoder.v. VERI-1328
-INFO <35901328> - D:/lscc/radiant/2026.1/ip/pmi/../LFMXO4/ram_dq/rtl/lscc_lfmxo4_ram_dq.v(2840): analyzing included file D:/lscc/radiant/2026.1/ip/pmi/../LFMXO4/ram_dq/rtl/hsiao_ecc_decoder.v. VERI-1328
-INFO <35901328> - D:/lscc/radiant/2026.1/ip/pmi/../LFMXO4/ram_dq/rtl/lscc_lfmxo4_ram_dq.v(2841): analyzing included file D:/lscc/radiant/2026.1/ip/pmi/../LFMXO4/ram_dq/rtl/lscc_lfmxo4_ram_dq_lut_decode.v. VERI-1328
-INFO <35901328> - D:/lscc/radiant/2026.1/ip/pmi/pmi_lifcl.v(20): analyzing included file D:/lscc/radiant/2026.1/ip/pmi/pmi_rom.v. VERI-1328
-INFO <35901328> - D:/lscc/radiant/2026.1/ip/pmi/pmi_rom.v(45): analyzing included file D:/lscc/radiant/2026.1/ip/pmi/../common/rom/rtl/lscc_rom.v. VERI-1328
-INFO <35901328> - D:/lscc/radiant/2026.1/ip/pmi/pmi_lifcl.v(21): analyzing included file D:/lscc/radiant/2026.1/ip/pmi/pmi_sub.v. VERI-1328
-INFO <35901328> - D:/lscc/radiant/2026.1/ip/pmi/pmi_sub.v(50): analyzing included file D:/lscc/radiant/2026.1/ip/pmi/../common/subtractor/rtl/lscc_subtractor.v. VERI-1328
-Analyzing Verilog file D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice/source/impl_1/binary_mac_unit.v. VERI-1482
-Analyzing Verilog file D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice/source/impl_1/binary_mac_array.v. VERI-1482
-Analyzing VHDL file D:/lscc/radiant/2026.1/ip/pmi/pmi_lifcl.vhd. VHDL-1481
-Analyzing VHDL file D:/lscc/radiant/2026.1/ip/pmi/pmi_lifcl.vhd
-
-INFO <35921014> - D:/lscc/radiant/2026.1/ip/pmi/pmi_lifcl.vhd(4): analyzing package components. VHDL-1014
-Top module name (Verilog): binary_mac_arry
-INFO <35901018> - D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice/source/impl_1/binary_mac_array.v(1): compiling module binary_mac_arry. VERI-1018
-INFO <35901018> - D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice/source/impl_1/binary_mac_unit.v(1): compiling module binary_mac_unit. VERI-1018
-Source compile complete.
-Writing output files.
-CPE Completed. Neuromorphic_Lattice_impl_1_cpe.ldc and CPEReport.txt produced.
-CPE: Constraint Propagation Engine: completed
-
-
-
-synthesis -f D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice/impl_1/Neuromorphic_Lattice_impl_1_lattice.synproj -logfile Neuromorphic_Lattice_impl_1_lattice.srp
-synthesis:  version Radiant Software (64-bit) 2026.1.0.37.0
+pnmainc -log pnmain "Neuromorphic_Lattice_impl_1_map.tcl"
+map:  version Radiant Software (64-bit) 2026.1.0.37.0
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2026 Lattice Semiconductor Corporation,  All rights reserved.
-Tue Aug 18 22:13:20 2026
 
+Command line:   map -i Neuromorphic_Lattice_impl_1_syn.udb -o Neuromorphic_Lattice_impl_1_map.udb -mp Neuromorphic_Lattice_impl_1.mrp -hierrpt -gui -msgset D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice/promote.xml 
 
-Command Line:  D:\lscc\radiant\2026.1\ispfpga\bin\nt64\synthesis.exe -f D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice/impl_1/Neuromorphic_Lattice_impl_1_lattice.synproj -logfile Neuromorphic_Lattice_impl_1_lattice.srp -gui -msgset D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice/promote.xml 
-
-Lattice Synthesis Engine launched.
-
-Synthesis options:
-The -a option is LIFCL.
-The -t option is CABGA400.
-The -sp option is 9_High-Performance_1.0V.
-The -p option is LIFCL-40.
-
-###################### Device Information ######################
-----------------------------------------------------------------
-Lattice Family        | LIFCL
-----------------------------------------------------------------
-Device                | LIFCL-40
-----------------------------------------------------------------
-Package               | CABGA400
-----------------------------------------------------------------
-Performance Grade     | 9_High-Performance_1.0V
-----------------------------------------------------------------
-################################################################
-
-####################### Device Resources #######################
-----------------------------------------------------------------
-Logic Cells           | 32256
-----------------------------------------------------------------
-RAM Blocks            | 84
-----------------------------------------------------------------
-DSP Blocks            | 462
-----------------------------------------------------------------
-PLLs                  | 3
-----------------------------------------------------------------
-I/O Pins              | 185
-----------------------------------------------------------------
-################################################################
-
-Resolving user-selected strategy settings...
-
-
-###################### Strategy Settings #######################
-----------------------------------------------------------------
-Optimization Goal     | Timing
-----------------------------------------------------------------
-Top-level Module Name | binary_mac_arry
-----------------------------------------------------------------
-Target Frequency      | 200.000 MHz
-----------------------------------------------------------------
-Maximum Fanout        | 1000
-----------------------------------------------------------------
-Timing Path Count     | 3
-----------------------------------------------------------------
-RAM Read/Write Check  | False
-----------------------------------------------------------------
-BRAM Utilization      | 100.0%
-----------------------------------------------------------------
-DSP Usage             | True
-----------------------------------------------------------------
-DSP Utilization       | 100.0%
-----------------------------------------------------------------
-FSM Encoding Style    | Auto
-----------------------------------------------------------------
-Resolve Mixed Drivers | False
-----------------------------------------------------------------
-Fix Gated Clocks      | True
-----------------------------------------------------------------
-Mux Style             | Auto
-----------------------------------------------------------------
-Use Carry Chain       | True
-----------------------------------------------------------------
-Carry Chain Length    | Infinite
-----------------------------------------------------------------
-Loop Limit            | 1950
-----------------------------------------------------------------
-Use I/O Insertion     | True
-----------------------------------------------------------------
-Use I/O Registers     | False
-----------------------------------------------------------------
-Resource Sharing      | True
-----------------------------------------------------------------
-Propagate Constants   | True
-----------------------------------------------------------------
-Remove Duplicate Reg  | True
-----------------------------------------------------------------
-Force GSR             | False
-----------------------------------------------------------------
-ROM Style             | Auto
-----------------------------------------------------------------
-RAM Style             | Auto
-----------------------------------------------------------------
-Remove LOC Properties | False
-----------------------------------------------------------------
-Partition Flow        | False
-----------------------------------------------------------------
-Use DCC Insertion     | None
-----------------------------------------------------------------
-################################################################
-
-
-The -comp option is FALSE.
-The -syn option is FALSE.
-Hardtimer checking is enabled (default). The -dt option is not used.
-
-Output HDL filename: Neuromorphic_Lattice_impl_1.vm
--sdc option: SDC file input is Neuromorphic_Lattice_impl_1_cpe.ldc.
--path . (searchpath added)
--path .. (searchpath added)
--path ../source/impl_1 (searchpath added)
--path D:/lscc/radiant/2026.1/ispfpga/je5d00/data (searchpath added)
-Mixed language design
-Verilog design file: D:/lscc/radiant/2026.1/ip/pmi/pmi_lifcl.v
-Verilog design file: ../source/impl_1/binary_mac_unit.v
-Verilog design file: ../source/impl_1/binary_mac_array.v
-VHDL library: pmi
-VHDL design file: D:/lscc/radiant/2026.1/ip/pmi/pmi_lifcl.vhd
-
-Compiling design...
-
-Analyzing Verilog file D:/lscc/radiant/2026.1/ispfpga\..\cae_library\synthesis\verilog\generic.v. VERI-1482
-Analyzing Verilog file D:/lscc/radiant/2026.1/ispfpga\..\cae_library\synthesis\verilog\lifcl.v. VERI-1482
-Analyzing Verilog file D:/lscc/radiant/2026.1/ispfpga\..\cae_library\synthesis\verilog\lifcl.v. VERI-1482
-Analyzing Verilog file D:/lscc/radiant/2026.1/ispfpga\..\cae_library\simulation\verilog\lifcl\lifcl_sp.v. VERI-1482
-Analyzing Verilog file D:/lscc/radiant/2026.1/ispfpga\..\cae_library\simulation\verilog\uaplatform\uaplatform_sp.v. VERI-1482
-Analyzing Verilog file D:/lscc/radiant/2026.1/ip/pmi/pmi_lifcl.v. VERI-1482
-Analyzing Verilog file ../source/impl_1/binary_mac_unit.v. VERI-1482
-Analyzing Verilog file ../source/impl_1/binary_mac_array.v. VERI-1482
-Top module name (Verilog): binary_mac_arry
-INFO <35901018> - ../source/impl_1/binary_mac_array.v(1): compiling module binary_mac_arry. VERI-1018
-INFO <35901018> - ../source/impl_1/binary_mac_unit.v(1): compiling module binary_mac_unit. VERI-1018
-WARNING <35931000> - ../source/impl_1/binary_mac_array.v(41): net 'unflatten_outputs[2][7]' is constantly driven from multiple places. VDB-1000
-WARNING <35931001> - ../source/impl_1/binary_mac_array.v(41): another driver from here. VDB-1001
-[Parameter Setting Section Start]
-
-	[Parameter Settings for top-level module]
-	(Module: binary_mac_arry)
-		IN_SIZE                   2
-		OUT_SIZE                  3
-		unflatten_weights[0].i    0
-		unflatten_weights[1].i    1
-		unflatten_weights[2].i    2
-		unflatten_weights[3].i    3
-		unflatten_weights[4].i    4
-		unflatten_weights[5].i    5
-		genblk2[0].k              0
-		genblk2[1].k              1
-		genblk2[2].k              2
-		genblk3[0].j              0
-		genblk3[0].genblk1[0].z   0
-		genblk3[0].genblk1[1].z   1
-		genblk3[1].j              1
-		genblk3[1].genblk1[0].z   0
-		genblk3[1].genblk1[1].z   1
-		genblk3[2].j              2
-		genblk3[2].genblk1[0].z   0
-		genblk3[2].genblk1[1].z   1
-
-[Parameter Setting Section End]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: clk
-CRITICAL <35002028> - I/O port's net has no driver and is unused: reset
-CRITICAL <35002028> - I/O port's net has no driver and is unused: weights_in[47]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: weights_in[46]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: weights_in[45]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: weights_in[44]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: weights_in[43]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: weights_in[42]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: weights_in[41]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: weights_in[40]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: weights_in[39]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: weights_in[38]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: weights_in[37]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: weights_in[36]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: weights_in[35]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: weights_in[34]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: weights_in[33]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: weights_in[32]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: weights_in[31]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: weights_in[30]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: weights_in[29]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: weights_in[28]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: weights_in[27]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: weights_in[26]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: weights_in[25]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: weights_in[24]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: weights_in[23]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: weights_in[22]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: weights_in[21]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: weights_in[20]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: weights_in[19]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: weights_in[18]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: weights_in[17]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: weights_in[16]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: weights_in[15]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: weights_in[14]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: weights_in[13]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: weights_in[12]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: weights_in[11]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: weights_in[10]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: weights_in[9]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: weights_in[8]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: weights_in[7]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: weights_in[6]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: weights_in[5]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: weights_in[4]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: weights_in[3]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: weights_in[2]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: weights_in[1]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: weights_in[0]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: input_signals[1]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: input_signals[0]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: added_outputs[23]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: added_outputs[22]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: added_outputs[21]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: added_outputs[20]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: added_outputs[19]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: added_outputs[18]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: added_outputs[17]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: added_outputs[16]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: added_outputs[15]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: added_outputs[14]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: added_outputs[13]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: added_outputs[12]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: added_outputs[11]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: added_outputs[10]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: added_outputs[9]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: added_outputs[8]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: added_outputs[7]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: added_outputs[6]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: added_outputs[5]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: added_outputs[4]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: added_outputs[3]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: added_outputs[2]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: added_outputs[1]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: added_outputs[0]
-######## Missing driver on net added_outputs[23]. Patching with GND.
-######## Missing driver on net added_outputs[22]. Patching with GND.
-######## Missing driver on net added_outputs[21]. Patching with GND.
-######## Missing driver on net added_outputs[20]. Patching with GND.
-######## Missing driver on net added_outputs[19]. Patching with GND.
-######## Missing driver on net added_outputs[18]. Patching with GND.
-######## Missing driver on net added_outputs[17]. Patching with GND.
-######## Missing driver on net added_outputs[16]. Patching with GND.
-######## Missing driver on net added_outputs[15]. Patching with GND.
-######## Missing driver on net added_outputs[14]. Patching with GND.
-######## Missing driver on net added_outputs[13]. Patching with GND.
-######## Missing driver on net added_outputs[12]. Patching with GND.
-######## Missing driver on net added_outputs[11]. Patching with GND.
-######## Missing driver on net added_outputs[10]. Patching with GND.
-######## Missing driver on net added_outputs[9]. Patching with GND.
-######## Missing driver on net added_outputs[8]. Patching with GND.
-######## Missing driver on net added_outputs[7]. Patching with GND.
-######## Missing driver on net added_outputs[6]. Patching with GND.
-######## Missing driver on net added_outputs[5]. Patching with GND.
-######## Missing driver on net added_outputs[4]. Patching with GND.
-######## Missing driver on net added_outputs[3]. Patching with GND.
-######## Missing driver on net added_outputs[2]. Patching with GND.
-######## Missing driver on net added_outputs[1]. Patching with GND.
-######## Missing driver on net added_outputs[0]. Patching with GND.
+Loading device for application GENERIC from file 'je5d30.nph' in environment: D:/lscc/radiant/2026.1/ispfpga.
+Package Status:                     Final          Version 1.
 
 
 
-CRITICAL <35002028> - I/O port's net has no driver and is unused: clk
-CRITICAL <35002028> - I/O port's net has no driver and is unused: reset
-CRITICAL <35002028> - I/O port's net has no driver and is unused: weights_in[47]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: weights_in[46]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: weights_in[45]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: weights_in[44]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: weights_in[43]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: weights_in[42]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: weights_in[41]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: weights_in[40]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: weights_in[39]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: weights_in[38]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: weights_in[37]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: weights_in[36]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: weights_in[35]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: weights_in[34]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: weights_in[33]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: weights_in[32]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: weights_in[31]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: weights_in[30]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: weights_in[29]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: weights_in[28]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: weights_in[27]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: weights_in[26]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: weights_in[25]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: weights_in[24]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: weights_in[23]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: weights_in[22]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: weights_in[21]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: weights_in[20]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: weights_in[19]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: weights_in[18]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: weights_in[17]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: weights_in[16]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: weights_in[15]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: weights_in[14]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: weights_in[13]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: weights_in[12]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: weights_in[11]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: weights_in[10]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: weights_in[9]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: weights_in[8]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: weights_in[7]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: weights_in[6]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: weights_in[5]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: weights_in[4]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: weights_in[3]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: weights_in[2]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: weights_in[1]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: weights_in[0]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: input_signals[1]
-CRITICAL <35002028> - I/O port's net has no driver and is unused: input_signals[0]
-Initializing timer
-Starting design annotation....
+Design:  network_tb
+Family:  LIFCL
+Device:  LIFCL-40
+Package: CABGA400
+Performance Grade:  9_High-Performance_1.0V
 
-Starting full timing analysis...
-Worst slack in design 2147483647
-Initializing timer
-Starting design annotation....
-
-Starting full timing analysis...
-Worst slack in design 2147483647
-Initializing timer
-Starting design annotation....
-
-Starting full timing analysis...
-Worst slack in design 2147483647
-Initializing timer
-Starting design annotation....
-
-Starting full timing analysis...
-Worst slack in design 2147483647
-
-################### Begin Area Report (binary_mac_arry)######################
-Number of register bits => 0 of 32256 (0 % )
-GSR => 1
-OB => 24
-################### End Area Report ##################
-Number of odd-length carry chains : 0
-Number of even-length carry chains : 0
-
-################### Begin Clock Report ######################
-Clock Nets
-Number of Clocks: 0
-Clock Enable Nets
-Number of Clock Enables: 0
-Highest fanout non-clock nets
-Top 10 highest fanout non-clock nets:
-  Net : VCC_net, loads : 1
-  Net : added_outputs[23], loads : 0
-  Net : added_outputs[22], loads : 0
-  Net : added_outputs[21], loads : 0
-  Net : added_outputs[20], loads : 0
-  Net : added_outputs[19], loads : 0
-  Net : added_outputs[18], loads : 0
-  Net : added_outputs[17], loads : 0
-  Net : added_outputs[16], loads : 0
-  Net : added_outputs[15], loads : 0
-################### End Clock Report ##################
-
-################### Begin Constraint Report ######################
-Constraint Summary:
-  Total number of constraints: 0
-  Total number of constraints dropped: 0
-###################  End Constraint Report  ######################
-
-Peak Memory Usage: 200 MB
-
---------------------------------------------------------------
-Total CPU Time: 2 secs 
-Total REAL Time: 3 secs 
---------------------------------------------------------------
-Checksum -- synthesis -- netlist: 8b11f586f45fe4c35265dc50c972ca6e818644e9
+Running general design DRC...
 
 
 
-postsyn -a LIFCL -p LIFCL-40 -t CABGA400 -sp 9_High-Performance_1.0V -oc Commercial -top -w -o Neuromorphic_Lattice_impl_1_syn.udb Neuromorphic_Lattice_impl_1.vm -ldc Neuromorphic_Lattice_impl_1.ldc
-POSTSYN: Post Synthesis Process Radiant Software (64-bit) 2026.1.0.37.0
-Command Line: postsyn -a LIFCL -p LIFCL-40 -t CABGA400 -sp 9_High-Performance_1.0V -oc Commercial -top -w -o Neuromorphic_Lattice_impl_1_syn.udb -ldc Neuromorphic_Lattice_impl_1.ldc -gui -msgset D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice/promote.xml Neuromorphic_Lattice_impl_1.vm 
-   Architecture:     LIFCL
-   Device:           LIFCL-40
-   Package:          CABGA400
-   Performance:      9_High-Performance_1.0V
-Reading input file 'Neuromorphic_Lattice_impl_1.vm' ...
-CPU Time to convert: 0.53125
-REAL Time to convert: 0
-convert PEAK Memory Usage: 116 MB
-convert CURRENT Memory Usage: 112 MB
-Reading constraint file 'Neuromorphic_Lattice_impl_1.ldc' ...
-Removing unused logic ...
-INFO <35811146> - Signal GSR_INST.GSROUT undriven or does not drive anything - clipped
-Starting design annotation....
+
+Design Summary:
+   Number of registers:         225 out of 32811 (1%)
+      Number of SLICE         registers:  225 out of 32256 (1%)
+      Number of PIO Input     registers:    0 out of   185 (0%)
+      Number of PIO Output    registers:    0 out of   185 (0%)
+      Number of PIO Tri-State registers:    0 out of   185 (0%)
+   Number of LUT4s:             351 out of 32256 (1%)
+      Number used as logic LUT4s:                        105
+      Number used as distributed RAM:                     12 (6 per 16X4 RAM)
+      Number used as ripple logic:                       234 (2 per CCU2)
+   Number of PIOs used/reserved:   13 out of   185 (7%)
+      Number of PIOs reserved:      7 (per sysConfig and/or prohibit constraint)
+      Number of PIOs used:          6
+        Number of PIOs used for single ended IO:         6
+        Number of PIO pairs used for differential IO:    0
+
+        Number allocated to regular speed PIOs:     6 out of  111 (5%)
+        Number allocated to high speed PIOs:        0 out of   74 (0%)
+   Number of Dedicated IO used for ADC/PCIE/DPHY:    0 out of   32 (0%)
+   Number of IDDR/ODDR/TDDR functions used:      0 out of   444 (0%)
+   Number of IOs using at least one DDR function: 0 (0 differential)
+   Number of Block RAMs:          0 out of 84 (0%)
+   Number of Large RAMs:          0 out of 2 (0%)
+   Number of Logical DSP Functions:
+      Number of Pre-Adders (9+9):    0 out of 112 (0%)
+      Number of Multipliers (18x18): 0 out of 56 (0%)
+         Number of 9X9:        0 (1 18x18 = 2   9x9)
+         Number of 18x18:      0 (1 18x18 = 1 18x18)
+         Number of 18x36:      0 (2 18x18 = 1 18x36)
+         Number of 36x36:      0 (4 18x18 = 1 36x36)
+      Number of 54-bit Accumulators: 0 out of 28 (0%)
+      Number of 18-bit Registers:    0 out of 112 (0%)
+   Number of Physical DSP Components:
+      Number of PREADD9:             0 out of 112 (0%)
+      Number of MULT9:               0 out of 112 (0%)
+      Number of MULT18:              0 out of 56 (0%)
+      Number of MULT18X36:           0 out of 28 (0%)
+      Number of MULT36:              0 out of 14 (0%)
+      Number of ACC54:               0 out of 28 (0%)
+      Number of REG18:               0 out of 112 (0%)
+   Number of ALUREGs:             0 out of 1 (0%)
+   Number of PLLs:                0 out of 3 (0%)
+   Number of DDRDLLs:             0 out of 2 (0%)
+   Number of DLLDELs:             0 out of 10 (0%)
+   Number of DQSs:                0 out of 4 (0%)
+   Number of DCSs:                0 out of 1 (0%)
+   Number of DCCs:                0 out of 62 (0%)
+   Number of PCLKDIVs:            0 out of 1 (0%)
+   Number of ECLKDIVs:            0 out of 12 (0%)
+   Number of ECLKSYNCs:           0 out of 12 (0%)
+   Number of ADC Blocks:          0 out of 1 (0%)
+   Number of SGMIICDRs:           0 out of 2 (0%)
+   Number of PMUs:                0 out of 1 (0%)
+   Number of BNKREF18s:           0 out of 3 (0%)
+   Number of BNKREF33s:           0 out of 5 (0%)
+   Number of I2CFIFOs:            0 out of 1 (0%)
+   Number of DPHYs:               0 out of 2 (0%)
+   Number of Oscillator:          0 out of 1 (0%)
+   Number of GSR:                 0 out of 1 (0%)
+   Number of Cryptographic Block: 0 out of 1 (0%)
+   Number of Config IP:           0 out of 1 (0%)
+                 TSALL:           0 out of 1 (0%)
+   Number of JTAG:                0 out of 1 (0%)
+   Number of Config LMMI:         0 out of 1 (0%)
+   Number of Config MULTIBOOT:    0 out of 1 (0%)
+   Number of SED:                 0 out of 1 (0%)
+   Number of Config WDT:          0 out of 1 (0%)
+   Number of PCIEs:               0 out of 1 (0%)
+   Number of Clocks:  1
+      Net clk_c: 227 loads, 227 rising, 0 falling (Driver: Port clk)
+   Number of Clock Enables:  7
+      Net wmu.read_mode: 15 loads, 15 SLICEs
+      Net wmu.clk_c_enable_51: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_43: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_35: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_19: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_27: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_52: 8 loads, 8 SLICEs
+   Number of LSRs:  8
+      Net reset: 54 loads, 54 SLICEs
+      Net sa.genblk1[2].sn.n543: 1 loads, 1 SLICEs
+      Net sa.genblk1[2].sn.n225: 32 loads, 32 SLICEs
+      Net sa.genblk1[1].sn.n545: 1 loads, 1 SLICEs
+      Net sa.genblk1[1].sn.n223: 32 loads, 32 SLICEs
+      Net sa.genblk1[0].sn.n227: 32 loads, 32 SLICEs
+      Net sa.genblk1[0].sn.n541: 1 loads, 1 SLICEs
+      Net n1057: 53 loads, 53 SLICEs
+   Top 10 highest fanout non-clock nets:
+      Net reset: 60 loads
+      Net n1057: 53 loads
+      Net sa.genblk1[0].sn.n227: 32 loads
+      Net sa.genblk1[1].sn.n223: 32 loads
+      Net sa.genblk1[2].sn.n225: 32 loads
+      Net wma_outputs[15]: 26 loads
+      Net wma_outputs[23]: 26 loads
+      Net wma_outputs[7]: 26 loads
+      Net network_inputs_c[0]: 24 loads
+      Net network_inputs_c[1]: 24 loads
+Running physical design DRC...
+
  
+
+
+   Number of warnings:  0
+   Number of criticals: 0
+   Number of errors:    0
+
 Constraint Summary:
    Total number of constraints: 1
    Total number of constraints dropped: 0
+
+
+Total CPU Time: 2 secs  
+Total REAL Time: 3 secs  
+Peak Memory Usage: 341 MB
+
+Checksum -- map: 499150ad37a1cfaf54aa1fd822b0d3939b91763
+**** CMD map_run - CPU/Elapsed: 0 secs / 3 secs , MEM/Increased: 60.084 Mb/ 0.152 Mb, DATE: 21:54:04 08/20/26
+Thank you for using Radiant. Total CPU/Elapsed time: 0 secs /3 secs 
+
+pnmainc -log pnmain "Neuromorphic_Lattice_impl_1_par.tcl"
+
+PAR: Place And Route Radiant Software (64-bit) 2026.1.0.37.0.
+PARed on: Thu Aug 20 21:54:05 2026
+
+Command Line: par -w -t 1 -cores 1 -hsp m -exp parPathBased=OFF \
+	Neuromorphic_Lattice_impl_1_map.udb \
+	Neuromorphic_Lattice_impl_1_par.dir/5_1.udb 
+
+Loading Neuromorphic_Lattice_impl_1_map.udb ...
+Loading device for application GENERIC from file 'je5d30.nph' in environment: D:/lscc/radiant/2026.1/ispfpga.
+Package Status:                     Final          Version 1.
+Successfully read the udb in 0.00 s.
+
+Performance Hardware Data Status:   Final          Version 131.5.
+
+
+
+Design:  network_tb
+Family:  LIFCL
+Device:  LIFCL-40
+Package: CABGA400
+Performance Grade:   9_High-Performance_1.0V
+
+Constraint Summary
+   Total number of constraints: 1
+   Total number of constraints dropped: 0
+
+Successfully loaded device info and constraints in 2.00 s.
+
+Beginning Place Design 
+Phase 1 Placer Initialization 
+Phase 1 Placer Initialization Complete: Time (s) - CPU Time : 0.00, Real Time : 0.03  |   Memory (MB) - Peak Memory : 374.48, Gain Memory : 1.30  
+
+Time: cpu = 00:00:00 ; elapsed : 00:00:00 . Memory (MB): peak = 374.48 ; gain = 1.30 
+
+Phase 2 Logic Packing 
+
+Device SLICE utilization summary after final SLICE packing:
+   SLICE            292/16128         1% used
+
+Number of Signals: 685
+Number of Connections: 1792
+Device utilization summary:
+
+   SEIO33                6/185           3% used
+                         6/111           5% bonded
+   SLICE               292/16128         2% used
+     LUT               351/32256         1% used
+     REG               225/32256         1% used
+
+
+Phase 2 Logic Packing Complete: Time (s) - CPU Time : 0.28, Real Time : 0.28  |   Memory (MB) - Peak Memory : 386.55, Gain Memory : 12.04  
+
+Time: cpu = 00:00:00 ; elapsed : 00:00:00 . Memory (MB): peak = 386.55 ; gain = 12.04 
+
+Phase 3 Hierarchical Placement 
+Pin Constraint Summary:
+   0 out of 6 pins locked (0% locked).
+.
+Phase 3.1 Clustering & Global Placement 
+...........Phase 3.1 Clustering & Global Placement Complete: Time (s) - CPU Time : 0.02, Real Time : 0.02  |   Memory (MB) - Peak Memory : 401.10, Gain Memory : 0.03  
+
+Time: cpu = 00:00:00 ; elapsed : 00:00:00 . Memory (MB): peak = 401.10 ; gain = 0.03 
+
+Phase 3 Hierarchical Placement Complete: Time (s) - CPU Time : 0.17, Real Time : 0.18  |   Memory (MB) - Peak Memory : 401.12, Gain Memory : 14.57  
+
+Time: cpu = 00:00:00 ; elapsed : 00:00:00 . Memory (MB): peak = 401.12 ; gain = 14.57 
+
+Phase 4 Constructive Placement 
+Phase 4.1 Iterative Refinement 
+..  ..
+....................
+
+Placer score = 65798.
+Phase 4.1 Iterative Refinement Complete: Time (s) - CPU Time : 2.44, Real Time : 2.46  |   Memory (MB) - Peak Memory : 401.64, Gain Memory : 0.18  
+
+Time: cpu = 00:00:03 ; elapsed : 00:00:03 . Memory (MB): peak = 401.64 ; gain = 0.18 
+
+Phase 4 Constructive Placement Complete: Time (s) - CPU Time : 2.47, Real Time : 2.48  |   Memory (MB) - Peak Memory : 401.64, Gain Memory : 0.53  
+
+Time: cpu = 00:00:03 ; elapsed : 00:00:03 . Memory (MB): peak = 401.64 ; gain = 0.53 
+
+Phase 5 Placement Optimization 
+Phase 5.1 Local Optimization 
+.
+
+Placer score =  65781
+Phase 5.1 Local Optimization Complete: Time (s) - CPU Time : 0.02, Real Time : 0.02  |   Memory (MB) - Peak Memory : 401.66, Gain Memory : 0.01  
+
+Time: cpu = 00:00:03 ; elapsed : 00:00:03 . Memory (MB): peak = 401.66 ; gain = 0.01 
+
+Phase 5 Placement Optimization Complete: Time (s) - CPU Time : 0.02, Real Time : 0.02  |   Memory (MB) - Peak Memory : 401.66, Gain Memory : 0.01  
+
+Time: cpu = 00:00:03 ; elapsed : 00:00:03 . Memory (MB): peak = 401.66 ; gain = 0.01 
+
+Phase 6 Post-Placement Processing 
+
+------------------ Clock Report ------------------
+
+Global Clock Resources:
+  CLK_PIN    : 1 out of 26 (3%)
+  PLL        : 0 out of 3 (0%)
+  DCS        : 0 out of 1 (0%)
+  DCC        : 0 out of 62 (0%)
+  ECLKDIV    : 0 out of 12 (0%)
+  PCLKDIV    : 0 out of 1 (0%)
+  OSC        : 0 out of 1 (0%)
+  DPHY       : 0 out of 2 (0%)
+  PCIE       : 0 out of 1 (0%)
+
+Global Clocks:
+  PRIMARY "clk_c" from comp "clk" on CLK_PIN site "E12 (PT76A)", clk load = 178, ce load = 0, sr load = 0
+
+  PRIMARY  : 1 out of 16 (6%)
+
+Edge Clocks:
+
+  No edge clock selected.
+
+
+--------------- End of Clock Report ---------------
+
+
+I/O Usage Summary (final):
+   6 out of 185 (3.2%) SEIO33 sites used.
+   6 out of 111 (5.4%) bonded SEIO33 sites used.
+   Number of SEIO33 components: 6; differential: 0
+   Number of Vref pins used: 0
+   0 out of 74 (0.0%) SEIO18 sites used.
+   0 out of 74 (0.0%) bonded SEIO18 sites used.
+   Number of SEIO18 components: 0; differential: 0
+   0 out of 37 (0.0%) DIFFIO18 sites used.
+   0 out of 37 (0.0%) bonded DIFFIO18 sites used.
+   Number of DIFFIO18 components: 0; differential: 0
+
+I/O Bank Usage Summary:
++----------+---------------+------------+------------+------------+
+| I/O Bank | Usage         | Bank Vccio | Bank Vref1 | Bank Vref2 |
++----------+---------------+------------+------------+------------+
+| 0        | 1 / 12 (  8%) | 3.3V       | -          | -          |
+| 1        | 0 / 21 (  0%) | -          | -          | -          |
+| 2        | 5 / 28 ( 17%) | 3.3V       | -          | -          |
+| 3        | 0 / 32 (  0%) | -          | -          | -          |
+| 4        | 0 / 32 (  0%) | -          | -          | -          |
+| 5        | 0 / 10 (  0%) | -          | -          | -          |
+| 6        | 0 / 28 (  0%) | -          | -          | -          |
+| 7        | 0 / 22 (  0%) | -          | -          | -          |
++----------+---------------+------------+------------+------------+
+
+Device utilization summary:
+
+   SEIO33                6/185           3% used
+                         6/111           5% bonded
+   SLICE               292/16128         2% used
+     LUT               351/32256         1% used
+     REG               225/32256         1% used
+
+
+Phase 6 Post-Placement Processing Complete: Time (s) - CPU Time : 0.02, Real Time : 0.02  |   Memory (MB) - Peak Memory : 402.71, Gain Memory : 1.05  
+
+Time: cpu = 00:00:03 ; elapsed : 00:00:03 . Memory (MB): peak = 402.71 ; gain = 1.05 
+
+Total Placer CPU time: 3 secs, REAL time = 3 secs
+
+
+Checksum -- place: 13265a669127837b799aee904fb7f741f2fccd24
+Ending Place Design : Time (s) - CPU Time : 3.02, Real Time : 3.05  |   Memory (MB) - Peak Memory : 402.80, Gain Memory : 29.63  
+
+Time: cpu = 00:00:03 ; elapsed : 00:00:03 . Memory (MB): peak = 402.80 ; gain = 29.63 
+
+
+ Phase Summary Table: 	
++--------------------------------------------------------+-------------+--------------+-----------------+----------------+
+| Phase Name                                             | CPU Time(s) | Wall Time(s) | Peak Memory(MB) | Memory Gain(MB)|
++--------------------------------------------------------+-------------+--------------+-----------------+----------------+
+| Phase 1 Placer Initialization                          | 0.00        |         0.03 |          374.48 |           1.30 |
+| Phase 2 Logic Packing                                  | 0.28        |         0.28 |          386.55 |          12.04 |
+| Phase 3 Hierarchical Placement                         | 0.17        |         0.18 |          401.12 |          14.57 |
+| Phase 3.1 Clustering & Global Placement                | 0.02        |         0.02 |          401.10 |           0.03 |
+| Phase 4 Constructive Placement                         | 2.47        |         2.48 |          401.64 |           0.53 |
+| Phase 4.1 Iterative Refinement                         | 2.44        |         2.46 |          401.64 |           0.18 |
+| Phase 5 Placement Optimization                         | 0.02        |         0.02 |          401.66 |           0.01 |
+| Phase 5.1 Local Optimization                           | 0.02        |         0.02 |          401.66 |           0.01 |
+| Phase 6 Post-Placement Processing                      | 0.02        |         0.02 |          402.71 |           1.05 |
++--------------------------------------------------------+-------------+--------------+-----------------+----------------+
+Writing design to file Neuromorphic_Lattice_impl_1_par.dir/5_1.udb ...
+
+Starting Route Task
+Beginning Route Design 
+Phase 1 Build Route Design 
+
+-----------------------------------------------------------------
+INFO - par: ASE feature is off due to non timing-driven settings.  
+-----------------------------------------------------------------
+
+
+Start NBR router at 21:54:11 08/20/26
+
+*****************************************************************
+Info: NBR allows conflicts(one node used by more than one signal)
+      in the earlier iterations. In each iteration, it tries to  
+      solve the conflicts while keeping the critical connections 
+      routed as short as possible. The routing process is said to
+      be completed when no conflicts exist and all connections   
+      are routed.                                                
+Note: NBR uses a different method to calculate timing slacks. The
+      worst slack and total negative slack may not be the same as
+      that in timing report. You should always run the timing    
+      tool to verify your design.                                
+*****************************************************************
+
+Phase 1 Build Route Design Complete: Time (s) - CPU Time : 0.25, Real Time : 0.28  |   Memory (MB) - Peak Memory : 524.05, Gain Memory : 121.15  
+
+Time: cpu = 00:00:00 ; elapsed : 00:00:00 . Memory (MB): peak = 524.05 ; gain = 121.15 
+
+Phase 2 Design Checks and Routing Setup 
+Phase 2 Design Checks and Routing Setup Complete: Time (s) - CPU Time : 0.00, Real Time : 0.00  |   Memory (MB) - Peak Memory : 524.15, Gain Memory : 0.00  
+
+Time: cpu = 00:00:00 ; elapsed : 00:00:00 . Memory (MB): peak = 524.15 ; gain = 0.00 
+
+Phase 3 Dedicated Net and Clock Routing 
+Phase 3.1 Routing User Constraints 
+Phase 3.1 Routing User Constraints Complete: Time (s) - CPU Time : 3.89, Real Time : 3.90  |   Memory (MB) - Peak Memory : 594.64, Gain Memory : 70.49  
+
+Time: cpu = 00:00:04 ; elapsed : 00:00:04 . Memory (MB): peak = 594.64 ; gain = 70.49 
+
+Phase 3.2 Dedicated Routing 
+Phase 3.2 Dedicated Routing Complete: Time (s) - CPU Time : 0.06, Real Time : 0.05  |   Memory (MB) - Peak Memory : 594.64, Gain Memory : 76.86  
+
+Time: cpu = 00:00:04 ; elapsed : 00:00:04 . Memory (MB): peak = 594.64 ; gain = 76.86 
+
+Phase 3.3 Clock Net Routing 
+Phase 3.3 Clock Net Routing Complete: Time (s) - CPU Time : 0.02, Real Time : 0.03  |   Memory (MB) - Peak Memory : 594.64, Gain Memory : 119.87  
+
+Time: cpu = 00:00:04 ; elapsed : 00:00:04 . Memory (MB): peak = 594.64 ; gain = 119.87 
+
+Phase 3.4 Dedicated Net and Clock Routing Finalization 
+Preassignment Summary:
+--------------------------------------------------------------------------------
+161 connections routed with dedicated routing resources
+1 global clock signals routed
+479 connections routed (of 1792 total) (26.73%)
+---------------------------------------------------------
+Clock routing summary:
+Primary clocks (2 used out of 32 available):
+    Signal "clk_c" (0, 16)
+       Clock   loads: 178   out of   178 routed (100.00%)
+---------------------------------------------------------
+--------------------------------------------------------------------------------
+Phase 3.4 Dedicated Net and Clock Routing Finalization Complete: Time (s) - CPU Time : 0.00, Real Time : 0.00  |   Memory (MB) - Peak Memory : 594.64, Gain Memory : 119.59  
+
+Time: cpu = 00:00:04 ; elapsed : 00:00:04 . Memory (MB): peak = 594.64 ; gain = 119.59 
+
+Phase 3 Dedicated Net and Clock Routing Complete: Time (s) - CPU Time : 4.00, Real Time : 4.01  |   Memory (MB) - Peak Memory : 594.64, Gain Memory : 70.49  
+
+Time: cpu = 00:00:04 ; elapsed : 00:00:04 . Memory (MB): peak = 594.64 ; gain = 70.49 
+
+Phase 4 Pre-Detailed Routing 
+Phase 4 Pre-Detailed Routing Complete: Time (s) - CPU Time : 0.00, Real Time : 0.00  |   Memory (MB) - Peak Memory : 594.64, Gain Memory : 119.58  
+
+Time: cpu = 00:00:04 ; elapsed : 00:00:04 . Memory (MB): peak = 594.64 ; gain = 119.58 
+
+Phase 5 Detailed Routing 
+Phase 5.1 Initial Detailed Routing 
+
+Start NBR section for initial routing at 21:54:15 08/20/26
+Level 4, iteration 1
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Routing in Serial Mode ......
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+89(0.01%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; real time: 5 secs 
+
+Info: Initial congestion level at 75.00% usage is 0
+Info: Initial congestion area  at 75.00% usage is 0 (0.00%)
+Phase 5.1 Initial Detailed Routing Complete: Time (s) - CPU Time : 0.50, Real Time : 0.52  |   Memory (MB) - Peak Memory : 594.64, Gain Memory : 119.58  
+
+Time: cpu = 00:00:05 ; elapsed : 00:00:05 . Memory (MB): peak = 594.64 ; gain = 119.58 
+
+Phase 5.2 Rip-Up and Route 
+
+Start NBR section for normal routing at 21:54:16 08/20/26
+Level 4, iteration 1
+54(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; real time: 5 secs 
+Level 4, iteration 2
+16(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; real time: 5 secs 
+Level 4, iteration 3
+3(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; real time: 5 secs 
+Level 4, iteration 4
+0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; real time: 5 secs 
+Phase 5.2 Rip-Up and Route Complete: Time (s) - CPU Time : 0.16, Real Time : 0.15  |   Memory (MB) - Peak Memory : 594.64, Gain Memory : 118.34  
+
+Time: cpu = 00:00:05 ; elapsed : 00:00:05 . Memory (MB): peak = 594.64 ; gain = 118.34 
+
+Phase 5.3 Rip-Up and Reroute for setup timing improvement 
+Phase 5.3 Rip-Up and Reroute for setup timing improvement Complete: Time (s) - CPU Time : 0.00, Real Time : 0.00  |   Memory (MB) - Peak Memory : 594.64, Gain Memory : 118.31  
+
+Time: cpu = 00:00:05 ; elapsed : 00:00:05 . Memory (MB): peak = 594.64 ; gain = 118.31 
+
+Phase 5.4 Rip-Up and Reroute for hold timing fix 
+Phase 5.4 Rip-Up and Reroute for hold timing fix Complete: Time (s) - CPU Time : 0.00, Real Time : 0.00  |   Memory (MB) - Peak Memory : 594.64, Gain Memory : 118.31  
+
+Time: cpu = 00:00:05 ; elapsed : 00:00:05 . Memory (MB): peak = 594.64 ; gain = 118.31 
+
+Phase 5.5 TNS CleanUp 
+
+Start NBR section for post-routing at 21:54:16 08/20/26
+Phase 5.5 TNS CleanUp Complete: Time (s) - CPU Time : 0.02, Real Time : 0.03  |   Memory (MB) - Peak Memory : 594.64, Gain Memory : 118.31  
+
+Time: cpu = 00:00:05 ; elapsed : 00:00:05 . Memory (MB): peak = 594.64 ; gain = 118.31 
+
+Phase 5.6 Detail Routing Finalization 
+
+End NBR router with 0 unrouted connection(s)
+
+Checksum -- route: d9859aca1b2b5d493f1216b2869de83ed6b5f896
+Phase 5.6 Detail Routing Finalization Complete: Time (s) - CPU Time : 0.09, Real Time : 0.10  |   Memory (MB) - Peak Memory : 594.64, Gain Memory : 118.57  
+
+Time: cpu = 00:00:05 ; elapsed : 00:00:05 . Memory (MB): peak = 594.64 ; gain = 118.57 
+
+
+Phase 5 Detailed Routing Complete: Time (s) - CPU Time : 0.78, Real Time : 0.79  |   Memory (MB) - Peak Memory : 594.64, Gain Memory : 119.58  
+
+Time: cpu = 00:00:05 ; elapsed : 00:00:05 . Memory (MB): peak = 594.64 ; gain = 119.58 
+
+Phase 6 Router Finalization 
+Total Router CPU time 5 secs , REAL time: 5 secs 
+Completely routed.
+End of route.  1792 routed (100.00%); 0 unrouted.
+Phase 6 Router Finalization Complete: Time (s) - CPU Time : 0.02, Real Time : 0.02  |   Memory (MB) - Peak Memory : 594.64, Gain Memory : 118.56  
+
+Time: cpu = 00:00:05 ; elapsed : 00:00:05 . Memory (MB): peak = 594.64 ; gain = 118.56 
+
+Ending Route Design : Time (s) - CPU Time : 5.08, Real Time : 5.12  |   Memory (MB) - Peak Memory : 594.64, Gain Memory : 191.78  
+
+Time: cpu = 00:00:05 ; elapsed : 00:00:05 . Memory (MB): peak = 594.64 ; gain = 191.78 
+
+
+ Phase Summary Table: 	
++--------------------------------------------------------+-------------+--------------+-----------------+----------------+
+| Phase Name                                             | CPU Time(s) | Wall Time(s) | Peak Memory(MB) | Memory Gain(MB)|
++--------------------------------------------------------+-------------+--------------+-----------------+----------------+
+| Phase 1 Build Route Design                             | 0.25        |         0.28 |          524.05 |         121.15 |
+| Phase 2 Design Checks and Routing Setup                | 0.00        |         0.00 |          524.15 |           0.00 |
+| Phase 3 Dedicated Net and Clock Routing                | 4.00        |         4.01 |          594.64 |          70.49 |
+| Phase 3.1 Routing User Constraints                     | 3.89        |         3.90 |          594.64 |          70.49 |
+| Phase 3.2 Dedicated Routing                            | 0.06        |         0.05 |          594.64 |          76.86 |
+| Phase 3.3 Clock Net Routing                            | 0.02        |         0.03 |          594.64 |         119.87 |
+| Phase 3.4 Dedicated Net and Clock Routing Finalization | 0.00        |         0.00 |          594.64 |         119.59 |
+| Phase 4 Pre-Detailed Routing                           | 0.00        |         0.00 |          594.64 |         119.58 |
+| Phase 5 Detailed Routing                               | 0.78        |         0.79 |          594.64 |         119.58 |
+| Phase 5.1 Initial Detailed Routing                     | 0.50        |         0.52 |          594.64 |         119.58 |
+| Phase 5.2 Rip-Up and Route                             | 0.16        |         0.15 |          594.64 |         118.34 |
+| Phase 5.3 Rip-Up and Reroute for setup timing improve* | 0.00        |         0.00 |          594.64 |         118.31 |
+| Phase 5.4 Rip-Up and Reroute for hold timing fix       | 0.00        |         0.00 |          594.64 |         118.31 |
+| Phase 5.5 TNS CleanUp                                  | 0.02        |         0.03 |          594.64 |         118.31 |
+| Phase 5.6 Detail Routing Finalization                  | 0.09        |         0.10 |          594.64 |         118.57 |
+| Phase 6 Router Finalization                            | 0.02        |         0.02 |          594.64 |         118.56 |
++--------------------------------------------------------+-------------+--------------+-----------------+----------------+
+
+Writing design to file Neuromorphic_Lattice_impl_1_par.dir/5_1.udb ...
+
+
+PAR_SUMMARY::Run status = Completed
+PAR_SUMMARY::Number of unrouted conns = 0
+PAR_SUMMARY::Estimated worst slack<setup/<ns>> = <n/a>
+PAR_SUMMARY::Timing score<setup/<ns>> = <n/a>
+PAR_SUMMARY::Estimated worst slack<hold/<ns>> = <n/a>
+PAR_SUMMARY::Timing score<hold/<ns>> = <n/a>
+PAR_SUMMARY::Number of errors = 0
+
+Note: user must run 'timing' for timing closure signoff.
+
+Total CPU  Time: 11 secs 
+Total REAL Time: 12 secs 
+Peak Memory Usage: 594.64 MB
+
+
+par done!
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2026 Lattice Semiconductor Corporation,  All rights reserved.
+**** CMD par_run - CPU/Elapsed: 0 secs / 12 secs , MEM/Increased: 59.523 Mb/ 0.451 Mb, DATE: 21:54:17 08/20/26
+Thank you for using Radiant. Total CPU/Elapsed time: 0 secs /12 secs 
+
+timing -sethld -v 10 -u 10 -endpoints 10 -nperend 1 -sp 9_High-Performance_1.0V -hsp m   -pwrprd -html -rpt "Neuromorphic_Lattice_impl_1.twr" "Neuromorphic_Lattice_impl_1.udb" 
+timing -sethld -v 10 -u 10 -endpoints 10 -nperend 1 -sp 9_High-Performance_1.0V -hsp m -pwrprd -html -rpt Neuromorphic_Lattice_impl_1.twr Neuromorphic_Lattice_impl_1.udb -gui -msgset D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice/promote.xml
+Starting design reading...
+Loading device for application GENERIC from file 'je5d30.nph' in environment: D:/lscc/radiant/2026.1/ispfpga.
+Package Status:                     Final          Version 1.
+Performance Hardware Data Status:   Final          Version 131.5.
+Loading udb::Database ...
+Design:  network_tb
+Family:  LIFCL
+Device:  LIFCL-40
+Package: CABGA400
+Performance Grade:   9_High-Performance_1.0V
+
+
+
+Successfully loading udb, 0.50 seconds
+
+Initializing timer
+Starting design annotation....
+
+Starting full timing analysis...
+Performance Hardware Data Status:   Final          Version 131.5.
+Connections ignored  178  counted  1314  covered  0
+Changing speed to 9_High-Performance_1.0V;   changing temperature to 0
+Changing speed to m;   changing temperature to 0
+
+STA Runtime and Peak Memory Usage :
+Total CPU Time: 2 secs 
+Total REAL Time: 3 secs 
+Peak Memory Usage: 464 MB
+
+ 2.931567s wall, 2.609375s user + 0.281250s system = 2.890625s CPU (98.6%)
+
+
+tmcheck -twr "Neuromorphic_Lattice_impl_1.twr"  
+
+pnmainc -log pnmain "Neuromorphic_Lattice_impl_1_bit.tcl"
+Loading Neuromorphic_Lattice_impl_1.udb ...
+Loading device for application GENERIC from file 'je5d30.nph' in environment: D:/lscc/radiant/2026.1/ispfpga.
+Package Status:                     Final          Version 1.
+Successfully read the udb in 0.00 s.
+
+Performance Hardware Data Status:   Final          Version 131.5.
+
+
+
+Design:  network_tb
+Family:  LIFCL
+Device:  LIFCL-40
+Package: CABGA400
+Performance Grade:   9_High-Performance_1.0V
+
+Constraint Summary
+   Total number of constraints: 1
+   Total number of constraints dropped: 0
+
+Successfully loaded device info and constraints in 1.00 s.
+
+Successfully loading design udb and device data from disks and to up-layer in CPU time: 1 secs , REAL time: 0 secs 
+
+
+
+BITGEN: Bitstream Generator Radiant Software (64-bit) 2026.1.0.37.0
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2026 Lattice Semiconductor Corporation,  All rights reserved.
+
+
+Running DRC.
+DRC detected 0 errors and 0 warnings.
+
+Preference Summary:
++---------------------------------+---------------------------------+
+|  Preference                     |  Current Setting                |
++---------------------------------+---------------------------------+
+|                        DONE_EX  |                           OFF*  |
++---------------------------------+---------------------------------+
+|                        DONE_OD  |                            ON*  |
++---------------------------------+---------------------------------+
+|                  CONFIG_SECURE  |                           OFF*  |
++---------------------------------+---------------------------------+
+|               EARLY_IO_RELEASE  |                           OFF*  |
++---------------------------------+---------------------------------+
+|                  REGISTER_INIT  |                           ON**  |
++---------------------------------+---------------------------------+
+|   MASTER_PREAMBLE_TIMER_CYCLES  |                        600000*  |
++---------------------------------+---------------------------------+
+|                 SLAVE_SPI_PORT  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|                 SLAVE_I2C_PORT  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|                 SLAVE_I3C_PORT  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|                      JTAG_PORT  |                       ENABLE**  |
++---------------------------------+---------------------------------+
+|                      DONE_PORT  |                       ENABLE**  |
++---------------------------------+---------------------------------+
+|                     INITN_PORT  |                       ENABLE**  |
++---------------------------------+---------------------------------+
+|                  PROGRAMN_PORT  |                       ENABLE**  |
++---------------------------------+---------------------------------+
+|                        TRANSFR  |                           OFF*  |
++---------------------------------+---------------------------------+
+|                MASTER_SPI_PORT  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|                     MCCLK_FREQ  |                           3.5*  |
++---------------------------------+---------------------------------+
+|                COMPRESS_CONFIG  |                           OFF*  |
++---------------------------------+---------------------------------+
+|            BACKGROUND_RECONFIG  |                           OFF*  |
++---------------------------------+---------------------------------+
+|                  CONFIG_IOSLEW  |                          SLOW*  |
++---------------------------------+---------------------------------+
+|                        WAKE_UP  |              ENABLE_DONE_SYNC*  |
++---------------------------------+---------------------------------+
+|                       BOOTMODE  |                          DUAL*  |
++---------------------------------+---------------------------------+
+|         CONFIGIO_VOLTAGE_BANK0  |                 NOT_SPECIFIED*  |
++---------------------------------+---------------------------------+
+|         CONFIGIO_VOLTAGE_BANK1  |                 NOT_SPECIFIED*  |
++---------------------------------+---------------------------------+
+ *  Default setting.
+ ** The specified setting matches the default setting.
+
+
+Creating bit map...
  
-Writing output file 'Neuromorphic_Lattice_impl_1_syn.udb'.
-POSTSYN finished successfully.
-Total CPU Time: 0 secs 
-Total REAL Time: 0 secs 
-Peak Memory Usage: 154 MB
-Checksum -- postsyn: 511cfdf5475a9a3698b75237ff4da3cbdea5195
+Bitstream Status: Final           Version 10.4.
+ 
+Saving bit stream in "D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice/impl_1/Neuromorphic_Lattice_impl_1.bit".
+Bitstream generation complete!
 
+Total CPU Time: 5 secs 
+Total REAL Time: 5 secs 
+Peak Memory Usage: 550 MB
 
+**** CMD bit_generate - CPU/Elapsed: 0 secs / 8 secs , MEM/Increased: 59.568 Mb/ 0.438 Mb, DATE: 21:54:28 08/20/26
+Thank you for using Radiant. Total CPU/Elapsed time: 0 secs /8 secs 
