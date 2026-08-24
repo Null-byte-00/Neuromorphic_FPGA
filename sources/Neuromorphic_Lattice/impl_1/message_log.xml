@@ -921,6 +921,14 @@
         <Message>
             <ID>35901328</ID>
             <Severity>1</Severity>
+            <Dynamic>D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice/source/impl_1/ram.v(2): </Dynamic>
+            <Dynamic>D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice/source/impl_1/constants.vh</Dynamic>
+            <Navigation>D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice/source/impl_1/ram.v</Navigation>
+            <Navigation>2</Navigation>
+        </Message>
+        <Message>
+            <ID>35901328</ID>
+            <Severity>1</Severity>
             <Dynamic>D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice/source/impl_1/weight_manager_unit.v(1): </Dynamic>
             <Dynamic>D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice/source/impl_1/constants.vh</Dynamic>
             <Navigation>D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice/source/impl_1/weight_manager_unit.v</Navigation>
@@ -983,6 +991,55 @@
             <Navigation>1</Navigation>
         </Message>
         <Message>
+            <ID>35901330</ID>
+            <Severity>16</Severity>
+            <Dynamic>D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice/source/impl_1/weight_multiply_array.v(37): </Dynamic>
+            <Dynamic>16</Dynamic>
+            <Dynamic>8</Dynamic>
+            <Dynamic>out</Dynamic>
+            <Navigation>D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice/source/impl_1/weight_multiply_array.v</Navigation>
+            <Navigation>37</Navigation>
+        </Message>
+        <Message>
+            <ID>35901330</ID>
+            <Severity>16</Severity>
+            <Dynamic>D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice/source/impl_1/weight_multiply_array.v(37): </Dynamic>
+            <Dynamic>16</Dynamic>
+            <Dynamic>8</Dynamic>
+            <Dynamic>out</Dynamic>
+            <Navigation>D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice/source/impl_1/weight_multiply_array.v</Navigation>
+            <Navigation>37</Navigation>
+        </Message>
+        <Message>
+            <ID>35901330</ID>
+            <Severity>16</Severity>
+            <Dynamic>D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice/source/impl_1/weight_multiply_array.v(37): </Dynamic>
+            <Dynamic>16</Dynamic>
+            <Dynamic>8</Dynamic>
+            <Dynamic>out</Dynamic>
+            <Navigation>D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice/source/impl_1/weight_multiply_array.v</Navigation>
+            <Navigation>37</Navigation>
+        </Message>
+        <Message>
+            <ID>35901330</ID>
+            <Severity>16</Severity>
+            <Dynamic>D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice/source/impl_1/weight_multiply_array.v(37): </Dynamic>
+            <Dynamic>16</Dynamic>
+            <Dynamic>8</Dynamic>
+            <Dynamic>out</Dynamic>
+            <Navigation>D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice/source/impl_1/weight_multiply_array.v</Navigation>
+            <Navigation>37</Navigation>
+        </Message>
+        <Message>
+            <ID>35901209</ID>
+            <Severity>16</Severity>
+            <Dynamic>D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice/source/impl_1/weight_multiply_array.v(52): </Dynamic>
+            <Dynamic>24</Dynamic>
+            <Dynamic>16</Dynamic>
+            <Navigation>D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice/source/impl_1/weight_multiply_array.v</Navigation>
+            <Navigation>52</Navigation>
+        </Message>
+        <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
             <Dynamic>D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice/source/impl_1/weight_manager_unit.v(3): </Dynamic>
@@ -995,25 +1052,25 @@
             <Severity>16</Severity>
             <Dynamic>D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice/source/impl_1/weight_manager_unit.v(23): </Dynamic>
             <Dynamic>32</Dynamic>
-            <Dynamic>4</Dynamic>
+            <Dynamic>8</Dynamic>
             <Navigation>D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice/source/impl_1/weight_manager_unit.v</Navigation>
             <Navigation>23</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice/source/impl_1/ram.v(2): </Dynamic>
+            <Dynamic>D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice/source/impl_1/ram.v(4): </Dynamic>
             <Dynamic>single_port_ram</Dynamic>
             <Navigation>D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice/source/impl_1/ram.v</Navigation>
-            <Navigation>2</Navigation>
+            <Navigation>4</Navigation>
         </Message>
         <Message>
             <ID>35901012</ID>
             <Severity>16</Severity>
-            <Dynamic>D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice/source/impl_1/ram.v(19): </Dynamic>
+            <Dynamic>D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice/source/impl_1/ram.v(21): </Dynamic>
             <Dynamic>memory_init.txt</Dynamic>
             <Navigation>D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice/source/impl_1/ram.v</Navigation>
-            <Navigation>19</Navigation>
+            <Navigation>21</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
@@ -1064,6 +1121,55 @@
             <Navigation>1</Navigation>
         </Message>
         <Message>
+            <ID>35901330</ID>
+            <Severity>16</Severity>
+            <Dynamic>../source/impl_1/weight_multiply_array.v(37): </Dynamic>
+            <Dynamic>16</Dynamic>
+            <Dynamic>8</Dynamic>
+            <Dynamic>out</Dynamic>
+            <Navigation>../source/impl_1/weight_multiply_array.v</Navigation>
+            <Navigation>37</Navigation>
+        </Message>
+        <Message>
+            <ID>35901330</ID>
+            <Severity>16</Severity>
+            <Dynamic>../source/impl_1/weight_multiply_array.v(37): </Dynamic>
+            <Dynamic>16</Dynamic>
+            <Dynamic>8</Dynamic>
+            <Dynamic>out</Dynamic>
+            <Navigation>../source/impl_1/weight_multiply_array.v</Navigation>
+            <Navigation>37</Navigation>
+        </Message>
+        <Message>
+            <ID>35901330</ID>
+            <Severity>16</Severity>
+            <Dynamic>../source/impl_1/weight_multiply_array.v(37): </Dynamic>
+            <Dynamic>16</Dynamic>
+            <Dynamic>8</Dynamic>
+            <Dynamic>out</Dynamic>
+            <Navigation>../source/impl_1/weight_multiply_array.v</Navigation>
+            <Navigation>37</Navigation>
+        </Message>
+        <Message>
+            <ID>35901330</ID>
+            <Severity>16</Severity>
+            <Dynamic>../source/impl_1/weight_multiply_array.v(37): </Dynamic>
+            <Dynamic>16</Dynamic>
+            <Dynamic>8</Dynamic>
+            <Dynamic>out</Dynamic>
+            <Navigation>../source/impl_1/weight_multiply_array.v</Navigation>
+            <Navigation>37</Navigation>
+        </Message>
+        <Message>
+            <ID>35901209</ID>
+            <Severity>16</Severity>
+            <Dynamic>../source/impl_1/weight_multiply_array.v(52): </Dynamic>
+            <Dynamic>24</Dynamic>
+            <Dynamic>16</Dynamic>
+            <Navigation>../source/impl_1/weight_multiply_array.v</Navigation>
+            <Navigation>52</Navigation>
+        </Message>
+        <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
             <Dynamic>../source/impl_1/weight_manager_unit.v(3): </Dynamic>
@@ -1076,17 +1182,17 @@
             <Severity>16</Severity>
             <Dynamic>../source/impl_1/weight_manager_unit.v(23): </Dynamic>
             <Dynamic>32</Dynamic>
-            <Dynamic>4</Dynamic>
+            <Dynamic>8</Dynamic>
             <Navigation>../source/impl_1/weight_manager_unit.v</Navigation>
             <Navigation>23</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>../source/impl_1/ram.v(2): </Dynamic>
+            <Dynamic>../source/impl_1/ram.v(4): </Dynamic>
             <Dynamic>single_port_ram</Dynamic>
             <Navigation>../source/impl_1/ram.v</Navigation>
-            <Navigation>2</Navigation>
+            <Navigation>4</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
@@ -1118,13 +1224,49 @@
         <Message>
             <ID>35935040</ID>
             <Severity>16</Severity>
-            <Dynamic>\wma/add_12_i2</Dynamic>
+            <Dynamic>\sa/gen_neurons[0].sn/sub_5_add_2_i2</Dynamic>
             <Dynamic>Zero</Dynamic>
         </Message>
         <Message>
             <ID>35935040</ID>
             <Severity>16</Severity>
-            <Dynamic>\wma/add_14_i17</Dynamic>
+            <Dynamic>\sa/gen_neurons[1].sn/add_4_i17</Dynamic>
+            <Dynamic>Zero</Dynamic>
+        </Message>
+        <Message>
+            <ID>35935040</ID>
+            <Severity>16</Severity>
+            <Dynamic>\sa/gen_neurons[0].sn/add_4_i2</Dynamic>
+            <Dynamic>Zero</Dynamic>
+        </Message>
+        <Message>
+            <ID>35935040</ID>
+            <Severity>16</Severity>
+            <Dynamic>\sa/gen_neurons[1].sn/add_4_i2</Dynamic>
+            <Dynamic>Zero</Dynamic>
+        </Message>
+        <Message>
+            <ID>35935040</ID>
+            <Severity>16</Severity>
+            <Dynamic>\sa/gen_neurons[1].sn/sub_5_add_2_i17</Dynamic>
+            <Dynamic>Zero</Dynamic>
+        </Message>
+        <Message>
+            <ID>35935040</ID>
+            <Severity>16</Severity>
+            <Dynamic>\sa/gen_neurons[1].sn/sub_5_add_2_i2</Dynamic>
+            <Dynamic>Zero</Dynamic>
+        </Message>
+        <Message>
+            <ID>35935040</ID>
+            <Severity>16</Severity>
+            <Dynamic>\sa/gen_neurons[0].sn/add_4_i17</Dynamic>
+            <Dynamic>Zero</Dynamic>
+        </Message>
+        <Message>
+            <ID>35935040</ID>
+            <Severity>16</Severity>
+            <Dynamic>\sa/gen_neurons[0].sn/sub_5_add_2_i17</Dynamic>
             <Dynamic>Zero</Dynamic>
         </Message>
         <Message>
@@ -1136,193 +1278,37 @@
         <Message>
             <ID>35935040</ID>
             <Severity>16</Severity>
-            <Dynamic>\wma/add_14_i2</Dynamic>
-            <Dynamic>Zero</Dynamic>
-        </Message>
-        <Message>
-            <ID>35935040</ID>
-            <Severity>16</Severity>
-            <Dynamic>\sa/genblk1[0].sn/sub_5_add_2_i17</Dynamic>
-            <Dynamic>Zero</Dynamic>
-        </Message>
-        <Message>
-            <ID>35935040</ID>
-            <Severity>16</Severity>
-            <Dynamic>\sa/genblk1[0].sn/sub_5_add_2_i2</Dynamic>
-            <Dynamic>Zero</Dynamic>
-        </Message>
-        <Message>
-            <ID>35935040</ID>
-            <Severity>16</Severity>
-            <Dynamic>\sa/genblk1[2].sn/sub_5_add_2_i17</Dynamic>
-            <Dynamic>Zero</Dynamic>
-        </Message>
-        <Message>
-            <ID>35935040</ID>
-            <Severity>16</Severity>
-            <Dynamic>\sa/genblk1[2].sn/sub_5_add_2_i2</Dynamic>
-            <Dynamic>Zero</Dynamic>
-        </Message>
-        <Message>
-            <ID>35935040</ID>
-            <Severity>16</Severity>
-            <Dynamic>\sa/genblk1[1].sn/sub_5_add_2_i17</Dynamic>
-            <Dynamic>Zero</Dynamic>
-        </Message>
-        <Message>
-            <ID>35935040</ID>
-            <Severity>16</Severity>
-            <Dynamic>\sa/genblk1[1].sn/sub_5_add_2_i2</Dynamic>
-            <Dynamic>Zero</Dynamic>
-        </Message>
-        <Message>
-            <ID>35935040</ID>
-            <Severity>16</Severity>
             <Dynamic>\wmu/next_addr_i17</Dynamic>
             <Dynamic>Zero</Dynamic>
         </Message>
         <Message>
             <ID>35935040</ID>
             <Severity>16</Severity>
-            <Dynamic>\wma/add_12_i17</Dynamic>
+            <Dynamic>\wma/add_15_i2</Dynamic>
             <Dynamic>Zero</Dynamic>
         </Message>
         <Message>
             <ID>35935040</ID>
             <Severity>16</Severity>
-            <Dynamic>\wma/add_10_i2</Dynamic>
+            <Dynamic>\wma/add_15_i17</Dynamic>
             <Dynamic>Zero</Dynamic>
         </Message>
         <Message>
             <ID>35935040</ID>
             <Severity>16</Severity>
-            <Dynamic>\wma/add_10_i17</Dynamic>
+            <Dynamic>\sa/gen_neurons[1].sn/add_4_add_12_i2</Dynamic>
             <Dynamic>Zero</Dynamic>
         </Message>
         <Message>
             <ID>35935040</ID>
             <Severity>16</Severity>
-            <Dynamic>\sa/genblk1[0].sn/add_4_i2</Dynamic>
+            <Dynamic>\wma/add_15_add_12_i2</Dynamic>
             <Dynamic>Zero</Dynamic>
         </Message>
         <Message>
             <ID>35935040</ID>
             <Severity>16</Severity>
-            <Dynamic>\sa/genblk1[0].sn/add_4_i17</Dynamic>
-            <Dynamic>Zero</Dynamic>
-        </Message>
-        <Message>
-            <ID>35935040</ID>
-            <Severity>16</Severity>
-            <Dynamic>\sa/genblk1[2].sn/add_4_i2</Dynamic>
-            <Dynamic>Zero</Dynamic>
-        </Message>
-        <Message>
-            <ID>35935040</ID>
-            <Severity>16</Severity>
-            <Dynamic>\sa/genblk1[2].sn/add_4_i17</Dynamic>
-            <Dynamic>Zero</Dynamic>
-        </Message>
-        <Message>
-            <ID>35935040</ID>
-            <Severity>16</Severity>
-            <Dynamic>\sa/genblk1[1].sn/add_4_i2</Dynamic>
-            <Dynamic>Zero</Dynamic>
-        </Message>
-        <Message>
-            <ID>35935040</ID>
-            <Severity>16</Severity>
-            <Dynamic>\sa/genblk1[1].sn/add_4_i17</Dynamic>
-            <Dynamic>Zero</Dynamic>
-        </Message>
-        <Message>
-            <ID>35935040</ID>
-            <Severity>16</Severity>
-            <Dynamic>\wma/add_14_add_12_i17</Dynamic>
-            <Dynamic>Zero</Dynamic>
-        </Message>
-        <Message>
-            <ID>35935040</ID>
-            <Severity>16</Severity>
-            <Dynamic>\wma/add_10_add_12_i2</Dynamic>
-            <Dynamic>Zero</Dynamic>
-        </Message>
-        <Message>
-            <ID>35935040</ID>
-            <Severity>16</Severity>
-            <Dynamic>\sa/genblk1[1].sn/add_4_add_12_i17</Dynamic>
-            <Dynamic>Zero</Dynamic>
-        </Message>
-        <Message>
-            <ID>35935040</ID>
-            <Severity>16</Severity>
-            <Dynamic>add_132_i2</Dynamic>
-            <Dynamic>Zero</Dynamic>
-        </Message>
-        <Message>
-            <ID>35935040</ID>
-            <Severity>16</Severity>
-            <Dynamic>\sa/genblk1[0].sn/add_4_add_12_i17</Dynamic>
-            <Dynamic>Zero</Dynamic>
-        </Message>
-        <Message>
-            <ID>35935040</ID>
-            <Severity>16</Severity>
-            <Dynamic>\sa/genblk1[0].sn/add_4_add_12_i2</Dynamic>
-            <Dynamic>Zero</Dynamic>
-        </Message>
-        <Message>
-            <ID>35935040</ID>
-            <Severity>16</Severity>
-            <Dynamic>\sa/genblk1[2].sn/add_4_add_12_i17</Dynamic>
-            <Dynamic>Zero</Dynamic>
-        </Message>
-        <Message>
-            <ID>35935040</ID>
-            <Severity>16</Severity>
-            <Dynamic>add_132_i17</Dynamic>
-            <Dynamic>Zero</Dynamic>
-        </Message>
-        <Message>
-            <ID>35935040</ID>
-            <Severity>16</Severity>
-            <Dynamic>\wma/add_14_add_12_i2</Dynamic>
-            <Dynamic>Zero</Dynamic>
-        </Message>
-        <Message>
-            <ID>35935040</ID>
-            <Severity>16</Severity>
-            <Dynamic>\sa/genblk1[2].sn/add_4_add_12_i2</Dynamic>
-            <Dynamic>Zero</Dynamic>
-        </Message>
-        <Message>
-            <ID>35935040</ID>
-            <Severity>16</Severity>
-            <Dynamic>add_131_i17</Dynamic>
-            <Dynamic>Zero</Dynamic>
-        </Message>
-        <Message>
-            <ID>35935040</ID>
-            <Severity>16</Severity>
-            <Dynamic>\wma/add_10_add_12_i17</Dynamic>
-            <Dynamic>Zero</Dynamic>
-        </Message>
-        <Message>
-            <ID>35935040</ID>
-            <Severity>16</Severity>
-            <Dynamic>\wma/add_12_add_12_i17</Dynamic>
-            <Dynamic>Zero</Dynamic>
-        </Message>
-        <Message>
-            <ID>35935040</ID>
-            <Severity>16</Severity>
-            <Dynamic>add_131_i2</Dynamic>
-            <Dynamic>Zero</Dynamic>
-        </Message>
-        <Message>
-            <ID>35935040</ID>
-            <Severity>16</Severity>
-            <Dynamic>add_130_i2</Dynamic>
+            <Dynamic>\sa/gen_neurons[0].sn/add_4_add_12_i17</Dynamic>
             <Dynamic>Zero</Dynamic>
         </Message>
         <Message>
@@ -1334,19 +1320,7 @@
         <Message>
             <ID>35935040</ID>
             <Severity>16</Severity>
-            <Dynamic>\sa/genblk1[1].sn/add_4_add_12_i2</Dynamic>
-            <Dynamic>Zero</Dynamic>
-        </Message>
-        <Message>
-            <ID>35935040</ID>
-            <Severity>16</Severity>
-            <Dynamic>\wma/add_12_add_12_i2</Dynamic>
-            <Dynamic>Zero</Dynamic>
-        </Message>
-        <Message>
-            <ID>35935040</ID>
-            <Severity>16</Severity>
-            <Dynamic>add_130_i17</Dynamic>
+            <Dynamic>\sa/gen_neurons[0].sn/add_4_add_12_i2</Dynamic>
             <Dynamic>Zero</Dynamic>
         </Message>
         <Message>
@@ -1356,6 +1330,47 @@
             <Dynamic>Zero</Dynamic>
         </Message>
         <Message>
+            <ID>35935040</ID>
+            <Severity>16</Severity>
+            <Dynamic>\wma/add_15_add_12_i17</Dynamic>
+            <Dynamic>Zero</Dynamic>
+        </Message>
+        <Message>
+            <ID>35935040</ID>
+            <Severity>16</Severity>
+            <Dynamic>add_95_i2</Dynamic>
+            <Dynamic>Zero</Dynamic>
+        </Message>
+        <Message>
+            <ID>35935040</ID>
+            <Severity>16</Severity>
+            <Dynamic>add_94_i17</Dynamic>
+            <Dynamic>Zero</Dynamic>
+        </Message>
+        <Message>
+            <ID>35935040</ID>
+            <Severity>16</Severity>
+            <Dynamic>add_94_i2</Dynamic>
+            <Dynamic>Zero</Dynamic>
+        </Message>
+        <Message>
+            <ID>35935040</ID>
+            <Severity>16</Severity>
+            <Dynamic>\sa/gen_neurons[1].sn/add_4_add_12_i17</Dynamic>
+            <Dynamic>Zero</Dynamic>
+        </Message>
+        <Message>
+            <ID>35935040</ID>
+            <Severity>16</Severity>
+            <Dynamic>add_95_i17</Dynamic>
+            <Dynamic>Zero</Dynamic>
+        </Message>
+        <Message>
+            <ID>35002066</ID>
+            <Severity>16</Severity>
+            <Dynamic>\ram/memory</Dynamic>
+        </Message>
+        <Message>
             <ID>70009502</ID>
             <Severity>16</Severity>
             <Dynamic>The preferred point for defining clocks is top level ports and driver pins. Pad delays will not be taken into consideration if clocks are defined on nets.</Dynamic>
@@ -1374,41 +1389,6 @@
             <ID>70009502</ID>
             <Severity>16</Severity>
             <Dynamic>The preferred point for defining clocks is top level ports and driver pins. Pad delays will not be taken into consideration if clocks are defined on nets.</Dynamic>
-        </Message>
-        <Message>
-            <ID>35811146</ID>
-            <Severity>1</Severity>
-            <Dynamic>wma/GEN_OUTPUT[0].GEN_INPUT[0].wmu/out__i2.intGnd</Dynamic>
-        </Message>
-        <Message>
-            <ID>35811146</ID>
-            <Severity>1</Severity>
-            <Dynamic>wma/GEN_OUTPUT[0].GEN_INPUT[0].wmu/out__i3.intGnd</Dynamic>
-        </Message>
-        <Message>
-            <ID>35811146</ID>
-            <Severity>1</Severity>
-            <Dynamic>wma/GEN_OUTPUT[0].GEN_INPUT[0].wmu/out__i4.intGnd</Dynamic>
-        </Message>
-        <Message>
-            <ID>35811146</ID>
-            <Severity>1</Severity>
-            <Dynamic>wma/GEN_OUTPUT[0].GEN_INPUT[0].wmu/out__i5.intGnd</Dynamic>
-        </Message>
-        <Message>
-            <ID>35811146</ID>
-            <Severity>1</Severity>
-            <Dynamic>wma/GEN_OUTPUT[0].GEN_INPUT[0].wmu/out__i6.intGnd</Dynamic>
-        </Message>
-        <Message>
-            <ID>35811146</ID>
-            <Severity>1</Severity>
-            <Dynamic>wma/GEN_OUTPUT[0].GEN_INPUT[0].wmu/out__i7.intGnd</Dynamic>
-        </Message>
-        <Message>
-            <ID>35811146</ID>
-            <Severity>1</Severity>
-            <Dynamic>wma/GEN_OUTPUT[0].GEN_INPUT[0].wmu/out__i0.intGnd</Dynamic>
         </Message>
         <Message>
             <ID>35811146</ID>
@@ -1418,12 +1398,47 @@
         <Message>
             <ID>35811146</ID>
             <Severity>1</Severity>
-            <Dynamic>wma/GEN_OUTPUT[0].GEN_INPUT[1].wmu/out__i0.intGnd</Dynamic>
+            <Dynamic>wma/GEN_OUTPUT[0].GEN_INPUT[0].wmu/out__i3.intGnd</Dynamic>
+        </Message>
+        <Message>
+            <ID>35811146</ID>
+            <Severity>1</Severity>
+            <Dynamic>wma/GEN_OUTPUT[0].GEN_INPUT[0].wmu/out__i8.intGnd</Dynamic>
+        </Message>
+        <Message>
+            <ID>35811146</ID>
+            <Severity>1</Severity>
+            <Dynamic>wma/GEN_OUTPUT[0].GEN_INPUT[0].wmu/out__i6.intGnd</Dynamic>
+        </Message>
+        <Message>
+            <ID>35811146</ID>
+            <Severity>1</Severity>
+            <Dynamic>wma/GEN_OUTPUT[0].GEN_INPUT[0].wmu/out__i5.intGnd</Dynamic>
+        </Message>
+        <Message>
+            <ID>35811146</ID>
+            <Severity>1</Severity>
+            <Dynamic>wma/GEN_OUTPUT[0].GEN_INPUT[0].wmu/out__i4.intGnd</Dynamic>
+        </Message>
+        <Message>
+            <ID>35811146</ID>
+            <Severity>1</Severity>
+            <Dynamic>wma/GEN_OUTPUT[0].GEN_INPUT[0].wmu/out__i2.intGnd</Dynamic>
+        </Message>
+        <Message>
+            <ID>35811146</ID>
+            <Severity>1</Severity>
+            <Dynamic>wma/GEN_OUTPUT[0].GEN_INPUT[0].wmu/out__i7.intGnd</Dynamic>
         </Message>
         <Message>
             <ID>35811146</ID>
             <Severity>1</Severity>
             <Dynamic>wma/GEN_OUTPUT[0].GEN_INPUT[1].wmu/out__i1.intGnd</Dynamic>
+        </Message>
+        <Message>
+            <ID>35811146</ID>
+            <Severity>1</Severity>
+            <Dynamic>wma/GEN_OUTPUT[0].GEN_INPUT[1].wmu/out__i2.intGnd</Dynamic>
         </Message>
         <Message>
             <ID>35811149</ID>

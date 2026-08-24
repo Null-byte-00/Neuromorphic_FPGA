@@ -2,27 +2,32 @@
 
 module weight_multiply_array #(
     parameter IN_SIZE  = `NUM_INPUTS,
-    parameter OUT_SIZE = 3
+    parameter OUT_SIZE = `NUM_OUTPUTS
 )(
-    input  wire                            clk,
-    input  wire                            reset,
-    input  wire [(8*IN_SIZE*OUT_SIZE)-1:0] weights_in,
-    input  wire [IN_SIZE-1:0]              input_signals,
-    output reg  [(8*OUT_SIZE)-1:0]         added_outputs
+    input  wire                              clk,
+    input  wire                              reset,
+    input  wire [(8*IN_SIZE*OUT_SIZE)-1:0]   weights_in,
+    input  wire [IN_SIZE-1:0]                input_signals,
+    output reg  [(16*OUT_SIZE)-1:0]          added_outputs
 );
 
-localparam NUM_UNITS = IN_SIZE * OUT_SIZE;
+localparam integer NUM_UNITS = IN_SIZE * OUT_SIZE;
 
-wire [7:0] weights      [0:NUM_UNITS-1];
-wire [7:0] unit_outputs [0:NUM_UNITS-1];
+wire signed [7:0] weights      [0:NUM_UNITS-1];
+wire signed [7:0] unit_outputs [0:NUM_UNITS-1];
 
+
+// Unflatten weights
 genvar i;
 generate
     for (i = 0; i < NUM_UNITS; i = i + 1) begin : GEN_WEIGHTS
-        assign weights[i] = weights_in[(i * 8) +: 8];
+        assign weights[i] =
+            $signed(weights_in[(i * 8) +: 8]);
     end
 endgenerate
 
+
+// Create one unit for every input-output connection
 genvar j;
 genvar z;
 generate
@@ -41,6 +46,8 @@ generate
     end
 endgenerate
 
+
+// Sum the active weights for each output
 integer k;
 integer n;
 
@@ -49,9 +56,13 @@ always @(*) begin
 
     for (k = 0; k < OUT_SIZE; k = k + 1) begin
         for (n = 0; n < IN_SIZE; n = n + 1) begin
-            added_outputs[(k * 8) +: 8] =
-                added_outputs[(k * 8) +: 8]
-                + unit_outputs[(k * IN_SIZE) + n];
+            added_outputs[(k * 16) +: 16] =
+                $signed(added_outputs[(k * 16) +: 16])
+                +
+                $signed({
+                    {8{unit_outputs[(k * IN_SIZE) + n][7]}},
+                    unit_outputs[(k * IN_SIZE) + n]
+                });
         end
     end
 end

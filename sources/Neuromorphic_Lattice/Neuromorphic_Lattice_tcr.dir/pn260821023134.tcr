@@ -1,0 +1,41 @@
+#Start recording tcl command: 8/18/2026 15:32:50
+#Project Location: D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice; Project name: Neuromorphic_Lattice
+prj_open "D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice/Neuromorphic_Lattice.rdf"
+prj_add_source "D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice/source/impl_1/ffn_spike_network.v"
+prj_remove_source "D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice/source/impl_1/ffn_spike_network.v"
+prj_add_source "D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice/source/impl_1/weight_multiplier_unit.v"
+prj_run Synthesis -impl impl_1
+prj_run Synthesis -impl impl_1
+prj_run Synthesis -impl impl_1
+prj_run Synthesis -impl impl_1 -task Lattice_Synthesis
+prj_run Synthesis -impl impl_1
+prj_remove_source "D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice/source/impl_1/weight_multiplier_unit.v"
+prj_add_source "D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice/source/impl_1/binary_mac_unit.v"
+prj_run Synthesis -impl impl_1
+prj_add_source "D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice/source/impl_1/binary_mac_array.v"
+prj_run Synthesis -impl impl_1
+prj_run Synthesis -impl impl_1
+prj_remove_source "D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice/source/impl_1/binary_mac_unit.v"
+prj_add_source "D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice/source/impl_1/weight_multiply_unit.v"
+prj_remove_source "D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice/source/impl_1/binary_mac_array.v"
+prj_add_source "D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice/source/impl_1/weight_multiply_array.v"
+prj_run Synthesis -impl impl_1
+prj_add_source "D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice/source/impl_1/ram.v"
+prj_add_source "D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice/source/impl_1/weight_manager_unit.v"
+prj_run Synthesis -impl impl_1
+prj_add_source "D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice/source/impl_1/network_tb.v"
+prj_run Synthesis -impl impl_1
+prj_add_source "D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice/source/impl_1/spike_neuron.v"
+prj_add_source "D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice/source/impl_1/spike_array.v"
+prj_add_source "D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice/source/impl_1/constants.vh"
+prj_run Synthesis -impl impl_1
+prj_run Synthesis -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Synthesis -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+#Stop recording: 8/21/2026 02:31:34

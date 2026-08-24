@@ -1,40 +1,70 @@
 `include "constants.vh"
 
 module weight_manager_unit #(
-	parameter NUM_WEIGHTS = `NUM_INPUTS*`NUM_OUTPUTS
+    parameter NUM_WEIGHTS = `NUM_INPUTS * `NUM_OUTPUTS
 )(
-	input wire clk,
-	input wire reset,
-	input wire [7:0] ram_data,
-	output reg [3:0] ram_addr,
-	output reg write_enable,
-	output reg [(8*NUM_WEIGHTS) - 1:0] weights_out
-); 
+    input  wire                              clk,
+    input  wire                              reset,
+    input  wire [7:0]                        ram_data,
 
-reg read_mode = 1;
-reg [3:0] current_addr = 0;
-reg [3:0] next_addr = 0;
-reg [3:0] weight_idx = 0;
+    output reg [`RAM_ADDRESS_WIDTH-1:0]       ram_addr,
+    output reg                               write_enable,
+    output reg [(8*NUM_WEIGHTS)-1:0]         weights_out,
+    output reg                               weights_loaded
+);
+
+localparam [1:0] SET_ADDR = 2'd0;
+localparam [1:0] WAIT_RAM = 2'd1;
+localparam [1:0] CAPTURE  = 2'd2;
+localparam [1:0] DONE     = 2'd3;
+
+reg [1:0] state;
+reg [`RAM_ADDRESS_WIDTH-1:0] weight_idx;
 
 always @(posedge clk) begin
-	write_enable = 0;
-	if (read_mode) begin
-		ram_addr <= current_addr;
-		next_addr <= current_addr + 1;
-		weight_idx <= current_addr;
-		read_mode <= 0;
-	end else begin
-		weights_out[(weight_idx*8) +: 8] <= ram_data;
-		current_addr <= next_addr;
-		read_mode <= 1;
-	end
-	if (reset) begin
-		weights_out <= 0;
-		current_addr <= 0;
-		next_addr <= 0;
-		weight_idx <= 0;
-	end
-end
+    if (reset) begin
+        state          <= SET_ADDR;
+        ram_addr       <= 0;
+        weight_idx     <= 0;
+        weights_out    <= 0;
+        write_enable   <= 0;
+        weights_loaded <= 0;
+    end else begin
+        write_enable <= 0;
 
+        case (state)
+
+            SET_ADDR: begin
+                ram_addr <= weight_idx;
+                state <= WAIT_RAM;
+            end
+
+            WAIT_RAM: begin
+                state <= CAPTURE;
+            end
+
+            CAPTURE: begin
+                weights_out[(weight_idx * 8) +: 8] <= ram_data;
+
+                if (weight_idx == NUM_WEIGHTS - 1) begin
+                    weights_loaded <= 1;
+                    state <= DONE;
+                end else begin
+                    weight_idx <= weight_idx + 1'b1;
+                    state <= SET_ADDR;
+                end
+            end
+
+            DONE: begin
+                weights_loaded <= 1;
+            end
+
+            default: begin
+                state <= SET_ADDR;
+            end
+
+        endcase
+    end
+end
 
 endmodule

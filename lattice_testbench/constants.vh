@@ -1,2 +1,3 @@
-`define NUM_INPUTS 5
-`define	NUM_OUTPUTS 4
+`define NUM_INPUTS 2
+`define	NUM_OUTPUTS 2
+`define RAM_ADDRESS_WIDTH 8

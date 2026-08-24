@@ -2,7 +2,31 @@
 <RadiantProject version="4.2" radiant="2026.1.0.37.0" title="Neuromorphic_Lattice" device="LIFCL-40-9BG400C" performance_grade="9_High-Performance_1.0V" family_int="je5d00" device_int="je5d30" package_int="CABGA400" operation_int="COM" speed_int="12" default_implementation="impl_1">
     <Options/>
     <Implementation title="impl_1" dir="impl_1" description="impl_1" synthesis="lse" default_strategy="Strategy1">
-        <Options/>
+        <Options def_top="network_tb"/>
+        <Source name="source/impl_1/weight_multiply_unit.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="source/impl_1/weight_multiply_array.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="source/impl_1/ram.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="source/impl_1/weight_manager_unit.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="source/impl_1/network_tb.v" type="Verilog" type_short="Verilog">
+            <Options top_module="network_tb"/>
+        </Source>
+        <Source name="source/impl_1/spike_neuron.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="source/impl_1/spike_array.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="source/impl_1/constants.vh" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
     </Implementation>
     <Strategy name="Strategy1" file="Neuromorphic_Lattice1.sty"/>
 </RadiantProject>

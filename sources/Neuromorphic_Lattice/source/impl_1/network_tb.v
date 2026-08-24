@@ -8,13 +8,13 @@ output reg [`NUM_OUTPUTS-1:0] network_outputs
 
 reg do_reset = 1;
 reg reset = 0;
-wire [3:0] ram_addr_line;
+wire [`RAM_ADDRESS_WIDTH-1:0] ram_addr_line;
 wire [7:0] ram_output_line;
 wire ram_write_enable;
 wire [(`NUM_OUTPUTS*`NUM_INPUTS*8)-1:0] weight_line;
-wire [(`NUM_OUTPUTS*8) - 1:0] wma_outputs;
+wire [(`NUM_OUTPUTS*16) - 1:0] wma_outputs;
 
-wire [2:0] net_outs;
+wire [(`NUM_OUTPUTS-1):0] net_outs;
 //wire [23:0] net_out_wire;
 
 reg [7:0] ram_data_in = 0;

@@ -1,6 +1,6 @@
 
 PAR: Place And Route Radiant Software (64-bit) 2026.1.0.37.0.
-PARed on: Thu Aug 20 21:54:05 2026
+PARed on: Thu Aug 20 22:21:11 2026
 
 Command Line: par -w -t 1 -cores 1 -hsp m -exp parPathBased=OFF \
 	Neuromorphic_Lattice_impl_1_map.udb \
@@ -9,7 +9,7 @@ Command Line: par -w -t 1 -cores 1 -hsp m -exp parPathBased=OFF \
 Loading Neuromorphic_Lattice_impl_1_map.udb ...
 Loading device for application GENERIC from file 'je5d30.nph' in environment: D:/lscc/radiant/2026.1/ispfpga.
 Package Status:                     Final          Version 1.
-Successfully read the udb in 0.00 s.
+Successfully read the udb in 1.00 s.
 
 Performance Hardware Data Status:   Final          Version 131.5.
 
@@ -25,73 +25,75 @@ Constraint Summary
    Total number of constraints: 1
    Total number of constraints dropped: 0
 
-Successfully loaded device info and constraints in 2.00 s.
+Successfully loaded device info and constraints in 1.00 s.
 
 Beginning Place Design 
 Phase 1 Placer Initialization 
-Phase 1 Placer Initialization Complete: Time (s) - CPU Time : 0.00, Real Time : 0.03  |   Memory (MB) - Peak Memory : 374.48, Gain Memory : 1.30  
+Phase 1 Placer Initialization Complete: Time (s) - CPU Time : 0.00, Real Time : 0.00  |   Memory (MB) - Peak Memory : 381.67, Gain Memory : 1.30  
 
-Time: cpu = 00:00:00 ; elapsed : 00:00:00 . Memory (MB): peak = 374.48 ; gain = 1.30 
+Time: cpu = 00:00:00 ; elapsed : 00:00:00 . Memory (MB): peak = 381.67 ; gain = 1.30 
 
 Phase 2 Logic Packing 
 
 Device SLICE utilization summary after final SLICE packing:
-   SLICE            292/16128         1% used
+   SLICE            848/16128         5% used
 
-Number of Signals: 685
-Number of Connections: 1792
+Number of Signals: 1609
+Number of Connections: 4575
 Device utilization summary:
 
-   SEIO33                6/185           3% used
-                         6/111           5% bonded
-   SLICE               292/16128         2% used
-     LUT               351/32256         1% used
-     REG               225/32256         1% used
+   VHI                   1/1           100% used
+   EBR                   1/84            1% used
+   SEIO33               21/185          11% used
+                        21/111          18% bonded
+   SLICE               848/16128         5% used
+     LUT               830/32256         3% used
+     REG               617/32256         2% used
 
 
-Phase 2 Logic Packing Complete: Time (s) - CPU Time : 0.28, Real Time : 0.28  |   Memory (MB) - Peak Memory : 386.55, Gain Memory : 12.04  
+Phase 2 Logic Packing Complete: Time (s) - CPU Time : 0.45, Real Time : 0.47  |   Memory (MB) - Peak Memory : 393.54, Gain Memory : 11.84  
 
-Time: cpu = 00:00:00 ; elapsed : 00:00:00 . Memory (MB): peak = 386.55 ; gain = 12.04 
+Time: cpu = 00:00:00 ; elapsed : 00:00:00 . Memory (MB): peak = 393.54 ; gain = 11.84 
 
 Phase 3 Hierarchical Placement 
 Pin Constraint Summary:
-   0 out of 6 pins locked (0% locked).
+   0 out of 21 pins locked (0% locked).
 .
 Phase 3.1 Clustering & Global Placement 
-...........Phase 3.1 Clustering & Global Placement Complete: Time (s) - CPU Time : 0.02, Real Time : 0.02  |   Memory (MB) - Peak Memory : 401.10, Gain Memory : 0.03  
+..............Phase 3.1 Clustering & Global Placement Complete: Time (s) - CPU Time : 0.16, Real Time : 0.16  |   Memory (MB) - Peak Memory : 406.93, Gain Memory : 0.02  
 
-Time: cpu = 00:00:00 ; elapsed : 00:00:00 . Memory (MB): peak = 401.10 ; gain = 0.03 
+Time: cpu = 00:00:01 ; elapsed : 00:00:01 . Memory (MB): peak = 406.93 ; gain = 0.02 
 
-Phase 3 Hierarchical Placement Complete: Time (s) - CPU Time : 0.17, Real Time : 0.18  |   Memory (MB) - Peak Memory : 401.12, Gain Memory : 14.57  
+Phase 3 Hierarchical Placement Complete: Time (s) - CPU Time : 0.38, Real Time : 0.38  |   Memory (MB) - Peak Memory : 406.94, Gain Memory : 13.40  
 
-Time: cpu = 00:00:00 ; elapsed : 00:00:00 . Memory (MB): peak = 401.12 ; gain = 14.57 
+Time: cpu = 00:00:01 ; elapsed : 00:00:01 . Memory (MB): peak = 406.94 ; gain = 13.40 
 
 Phase 4 Constructive Placement 
 Phase 4.1 Iterative Refinement 
 ..  ..
-....................
+..................
 
-Placer score = 65798.
-Phase 4.1 Iterative Refinement Complete: Time (s) - CPU Time : 2.44, Real Time : 2.46  |   Memory (MB) - Peak Memory : 401.64, Gain Memory : 0.18  
+Placer score = 296443.
+Phase 4.1 Iterative Refinement Complete: Time (s) - CPU Time : 4.36, Real Time : 4.39  |   Memory (MB) - Peak Memory : 407.78, Gain Memory : 0.17  
 
-Time: cpu = 00:00:03 ; elapsed : 00:00:03 . Memory (MB): peak = 401.64 ; gain = 0.18 
+Time: cpu = 00:00:05 ; elapsed : 00:00:05 . Memory (MB): peak = 407.78 ; gain = 0.17 
 
-Phase 4 Constructive Placement Complete: Time (s) - CPU Time : 2.47, Real Time : 2.48  |   Memory (MB) - Peak Memory : 401.64, Gain Memory : 0.53  
+Phase 4 Constructive Placement Complete: Time (s) - CPU Time : 4.41, Real Time : 4.43  |   Memory (MB) - Peak Memory : 407.78, Gain Memory : 0.84  
 
-Time: cpu = 00:00:03 ; elapsed : 00:00:03 . Memory (MB): peak = 401.64 ; gain = 0.53 
+Time: cpu = 00:00:05 ; elapsed : 00:00:05 . Memory (MB): peak = 407.78 ; gain = 0.84 
 
 Phase 5 Placement Optimization 
 Phase 5.1 Local Optimization 
 .
 
-Placer score =  65781
-Phase 5.1 Local Optimization Complete: Time (s) - CPU Time : 0.02, Real Time : 0.02  |   Memory (MB) - Peak Memory : 401.66, Gain Memory : 0.01  
+Placer score =  288613
+Phase 5.1 Local Optimization Complete: Time (s) - CPU Time : 0.09, Real Time : 0.09  |   Memory (MB) - Peak Memory : 407.79, Gain Memory : 0.01  
 
-Time: cpu = 00:00:03 ; elapsed : 00:00:03 . Memory (MB): peak = 401.66 ; gain = 0.01 
+Time: cpu = 00:00:05 ; elapsed : 00:00:05 . Memory (MB): peak = 407.79 ; gain = 0.01 
 
-Phase 5 Placement Optimization Complete: Time (s) - CPU Time : 0.02, Real Time : 0.02  |   Memory (MB) - Peak Memory : 401.66, Gain Memory : 0.01  
+Phase 5 Placement Optimization Complete: Time (s) - CPU Time : 0.09, Real Time : 0.09  |   Memory (MB) - Peak Memory : 407.79, Gain Memory : 0.01  
 
-Time: cpu = 00:00:03 ; elapsed : 00:00:03 . Memory (MB): peak = 401.66 ; gain = 0.01 
+Time: cpu = 00:00:05 ; elapsed : 00:00:05 . Memory (MB): peak = 407.79 ; gain = 0.01 
 
 Phase 6 Post-Placement Processing 
 
@@ -109,7 +111,7 @@ Global Clock Resources:
   PCIE       : 0 out of 1 (0%)
 
 Global Clocks:
-  PRIMARY "clk_c" from comp "clk" on CLK_PIN site "E12 (PT76A)", clk load = 178, ce load = 0, sr load = 0
+  PRIMARY "clk_c" from comp "clk" on CLK_PIN site "E12 (PT76A)", clk load = 571, ce load = 0, sr load = 0
 
   PRIMARY  : 1 out of 16 (6%)
 
@@ -122,9 +124,9 @@ Edge Clocks:
 
 
 I/O Usage Summary (final):
-   6 out of 185 (3.2%) SEIO33 sites used.
-   6 out of 111 (5.4%) bonded SEIO33 sites used.
-   Number of SEIO33 components: 6; differential: 0
+   21 out of 185 (11.4%) SEIO33 sites used.
+   21 out of 111 (18.9%) bonded SEIO33 sites used.
+   Number of SEIO33 components: 21; differential: 0
    Number of Vref pins used: 0
    0 out of 74 (0.0%) SEIO18 sites used.
    0 out of 74 (0.0%) bonded SEIO18 sites used.
@@ -138,50 +140,52 @@ I/O Bank Usage Summary:
 | I/O Bank | Usage         | Bank Vccio | Bank Vref1 | Bank Vref2 |
 +----------+---------------+------------+------------+------------+
 | 0        | 1 / 12 (  8%) | 3.3V       | -          | -          |
-| 1        | 0 / 21 (  0%) | -          | -          | -          |
+| 1        | 5 / 21 ( 23%) | 3.3V       | -          | -          |
 | 2        | 5 / 28 ( 17%) | 3.3V       | -          | -          |
 | 3        | 0 / 32 (  0%) | -          | -          | -          |
 | 4        | 0 / 32 (  0%) | -          | -          | -          |
 | 5        | 0 / 10 (  0%) | -          | -          | -          |
-| 6        | 0 / 28 (  0%) | -          | -          | -          |
-| 7        | 0 / 22 (  0%) | -          | -          | -          |
+| 6        | 6 / 28 ( 21%) | 3.3V       | -          | -          |
+| 7        | 4 / 22 ( 18%) | 3.3V       | -          | -          |
 +----------+---------------+------------+------------+------------+
 
 Device utilization summary:
 
-   SEIO33                6/185           3% used
-                         6/111           5% bonded
-   SLICE               292/16128         2% used
-     LUT               351/32256         1% used
-     REG               225/32256         1% used
+   VHI                   1/1           100% used
+   EBR                   1/84            1% used
+   SEIO33               21/185          11% used
+                        21/111          18% bonded
+   SLICE               848/16128         5% used
+     LUT               830/32256         3% used
+     REG               617/32256         2% used
 
 
-Phase 6 Post-Placement Processing Complete: Time (s) - CPU Time : 0.02, Real Time : 0.02  |   Memory (MB) - Peak Memory : 402.71, Gain Memory : 1.05  
+Phase 6 Post-Placement Processing Complete: Time (s) - CPU Time : 0.03, Real Time : 0.03  |   Memory (MB) - Peak Memory : 408.59, Gain Memory : 0.80  
 
-Time: cpu = 00:00:03 ; elapsed : 00:00:03 . Memory (MB): peak = 402.71 ; gain = 1.05 
+Time: cpu = 00:00:05 ; elapsed : 00:00:05 . Memory (MB): peak = 408.59 ; gain = 0.80 
 
-Total Placer CPU time: 3 secs, REAL time = 3 secs
+Total Placer CPU time: 5 secs, REAL time = 5 secs
 
 
-Checksum -- place: 13265a669127837b799aee904fb7f741f2fccd24
-Ending Place Design : Time (s) - CPU Time : 3.02, Real Time : 3.05  |   Memory (MB) - Peak Memory : 402.80, Gain Memory : 29.63  
+Checksum -- place: 9460de9e26aa979b6b9e73dfd8343febabb8a2
+Ending Place Design : Time (s) - CPU Time : 5.53, Real Time : 5.58  |   Memory (MB) - Peak Memory : 408.68, Gain Memory : 28.32  
 
-Time: cpu = 00:00:03 ; elapsed : 00:00:03 . Memory (MB): peak = 402.80 ; gain = 29.63 
+Time: cpu = 00:00:06 ; elapsed : 00:00:06 . Memory (MB): peak = 408.68 ; gain = 28.32 
 
 
  Phase Summary Table: 	
 +--------------------------------------------------------+-------------+--------------+-----------------+----------------+
 | Phase Name                                             | CPU Time(s) | Wall Time(s) | Peak Memory(MB) | Memory Gain(MB)|
 +--------------------------------------------------------+-------------+--------------+-----------------+----------------+
-| Phase 1 Placer Initialization                          | 0.00        |         0.03 |          374.48 |           1.30 |
-| Phase 2 Logic Packing                                  | 0.28        |         0.28 |          386.55 |          12.04 |
-| Phase 3 Hierarchical Placement                         | 0.17        |         0.18 |          401.12 |          14.57 |
-| Phase 3.1 Clustering & Global Placement                | 0.02        |         0.02 |          401.10 |           0.03 |
-| Phase 4 Constructive Placement                         | 2.47        |         2.48 |          401.64 |           0.53 |
-| Phase 4.1 Iterative Refinement                         | 2.44        |         2.46 |          401.64 |           0.18 |
-| Phase 5 Placement Optimization                         | 0.02        |         0.02 |          401.66 |           0.01 |
-| Phase 5.1 Local Optimization                           | 0.02        |         0.02 |          401.66 |           0.01 |
-| Phase 6 Post-Placement Processing                      | 0.02        |         0.02 |          402.71 |           1.05 |
+| Phase 1 Placer Initialization                          | 0.00        |         0.00 |          381.67 |           1.30 |
+| Phase 2 Logic Packing                                  | 0.45        |         0.47 |          393.54 |          11.84 |
+| Phase 3 Hierarchical Placement                         | 0.38        |         0.38 |          406.94 |          13.40 |
+| Phase 3.1 Clustering & Global Placement                | 0.16        |         0.16 |          406.93 |           0.02 |
+| Phase 4 Constructive Placement                         | 4.41        |         4.43 |          407.78 |           0.84 |
+| Phase 4.1 Iterative Refinement                         | 4.36        |         4.39 |          407.78 |           0.17 |
+| Phase 5 Placement Optimization                         | 0.09        |         0.09 |          407.79 |           0.01 |
+| Phase 5.1 Local Optimization                           | 0.09        |         0.09 |          407.79 |           0.01 |
+| Phase 6 Post-Placement Processing                      | 0.03        |         0.03 |          408.59 |           0.80 |
 +--------------------------------------------------------+-------------+--------------+-----------------+----------------+
 Writing design to file Neuromorphic_Lattice_impl_1_par.dir/5_1.udb ...
 
@@ -194,7 +198,7 @@ INFO - par: ASE feature is off due to non timing-driven settings.
 -----------------------------------------------------------------
 
 
-Start NBR router at 21:54:11 08/20/26
+Start NBR router at 22:21:20 08/20/26
 
 *****************************************************************
 Info: NBR allows conflicts(one node used by more than one signal)
@@ -209,152 +213,158 @@ Note: NBR uses a different method to calculate timing slacks. The
       tool to verify your design.                                
 *****************************************************************
 
-Phase 1 Build Route Design Complete: Time (s) - CPU Time : 0.25, Real Time : 0.28  |   Memory (MB) - Peak Memory : 524.05, Gain Memory : 121.15  
+Phase 1 Build Route Design Complete: Time (s) - CPU Time : 0.47, Real Time : 0.46  |   Memory (MB) - Peak Memory : 530.19, Gain Memory : 121.39  
 
-Time: cpu = 00:00:00 ; elapsed : 00:00:00 . Memory (MB): peak = 524.05 ; gain = 121.15 
+Time: cpu = 00:00:00 ; elapsed : 00:00:00 . Memory (MB): peak = 530.19 ; gain = 121.39 
 
 Phase 2 Design Checks and Routing Setup 
-Phase 2 Design Checks and Routing Setup Complete: Time (s) - CPU Time : 0.00, Real Time : 0.00  |   Memory (MB) - Peak Memory : 524.15, Gain Memory : 0.00  
+Phase 2 Design Checks and Routing Setup Complete: Time (s) - CPU Time : 0.00, Real Time : 0.00  |   Memory (MB) - Peak Memory : 530.29, Gain Memory : 0.00  
 
-Time: cpu = 00:00:00 ; elapsed : 00:00:00 . Memory (MB): peak = 524.15 ; gain = 0.00 
+Time: cpu = 00:00:00 ; elapsed : 00:00:00 . Memory (MB): peak = 530.29 ; gain = 0.00 
 
 Phase 3 Dedicated Net and Clock Routing 
 Phase 3.1 Routing User Constraints 
-Phase 3.1 Routing User Constraints Complete: Time (s) - CPU Time : 3.89, Real Time : 3.90  |   Memory (MB) - Peak Memory : 594.64, Gain Memory : 70.49  
+Phase 3.1 Routing User Constraints Complete: Time (s) - CPU Time : 5.45, Real Time : 5.45  |   Memory (MB) - Peak Memory : 602.05, Gain Memory : 71.77  
 
-Time: cpu = 00:00:04 ; elapsed : 00:00:04 . Memory (MB): peak = 594.64 ; gain = 70.49 
+Time: cpu = 00:00:06 ; elapsed : 00:00:06 . Memory (MB): peak = 602.05 ; gain = 71.77 
 
 Phase 3.2 Dedicated Routing 
-Phase 3.2 Dedicated Routing Complete: Time (s) - CPU Time : 0.06, Real Time : 0.05  |   Memory (MB) - Peak Memory : 594.64, Gain Memory : 76.86  
+Phase 3.2 Dedicated Routing Complete: Time (s) - CPU Time : 0.06, Real Time : 0.07  |   Memory (MB) - Peak Memory : 602.05, Gain Memory : 76.86  
 
-Time: cpu = 00:00:04 ; elapsed : 00:00:04 . Memory (MB): peak = 594.64 ; gain = 76.86 
+Time: cpu = 00:00:06 ; elapsed : 00:00:06 . Memory (MB): peak = 602.05 ; gain = 76.86 
 
 Phase 3.3 Clock Net Routing 
-Phase 3.3 Clock Net Routing Complete: Time (s) - CPU Time : 0.02, Real Time : 0.03  |   Memory (MB) - Peak Memory : 594.64, Gain Memory : 119.87  
+Phase 3.3 Clock Net Routing Complete: Time (s) - CPU Time : 0.12, Real Time : 0.13  |   Memory (MB) - Peak Memory : 602.05, Gain Memory : 121.41  
 
-Time: cpu = 00:00:04 ; elapsed : 00:00:04 . Memory (MB): peak = 594.64 ; gain = 119.87 
+Time: cpu = 00:00:06 ; elapsed : 00:00:06 . Memory (MB): peak = 602.05 ; gain = 121.41 
 
 Phase 3.4 Dedicated Net and Clock Routing Finalization 
 Preassignment Summary:
 --------------------------------------------------------------------------------
-161 connections routed with dedicated routing resources
+357 connections routed with dedicated routing resources
 1 global clock signals routed
-479 connections routed (of 1792 total) (26.73%)
+1152 connections routed (of 4575 total) (25.18%)
 ---------------------------------------------------------
 Clock routing summary:
 Primary clocks (2 used out of 32 available):
     Signal "clk_c" (0, 16)
-       Clock   loads: 178   out of   178 routed (100.00%)
+       Clock   loads: 571   out of   571 routed (100.00%)
 ---------------------------------------------------------
 --------------------------------------------------------------------------------
-Phase 3.4 Dedicated Net and Clock Routing Finalization Complete: Time (s) - CPU Time : 0.00, Real Time : 0.00  |   Memory (MB) - Peak Memory : 594.64, Gain Memory : 119.59  
+Phase 3.4 Dedicated Net and Clock Routing Finalization Complete: Time (s) - CPU Time : 0.00, Real Time : 0.00  |   Memory (MB) - Peak Memory : 602.05, Gain Memory : 121.14  
 
-Time: cpu = 00:00:04 ; elapsed : 00:00:04 . Memory (MB): peak = 594.64 ; gain = 119.59 
+Time: cpu = 00:00:06 ; elapsed : 00:00:06 . Memory (MB): peak = 602.05 ; gain = 121.14 
 
-Phase 3 Dedicated Net and Clock Routing Complete: Time (s) - CPU Time : 4.00, Real Time : 4.01  |   Memory (MB) - Peak Memory : 594.64, Gain Memory : 70.49  
+Phase 3 Dedicated Net and Clock Routing Complete: Time (s) - CPU Time : 5.69, Real Time : 5.69  |   Memory (MB) - Peak Memory : 602.05, Gain Memory : 71.77  
 
-Time: cpu = 00:00:04 ; elapsed : 00:00:04 . Memory (MB): peak = 594.64 ; gain = 70.49 
+Time: cpu = 00:00:06 ; elapsed : 00:00:06 . Memory (MB): peak = 602.05 ; gain = 71.77 
 
 Phase 4 Pre-Detailed Routing 
-Phase 4 Pre-Detailed Routing Complete: Time (s) - CPU Time : 0.00, Real Time : 0.00  |   Memory (MB) - Peak Memory : 594.64, Gain Memory : 119.58  
+Phase 4 Pre-Detailed Routing Complete: Time (s) - CPU Time : 0.00, Real Time : 0.00  |   Memory (MB) - Peak Memory : 602.05, Gain Memory : 121.05  
 
-Time: cpu = 00:00:04 ; elapsed : 00:00:04 . Memory (MB): peak = 594.64 ; gain = 119.58 
+Time: cpu = 00:00:06 ; elapsed : 00:00:06 . Memory (MB): peak = 602.05 ; gain = 121.05 
 
 Phase 5 Detailed Routing 
 Phase 5.1 Initial Detailed Routing 
 
-Start NBR section for initial routing at 21:54:15 08/20/26
+Start NBR section for initial routing at 22:21:26 08/20/26
 Level 4, iteration 1
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Routing in Serial Mode ......
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-89(0.01%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; real time: 5 secs 
+252(0.01%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; real time: 7 secs 
 
 Info: Initial congestion level at 75.00% usage is 0
 Info: Initial congestion area  at 75.00% usage is 0 (0.00%)
-Phase 5.1 Initial Detailed Routing Complete: Time (s) - CPU Time : 0.50, Real Time : 0.52  |   Memory (MB) - Peak Memory : 594.64, Gain Memory : 119.58  
+Phase 5.1 Initial Detailed Routing Complete: Time (s) - CPU Time : 1.17, Real Time : 1.17  |   Memory (MB) - Peak Memory : 602.05, Gain Memory : 121.05  
 
-Time: cpu = 00:00:05 ; elapsed : 00:00:05 . Memory (MB): peak = 594.64 ; gain = 119.58 
+Time: cpu = 00:00:07 ; elapsed : 00:00:07 . Memory (MB): peak = 602.05 ; gain = 121.05 
 
 Phase 5.2 Rip-Up and Route 
 
-Start NBR section for normal routing at 21:54:16 08/20/26
+Start NBR section for normal routing at 22:21:28 08/20/26
 Level 4, iteration 1
-54(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; real time: 5 secs 
+150(0.01%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; real time: 8 secs 
 Level 4, iteration 2
-16(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; real time: 5 secs 
+47(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; real time: 8 secs 
 Level 4, iteration 3
-3(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; real time: 5 secs 
+12(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; real time: 8 secs 
 Level 4, iteration 4
-0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; real time: 5 secs 
-Phase 5.2 Rip-Up and Route Complete: Time (s) - CPU Time : 0.16, Real Time : 0.15  |   Memory (MB) - Peak Memory : 594.64, Gain Memory : 118.34  
+6(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; real time: 8 secs 
+Level 4, iteration 5
+3(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; real time: 8 secs 
+Level 4, iteration 6
+2(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; real time: 8 secs 
+Level 4, iteration 7
+0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; real time: 8 secs 
+Phase 5.2 Rip-Up and Route Complete: Time (s) - CPU Time : 0.45, Real Time : 0.46  |   Memory (MB) - Peak Memory : 602.05, Gain Memory : 119.49  
 
-Time: cpu = 00:00:05 ; elapsed : 00:00:05 . Memory (MB): peak = 594.64 ; gain = 118.34 
+Time: cpu = 00:00:08 ; elapsed : 00:00:08 . Memory (MB): peak = 602.05 ; gain = 119.49 
 
 Phase 5.3 Rip-Up and Reroute for setup timing improvement 
-Phase 5.3 Rip-Up and Reroute for setup timing improvement Complete: Time (s) - CPU Time : 0.00, Real Time : 0.00  |   Memory (MB) - Peak Memory : 594.64, Gain Memory : 118.31  
+Phase 5.3 Rip-Up and Reroute for setup timing improvement Complete: Time (s) - CPU Time : 0.00, Real Time : 0.00  |   Memory (MB) - Peak Memory : 602.05, Gain Memory : 119.38  
 
-Time: cpu = 00:00:05 ; elapsed : 00:00:05 . Memory (MB): peak = 594.64 ; gain = 118.31 
+Time: cpu = 00:00:08 ; elapsed : 00:00:08 . Memory (MB): peak = 602.05 ; gain = 119.38 
 
 Phase 5.4 Rip-Up and Reroute for hold timing fix 
-Phase 5.4 Rip-Up and Reroute for hold timing fix Complete: Time (s) - CPU Time : 0.00, Real Time : 0.00  |   Memory (MB) - Peak Memory : 594.64, Gain Memory : 118.31  
+Phase 5.4 Rip-Up and Reroute for hold timing fix Complete: Time (s) - CPU Time : 0.00, Real Time : 0.00  |   Memory (MB) - Peak Memory : 602.05, Gain Memory : 119.38  
 
-Time: cpu = 00:00:05 ; elapsed : 00:00:05 . Memory (MB): peak = 594.64 ; gain = 118.31 
+Time: cpu = 00:00:08 ; elapsed : 00:00:08 . Memory (MB): peak = 602.05 ; gain = 119.38 
 
 Phase 5.5 TNS CleanUp 
 
-Start NBR section for post-routing at 21:54:16 08/20/26
-Phase 5.5 TNS CleanUp Complete: Time (s) - CPU Time : 0.02, Real Time : 0.03  |   Memory (MB) - Peak Memory : 594.64, Gain Memory : 118.31  
+Start NBR section for post-routing at 22:21:28 08/20/26
+Phase 5.5 TNS CleanUp Complete: Time (s) - CPU Time : 0.05, Real Time : 0.06  |   Memory (MB) - Peak Memory : 602.05, Gain Memory : 119.38  
 
-Time: cpu = 00:00:05 ; elapsed : 00:00:05 . Memory (MB): peak = 594.64 ; gain = 118.31 
+Time: cpu = 00:00:08 ; elapsed : 00:00:08 . Memory (MB): peak = 602.05 ; gain = 119.38 
 
 Phase 5.6 Detail Routing Finalization 
 
 End NBR router with 0 unrouted connection(s)
 
-Checksum -- route: d9859aca1b2b5d493f1216b2869de83ed6b5f896
-Phase 5.6 Detail Routing Finalization Complete: Time (s) - CPU Time : 0.09, Real Time : 0.10  |   Memory (MB) - Peak Memory : 594.64, Gain Memory : 118.57  
+Checksum -- route: dab842492979e1f448aad40fd8d1721534d4ef0e
+Phase 5.6 Detail Routing Finalization Complete: Time (s) - CPU Time : 0.30, Real Time : 0.29  |   Memory (MB) - Peak Memory : 602.05, Gain Memory : 119.37  
 
-Time: cpu = 00:00:05 ; elapsed : 00:00:05 . Memory (MB): peak = 594.64 ; gain = 118.57 
+Time: cpu = 00:00:08 ; elapsed : 00:00:08 . Memory (MB): peak = 602.05 ; gain = 119.37 
 
 
-Phase 5 Detailed Routing Complete: Time (s) - CPU Time : 0.78, Real Time : 0.79  |   Memory (MB) - Peak Memory : 594.64, Gain Memory : 119.58  
+Phase 5 Detailed Routing Complete: Time (s) - CPU Time : 1.97, Real Time : 1.98  |   Memory (MB) - Peak Memory : 602.05, Gain Memory : 121.05  
 
-Time: cpu = 00:00:05 ; elapsed : 00:00:05 . Memory (MB): peak = 594.64 ; gain = 119.58 
+Time: cpu = 00:00:08 ; elapsed : 00:00:08 . Memory (MB): peak = 602.05 ; gain = 121.05 
 
 Phase 6 Router Finalization 
-Total Router CPU time 5 secs , REAL time: 5 secs 
+Total Router CPU time 8 secs , REAL time: 8 secs 
 Completely routed.
-End of route.  1792 routed (100.00%); 0 unrouted.
-Phase 6 Router Finalization Complete: Time (s) - CPU Time : 0.02, Real Time : 0.02  |   Memory (MB) - Peak Memory : 594.64, Gain Memory : 118.56  
+End of route.  4575 routed (100.00%); 0 unrouted.
+Phase 6 Router Finalization Complete: Time (s) - CPU Time : 0.06, Real Time : 0.06  |   Memory (MB) - Peak Memory : 602.05, Gain Memory : 119.36  
 
-Time: cpu = 00:00:05 ; elapsed : 00:00:05 . Memory (MB): peak = 594.64 ; gain = 118.56 
+Time: cpu = 00:00:08 ; elapsed : 00:00:08 . Memory (MB): peak = 602.05 ; gain = 119.36 
 
-Ending Route Design : Time (s) - CPU Time : 5.08, Real Time : 5.12  |   Memory (MB) - Peak Memory : 594.64, Gain Memory : 191.78  
+Ending Route Design : Time (s) - CPU Time : 8.20, Real Time : 8.21  |   Memory (MB) - Peak Memory : 602.05, Gain Memory : 193.31  
 
-Time: cpu = 00:00:05 ; elapsed : 00:00:05 . Memory (MB): peak = 594.64 ; gain = 191.78 
+Time: cpu = 00:00:08 ; elapsed : 00:00:08 . Memory (MB): peak = 602.05 ; gain = 193.31 
 
 
  Phase Summary Table: 	
 +--------------------------------------------------------+-------------+--------------+-----------------+----------------+
 | Phase Name                                             | CPU Time(s) | Wall Time(s) | Peak Memory(MB) | Memory Gain(MB)|
 +--------------------------------------------------------+-------------+--------------+-----------------+----------------+
-| Phase 1 Build Route Design                             | 0.25        |         0.28 |          524.05 |         121.15 |
-| Phase 2 Design Checks and Routing Setup                | 0.00        |         0.00 |          524.15 |           0.00 |
-| Phase 3 Dedicated Net and Clock Routing                | 4.00        |         4.01 |          594.64 |          70.49 |
-| Phase 3.1 Routing User Constraints                     | 3.89        |         3.90 |          594.64 |          70.49 |
-| Phase 3.2 Dedicated Routing                            | 0.06        |         0.05 |          594.64 |          76.86 |
-| Phase 3.3 Clock Net Routing                            | 0.02        |         0.03 |          594.64 |         119.87 |
-| Phase 3.4 Dedicated Net and Clock Routing Finalization | 0.00        |         0.00 |          594.64 |         119.59 |
-| Phase 4 Pre-Detailed Routing                           | 0.00        |         0.00 |          594.64 |         119.58 |
-| Phase 5 Detailed Routing                               | 0.78        |         0.79 |          594.64 |         119.58 |
-| Phase 5.1 Initial Detailed Routing                     | 0.50        |         0.52 |          594.64 |         119.58 |
-| Phase 5.2 Rip-Up and Route                             | 0.16        |         0.15 |          594.64 |         118.34 |
-| Phase 5.3 Rip-Up and Reroute for setup timing improve* | 0.00        |         0.00 |          594.64 |         118.31 |
-| Phase 5.4 Rip-Up and Reroute for hold timing fix       | 0.00        |         0.00 |          594.64 |         118.31 |
-| Phase 5.5 TNS CleanUp                                  | 0.02        |         0.03 |          594.64 |         118.31 |
-| Phase 5.6 Detail Routing Finalization                  | 0.09        |         0.10 |          594.64 |         118.57 |
-| Phase 6 Router Finalization                            | 0.02        |         0.02 |          594.64 |         118.56 |
+| Phase 1 Build Route Design                             | 0.47        |         0.46 |          530.19 |         121.39 |
+| Phase 2 Design Checks and Routing Setup                | 0.00        |         0.00 |          530.29 |           0.00 |
+| Phase 3 Dedicated Net and Clock Routing                | 5.69        |         5.69 |          602.05 |          71.77 |
+| Phase 3.1 Routing User Constraints                     | 5.45        |         5.45 |          602.05 |          71.77 |
+| Phase 3.2 Dedicated Routing                            | 0.06        |         0.07 |          602.05 |          76.86 |
+| Phase 3.3 Clock Net Routing                            | 0.12        |         0.13 |          602.05 |         121.41 |
+| Phase 3.4 Dedicated Net and Clock Routing Finalization | 0.00        |         0.00 |          602.05 |         121.14 |
+| Phase 4 Pre-Detailed Routing                           | 0.00        |         0.00 |          602.05 |         121.05 |
+| Phase 5 Detailed Routing                               | 1.97        |         1.98 |          602.05 |         121.05 |
+| Phase 5.1 Initial Detailed Routing                     | 1.17        |         1.17 |          602.05 |         121.05 |
+| Phase 5.2 Rip-Up and Route                             | 0.45        |         0.46 |          602.05 |         119.49 |
+| Phase 5.3 Rip-Up and Reroute for setup timing improve* | 0.00        |         0.00 |          602.05 |         119.38 |
+| Phase 5.4 Rip-Up and Reroute for hold timing fix       | 0.00        |         0.00 |          602.05 |         119.38 |
+| Phase 5.5 TNS CleanUp                                  | 0.05        |         0.06 |          602.05 |         119.38 |
+| Phase 5.6 Detail Routing Finalization                  | 0.30        |         0.29 |          602.05 |         119.37 |
+| Phase 6 Router Finalization                            | 0.06        |         0.06 |          602.05 |         119.36 |
 +--------------------------------------------------------+-------------+--------------+-----------------+----------------+
 
 Writing design to file Neuromorphic_Lattice_impl_1_par.dir/5_1.udb ...
@@ -373,9 +383,9 @@ PAR_SUMMARY::Number of errors = 0
 
 Note: user must run 'timing' for timing closure signoff.
 
-Total CPU  Time: 11 secs 
-Total REAL Time: 12 secs 
-Peak Memory Usage: 594.64 MB
+Total CPU  Time: 17 secs 
+Total REAL Time: 18 secs 
+Peak Memory Usage: 602.05 MB
 
 
 par done!

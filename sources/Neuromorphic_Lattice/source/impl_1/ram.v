@@ -1,7 +1,9 @@
 // Parameterized Single-Port Synchronous RAM with File Initialization
+`include "constants.vh"
+
 module single_port_ram #(
     parameter DATA_WIDTH = 8,
-    parameter ADDR_WIDTH = 4
+    parameter ADDR_WIDTH = `RAM_ADDRESS_WIDTH
 )(
     input                      clk,
     input                      write_enable,

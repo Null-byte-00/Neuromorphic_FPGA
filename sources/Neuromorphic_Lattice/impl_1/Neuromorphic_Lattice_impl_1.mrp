@@ -8,7 +8,7 @@ Package: CABGA400
 Performance Grade:  9_High-Performance_1.0V
 
 Mapper:    version Radiant Software (64-bit) 2026.1.0.37.0
-Mapped on: Thu Aug 20 21:54:03 2026
+Mapped on: Thu Aug 20 22:21:10 2026
 
 Design Information
 ------------------
@@ -21,26 +21,26 @@ Command line:   map -i Neuromorphic_Lattice_impl_1_syn.udb -o
 Design Summary
 --------------
 
-   Number of registers:         225 out of 32811 (1%)
-      Number of SLICE         registers:  225 out of 32256 (1%)
+   Number of registers:         617 out of 32811 (2%)
+      Number of SLICE         registers:  617 out of 32256 (2%)
       Number of PIO Input     registers:    0 out of   185 (0%)
       Number of PIO Output    registers:    0 out of   185 (0%)
       Number of PIO Tri-State registers:    0 out of   185 (0%)
-   Number of LUT4s:             351 out of 32256 (1%)
-      Number used as logic LUT4s:                        105
-      Number used as distributed RAM:                     12 (6 per 16X4 RAM)
-      Number used as ripple logic:                       234 (2 per CCU2)
-   Number of PIOs used/reserved:   13 out of   185 (7%)
+   Number of LUT4s:             830 out of 32256 (3%)
+      Number used as logic LUT4s:                        346
+      Number used as distributed RAM:                      0 (6 per 16X4 RAM)
+      Number used as ripple logic:                       484 (2 per CCU2)
+   Number of PIOs used/reserved:   28 out of   185 (15%)
       Number of PIOs reserved:      7 (per sysConfig and/or prohibit constraint)
-      Number of PIOs used:          6
-        Number of PIOs used for single ended IO:         6
+      Number of PIOs used:         21
+        Number of PIOs used for single ended IO:        21
         Number of PIO pairs used for differential IO:    0
-        Number allocated to regular speed PIOs:     6 out of  111 (5%)
+        Number allocated to regular speed PIOs:    21 out of  111 (19%)
         Number allocated to high speed PIOs:        0 out of   74 (0%)
    Number of Dedicated IO used for ADC/PCIE/DPHY:    0 out of   32 (0%)
    Number of IDDR/ODDR/TDDR functions used:      0 out of   444 (0%)
    Number of IOs using at least one DDR function: 0 (0 differential)
-   Number of Block RAMs:          0 out of 84 (0%)
+   Number of Block RAMs:          1 out of 84 (1%)
    Number of Large RAMs:          0 out of 2 (0%)
    Number of Logical DSP Functions:
       Number of Pre-Adders (9+9):    0 out of 112 (0%)
@@ -97,35 +97,35 @@ Design Summary (cont)
    Number of Config WDT:          0 out of 1 (0%)
    Number of PCIEs:               0 out of 1 (0%)
    Number of Clocks:  1
-      Net clk_c: 227 loads, 227 rising, 0 falling (Driver: Port clk)
-   Number of Clock Enables:  7
-      Net wmu.read_mode: 15 loads, 15 SLICEs
-      Net wmu.clk_c_enable_51: 8 loads, 8 SLICEs
-      Net wmu.clk_c_enable_43: 8 loads, 8 SLICEs
-      Net wmu.clk_c_enable_35: 8 loads, 8 SLICEs
-      Net wmu.clk_c_enable_19: 8 loads, 8 SLICEs
-      Net wmu.clk_c_enable_27: 8 loads, 8 SLICEs
-      Net wmu.clk_c_enable_52: 8 loads, 8 SLICEs
-   Number of LSRs:  8
-      Net reset: 54 loads, 54 SLICEs
-      Net sa.genblk1[2].sn.n543: 1 loads, 1 SLICEs
-      Net sa.genblk1[2].sn.n225: 32 loads, 32 SLICEs
-      Net sa.genblk1[1].sn.n545: 1 loads, 1 SLICEs
-      Net sa.genblk1[1].sn.n223: 32 loads, 32 SLICEs
-      Net sa.genblk1[0].sn.n227: 32 loads, 32 SLICEs
-      Net sa.genblk1[0].sn.n541: 1 loads, 1 SLICEs
-      Net n1057: 53 loads, 53 SLICEs
-   Top 10 highest fanout non-clock nets:
-      Net reset: 60 loads
-      Net n1057: 53 loads
-      Net sa.genblk1[0].sn.n227: 32 loads
-      Net sa.genblk1[1].sn.n223: 32 loads
-      Net sa.genblk1[2].sn.n225: 32 loads
-      Net wma_outputs[15]: 26 loads
-      Net wma_outputs[23]: 26 loads
-      Net wma_outputs[7]: 26 loads
-      Net network_inputs_c[0]: 24 loads
-      Net network_inputs_c[1]: 24 loads
+      Net clk_c: 619 loads, 619 rising, 0 falling (Driver: Port clk)
+   Number of Clock Enables:  32
+      Net VCC_net: 2 loads, 0 SLICEs
+      Net wmu.clk_c_enable_241: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_186: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_194: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_202: 8 loads, 8 SLICEs
+      Net wmu.read_mode: 23 loads, 23 SLICEs
+      Net wmu.clk_c_enable_26: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_210: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_146: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_18: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_82: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_10: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_122: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_130: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_34: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_218: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_154: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_90: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_234: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_106: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_170: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_138: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_42: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_178: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_114: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_98: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_162: 8 loads, 8 SLICEs
 
                                     Page 2
 
@@ -133,6 +133,33 @@ Design Summary (cont)
 
 
 
+Design Summary (cont)
+---------------------
+      Net wmu.clk_c_enable_226: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_58: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_66: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_74: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_50: 8 loads, 8 SLICEs
+   Number of LSRs:  8
+      Net reset: 263 loads, 263 SLICEs
+      Net sa.genblk1[2].sn.n2709: 1 loads, 1 SLICEs
+      Net sa.genblk1[2].sn.n1197: 32 loads, 32 SLICEs
+      Net sa.genblk1[1].sn.n1195: 32 loads, 32 SLICEs
+      Net sa.genblk1[1].sn.n2711: 1 loads, 1 SLICEs
+      Net sa.genblk1[0].sn.n2713: 1 loads, 1 SLICEs
+      Net sa.genblk1[0].sn.n1199: 32 loads, 32 SLICEs
+      Net n6115: 240 loads, 240 SLICEs
+   Top 10 highest fanout non-clock nets:
+      Net reset: 269 loads
+      Net n6115: 240 loads
+      Net wmu.read_mode: 43 loads
+      Net sa.genblk1[0].sn.n1199: 32 loads
+      Net sa.genblk1[1].sn.n1195: 32 loads
+      Net sa.genblk1[2].sn.n1197: 32 loads
+      Net ram_output_line[0]: 30 loads
+      Net ram_output_line[1]: 30 loads
+      Net ram_output_line[2]: 30 loads
+      Net ram_output_line[3]: 30 loads
 
 
 
@@ -156,22 +183,67 @@ IO (PIO) Attributes
 +---------------------+-----------+-----------+-------+-------+-----------+
 | network_outputs[0]  | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
+| clk                 | INPUT     |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| network_inputs[9]   | INPUT     |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| network_inputs[8]   | INPUT     |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| network_inputs[7]   | INPUT     |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| network_inputs[6]   | INPUT     |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+
+                                    Page 3
+
+
+
+
+
+IO (PIO) Attributes (cont)
+--------------------------
+| network_inputs[5]   | INPUT     |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| network_inputs[4]   | INPUT     |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| network_inputs[3]   | INPUT     |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| network_inputs[2]   | INPUT     |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
 | network_inputs[1]   | INPUT     |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
 | network_inputs[0]   | INPUT     |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
+| network_outputs[9]  | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| network_outputs[8]  | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| network_outputs[7]  | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| network_outputs[6]  | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| network_outputs[5]  | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| network_outputs[4]  | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| network_outputs[3]  | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
 | network_outputs[2]  | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
 | network_outputs[1]  | OUTPUT    |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| clk                 | INPUT     |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
 
 Removed logic
 -------------
 
 Block GSR_INST undriven or does not drive anything - clipped.
-Block i14 was optimized away.
+Block i71 was optimized away.
+
+ASIC Components
+---------------
+
+Instance Name: ram/ram_addr_line_0__I_0.PDPSC16K_MODE_inst
+         Type: EBR_CORE
 
 Constraint Summary
 ------------------
@@ -184,17 +256,11 @@ Run Time and Memory Usage
 
    Total CPU Time: 2 secs
    Total REAL Time: 3 secs
-   Peak Memory Usage: 341 MB
-Checksum -- map: 499150ad37a1cfaf54aa1fd822b0d3939b91763
+   Peak Memory Usage: 351 MB
+Checksum -- map: 211d1f9caa12467ebf075a9b24643e8c3150db2b
 
 
-
-
-
-
-
-
-                                    Page 3
+                                    Page 4
 
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
