@@ -16,9 +16,9 @@
             <Task name="PARTrace" build_result="0" update_result="2" update_time="1787267749"/>
             <Task name="IOTiming" build_result="0" update_result="2" update_time="1787071343"/>
         </Milestone>
-        <Milestone name="Synthesis" build_result="0" build_time="1787591596">
-            <Task name="Lattice_Synthesis" build_result="0" update_result="2" update_time="1787591596"/>
-            <Task name="LSE_Compile" build_result="0" update_result="2" update_time="1787591596"/>
+        <Milestone name="Synthesis" build_result="2" build_time="1787594261">
+            <Task name="Lattice_Synthesis" build_result="2" update_result="0" update_time="1787594261"/>
+            <Task name="LSE_Compile" build_result="2" update_result="0" update_time="1787594261"/>
             <Task name="LSE_Lint" build_result="0" update_result="2" update_time="1787248069"/>
             <Task name="SynTrace" build_result="0" update_result="2" update_time="1787248069"/>
             <Task name="SynVerilogSimFile" build_result="0" update_result="2" update_time="1787248069"/>
@@ -36,7 +36,8 @@
         <Report name="Neuromorphic_Lattice_impl_1.twr.html" last_build_time="1787251893" last_build_size="14877"/>
         <Report name="Neuromorphic_Lattice_impl_1.udb" last_build_time="1787251889" last_build_size="130002"/>
         <Report name="Neuromorphic_Lattice_impl_1_map.udb" last_build_time="1787251871" last_build_size="74465"/>
-        <Report name="Neuromorphic_Lattice_impl_1_rtl.udb" last_build_time="1787591335" last_build_size="17479"/>
-        <Report name="Neuromorphic_Lattice_impl_1_syn.udb" last_build_time="1787591337" last_build_size="15631"/>
+        <Report name="Neuromorphic_Lattice_impl_1_rtl.udb" last_build_time="1787594258" last_build_size="34557"/>
+        <Report name="Neuromorphic_Lattice_impl_1_syn.udb" last_build_time="1787594260" last_build_size="7043"/>
     </Strategy>
 </BuildStatus>
+          

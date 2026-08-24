@@ -1,6 +1,6 @@
 <testsuites name="results">
   <testsuite name="all" package="all">
-    <property name="random_seed" value="1787592377" />
-    <testcase name="test_ffn" classname="lattice_tb" file="D:\programs\Neuromophic_FPGA\lattice_testbench\lattice_tb.py" lineno="9" time="1.2557792663574219" sim_time_ns="2002.0" ratio_time="1594.2292197633622" />
+    <property name="random_seed" value="1787596972" />
+    <testcase name="test_ffn" classname="lattice_tb" file="D:\programs\Neuromophic_FPGA\lattice_testbench\lattice_tb.py" lineno="9" time="0.0655355453491211" sim_time_ns="256.0" ratio_time="3906.2770994921348" />
   </testsuite>
 </testsuites>

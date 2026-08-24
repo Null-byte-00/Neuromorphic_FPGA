@@ -14,24 +14,33 @@ async def test_ffn(dut):
 
     dut.network_inputs.value = 0B11
 
-    await RisingEdge(dut.clk)
-    await ReadOnly()
+    dut.reset.value = 1
+    dut.network_inputs.value = 0
 
-    await FallingEdge(dut.clk)
+    for _ in range(3):
+        await RisingEdge(dut.clk)
 
-    for i in range(1000):
+    dut.reset.value = 0
+
+    while not dut.weights_loaded.value:
+        await RisingEdge(dut.clk)
+
+    for i in range(100):
         await RisingEdge(dut.clk)
         await ReadOnly()
         
         await FallingEdge(dut.clk)
+        dut.network_inputs.value = 0B11
+
         cocotb.log.info("___________________________________________________________________")
-        cocotb.log.info("inputs are %s, potentials are %s, spike outputs are %s",
-                         dut.network_inputs.value, 
-                         dut.wma_outputs.value,
-                         dut.network_outputs.value,
-                         )
-        cocotb.log.info("loaded weights are %s", dut.wma.weights_in)
-        cocotb.log.info("wma outputs: %s", dut.wma_outputs.value)       
+        """
+        #cocotb.log.info("inputs are %s, potentials are %s, spike outputs are %s",
+        #                        dut.network_inputs.value, 
+        #                        dut.wma_outputs.value,
+        #                        dut.network_outputs.value,
+        #                        )
+        #cocotb.log.info("loaded weights are %s", dut.wma.weights_in)
+        #cocotb.log.info("wma outputs: %s", dut.wma_outputs.value)       
         cocotb.log.info("***** neuron 1 *****")
         cocotb.log.info("neuron 1 input current %s", dut.sa.GEN_NEURONS[0].sn.input_current.value)
         cocotb.log.info("neuron 1 potential current %s", dut.sa.GEN_NEURONS[0].sn.potential.value)
@@ -43,3 +52,11 @@ async def test_ffn(dut):
         #cocotb.log.info("network_outputs is %s", dut.network_outputs)#wmu.weights_out)
         #cocotb.log.info("input is %s", dut.network_inputs)
         #cocotb.log.info("ram output is %s", dut.ram.data_out)
+        """
+        cocotb.log.info("network outputs: %s", dut.network_outputs)
+        cocotb.log.info("Layer 1 weights: %s", dut.layer1_weights)
+        cocotb.log.info("Layer 2 weights: %s", dut.layer2_weights)
+        cocotb.log.info("Last layer potentials: %s", dut.layer2_currents)
+        cocotb.log.info("Ram output: %s", dut.ram.data_out)
+
+

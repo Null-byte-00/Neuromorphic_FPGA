@@ -5,7 +5,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2026 Lattice Semiconductor Corporation,  All rights reserved.
-Mon Aug 24 20:38:53 2026
+Mon Aug 24 21:27:37 2026
 
 
 Command Line:  D:\lscc\radiant\2026.1\ispfpga\bin\nt64\synthesis.exe -f D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice/impl_1/Neuromorphic_Lattice_impl_1_lattice.synproj -logfile Neuromorphic_Lattice_impl_1_lattice.srp -gui -msgset D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice/promote.xml 
@@ -147,22 +147,38 @@ Analyzing Verilog file ../source/impl_1/spike_neuron.v. VERI-1482
 Analyzing Verilog file ../source/impl_1/spike_array.v. VERI-1482
 Top module name (Verilog): network_tb
 INFO <35901018> - synthesis: ../source/impl_1/network_tb.v(3): compiling module network_tb. VERI-1018
-WARNING <35901220> - synthesis: ../source/impl_1/network_tb.v(20): using initial value of ram_data_in since it is never assigned. VERI-1220
+INFO <35901018> - synthesis: ../source/impl_1/weight_manager_unit.v(3): compiling module weight_manager_unit(NUM_WEIGHTS=8). VERI-1018
+WARNING <35901209> - synthesis: ../source/impl_1/weight_manager_unit.v(39): expression size 32 truncated to fit in target size 8. VERI-1209
+INFO <35901018> - synthesis: ../source/impl_1/ram.v(4): compiling module single_port_ram. VERI-1018
 INFO <35901018> - synthesis: ../source/impl_1/weight_multiply_array.v(3): compiling module weight_multiply_array. VERI-1018
 INFO <35901018> - synthesis: ../source/impl_1/weight_multiply_unit.v(1): compiling module weight_multiply_unit. VERI-1018
-WARNING <35901330> - synthesis: ../source/impl_1/weight_multiply_array.v(37): actual bit length 16 differs from formal bit length 8 for port out. VERI-1330
-WARNING <35901330> - synthesis: ../source/impl_1/weight_multiply_array.v(37): actual bit length 16 differs from formal bit length 8 for port out. VERI-1330
-WARNING <35901330> - synthesis: ../source/impl_1/weight_multiply_array.v(37): actual bit length 16 differs from formal bit length 8 for port out. VERI-1330
-WARNING <35901330> - synthesis: ../source/impl_1/weight_multiply_array.v(37): actual bit length 16 differs from formal bit length 8 for port out. VERI-1330
-WARNING <35901209> - synthesis: ../source/impl_1/weight_multiply_array.v(52): expression size 24 truncated to fit in target size 16. VERI-1209
-INFO <35901018> - synthesis: ../source/impl_1/weight_manager_unit.v(3): compiling module weight_manager_unit. VERI-1018
-WARNING <35901209> - synthesis: ../source/impl_1/weight_manager_unit.v(23): expression size 32 truncated to fit in target size 8. VERI-1209
-INFO <35901018> - synthesis: ../source/impl_1/ram.v(4): compiling module single_port_ram. VERI-1018
 INFO <35901018> - synthesis: ../source/impl_1/spike_array.v(3): compiling module spike_array. VERI-1018
 INFO <35901018> - synthesis: ../source/impl_1/spike_neuron.v(1): compiling module spike_neuron. VERI-1018
 [Parameter Setting Section Start]
 
-	[Parameter Settings for Instance(s): wma]
+	[Parameter Settings for top-level module]
+	(Module: network_tb)
+		HIDDEN_SIZE               2
+		INIT_ADDRESS              0
+		LAYER1_NUM_WEIGHTS        4
+		LAYER2_NUM_WEIGHTS        4
+		TOTAL_NUM_WEIGHTS         8
+
+	[Parameter Settings for Instance(s): wmu]
+	(Module: weight_manager_unit)
+		NUM_WEIGHTS               8
+		INIT_ADDRESS              0
+		SET_ADDR                  2'b00
+		WAIT_RAM                  2'b01
+		CAPTURE                   2'b10
+		DONE                      2'b11
+
+	[Parameter Settings for Instance(s): ram]
+	(Module: single_port_ram)
+		DATA_WIDTH                8
+		ADDR_WIDTH                8
+
+	[Parameter Settings for Instance(s): layer1_wma, layer2_wma]
 	(Module: weight_multiply_array)
 		IN_SIZE                   2
 		OUT_SIZE                  2
@@ -178,60 +194,43 @@ INFO <35901018> - synthesis: ../source/impl_1/spike_neuron.v(1): compiling modul
 		GEN_OUTPUT[1].GEN_INPUT[0].z 0
 		GEN_OUTPUT[1].GEN_INPUT[1].z 1
 
-	[Parameter Settings for Instance(s): wmu]
-	(Module: weight_manager_unit)
-		NUM_WEIGHTS               4
-
-	[Parameter Settings for Instance(s): ram]
-	(Module: single_port_ram)
-		DATA_WIDTH                8
-		ADDR_WIDTH                8
-
-	[Parameter Settings for Instance(s): sa]
+	[Parameter Settings for Instance(s): hidden_neurons, output_neurons]
 	(Module: spike_array)
 		SIZE                      2
-		gen_neurons[0].i          0
-		gen_neurons[1].i          1
+		GEN_NEURONS[0].i          0
+		GEN_NEURONS[1].i          1
 
-	[Parameter Settings for Instance(s): gen_neurons[0].sn, gen_neurons[1].sn]
+	[Parameter Settings for Instance(s): GEN_NEURONS[0].sn, GEN_NEURONS[1].sn]
 	(Module: spike_neuron)
 		threshold                 50
 		beta_shift                8
 
 [Parameter Setting Section End]
-WARNING <35001771> - synthesis: Initial value found on net gnd will be ignored due to unrecognized driver type
 WARNING <35935040> - synthesis: Register write_enable clock is stuck at Zero. VDB-5040
+WARNING <35935049> - synthesis: input port weights_loaded remains unconnected for this instance. VDB-5049
+WARNING <35935049> - synthesis: input port weights_loaded remains unconnected for this instance. VDB-5049
+WARNING <35935049> - synthesis: input port weights_loaded remains unconnected for this instance. VDB-5049
+WARNING <35935049> - synthesis: input port weights_loaded remains unconnected for this instance. VDB-5049
+WARNING <35931002> - synthesis: ../source/impl_1/weight_multiply_array.v(10): net \layer1_wma/weights_loaded does not have a driver. VDB-1002
+######## Missing driver on net \layer1_wma/weights_loaded. Patching with GND.
+######## Missing driver on net \layer2_wma/weights_loaded. Patching with GND.
 
 
 
-WARNING <35935040> - synthesis: Register \sa/gen_neurons[0].sn/sub_5_add_2_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \sa/gen_neurons[1].sn/add_4_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \sa/gen_neurons[0].sn/add_4_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \sa/gen_neurons[1].sn/add_4_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \sa/gen_neurons[1].sn/sub_5_add_2_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \sa/gen_neurons[1].sn/sub_5_add_2_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \sa/gen_neurons[0].sn/add_4_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \sa/gen_neurons[0].sn/sub_5_add_2_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \wmu/next_addr_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \wmu/next_addr_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \wma/add_15_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \wma/add_15_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \sa/gen_neurons[1].sn/add_4_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \wma/add_15_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \sa/gen_neurons[0].sn/add_4_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \wmu/next_addr_e3_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \sa/gen_neurons[0].sn/add_4_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \wmu/next_addr_e3_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \wma/add_15_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register add_95_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register add_94_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register add_94_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \sa/gen_neurons[1].sn/add_4_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register add_95_i17 clock is stuck at Zero. VDB-5040
-######## Found 1 RTL RAMs in the design.
-WARNING <35002066> - synthesis: Memory \ram/memory does not have a read/write conflict check. Possible simulation mismatch.
-######## Mapping RTL RAM \ram/memory to 1 EBR blocks in PSEUDO_DUAL_PORT Mode
-
+WARNING <35935040> - synthesis: Register \output_neurons/GEN_NEURONS[0].sn/sub_5_add_2_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \output_neurons/GEN_NEURONS[0].sn/sub_5_add_2_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \wmu/add_136_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \wmu/add_136_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \output_neurons/GEN_NEURONS[1].sn/sub_5_add_2_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \output_neurons/GEN_NEURONS[1].sn/sub_5_add_2_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register add_186_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \wmu/add_136_add_12_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register add_185_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register add_186_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register add_185_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \wmu/add_136_add_12_i2 clock is stuck at Zero. VDB-5040
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: network_inputs[1]
+CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: network_inputs[0]
 Starting design annotation....
 WARNING <70009502> - synthesis: The preferred point for defining clocks is top level ports and driver pins. Pad delays will not be taken into consideration if clocks are defined on nets.
 
@@ -250,48 +249,42 @@ WARNING <70009502> - synthesis: The preferred point for defining clocks is top l
 Starting full timing analysis...
 
 ################### Begin Area Report (network_tb)######################
-Number of register bits => 131 of 32256 (0 % )
-CCU2 => 78
-FD1P3DX => 30
-FD1P3IX => 101
+Number of register bits => 77 of 32256 (0 % )
+CCU2 => 39
+FD1P3IX => 77
 GSR => 1
-IB => 3
-LUT4 => 57
-OB => 2
-PDPSC16K => 1
+IB => 2
+LUT4 => 39
+OB => 3
 ################### End Area Report ##################
-Number of odd-length carry chains : 1
-Number of even-length carry chains : 5
+Number of odd-length carry chains : 0
+Number of even-length carry chains : 3
 
 ################### Begin Clock Report ######################
 Clock Nets
 Number of Clocks: 1
-  Net : clk_c, loads : 132
+  Net : clk_c, loads : 77
 Clock Enable Nets
-Number of Clock Enables: 11
-Top 10 highest fanout Clock Enables:
-  Net : sa/gen_neurons[1].sn/VCC_net, loads : 103
-  Net : sa/gen_neurons[0].sn/VCC_net, loads : 103
-  Net : wmu/read_mode, loads : 22
-  Net : wmu/VCC_net, loads : 20
-  Net : ram/VCC_net, loads : 13
-  Net : wmu/clk_c_enable_23, loads : 9
-  Net : wmu/clk_c_enable_16, loads : 8
-  Net : wmu/clk_c_enable_24, loads : 8
-  Net : wma/GEN_OUTPUT[0].GEN_INPUT[0].wmu/VCC_net, loads : 8
-  Net : wma/GEN_OUTPUT[0].GEN_INPUT[1].wmu/VCC_net, loads : 8
+Number of Clock Enables: 7
+  Net : output_neurons/GEN_NEURONS[1].sn/VCC_net, loads : 68
+  Net : output_neurons/GEN_NEURONS[0].sn/VCC_net, loads : 68
+  Net : wmu/VCC_net, loads : 13
+  Net : wmu/clk_c_enable_10, loads : 5
+  Net : wmu/clk_c_enable_8, loads : 3
+  Net : wmu/clk_c_enable_1, loads : 1
+  Net : wmu/clk_c_enable_3, loads : 1
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : sa/gen_neurons[1].sn/VCC_net, loads : 103
-  Net : sa/gen_neurons[0].sn/VCC_net, loads : 103
-  Net : sa/gen_neurons[1].sn/n181, loads : 61
-  Net : sa/gen_neurons[0].sn/n183, loads : 57
-  Net : sa/gen_neurons[1].sn/potential_new[31], loads : 32
-  Net : wma/wma_outputs[15], loads : 31
-  Net : reset, loads : 30
-  Net : sa/gen_neurons[1].sn/n62, loads : 30
-  Net : sa/gen_neurons[1].sn/potential_decayed[31], loads : 30
-  Net : sa/gen_neurons[1].sn/n420, loads : 29
+  Net : output_neurons/GEN_NEURONS[1].sn/VCC_net, loads : 68
+  Net : output_neurons/GEN_NEURONS[0].sn/VCC_net, loads : 68
+  Net : n382, loads : 51
+  Net : n386, loads : 51
+  Net : n604, loads : 19
+  Net : n596, loads : 19
+  Net : output_neurons/GEN_NEURONS[1].sn/n836, loads : 18
+  Net : output_neurons/GEN_NEURONS[1].sn/potential_decayed[29], loads : 18
+  Net : output_neurons/GEN_NEURONS[1].sn/n833, loads : 18
+  Net : output_neurons/GEN_NEURONS[1].sn/n837, loads : 18
 ################### End Clock Report ##################
 
 ################### Begin Constraint Report ######################
@@ -300,10 +293,10 @@ Constraint Summary:
   Total number of constraints dropped: 0
 ###################  End Constraint Report  ######################
 
-Peak Memory Usage: 200 MB
+Peak Memory Usage: 203 MB
 
 --------------------------------------------------------------
 Total CPU Time: 2 secs 
-Total REAL Time: 3 secs 
+Total REAL Time: 2 secs 
 --------------------------------------------------------------
-Checksum -- synthesis -- netlist: da1889ed69e10b373b72b56618bbc8586938cd5
+Checksum -- synthesis -- netlist: 70deb484a3d04dffc03b12d8c9d89f33b7e51927

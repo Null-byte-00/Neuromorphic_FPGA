@@ -967,94 +967,21 @@
             <Navigation>3</Navigation>
         </Message>
         <Message>
-            <ID>35901220</ID>
-            <Severity>16</Severity>
-            <Dynamic>D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice/source/impl_1/network_tb.v(20): </Dynamic>
-            <Dynamic>ram_data_in</Dynamic>
-            <Navigation>D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice/source/impl_1/network_tb.v</Navigation>
-            <Navigation>20</Navigation>
-        </Message>
-        <Message>
-            <ID>35901018</ID>
-            <Severity>1</Severity>
-            <Dynamic>D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice/source/impl_1/weight_multiply_array.v(3): </Dynamic>
-            <Dynamic>weight_multiply_array</Dynamic>
-            <Navigation>D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice/source/impl_1/weight_multiply_array.v</Navigation>
-            <Navigation>3</Navigation>
-        </Message>
-        <Message>
-            <ID>35901018</ID>
-            <Severity>1</Severity>
-            <Dynamic>D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice/source/impl_1/weight_multiply_unit.v(1): </Dynamic>
-            <Dynamic>weight_multiply_unit</Dynamic>
-            <Navigation>D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice/source/impl_1/weight_multiply_unit.v</Navigation>
-            <Navigation>1</Navigation>
-        </Message>
-        <Message>
-            <ID>35901330</ID>
-            <Severity>16</Severity>
-            <Dynamic>D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice/source/impl_1/weight_multiply_array.v(37): </Dynamic>
-            <Dynamic>16</Dynamic>
-            <Dynamic>8</Dynamic>
-            <Dynamic>out</Dynamic>
-            <Navigation>D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice/source/impl_1/weight_multiply_array.v</Navigation>
-            <Navigation>37</Navigation>
-        </Message>
-        <Message>
-            <ID>35901330</ID>
-            <Severity>16</Severity>
-            <Dynamic>D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice/source/impl_1/weight_multiply_array.v(37): </Dynamic>
-            <Dynamic>16</Dynamic>
-            <Dynamic>8</Dynamic>
-            <Dynamic>out</Dynamic>
-            <Navigation>D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice/source/impl_1/weight_multiply_array.v</Navigation>
-            <Navigation>37</Navigation>
-        </Message>
-        <Message>
-            <ID>35901330</ID>
-            <Severity>16</Severity>
-            <Dynamic>D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice/source/impl_1/weight_multiply_array.v(37): </Dynamic>
-            <Dynamic>16</Dynamic>
-            <Dynamic>8</Dynamic>
-            <Dynamic>out</Dynamic>
-            <Navigation>D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice/source/impl_1/weight_multiply_array.v</Navigation>
-            <Navigation>37</Navigation>
-        </Message>
-        <Message>
-            <ID>35901330</ID>
-            <Severity>16</Severity>
-            <Dynamic>D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice/source/impl_1/weight_multiply_array.v(37): </Dynamic>
-            <Dynamic>16</Dynamic>
-            <Dynamic>8</Dynamic>
-            <Dynamic>out</Dynamic>
-            <Navigation>D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice/source/impl_1/weight_multiply_array.v</Navigation>
-            <Navigation>37</Navigation>
-        </Message>
-        <Message>
-            <ID>35901209</ID>
-            <Severity>16</Severity>
-            <Dynamic>D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice/source/impl_1/weight_multiply_array.v(52): </Dynamic>
-            <Dynamic>24</Dynamic>
-            <Dynamic>16</Dynamic>
-            <Navigation>D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice/source/impl_1/weight_multiply_array.v</Navigation>
-            <Navigation>52</Navigation>
-        </Message>
-        <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
             <Dynamic>D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice/source/impl_1/weight_manager_unit.v(3): </Dynamic>
-            <Dynamic>weight_manager_unit</Dynamic>
+            <Dynamic>weight_manager_unit(NUM_WEIGHTS=8)</Dynamic>
             <Navigation>D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice/source/impl_1/weight_manager_unit.v</Navigation>
             <Navigation>3</Navigation>
         </Message>
         <Message>
             <ID>35901209</ID>
             <Severity>16</Severity>
-            <Dynamic>D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice/source/impl_1/weight_manager_unit.v(23): </Dynamic>
+            <Dynamic>D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice/source/impl_1/weight_manager_unit.v(39): </Dynamic>
             <Dynamic>32</Dynamic>
             <Dynamic>8</Dynamic>
             <Navigation>D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice/source/impl_1/weight_manager_unit.v</Navigation>
-            <Navigation>23</Navigation>
+            <Navigation>39</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
@@ -1071,6 +998,22 @@
             <Dynamic>memory_init.txt</Dynamic>
             <Navigation>D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice/source/impl_1/ram.v</Navigation>
             <Navigation>21</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>1</Severity>
+            <Dynamic>D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice/source/impl_1/weight_multiply_array.v(3): </Dynamic>
+            <Dynamic>weight_multiply_array</Dynamic>
+            <Navigation>D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice/source/impl_1/weight_multiply_array.v</Navigation>
+            <Navigation>3</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>1</Severity>
+            <Dynamic>D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice/source/impl_1/weight_multiply_unit.v(1): </Dynamic>
+            <Dynamic>weight_multiply_unit</Dynamic>
+            <Navigation>D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice/source/impl_1/weight_multiply_unit.v</Navigation>
+            <Navigation>1</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
@@ -1097,12 +1040,29 @@
             <Navigation>3</Navigation>
         </Message>
         <Message>
-            <ID>35901220</ID>
+            <ID>35901018</ID>
+            <Severity>1</Severity>
+            <Dynamic>../source/impl_1/weight_manager_unit.v(3): </Dynamic>
+            <Dynamic>weight_manager_unit(NUM_WEIGHTS=8)</Dynamic>
+            <Navigation>../source/impl_1/weight_manager_unit.v</Navigation>
+            <Navigation>3</Navigation>
+        </Message>
+        <Message>
+            <ID>35901209</ID>
             <Severity>16</Severity>
-            <Dynamic>../source/impl_1/network_tb.v(20): </Dynamic>
-            <Dynamic>ram_data_in</Dynamic>
-            <Navigation>../source/impl_1/network_tb.v</Navigation>
-            <Navigation>20</Navigation>
+            <Dynamic>../source/impl_1/weight_manager_unit.v(39): </Dynamic>
+            <Dynamic>32</Dynamic>
+            <Dynamic>8</Dynamic>
+            <Navigation>../source/impl_1/weight_manager_unit.v</Navigation>
+            <Navigation>39</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>1</Severity>
+            <Dynamic>../source/impl_1/ram.v(4): </Dynamic>
+            <Dynamic>single_port_ram</Dynamic>
+            <Navigation>../source/impl_1/ram.v</Navigation>
+            <Navigation>4</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
@@ -1121,80 +1081,6 @@
             <Navigation>1</Navigation>
         </Message>
         <Message>
-            <ID>35901330</ID>
-            <Severity>16</Severity>
-            <Dynamic>../source/impl_1/weight_multiply_array.v(37): </Dynamic>
-            <Dynamic>16</Dynamic>
-            <Dynamic>8</Dynamic>
-            <Dynamic>out</Dynamic>
-            <Navigation>../source/impl_1/weight_multiply_array.v</Navigation>
-            <Navigation>37</Navigation>
-        </Message>
-        <Message>
-            <ID>35901330</ID>
-            <Severity>16</Severity>
-            <Dynamic>../source/impl_1/weight_multiply_array.v(37): </Dynamic>
-            <Dynamic>16</Dynamic>
-            <Dynamic>8</Dynamic>
-            <Dynamic>out</Dynamic>
-            <Navigation>../source/impl_1/weight_multiply_array.v</Navigation>
-            <Navigation>37</Navigation>
-        </Message>
-        <Message>
-            <ID>35901330</ID>
-            <Severity>16</Severity>
-            <Dynamic>../source/impl_1/weight_multiply_array.v(37): </Dynamic>
-            <Dynamic>16</Dynamic>
-            <Dynamic>8</Dynamic>
-            <Dynamic>out</Dynamic>
-            <Navigation>../source/impl_1/weight_multiply_array.v</Navigation>
-            <Navigation>37</Navigation>
-        </Message>
-        <Message>
-            <ID>35901330</ID>
-            <Severity>16</Severity>
-            <Dynamic>../source/impl_1/weight_multiply_array.v(37): </Dynamic>
-            <Dynamic>16</Dynamic>
-            <Dynamic>8</Dynamic>
-            <Dynamic>out</Dynamic>
-            <Navigation>../source/impl_1/weight_multiply_array.v</Navigation>
-            <Navigation>37</Navigation>
-        </Message>
-        <Message>
-            <ID>35901209</ID>
-            <Severity>16</Severity>
-            <Dynamic>../source/impl_1/weight_multiply_array.v(52): </Dynamic>
-            <Dynamic>24</Dynamic>
-            <Dynamic>16</Dynamic>
-            <Navigation>../source/impl_1/weight_multiply_array.v</Navigation>
-            <Navigation>52</Navigation>
-        </Message>
-        <Message>
-            <ID>35901018</ID>
-            <Severity>1</Severity>
-            <Dynamic>../source/impl_1/weight_manager_unit.v(3): </Dynamic>
-            <Dynamic>weight_manager_unit</Dynamic>
-            <Navigation>../source/impl_1/weight_manager_unit.v</Navigation>
-            <Navigation>3</Navigation>
-        </Message>
-        <Message>
-            <ID>35901209</ID>
-            <Severity>16</Severity>
-            <Dynamic>../source/impl_1/weight_manager_unit.v(23): </Dynamic>
-            <Dynamic>32</Dynamic>
-            <Dynamic>8</Dynamic>
-            <Navigation>../source/impl_1/weight_manager_unit.v</Navigation>
-            <Navigation>23</Navigation>
-        </Message>
-        <Message>
-            <ID>35901018</ID>
-            <Severity>1</Severity>
-            <Dynamic>../source/impl_1/ram.v(4): </Dynamic>
-            <Dynamic>single_port_ram</Dynamic>
-            <Navigation>../source/impl_1/ram.v</Navigation>
-            <Navigation>4</Navigation>
-        </Message>
-        <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
             <Dynamic>../source/impl_1/spike_array.v(3): </Dynamic>
@@ -1211,164 +1097,120 @@
             <Navigation>1</Navigation>
         </Message>
         <Message>
-            <ID>35001771</ID>
-            <Severity>16</Severity>
-            <Dynamic>gnd</Dynamic>
-        </Message>
-        <Message>
             <ID>35935040</ID>
             <Severity>16</Severity>
             <Dynamic>write_enable</Dynamic>
             <Dynamic>Zero</Dynamic>
         </Message>
         <Message>
+            <ID>35935049</ID>
+            <Severity>16</Severity>
+            <Dynamic>weights_loaded</Dynamic>
+        </Message>
+        <Message>
+            <ID>35935049</ID>
+            <Severity>16</Severity>
+            <Dynamic>weights_loaded</Dynamic>
+        </Message>
+        <Message>
+            <ID>35935049</ID>
+            <Severity>16</Severity>
+            <Dynamic>weights_loaded</Dynamic>
+        </Message>
+        <Message>
+            <ID>35935049</ID>
+            <Severity>16</Severity>
+            <Dynamic>weights_loaded</Dynamic>
+        </Message>
+        <Message>
+            <ID>35931002</ID>
+            <Severity>16</Severity>
+            <Dynamic>../source/impl_1/weight_multiply_array.v(10): </Dynamic>
+            <Dynamic>\layer1_wma/weights_loaded</Dynamic>
+            <Navigation>../source/impl_1/weight_multiply_array.v</Navigation>
+            <Navigation>10</Navigation>
+        </Message>
+        <Message>
             <ID>35935040</ID>
             <Severity>16</Severity>
-            <Dynamic>\sa/gen_neurons[0].sn/sub_5_add_2_i2</Dynamic>
+            <Dynamic>\output_neurons/GEN_NEURONS[0].sn/sub_5_add_2_i17</Dynamic>
             <Dynamic>Zero</Dynamic>
         </Message>
         <Message>
             <ID>35935040</ID>
             <Severity>16</Severity>
-            <Dynamic>\sa/gen_neurons[1].sn/add_4_i17</Dynamic>
+            <Dynamic>\output_neurons/GEN_NEURONS[0].sn/sub_5_add_2_i2</Dynamic>
             <Dynamic>Zero</Dynamic>
         </Message>
         <Message>
             <ID>35935040</ID>
             <Severity>16</Severity>
-            <Dynamic>\sa/gen_neurons[0].sn/add_4_i2</Dynamic>
+            <Dynamic>\wmu/add_136_i17</Dynamic>
             <Dynamic>Zero</Dynamic>
         </Message>
         <Message>
             <ID>35935040</ID>
             <Severity>16</Severity>
-            <Dynamic>\sa/gen_neurons[1].sn/add_4_i2</Dynamic>
+            <Dynamic>\wmu/add_136_i2</Dynamic>
             <Dynamic>Zero</Dynamic>
         </Message>
         <Message>
             <ID>35935040</ID>
             <Severity>16</Severity>
-            <Dynamic>\sa/gen_neurons[1].sn/sub_5_add_2_i17</Dynamic>
+            <Dynamic>\output_neurons/GEN_NEURONS[1].sn/sub_5_add_2_i17</Dynamic>
             <Dynamic>Zero</Dynamic>
         </Message>
         <Message>
             <ID>35935040</ID>
             <Severity>16</Severity>
-            <Dynamic>\sa/gen_neurons[1].sn/sub_5_add_2_i2</Dynamic>
+            <Dynamic>\output_neurons/GEN_NEURONS[1].sn/sub_5_add_2_i2</Dynamic>
             <Dynamic>Zero</Dynamic>
         </Message>
         <Message>
             <ID>35935040</ID>
             <Severity>16</Severity>
-            <Dynamic>\sa/gen_neurons[0].sn/add_4_i17</Dynamic>
+            <Dynamic>add_186_i17</Dynamic>
             <Dynamic>Zero</Dynamic>
         </Message>
         <Message>
             <ID>35935040</ID>
             <Severity>16</Severity>
-            <Dynamic>\sa/gen_neurons[0].sn/sub_5_add_2_i17</Dynamic>
+            <Dynamic>\wmu/add_136_add_12_i17</Dynamic>
             <Dynamic>Zero</Dynamic>
         </Message>
         <Message>
             <ID>35935040</ID>
             <Severity>16</Severity>
-            <Dynamic>\wmu/next_addr_i2</Dynamic>
+            <Dynamic>add_185_i2</Dynamic>
             <Dynamic>Zero</Dynamic>
         </Message>
         <Message>
             <ID>35935040</ID>
             <Severity>16</Severity>
-            <Dynamic>\wmu/next_addr_i17</Dynamic>
+            <Dynamic>add_186_i2</Dynamic>
             <Dynamic>Zero</Dynamic>
         </Message>
         <Message>
             <ID>35935040</ID>
             <Severity>16</Severity>
-            <Dynamic>\wma/add_15_i2</Dynamic>
+            <Dynamic>add_185_i17</Dynamic>
             <Dynamic>Zero</Dynamic>
         </Message>
         <Message>
             <ID>35935040</ID>
             <Severity>16</Severity>
-            <Dynamic>\wma/add_15_i17</Dynamic>
+            <Dynamic>\wmu/add_136_add_12_i2</Dynamic>
             <Dynamic>Zero</Dynamic>
         </Message>
         <Message>
-            <ID>35935040</ID>
-            <Severity>16</Severity>
-            <Dynamic>\sa/gen_neurons[1].sn/add_4_add_12_i2</Dynamic>
-            <Dynamic>Zero</Dynamic>
+            <ID>35002028</ID>
+            <Severity>256</Severity>
+            <Dynamic>network_inputs[1]</Dynamic>
         </Message>
         <Message>
-            <ID>35935040</ID>
-            <Severity>16</Severity>
-            <Dynamic>\wma/add_15_add_12_i2</Dynamic>
-            <Dynamic>Zero</Dynamic>
-        </Message>
-        <Message>
-            <ID>35935040</ID>
-            <Severity>16</Severity>
-            <Dynamic>\sa/gen_neurons[0].sn/add_4_add_12_i17</Dynamic>
-            <Dynamic>Zero</Dynamic>
-        </Message>
-        <Message>
-            <ID>35935040</ID>
-            <Severity>16</Severity>
-            <Dynamic>\wmu/next_addr_e3_i17</Dynamic>
-            <Dynamic>Zero</Dynamic>
-        </Message>
-        <Message>
-            <ID>35935040</ID>
-            <Severity>16</Severity>
-            <Dynamic>\sa/gen_neurons[0].sn/add_4_add_12_i2</Dynamic>
-            <Dynamic>Zero</Dynamic>
-        </Message>
-        <Message>
-            <ID>35935040</ID>
-            <Severity>16</Severity>
-            <Dynamic>\wmu/next_addr_e3_i2</Dynamic>
-            <Dynamic>Zero</Dynamic>
-        </Message>
-        <Message>
-            <ID>35935040</ID>
-            <Severity>16</Severity>
-            <Dynamic>\wma/add_15_add_12_i17</Dynamic>
-            <Dynamic>Zero</Dynamic>
-        </Message>
-        <Message>
-            <ID>35935040</ID>
-            <Severity>16</Severity>
-            <Dynamic>add_95_i2</Dynamic>
-            <Dynamic>Zero</Dynamic>
-        </Message>
-        <Message>
-            <ID>35935040</ID>
-            <Severity>16</Severity>
-            <Dynamic>add_94_i17</Dynamic>
-            <Dynamic>Zero</Dynamic>
-        </Message>
-        <Message>
-            <ID>35935040</ID>
-            <Severity>16</Severity>
-            <Dynamic>add_94_i2</Dynamic>
-            <Dynamic>Zero</Dynamic>
-        </Message>
-        <Message>
-            <ID>35935040</ID>
-            <Severity>16</Severity>
-            <Dynamic>\sa/gen_neurons[1].sn/add_4_add_12_i17</Dynamic>
-            <Dynamic>Zero</Dynamic>
-        </Message>
-        <Message>
-            <ID>35935040</ID>
-            <Severity>16</Severity>
-            <Dynamic>add_95_i17</Dynamic>
-            <Dynamic>Zero</Dynamic>
-        </Message>
-        <Message>
-            <ID>35002066</ID>
-            <Severity>16</Severity>
-            <Dynamic>\ram/memory</Dynamic>
+            <ID>35002028</ID>
+            <Severity>256</Severity>
+            <Dynamic>network_inputs[0]</Dynamic>
         </Message>
         <Message>
             <ID>70009502</ID>
@@ -1393,52 +1235,52 @@
         <Message>
             <ID>35811146</ID>
             <Severity>1</Severity>
-            <Dynamic>wma/GEN_OUTPUT[0].GEN_INPUT[0].wmu/out__i1.intGnd</Dynamic>
+            <Dynamic>wmu/state___i0.intGnd</Dynamic>
         </Message>
         <Message>
             <ID>35811146</ID>
             <Severity>1</Severity>
-            <Dynamic>wma/GEN_OUTPUT[0].GEN_INPUT[0].wmu/out__i3.intGnd</Dynamic>
+            <Dynamic>wmu/state___i1.intGnd</Dynamic>
         </Message>
         <Message>
             <ID>35811146</ID>
             <Severity>1</Severity>
-            <Dynamic>wma/GEN_OUTPUT[0].GEN_INPUT[0].wmu/out__i8.intGnd</Dynamic>
+            <Dynamic>wmu/weight_idx___i0.intGnd</Dynamic>
         </Message>
         <Message>
             <ID>35811146</ID>
             <Severity>1</Severity>
-            <Dynamic>wma/GEN_OUTPUT[0].GEN_INPUT[0].wmu/out__i6.intGnd</Dynamic>
+            <Dynamic>wmu/weights_loaded.intGnd</Dynamic>
         </Message>
         <Message>
             <ID>35811146</ID>
             <Severity>1</Severity>
-            <Dynamic>wma/GEN_OUTPUT[0].GEN_INPUT[0].wmu/out__i5.intGnd</Dynamic>
+            <Dynamic>wmu/weight_idx___i7.intGnd</Dynamic>
         </Message>
         <Message>
             <ID>35811146</ID>
             <Severity>1</Severity>
-            <Dynamic>wma/GEN_OUTPUT[0].GEN_INPUT[0].wmu/out__i4.intGnd</Dynamic>
+            <Dynamic>wmu/weight_idx___i6.intGnd</Dynamic>
         </Message>
         <Message>
             <ID>35811146</ID>
             <Severity>1</Severity>
-            <Dynamic>wma/GEN_OUTPUT[0].GEN_INPUT[0].wmu/out__i2.intGnd</Dynamic>
+            <Dynamic>wmu/weight_idx___i5.intGnd</Dynamic>
         </Message>
         <Message>
             <ID>35811146</ID>
             <Severity>1</Severity>
-            <Dynamic>wma/GEN_OUTPUT[0].GEN_INPUT[0].wmu/out__i7.intGnd</Dynamic>
+            <Dynamic>wmu/weight_idx___i4.intGnd</Dynamic>
         </Message>
         <Message>
             <ID>35811146</ID>
             <Severity>1</Severity>
-            <Dynamic>wma/GEN_OUTPUT[0].GEN_INPUT[1].wmu/out__i1.intGnd</Dynamic>
+            <Dynamic>wmu/weight_idx___i3.intGnd</Dynamic>
         </Message>
         <Message>
             <ID>35811146</ID>
             <Severity>1</Severity>
-            <Dynamic>wma/GEN_OUTPUT[0].GEN_INPUT[1].wmu/out__i2.intGnd</Dynamic>
+            <Dynamic>wmu/weight_idx___i2.intGnd</Dynamic>
         </Message>
         <Message>
             <ID>35811149</ID>

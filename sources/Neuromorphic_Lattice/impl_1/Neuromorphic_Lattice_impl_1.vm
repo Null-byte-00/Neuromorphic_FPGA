@@ -1,5 +1,5 @@
 // Verilog netlist produced by program LSE :  version Radiant Software (64-bit) 2026.1.0.37.0
-// Netlist written on Mon Aug 24 20:38:56 2026
+// Netlist written on Mon Aug 24 21:27:39 2026
 // Source file index table: 
 // Object locations will have the form @<file_index>(<first_ line>[<left_column>],<last_line>[<right_column>])
 // file 0 "d:/programs/neuromophic_fpga/sources/neuromorphic_lattice/source/impl_1/constants.vh"
@@ -181,69 +181,48 @@
 // Verilog Description of module network_tb
 //
 
-module network_tb (input clk, input [1:0]network_inputs, output [1:0]network_outputs);
+module network_tb (input clk, input reset, input [1:0]network_inputs, 
+            output [1:0]network_outputs, output weights_loaded);
     
-    wire GND_net;
     (* is_clock=1 *) wire clk_c;
-    wire [1:0]network_inputs_c;
+    wire reset_c;
+    wire weights_loaded_c;
     wire [1:0]network_outputs_c;
-    wire do_reset;
-    wire reset;
-    wire [7:0]ram_addr_line;
-    wire [7:0]ram_output_line;
-    wire [31:0]weight_line;
-    wire [31:0]wma_outputs;
-    wire [1:0]net_outs;
+    wire [31:0]potential_decayed;
+    wire [31:0]potential_decayed_adj_2131;
     
-    wire VCC_net;
-    wire [7:0]ram_addr_line_7__N_1;
+    wire GND_net, VCC_net, n604, n62, n596, n62_adj_2132, n382, 
+        n386;
     
-    wire n728;
-    
-    VHI i14 (.Z(VCC_net));
-    (* lse_init_val=0 *) FD1P3DX reset_c (.D(do_reset), .CK(clk_c), .SP(VCC_net), 
-            .CD(GND_net), .Q(reset));
-    defparam reset_c.GSR = "ENABLED";
-    (* lse_init_val=1 *) FD1P3DX do_reset_c (.D(GND_net), .CK(clk_c), .SP(VCC_net), 
-            .CD(GND_net), .Q(do_reset));
-    defparam do_reset_c.GSR = "ENABLED";
-    VLO i1 (.Z(GND_net));
-    OB \network_outputs_pad[0]  (.I(network_outputs_c[0]), .O(network_outputs[0]));
-    FD1P3DX network_outputs_i0 (.D(net_outs[0]), .CK(clk_c), .SP(VCC_net), 
-            .CD(GND_net), .Q(network_outputs_c[0]));
-    defparam network_outputs_i0.GSR = "ENABLED";
-    (* lse_init_val=0 *) FD1P3DX reset_rep_2 (.D(do_reset), .CK(clk_c), 
-            .SP(VCC_net), .CD(GND_net), .Q(n728));
-    defparam reset_rep_2.GSR = "ENABLED";
-    IB \network_inputs_pad[0]  (.I(network_inputs[0]), .O(network_inputs_c[0]));
-    IB \network_inputs_pad[1]  (.I(network_inputs[1]), .O(network_inputs_c[1]));
-    IB clk_pad (.I(clk), .O(clk_c));
-    FD1P3DX network_outputs_i1 (.D(net_outs[1]), .CK(clk_c), .SP(VCC_net), 
-            .CD(GND_net), .Q(network_outputs_c[1]));
-    defparam network_outputs_i1.GSR = "ENABLED";
+    VHI i11 (.Z(VCC_net));
     OB \network_outputs_pad[1]  (.I(network_outputs_c[1]), .O(network_outputs[1]));
-    (* LSE_LINE_FILE_ID=104, LSE_LCOL=13, LSE_RCOL=2, LSE_LLINE=49, LSE_RLINE=54 *) spike_array sa (wma_outputs[5], 
-            wma_outputs[15], clk_c, reset, wma_outputs[6], {net_outs}, 
-            wma_outputs[2], wma_outputs[7], wma_outputs[3], wma_outputs[4], 
-            wma_outputs[1], wma_outputs[0]);
-    (* LSE_LINE_FILE_ID=104, LSE_LCOL=21, LSE_RCOL=2, LSE_LLINE=32, LSE_RLINE=39 *) weight_manager_unit wmu (weight_line[3], 
-            {ram_addr_line}, {ram_addr_line_7__N_1}, n728, {ram_output_line}, 
-            weight_line[4], clk_c, weight_line[1], weight_line[2], weight_line[0], 
-            weight_line[15], reset, weight_line[8], weight_line[5], 
-            weight_line[10], weight_line[14], weight_line[12], weight_line[6], 
-            weight_line[11], weight_line[7], weight_line[9], weight_line[13]);
-    (* LSE_LINE_FILE_ID=104, LSE_LCOL=17, LSE_RCOL=2, LSE_LLINE=41, LSE_RLINE=47 *) single_port_ram ram ({ram_addr_line_7__N_1}, 
-            {ram_addr_line}, {ram_output_line}, clk_c);
-    (* LSE_LINE_FILE_ID=104, LSE_LCOL=23, LSE_RCOL=2, LSE_LLINE=24, LSE_RLINE=30 *) weight_multiply_array wma (wma_outputs[15], 
-            weight_line[4], wma_outputs[0], weight_line[2], wma_outputs[7], 
-            wma_outputs[5], wma_outputs[6], weight_line[9], weight_line[0], 
-            weight_line[13], wma_outputs[3], wma_outputs[4], weight_line[7], 
-            wma_outputs[1], weight_line[10], wma_outputs[2], {network_inputs_c}, 
-            clk_c, weight_line[8], weight_line[15], reset, weight_line[14], 
-            weight_line[11], weight_line[12], weight_line[1], weight_line[5], 
-            weight_line[6], weight_line[3]);
+    OB \network_outputs_pad[0]  (.I(network_outputs_c[0]), .O(network_outputs[0]));
+    (* lut_function="(A+!(B (C+!(D))))" *) LUT4 i166_3_lut_4_lut (.A(reset_c), 
+            .B(weights_loaded_c), .C(potential_decayed_adj_2131[31]), .D(n62), 
+            .Z(n386));
+    defparam i166_3_lut_4_lut.INIT = "0xbfbb";
+    (* lut_function="(A+((C)+!B))" *) LUT4 i281_2_lut_3_lut (.A(reset_c), 
+            .B(weights_loaded_c), .C(potential_decayed[31]), .Z(n596));
+    defparam i281_2_lut_3_lut.INIT = "0xfbfb";
+    (* lut_function="(A+((C)+!B))" *) LUT4 i289_2_lut_3_lut (.A(reset_c), 
+            .B(weights_loaded_c), .C(potential_decayed_adj_2131[31]), .Z(n604));
+    defparam i289_2_lut_3_lut.INIT = "0xfbfb";
+    OB weights_loaded_pad (.I(weights_loaded_c), .O(weights_loaded));
     GSR GSR_INST (.GSR_N(VCC_net));
     defparam GSR_INST.SYNCMODE = "ASYNC";
+    IB clk_pad (.I(clk), .O(clk_c));
+    IB reset_pad (.I(reset), .O(reset_c));
+    (* lut_function="(A+!(B (C+!(D))))" *) LUT4 i162_3_lut_4_lut (.A(reset_c), 
+            .B(weights_loaded_c), .C(potential_decayed[31]), .D(n62_adj_2132), 
+            .Z(n382));
+    defparam i162_3_lut_4_lut.INIT = "0xbfbb";
+    (* LSE_LINE_FILE_ID=104, LSE_LCOL=3, LSE_RCOL=2, LSE_LLINE=137, LSE_RLINE=142 *) spike_array output_neurons (n382, 
+            n386, clk_c, n62_adj_2132, potential_decayed[31], n596, 
+            {network_outputs_c}, n62, potential_decayed_adj_2131[31], 
+            n604);
+    VLO i499 (.Z(GND_net));
+    (* LSE_LINE_FILE_ID=104, LSE_LCOL=3, LSE_RCOL=2, LSE_LLINE=61, LSE_RLINE=69 *) \weight_manager_unit(NUM_WEIGHTS=8)  wmu (clk_c, 
+            reset_c, weights_loaded_c);
     
 endmodule
 
@@ -251,19 +230,17 @@ endmodule
 // Verilog Description of module spike_array
 //
 
-module spike_array (input \wma_outputs[5] , input \wma_outputs[15] , input clk_c, 
-            input reset, input \wma_outputs[6] , output [1:0]net_outs, 
-            input \wma_outputs[2] , input \wma_outputs[7] , input \wma_outputs[3] , 
-            input \wma_outputs[4] , input \wma_outputs[1] , input \wma_outputs[0] );
+module spike_array (input n382, input n386, input clk_c, output n62, 
+            output \potential_decayed[31] , input n596, output [1:0]network_outputs_c, 
+            output n62_adj_1, output \potential_decayed[31]_adj_2 , input n604);
     
     (* is_clock=1 *) wire clk_c;
     
-    (* LSE_LINE_FILE_ID=106, LSE_LCOL=15, LSE_RCOL=3, LSE_LLINE=21, LSE_RLINE=26 *) spike_neuron \gen_neurons[1].sn  (\wma_outputs[15] , 
-            clk_c, reset, net_outs[1]);
-    (* LSE_LINE_FILE_ID=106, LSE_LCOL=15, LSE_RCOL=3, LSE_LLINE=21, LSE_RLINE=26 *) spike_neuron_U1 \gen_neurons[0].sn  (reset, 
-            net_outs[0], \wma_outputs[7] , clk_c, \wma_outputs[5] , 
-            \wma_outputs[6] , \wma_outputs[3] , \wma_outputs[4] , \wma_outputs[1] , 
-            \wma_outputs[2] , \wma_outputs[0] );
+    (* LSE_LINE_FILE_ID=106, LSE_LCOL=22, LSE_RCOL=10, LSE_LLINE=22, LSE_RLINE=27 *) spike_neuron \GEN_NEURONS[1].sn  (n382, 
+            clk_c, \potential_decayed[31] , n596, n62, network_outputs_c[1]);
+    (* LSE_LINE_FILE_ID=106, LSE_LCOL=22, LSE_RCOL=10, LSE_LLINE=22, LSE_RLINE=27 *) spike_neuron_U0 \GEN_NEURONS[0].sn  (n62_adj_1, 
+            clk_c, n386, \potential_decayed[31]_adj_2 , network_outputs_c[0], 
+            n604);
     
 endmodule
 
@@ -271,1299 +248,672 @@ endmodule
 // Verilog Description of module spike_neuron
 //
 
-module spike_neuron (input \wma_outputs[15] , input clk_c, input reset, 
-            output \net_outs[1] );
-    
-    wire [31:0]potential_new;
-    wire [31:0]potential_decayed;
-    (* is_clock=1 *) wire clk_c;
-    
-    wire GND_net, VCC_net, n62, n521;
-    wire [31:0]potential_new_31__N_142;
-    
-    wire n699, n584, n700, n580, n710, n522, n528, n696, n714, 
-        n585, n701, n611, n532, n719, n717, n715, n590, n181, 
-        n718, n716, n420, n529, n526, n525, n593, n592, n591, 
-        n589, n588, n587, n586, n527, n583, n536, n582, n581, 
-        n579, n578, n535, n534, n533, n531, n530, n524, n523;
-    
-    (* lut_function="(A+(B))" *) LUT4 i1_2_lut (.A(potential_decayed[17]), 
-            .B(potential_decayed[10]), .Z(n699));
-    defparam i1_2_lut.INIT = "0xeeee";
-    (* lut_function="(A+(B))" *) LUT4 i1_2_lut_adj_28 (.A(potential_decayed[12]), 
-            .B(potential_decayed[15]), .Z(n700));
-    defparam i1_2_lut_adj_28.INIT = "0xeeee";
-    CCU2 potential_new_31__I_0_2_3 (.A1(potential_new_31__N_142[2]), .B1(\wma_outputs[15] ), 
-         .C1(GND_net), .D1(VCC_net), .A0(potential_new_31__N_142[1]), 
-         .B0(\wma_outputs[15] ), .C0(GND_net), .D0(VCC_net), .CIN(n521), 
-         .COUT(n522), .S1(potential_new[2]), .S0(potential_new[1]));
-    defparam potential_new_31__I_0_2_3.INJECT = "NO";
-    defparam potential_new_31__I_0_2_3.INIT0 = "0x66AA";
-    defparam potential_new_31__I_0_2_3.INIT1 = "0x66AA";
-    (* lut_function="(A (B+(C+(D)))+!A (B+(C)))" *) LUT4 i1_4_lut (.A(n696), 
-            .B(n714), .C(n701), .D(n611), .Z(n719));
-    defparam i1_4_lut.INIT = "0xfefc";
-    (* lut_function="(A+(B+(C+(D))))" *) LUT4 i1_4_lut_adj_29 (.A(potential_decayed[20]), 
-            .B(potential_decayed[30]), .C(potential_decayed[11]), .D(potential_decayed[16]), 
-            .Z(n715));
-    defparam i1_4_lut_adj_29.INIT = "0xfffe";
-    CCU2 potential_new_31__I_0_2_cin (.A1(potential_new_31__N_142[0]), .B1(\wma_outputs[15] ), 
-         .C1(GND_net), .D1(VCC_net), .A0(GND_net), .B0(GND_net), .C0(GND_net), 
-         .D0(VCC_net), .CIN(VCC_net), .COUT(n521), .S1(potential_new[0]));
-    defparam potential_new_31__I_0_2_cin.INJECT = "NO";
-    defparam potential_new_31__I_0_2_cin.INIT0 = "0x0000";
-    defparam potential_new_31__I_0_2_cin.INIT1 = "0x66AA";
-    (* LSE_LINE_FILE_ID=106, LSE_LCOL=15, LSE_RCOL=3, LSE_LLINE=21, LSE_RLINE=26 *) FD1P3IX add_4_add_12_add_12_e1__i0 (.D(potential_decayed[0]), 
-            .CK(clk_c), .SP(VCC_net), .CD(n181), .Q(potential_new_31__N_142[0]));
-    defparam add_4_add_12_add_12_e1__i0.GSR = "ENABLED";
-    (* lut_function="(A+(B+(C+(D))))" *) LUT4 i1_4_lut_adj_30 (.A(n715), .B(n719), 
-            .C(n718), .D(n716), .Z(n62));
-    defparam i1_4_lut_adj_30.INIT = "0xfffe";
-    (* lut_function="(A (B+!(C))+!A (B))" *) LUT4 i89_3_lut (.A(n62), .B(reset), 
-            .C(potential_decayed[31]), .Z(n181));
-    defparam i89_3_lut.INIT = "0xcece";
-    (* LSE_LINE_FILE_ID=106, LSE_LCOL=15, LSE_RCOL=3, LSE_LLINE=21, LSE_RLINE=26 *) FD1P3IX spike_out (.D(n62), 
-            .CK(clk_c), .SP(VCC_net), .CD(n420), .Q(\net_outs[1] ));
-    defparam spike_out.GSR = "ENABLED";
-    (* lut_function="(A+(B+(C)))" *) LUT4 i1_3_lut (.A(potential_decayed[7]), 
-            .B(potential_decayed[14]), .C(potential_decayed[9]), .Z(n710));
-    defparam i1_3_lut.INIT = "0xfefe";
-    (* lut_function="(A+(B+(C+(D))))" *) LUT4 i1_4_lut_adj_31 (.A(potential_decayed[19]), 
-            .B(potential_decayed[27]), .C(potential_decayed[6]), .D(potential_decayed[23]), 
-            .Z(n717));
-    defparam i1_4_lut_adj_31.INIT = "0xfffe";
-    (* lut_function="(A+(B+(C)))" *) LUT4 i1_3_lut_adj_32 (.A(potential_decayed[2]), 
-            .B(potential_decayed[3]), .C(potential_decayed[1]), .Z(n611));
-    defparam i1_3_lut_adj_32.INIT = "0xfefe";
-    (* lut_function="(A+(B))" *) LUT4 i1_2_lut_adj_33 (.A(potential_decayed[24]), 
-            .B(potential_decayed[28]), .Z(n701));
-    defparam i1_2_lut_adj_33.INIT = "0xeeee";
-    (* lut_function="(A+(B+(C+(D))))" *) LUT4 i1_4_lut_adj_34 (.A(potential_decayed[25]), 
-            .B(potential_decayed[13]), .C(potential_decayed[22]), .D(potential_decayed[26]), 
-            .Z(n714));
-    defparam i1_4_lut_adj_34.INIT = "0xfffe";
-    (* lut_function="(A (B))" *) LUT4 i1_2_lut_adj_35 (.A(potential_decayed[5]), 
-            .B(potential_decayed[4]), .Z(n696));
-    defparam i1_2_lut_adj_35.INIT = "0x8888";
-    (* lut_function="(A+(B+(C+(D))))" *) LUT4 i1_4_lut_adj_36 (.A(potential_decayed[21]), 
-            .B(potential_decayed[8]), .C(potential_decayed[29]), .D(potential_decayed[18]), 
-            .Z(n716));
-    defparam i1_4_lut_adj_36.INIT = "0xfffe";
-    (* lut_function="(A+(B+(C+(D))))" *) LUT4 i1_4_lut_adj_37 (.A(n717), .B(n710), 
-            .C(n700), .D(n699), .Z(n718));
-    defparam i1_4_lut_adj_37.INIT = "0xfffe";
-    (* LSE_LINE_FILE_ID=106, LSE_LCOL=15, LSE_RCOL=3, LSE_LLINE=21, LSE_RLINE=26 *) FD1P3IX add_4_add_12_add_12_e1__i1 (.D(potential_decayed[1]), 
-            .CK(clk_c), .SP(VCC_net), .CD(n181), .Q(potential_new_31__N_142[1]));
-    defparam add_4_add_12_add_12_e1__i1.GSR = "ENABLED";
-    (* LSE_LINE_FILE_ID=106, LSE_LCOL=15, LSE_RCOL=3, LSE_LLINE=21, LSE_RLINE=26 *) FD1P3IX add_4_add_12_add_12_e1__i2 (.D(potential_decayed[2]), 
-            .CK(clk_c), .SP(VCC_net), .CD(n181), .Q(potential_new_31__N_142[2]));
-    defparam add_4_add_12_add_12_e1__i2.GSR = "ENABLED";
-    (* LSE_LINE_FILE_ID=106, LSE_LCOL=15, LSE_RCOL=3, LSE_LLINE=21, LSE_RLINE=26 *) FD1P3IX add_4_add_12_add_12_e1__i3 (.D(potential_decayed[3]), 
-            .CK(clk_c), .SP(VCC_net), .CD(n181), .Q(potential_new_31__N_142[3]));
-    defparam add_4_add_12_add_12_e1__i3.GSR = "ENABLED";
-    (* LSE_LINE_FILE_ID=106, LSE_LCOL=15, LSE_RCOL=3, LSE_LLINE=21, LSE_RLINE=26 *) FD1P3IX add_4_add_12_add_12_e1__i4 (.D(potential_decayed[4]), 
-            .CK(clk_c), .SP(VCC_net), .CD(n181), .Q(potential_new_31__N_142[4]));
-    defparam add_4_add_12_add_12_e1__i4.GSR = "ENABLED";
-    (* LSE_LINE_FILE_ID=106, LSE_LCOL=15, LSE_RCOL=3, LSE_LLINE=21, LSE_RLINE=26 *) FD1P3IX add_4_add_12_add_12_e1__i5 (.D(potential_decayed[5]), 
-            .CK(clk_c), .SP(VCC_net), .CD(n181), .Q(potential_new_31__N_142[5]));
-    defparam add_4_add_12_add_12_e1__i5.GSR = "ENABLED";
-    (* LSE_LINE_FILE_ID=106, LSE_LCOL=15, LSE_RCOL=3, LSE_LLINE=21, LSE_RLINE=26 *) FD1P3IX add_4_add_12_add_12_e1__i6 (.D(potential_decayed[6]), 
-            .CK(clk_c), .SP(VCC_net), .CD(n181), .Q(potential_new_31__N_142[6]));
-    defparam add_4_add_12_add_12_e1__i6.GSR = "ENABLED";
-    (* LSE_LINE_FILE_ID=106, LSE_LCOL=15, LSE_RCOL=3, LSE_LLINE=21, LSE_RLINE=26 *) FD1P3IX add_4_add_12_add_12_e1__i7 (.D(potential_decayed[7]), 
-            .CK(clk_c), .SP(VCC_net), .CD(n181), .Q(potential_new_31__N_142[7]));
-    defparam add_4_add_12_add_12_e1__i7.GSR = "ENABLED";
-    (* LSE_LINE_FILE_ID=106, LSE_LCOL=15, LSE_RCOL=3, LSE_LLINE=21, LSE_RLINE=26 *) FD1P3IX add_4_add_12_add_12_e1__i8 (.D(potential_decayed[8]), 
-            .CK(clk_c), .SP(VCC_net), .CD(n181), .Q(potential_new_31__N_142[8]));
-    defparam add_4_add_12_add_12_e1__i8.GSR = "ENABLED";
-    (* LSE_LINE_FILE_ID=106, LSE_LCOL=15, LSE_RCOL=3, LSE_LLINE=21, LSE_RLINE=26 *) FD1P3IX add_4_add_12_add_12_e1__i9 (.D(potential_decayed[9]), 
-            .CK(clk_c), .SP(VCC_net), .CD(n181), .Q(potential_new_31__N_142[9]));
-    defparam add_4_add_12_add_12_e1__i9.GSR = "ENABLED";
-    (* LSE_LINE_FILE_ID=106, LSE_LCOL=15, LSE_RCOL=3, LSE_LLINE=21, LSE_RLINE=26 *) FD1P3IX add_4_add_12_add_12_e1__i10 (.D(potential_decayed[10]), 
-            .CK(clk_c), .SP(VCC_net), .CD(n181), .Q(potential_new_31__N_142[10]));
-    defparam add_4_add_12_add_12_e1__i10.GSR = "ENABLED";
-    (* LSE_LINE_FILE_ID=106, LSE_LCOL=15, LSE_RCOL=3, LSE_LLINE=21, LSE_RLINE=26 *) FD1P3IX add_4_add_12_add_12_e1__i11 (.D(potential_decayed[11]), 
-            .CK(clk_c), .SP(VCC_net), .CD(n181), .Q(potential_new_31__N_142[11]));
-    defparam add_4_add_12_add_12_e1__i11.GSR = "ENABLED";
-    (* LSE_LINE_FILE_ID=106, LSE_LCOL=15, LSE_RCOL=3, LSE_LLINE=21, LSE_RLINE=26 *) FD1P3IX add_4_add_12_add_12_e1__i12 (.D(potential_decayed[12]), 
-            .CK(clk_c), .SP(VCC_net), .CD(n181), .Q(potential_new_31__N_142[12]));
-    defparam add_4_add_12_add_12_e1__i12.GSR = "ENABLED";
-    (* LSE_LINE_FILE_ID=106, LSE_LCOL=15, LSE_RCOL=3, LSE_LLINE=21, LSE_RLINE=26 *) FD1P3IX add_4_add_12_add_12_e1__i13 (.D(potential_decayed[13]), 
-            .CK(clk_c), .SP(VCC_net), .CD(n181), .Q(potential_new_31__N_142[13]));
-    defparam add_4_add_12_add_12_e1__i13.GSR = "ENABLED";
-    (* LSE_LINE_FILE_ID=106, LSE_LCOL=15, LSE_RCOL=3, LSE_LLINE=21, LSE_RLINE=26 *) FD1P3IX add_4_add_12_add_12_e1__i14 (.D(potential_decayed[14]), 
-            .CK(clk_c), .SP(VCC_net), .CD(n181), .Q(potential_new_31__N_142[14]));
-    defparam add_4_add_12_add_12_e1__i14.GSR = "ENABLED";
-    (* LSE_LINE_FILE_ID=106, LSE_LCOL=15, LSE_RCOL=3, LSE_LLINE=21, LSE_RLINE=26 *) FD1P3IX add_4_add_12_add_12_e1__i15 (.D(potential_decayed[15]), 
-            .CK(clk_c), .SP(VCC_net), .CD(n181), .Q(potential_new_31__N_142[15]));
-    defparam add_4_add_12_add_12_e1__i15.GSR = "ENABLED";
-    (* LSE_LINE_FILE_ID=106, LSE_LCOL=15, LSE_RCOL=3, LSE_LLINE=21, LSE_RLINE=26 *) FD1P3IX add_4_add_12_add_12_e1__i16 (.D(potential_decayed[16]), 
-            .CK(clk_c), .SP(VCC_net), .CD(n181), .Q(potential_new_31__N_142[16]));
-    defparam add_4_add_12_add_12_e1__i16.GSR = "ENABLED";
-    (* LSE_LINE_FILE_ID=106, LSE_LCOL=15, LSE_RCOL=3, LSE_LLINE=21, LSE_RLINE=26 *) FD1P3IX add_4_add_12_add_12_e1__i17 (.D(potential_decayed[17]), 
-            .CK(clk_c), .SP(VCC_net), .CD(n181), .Q(potential_new_31__N_142[17]));
-    defparam add_4_add_12_add_12_e1__i17.GSR = "ENABLED";
-    (* LSE_LINE_FILE_ID=106, LSE_LCOL=15, LSE_RCOL=3, LSE_LLINE=21, LSE_RLINE=26 *) FD1P3IX add_4_add_12_add_12_e1__i18 (.D(potential_decayed[18]), 
-            .CK(clk_c), .SP(VCC_net), .CD(n181), .Q(potential_new_31__N_142[18]));
-    defparam add_4_add_12_add_12_e1__i18.GSR = "ENABLED";
-    (* LSE_LINE_FILE_ID=106, LSE_LCOL=15, LSE_RCOL=3, LSE_LLINE=21, LSE_RLINE=26 *) FD1P3IX add_4_add_12_add_12_e1__i19 (.D(potential_decayed[19]), 
-            .CK(clk_c), .SP(VCC_net), .CD(n181), .Q(potential_new_31__N_142[19]));
-    defparam add_4_add_12_add_12_e1__i19.GSR = "ENABLED";
-    (* LSE_LINE_FILE_ID=106, LSE_LCOL=15, LSE_RCOL=3, LSE_LLINE=21, LSE_RLINE=26 *) FD1P3IX add_4_add_12_add_12_e1__i20 (.D(potential_decayed[20]), 
-            .CK(clk_c), .SP(VCC_net), .CD(n181), .Q(potential_new_31__N_142[20]));
-    defparam add_4_add_12_add_12_e1__i20.GSR = "ENABLED";
-    (* LSE_LINE_FILE_ID=106, LSE_LCOL=15, LSE_RCOL=3, LSE_LLINE=21, LSE_RLINE=26 *) FD1P3IX add_4_add_12_add_12_e1__i21 (.D(potential_decayed[21]), 
-            .CK(clk_c), .SP(VCC_net), .CD(n181), .Q(potential_new_31__N_142[21]));
-    defparam add_4_add_12_add_12_e1__i21.GSR = "ENABLED";
-    (* LSE_LINE_FILE_ID=106, LSE_LCOL=15, LSE_RCOL=3, LSE_LLINE=21, LSE_RLINE=26 *) FD1P3IX add_4_add_12_add_12_e1__i22 (.D(potential_decayed[22]), 
-            .CK(clk_c), .SP(VCC_net), .CD(n181), .Q(potential_new_31__N_142[22]));
-    defparam add_4_add_12_add_12_e1__i22.GSR = "ENABLED";
-    (* LSE_LINE_FILE_ID=106, LSE_LCOL=15, LSE_RCOL=3, LSE_LLINE=21, LSE_RLINE=26 *) FD1P3IX add_4_add_12_add_12_e1__i23 (.D(potential_decayed[23]), 
-            .CK(clk_c), .SP(VCC_net), .CD(n181), .Q(potential_new_31__N_142[23]));
-    defparam add_4_add_12_add_12_e1__i23.GSR = "ENABLED";
-    (* LSE_LINE_FILE_ID=106, LSE_LCOL=15, LSE_RCOL=3, LSE_LLINE=21, LSE_RLINE=26 *) FD1P3IX add_4_add_12_add_12_e1__i24 (.D(potential_decayed[24]), 
-            .CK(clk_c), .SP(VCC_net), .CD(n181), .Q(potential_new_31__N_142[24]));
-    defparam add_4_add_12_add_12_e1__i24.GSR = "ENABLED";
-    (* LSE_LINE_FILE_ID=106, LSE_LCOL=15, LSE_RCOL=3, LSE_LLINE=21, LSE_RLINE=26 *) FD1P3IX add_4_add_12_add_12_e1__i25 (.D(potential_decayed[25]), 
-            .CK(clk_c), .SP(VCC_net), .CD(n181), .Q(potential_new_31__N_142[25]));
-    defparam add_4_add_12_add_12_e1__i25.GSR = "ENABLED";
-    (* LSE_LINE_FILE_ID=106, LSE_LCOL=15, LSE_RCOL=3, LSE_LLINE=21, LSE_RLINE=26 *) FD1P3IX add_4_add_12_add_12_e1__i26 (.D(potential_decayed[26]), 
-            .CK(clk_c), .SP(VCC_net), .CD(n181), .Q(potential_new_31__N_142[26]));
-    defparam add_4_add_12_add_12_e1__i26.GSR = "ENABLED";
-    (* LSE_LINE_FILE_ID=106, LSE_LCOL=15, LSE_RCOL=3, LSE_LLINE=21, LSE_RLINE=26 *) FD1P3IX add_4_add_12_add_12_e1__i27 (.D(potential_decayed[27]), 
-            .CK(clk_c), .SP(VCC_net), .CD(n181), .Q(potential_new_31__N_142[27]));
-    defparam add_4_add_12_add_12_e1__i27.GSR = "ENABLED";
-    (* LSE_LINE_FILE_ID=106, LSE_LCOL=15, LSE_RCOL=3, LSE_LLINE=21, LSE_RLINE=26 *) FD1P3IX add_4_add_12_add_12_e1__i28 (.D(potential_decayed[28]), 
-            .CK(clk_c), .SP(VCC_net), .CD(n181), .Q(potential_new_31__N_142[28]));
-    defparam add_4_add_12_add_12_e1__i28.GSR = "ENABLED";
-    (* LSE_LINE_FILE_ID=106, LSE_LCOL=15, LSE_RCOL=3, LSE_LLINE=21, LSE_RLINE=26 *) FD1P3IX add_4_add_12_add_12_e1__i29 (.D(potential_decayed[29]), 
-            .CK(clk_c), .SP(VCC_net), .CD(n181), .Q(potential_new_31__N_142[29]));
-    defparam add_4_add_12_add_12_e1__i29.GSR = "ENABLED";
-    (* LSE_LINE_FILE_ID=106, LSE_LCOL=15, LSE_RCOL=3, LSE_LLINE=21, LSE_RLINE=26 *) FD1P3IX add_4_add_12_add_12_e1__i30 (.D(potential_decayed[30]), 
-            .CK(clk_c), .SP(VCC_net), .CD(n181), .Q(potential_new_31__N_142[30]));
-    defparam add_4_add_12_add_12_e1__i30.GSR = "ENABLED";
-    (* LSE_LINE_FILE_ID=106, LSE_LCOL=15, LSE_RCOL=3, LSE_LLINE=21, LSE_RLINE=26 *) FD1P3IX add_4_add_12_add_12_e1__i31 (.D(potential_decayed[31]), 
-            .CK(clk_c), .SP(VCC_net), .CD(n181), .Q(potential_new_31__N_142[31]));
-    defparam add_4_add_12_add_12_e1__i31.GSR = "ENABLED";
-    (* lut_function="(A+(B))" *) LUT4 i198_2_lut (.A(potential_decayed[31]), 
-            .B(reset), .Z(n420));
-    defparam i198_2_lut.INIT = "0xeeee";
-    CCU2 potential_new_31__I_0_33 (.A1(GND_net), .B1(GND_net), .C1(GND_net), 
-         .D1(VCC_net), .A0(potential_new[31]), .B0(potential_new[31]), 
-         .C0(GND_net), .D0(VCC_net), .CIN(n593), .S0(potential_decayed[31]));
-    defparam potential_new_31__I_0_33.INJECT = "NO";
-    defparam potential_new_31__I_0_33.INIT0 = "0x99AA";
-    defparam potential_new_31__I_0_33.INIT1 = "0x0000";
-    CCU2 potential_new_31__I_0_31 (.A1(potential_new[30]), .B1(potential_new[31]), 
-         .C1(GND_net), .D1(VCC_net), .A0(potential_new[29]), .B0(potential_new[31]), 
-         .C0(GND_net), .D0(VCC_net), .CIN(n592), .COUT(n593), .S1(potential_decayed[30]), 
-         .S0(potential_decayed[29]));
-    defparam potential_new_31__I_0_31.INJECT = "NO";
-    defparam potential_new_31__I_0_31.INIT0 = "0x99AA";
-    defparam potential_new_31__I_0_31.INIT1 = "0x99AA";
-    CCU2 potential_new_31__I_0_29 (.A1(potential_new[28]), .B1(potential_new[31]), 
-         .C1(GND_net), .D1(VCC_net), .A0(potential_new[27]), .B0(potential_new[31]), 
-         .C0(GND_net), .D0(VCC_net), .CIN(n591), .COUT(n592), .S1(potential_decayed[28]), 
-         .S0(potential_decayed[27]));
-    defparam potential_new_31__I_0_29.INJECT = "NO";
-    defparam potential_new_31__I_0_29.INIT0 = "0x99AA";
-    defparam potential_new_31__I_0_29.INIT1 = "0x99AA";
-    CCU2 potential_new_31__I_0_27 (.A1(potential_new[26]), .B1(potential_new[31]), 
-         .C1(GND_net), .D1(VCC_net), .A0(potential_new[25]), .B0(potential_new[31]), 
-         .C0(GND_net), .D0(VCC_net), .CIN(n590), .COUT(n591), .S1(potential_decayed[26]), 
-         .S0(potential_decayed[25]));
-    defparam potential_new_31__I_0_27.INJECT = "NO";
-    defparam potential_new_31__I_0_27.INIT0 = "0x99AA";
-    defparam potential_new_31__I_0_27.INIT1 = "0x99AA";
-    CCU2 potential_new_31__I_0_25 (.A1(potential_new[24]), .B1(potential_new[31]), 
-         .C1(GND_net), .D1(VCC_net), .A0(potential_new[23]), .B0(potential_new[31]), 
-         .C0(GND_net), .D0(VCC_net), .CIN(n589), .COUT(n590), .S1(potential_decayed[24]), 
-         .S0(potential_decayed[23]));
-    defparam potential_new_31__I_0_25.INJECT = "NO";
-    defparam potential_new_31__I_0_25.INIT0 = "0x99AA";
-    defparam potential_new_31__I_0_25.INIT1 = "0x99AA";
-    CCU2 potential_new_31__I_0_23 (.A1(potential_new[22]), .B1(potential_new[30]), 
-         .C1(GND_net), .D1(VCC_net), .A0(potential_new[21]), .B0(potential_new[29]), 
-         .C0(GND_net), .D0(VCC_net), .CIN(n588), .COUT(n589), .S1(potential_decayed[22]), 
-         .S0(potential_decayed[21]));
-    defparam potential_new_31__I_0_23.INJECT = "NO";
-    defparam potential_new_31__I_0_23.INIT0 = "0x99AA";
-    defparam potential_new_31__I_0_23.INIT1 = "0x99AA";
-    CCU2 potential_new_31__I_0_21 (.A1(potential_new[20]), .B1(potential_new[28]), 
-         .C1(GND_net), .D1(VCC_net), .A0(potential_new[19]), .B0(potential_new[27]), 
-         .C0(GND_net), .D0(VCC_net), .CIN(n587), .COUT(n588), .S1(potential_decayed[20]), 
-         .S0(potential_decayed[19]));
-    defparam potential_new_31__I_0_21.INJECT = "NO";
-    defparam potential_new_31__I_0_21.INIT0 = "0x99AA";
-    defparam potential_new_31__I_0_21.INIT1 = "0x99AA";
-    CCU2 potential_new_31__I_0_19 (.A1(potential_new[18]), .B1(potential_new[26]), 
-         .C1(GND_net), .D1(VCC_net), .A0(potential_new[17]), .B0(potential_new[25]), 
-         .C0(GND_net), .D0(VCC_net), .CIN(n586), .COUT(n587), .S1(potential_decayed[18]), 
-         .S0(potential_decayed[17]));
-    defparam potential_new_31__I_0_19.INJECT = "NO";
-    defparam potential_new_31__I_0_19.INIT0 = "0x99AA";
-    defparam potential_new_31__I_0_19.INIT1 = "0x99AA";
-    CCU2 potential_new_31__I_0_17 (.A1(potential_new[16]), .B1(potential_new[24]), 
-         .C1(GND_net), .D1(VCC_net), .A0(potential_new[15]), .B0(potential_new[23]), 
-         .C0(GND_net), .D0(VCC_net), .CIN(n585), .COUT(n586), .S1(potential_decayed[16]), 
-         .S0(potential_decayed[15]));
-    defparam potential_new_31__I_0_17.INJECT = "NO";
-    defparam potential_new_31__I_0_17.INIT0 = "0x99AA";
-    defparam potential_new_31__I_0_17.INIT1 = "0x99AA";
-    CCU2 potential_new_31__I_0_15 (.A1(potential_new[14]), .B1(potential_new[22]), 
-         .C1(GND_net), .D1(VCC_net), .A0(potential_new[13]), .B0(potential_new[21]), 
-         .C0(GND_net), .D0(VCC_net), .CIN(n584), .COUT(n585), .S1(potential_decayed[14]), 
-         .S0(potential_decayed[13]));
-    defparam potential_new_31__I_0_15.INJECT = "NO";
-    defparam potential_new_31__I_0_15.INIT0 = "0x99AA";
-    defparam potential_new_31__I_0_15.INIT1 = "0x99AA";
-    CCU2 potential_new_31__I_0_13 (.A1(potential_new[12]), .B1(potential_new[20]), 
-         .C1(GND_net), .D1(VCC_net), .A0(potential_new[11]), .B0(potential_new[19]), 
-         .C0(GND_net), .D0(VCC_net), .CIN(n583), .COUT(n584), .S1(potential_decayed[12]), 
-         .S0(potential_decayed[11]));
-    defparam potential_new_31__I_0_13.INJECT = "NO";
-    defparam potential_new_31__I_0_13.INIT0 = "0x99AA";
-    defparam potential_new_31__I_0_13.INIT1 = "0x99AA";
-    CCU2 potential_new_31__I_0_11 (.A1(potential_new[10]), .B1(potential_new[18]), 
-         .C1(GND_net), .D1(VCC_net), .A0(potential_new[9]), .B0(potential_new[17]), 
-         .C0(GND_net), .D0(VCC_net), .CIN(n582), .COUT(n583), .S1(potential_decayed[10]), 
-         .S0(potential_decayed[9]));
-    defparam potential_new_31__I_0_11.INJECT = "NO";
-    defparam potential_new_31__I_0_11.INIT0 = "0x99AA";
-    defparam potential_new_31__I_0_11.INIT1 = "0x99AA";
-    CCU2 potential_new_31__I_0_9 (.A1(potential_new[8]), .B1(potential_new[16]), 
-         .C1(GND_net), .D1(VCC_net), .A0(potential_new[7]), .B0(potential_new[15]), 
-         .C0(GND_net), .D0(VCC_net), .CIN(n581), .COUT(n582), .S1(potential_decayed[8]), 
-         .S0(potential_decayed[7]));
-    defparam potential_new_31__I_0_9.INJECT = "NO";
-    defparam potential_new_31__I_0_9.INIT0 = "0x99AA";
-    defparam potential_new_31__I_0_9.INIT1 = "0x99AA";
-    CCU2 potential_new_31__I_0_7 (.A1(potential_new[6]), .B1(potential_new[14]), 
-         .C1(GND_net), .D1(VCC_net), .A0(potential_new[5]), .B0(potential_new[13]), 
-         .C0(GND_net), .D0(VCC_net), .CIN(n580), .COUT(n581), .S1(potential_decayed[6]), 
-         .S0(potential_decayed[5]));
-    defparam potential_new_31__I_0_7.INJECT = "NO";
-    defparam potential_new_31__I_0_7.INIT0 = "0x99AA";
-    defparam potential_new_31__I_0_7.INIT1 = "0x99AA";
-    CCU2 potential_new_31__I_0_5 (.A1(potential_new[4]), .B1(potential_new[12]), 
-         .C1(GND_net), .D1(VCC_net), .A0(potential_new[3]), .B0(potential_new[11]), 
-         .C0(GND_net), .D0(VCC_net), .CIN(n579), .COUT(n580), .S1(potential_decayed[4]), 
-         .S0(potential_decayed[3]));
-    defparam potential_new_31__I_0_5.INJECT = "NO";
-    defparam potential_new_31__I_0_5.INIT0 = "0x99AA";
-    defparam potential_new_31__I_0_5.INIT1 = "0x99AA";
-    CCU2 potential_new_31__I_0_3 (.A1(potential_new[2]), .B1(potential_new[10]), 
-         .C1(GND_net), .D1(VCC_net), .A0(potential_new[1]), .B0(potential_new[9]), 
-         .C0(GND_net), .D0(VCC_net), .CIN(n578), .COUT(n579), .S1(potential_decayed[2]), 
-         .S0(potential_decayed[1]));
-    defparam potential_new_31__I_0_3.INJECT = "NO";
-    defparam potential_new_31__I_0_3.INIT0 = "0x99AA";
-    defparam potential_new_31__I_0_3.INIT1 = "0x99AA";
-    CCU2 potential_new_31__I_0_cin (.A1(potential_new[0]), .B1(potential_new[8]), 
-         .C1(GND_net), .D1(VCC_net), .A0(GND_net), .B0(GND_net), .C0(GND_net), 
-         .D0(VCC_net), .CIN(VCC_net), .COUT(n578), .S1(potential_decayed[0]));
-    defparam potential_new_31__I_0_cin.INJECT = "NO";
-    defparam potential_new_31__I_0_cin.INIT0 = "0x00FF";
-    defparam potential_new_31__I_0_cin.INIT1 = "0x99AA";
-    CCU2 potential_new_31__I_0_2_33 (.A1(GND_net), .B1(GND_net), .C1(GND_net), 
-         .D1(VCC_net), .A0(potential_new_31__N_142[31]), .B0(\wma_outputs[15] ), 
-         .C0(GND_net), .D0(VCC_net), .CIN(n536), .S0(potential_new[31]));
-    defparam potential_new_31__I_0_2_33.INJECT = "NO";
-    defparam potential_new_31__I_0_2_33.INIT0 = "0x66AA";
-    defparam potential_new_31__I_0_2_33.INIT1 = "0x0000";
-    CCU2 potential_new_31__I_0_2_31 (.A1(potential_new_31__N_142[30]), .B1(\wma_outputs[15] ), 
-         .C1(GND_net), .D1(VCC_net), .A0(potential_new_31__N_142[29]), 
-         .B0(\wma_outputs[15] ), .C0(GND_net), .D0(VCC_net), .CIN(n535), 
-         .COUT(n536), .S1(potential_new[30]), .S0(potential_new[29]));
-    defparam potential_new_31__I_0_2_31.INJECT = "NO";
-    defparam potential_new_31__I_0_2_31.INIT0 = "0x66AA";
-    defparam potential_new_31__I_0_2_31.INIT1 = "0x66AA";
-    CCU2 potential_new_31__I_0_2_29 (.A1(potential_new_31__N_142[28]), .B1(\wma_outputs[15] ), 
-         .C1(GND_net), .D1(VCC_net), .A0(potential_new_31__N_142[27]), 
-         .B0(\wma_outputs[15] ), .C0(GND_net), .D0(VCC_net), .CIN(n534), 
-         .COUT(n535), .S1(potential_new[28]), .S0(potential_new[27]));
-    defparam potential_new_31__I_0_2_29.INJECT = "NO";
-    defparam potential_new_31__I_0_2_29.INIT0 = "0x66AA";
-    defparam potential_new_31__I_0_2_29.INIT1 = "0x66AA";
-    CCU2 potential_new_31__I_0_2_27 (.A1(potential_new_31__N_142[26]), .B1(\wma_outputs[15] ), 
-         .C1(GND_net), .D1(VCC_net), .A0(potential_new_31__N_142[25]), 
-         .B0(\wma_outputs[15] ), .C0(GND_net), .D0(VCC_net), .CIN(n533), 
-         .COUT(n534), .S1(potential_new[26]), .S0(potential_new[25]));
-    defparam potential_new_31__I_0_2_27.INJECT = "NO";
-    defparam potential_new_31__I_0_2_27.INIT0 = "0x66AA";
-    defparam potential_new_31__I_0_2_27.INIT1 = "0x66AA";
-    CCU2 potential_new_31__I_0_2_25 (.A1(potential_new_31__N_142[24]), .B1(\wma_outputs[15] ), 
-         .C1(GND_net), .D1(VCC_net), .A0(potential_new_31__N_142[23]), 
-         .B0(\wma_outputs[15] ), .C0(GND_net), .D0(VCC_net), .CIN(n532), 
-         .COUT(n533), .S1(potential_new[24]), .S0(potential_new[23]));
-    defparam potential_new_31__I_0_2_25.INJECT = "NO";
-    defparam potential_new_31__I_0_2_25.INIT0 = "0x66AA";
-    defparam potential_new_31__I_0_2_25.INIT1 = "0x66AA";
-    CCU2 potential_new_31__I_0_2_23 (.A1(potential_new_31__N_142[22]), .B1(\wma_outputs[15] ), 
-         .C1(GND_net), .D1(VCC_net), .A0(potential_new_31__N_142[21]), 
-         .B0(\wma_outputs[15] ), .C0(GND_net), .D0(VCC_net), .CIN(n531), 
-         .COUT(n532), .S1(potential_new[22]), .S0(potential_new[21]));
-    defparam potential_new_31__I_0_2_23.INJECT = "NO";
-    defparam potential_new_31__I_0_2_23.INIT0 = "0x66AA";
-    defparam potential_new_31__I_0_2_23.INIT1 = "0x66AA";
-    CCU2 potential_new_31__I_0_2_21 (.A1(potential_new_31__N_142[20]), .B1(\wma_outputs[15] ), 
-         .C1(GND_net), .D1(VCC_net), .A0(potential_new_31__N_142[19]), 
-         .B0(\wma_outputs[15] ), .C0(GND_net), .D0(VCC_net), .CIN(n530), 
-         .COUT(n531), .S1(potential_new[20]), .S0(potential_new[19]));
-    defparam potential_new_31__I_0_2_21.INJECT = "NO";
-    defparam potential_new_31__I_0_2_21.INIT0 = "0x66AA";
-    defparam potential_new_31__I_0_2_21.INIT1 = "0x66AA";
-    CCU2 potential_new_31__I_0_2_19 (.A1(potential_new_31__N_142[18]), .B1(\wma_outputs[15] ), 
-         .C1(GND_net), .D1(VCC_net), .A0(potential_new_31__N_142[17]), 
-         .B0(\wma_outputs[15] ), .C0(GND_net), .D0(VCC_net), .CIN(n529), 
-         .COUT(n530), .S1(potential_new[18]), .S0(potential_new[17]));
-    defparam potential_new_31__I_0_2_19.INJECT = "NO";
-    defparam potential_new_31__I_0_2_19.INIT0 = "0x66AA";
-    defparam potential_new_31__I_0_2_19.INIT1 = "0x66AA";
-    CCU2 potential_new_31__I_0_2_17 (.A1(potential_new_31__N_142[16]), .B1(\wma_outputs[15] ), 
-         .C1(GND_net), .D1(VCC_net), .A0(potential_new_31__N_142[15]), 
-         .B0(\wma_outputs[15] ), .C0(GND_net), .D0(VCC_net), .CIN(n528), 
-         .COUT(n529), .S1(potential_new[16]), .S0(potential_new[15]));
-    defparam potential_new_31__I_0_2_17.INJECT = "NO";
-    defparam potential_new_31__I_0_2_17.INIT0 = "0x66AA";
-    defparam potential_new_31__I_0_2_17.INIT1 = "0x66AA";
-    CCU2 potential_new_31__I_0_2_15 (.A1(potential_new_31__N_142[14]), .B1(\wma_outputs[15] ), 
-         .C1(GND_net), .D1(VCC_net), .A0(potential_new_31__N_142[13]), 
-         .B0(\wma_outputs[15] ), .C0(GND_net), .D0(VCC_net), .CIN(n527), 
-         .COUT(n528), .S1(potential_new[14]), .S0(potential_new[13]));
-    defparam potential_new_31__I_0_2_15.INJECT = "NO";
-    defparam potential_new_31__I_0_2_15.INIT0 = "0x66AA";
-    defparam potential_new_31__I_0_2_15.INIT1 = "0x66AA";
-    CCU2 potential_new_31__I_0_2_13 (.A1(potential_new_31__N_142[12]), .B1(\wma_outputs[15] ), 
-         .C1(GND_net), .D1(VCC_net), .A0(potential_new_31__N_142[11]), 
-         .B0(\wma_outputs[15] ), .C0(GND_net), .D0(VCC_net), .CIN(n526), 
-         .COUT(n527), .S1(potential_new[12]), .S0(potential_new[11]));
-    defparam potential_new_31__I_0_2_13.INJECT = "NO";
-    defparam potential_new_31__I_0_2_13.INIT0 = "0x66AA";
-    defparam potential_new_31__I_0_2_13.INIT1 = "0x66AA";
-    CCU2 potential_new_31__I_0_2_11 (.A1(potential_new_31__N_142[10]), .B1(\wma_outputs[15] ), 
-         .C1(GND_net), .D1(VCC_net), .A0(potential_new_31__N_142[9]), 
-         .B0(\wma_outputs[15] ), .C0(GND_net), .D0(VCC_net), .CIN(n525), 
-         .COUT(n526), .S1(potential_new[10]), .S0(potential_new[9]));
-    defparam potential_new_31__I_0_2_11.INJECT = "NO";
-    defparam potential_new_31__I_0_2_11.INIT0 = "0x66AA";
-    defparam potential_new_31__I_0_2_11.INIT1 = "0x66AA";
-    CCU2 potential_new_31__I_0_2_9 (.A1(potential_new_31__N_142[8]), .B1(\wma_outputs[15] ), 
-         .C1(GND_net), .D1(VCC_net), .A0(potential_new_31__N_142[7]), 
-         .B0(\wma_outputs[15] ), .C0(GND_net), .D0(VCC_net), .CIN(n524), 
-         .COUT(n525), .S1(potential_new[8]), .S0(potential_new[7]));
-    defparam potential_new_31__I_0_2_9.INJECT = "NO";
-    defparam potential_new_31__I_0_2_9.INIT0 = "0x66AA";
-    defparam potential_new_31__I_0_2_9.INIT1 = "0x66AA";
-    CCU2 potential_new_31__I_0_2_7 (.A1(potential_new_31__N_142[6]), .B1(\wma_outputs[15] ), 
-         .C1(GND_net), .D1(VCC_net), .A0(potential_new_31__N_142[5]), 
-         .B0(\wma_outputs[15] ), .C0(GND_net), .D0(VCC_net), .CIN(n523), 
-         .COUT(n524), .S1(potential_new[6]), .S0(potential_new[5]));
-    defparam potential_new_31__I_0_2_7.INJECT = "NO";
-    defparam potential_new_31__I_0_2_7.INIT0 = "0x66AA";
-    defparam potential_new_31__I_0_2_7.INIT1 = "0x66AA";
-    CCU2 potential_new_31__I_0_2_5 (.A1(potential_new_31__N_142[4]), .B1(\wma_outputs[15] ), 
-         .C1(GND_net), .D1(VCC_net), .A0(potential_new_31__N_142[3]), 
-         .B0(\wma_outputs[15] ), .C0(GND_net), .D0(VCC_net), .CIN(n522), 
-         .COUT(n523), .S1(potential_new[4]), .S0(potential_new[3]));
-    defparam potential_new_31__I_0_2_5.INJECT = "NO";
-    defparam potential_new_31__I_0_2_5.INIT0 = "0x66AA";
-    defparam potential_new_31__I_0_2_5.INIT1 = "0x66AA";
-    VHI i2 (.Z(VCC_net));
-    VLO i1 (.Z(GND_net));
-    
-endmodule
-
-//
-// Verilog Description of module spike_neuron_U1
-//
-
-module spike_neuron_U1 (input reset, output \net_outs[0] , input \wma_outputs[7] , 
-            input clk_c, input \wma_outputs[5] , input \wma_outputs[6] , 
-            input \wma_outputs[3] , input \wma_outputs[4] , input \wma_outputs[1] , 
-            input \wma_outputs[2] , input \wma_outputs[0] );
+module spike_neuron (input n382, input clk_c, output \potential_decayed[31] , 
+            input n596, output n62, output \network_outputs_c[1] );
     
     wire [31:0]potential_decayed;
-    wire [31:0]potential_new;
+    wire [31:0]potential;
     (* is_clock=1 *) wire clk_c;
+    wire [31:0]potential_new;
     
-    wire GND_net, VCC_net, n690, n575, n686, n685, n687, n670;
-    wire [31:0]potential_new_31__N_2190;
+    wire VCC_net, GND_net, n661, n830, n667, n835, n836, n822, 
+        n768, n654, n821, n664, n824, n666, n727, n833, n656, 
+        n837, n655, n818, n653, n839, n662, n665, n663, n660, 
+        n652, n659, n658, n657;
     
-    wire n688, n667, n681, n671, n689, n672, n610, n576, n62, 
-        n558, n183, n570, n568, n550, n555, n418, n551, n573, 
-        n552, n574, n548, n549, n547, n546, n571, n577, n572, 
-        n569, n567, n559, n566, n565, n564, n563, n562, n561, 
-        n560, n557, n556, n554, n553;
-    
-    (* lut_function="(A+(B))" *) LUT4 i1_2_lut (.A(potential_decayed[17]), 
-            .B(potential_decayed[10]), .Z(n670));
-    defparam i1_2_lut.INIT = "0xeeee";
-    (* lut_function="(A+(B+(C+(D))))" *) LUT4 i1_4_lut (.A(potential_decayed[21]), 
-            .B(potential_decayed[8]), .C(potential_decayed[29]), .D(potential_decayed[18]), 
-            .Z(n687));
+    (* lse_init_val=0, LSE_LINE_FILE_ID=106, LSE_LCOL=22, LSE_RCOL=10, LSE_LLINE=22, LSE_RLINE=27 *) FD1P3IX potential__i1 (.D(potential_decayed[1]), 
+            .CK(clk_c), .SP(VCC_net), .CD(n382), .Q(potential[1]));
+    defparam potential__i1.GSR = "ENABLED";
+    (* lut_function="(A+(B+(C+(D))))" *) LUT4 i1_4_lut (.A(potential_decayed[19]), 
+            .B(potential_decayed[27]), .C(potential_decayed[29]), .D(potential_decayed[6]), 
+            .Z(n836));
     defparam i1_4_lut.INIT = "0xfffe";
-    (* lut_function="(A+(B+(C+(D))))" *) LUT4 i1_4_lut_adj_18 (.A(n688), .B(n681), 
-            .C(n671), .D(n670), .Z(n689));
-    defparam i1_4_lut_adj_18.INIT = "0xfffe";
-    (* lut_function="(A (B+(C+(D)))+!A (B+(C)))" *) LUT4 i1_4_lut_adj_19 (.A(n667), 
-            .B(n685), .C(n672), .D(n610), .Z(n690));
-    defparam i1_4_lut_adj_19.INIT = "0xfefc";
-    (* lut_function="(A+(B+(C+(D))))" *) LUT4 i1_4_lut_adj_20 (.A(potential_decayed[20]), 
-            .B(potential_decayed[30]), .C(potential_decayed[11]), .D(potential_decayed[16]), 
-            .Z(n686));
-    defparam i1_4_lut_adj_20.INIT = "0xfffe";
-    (* lut_function="(A+(B+(C+(D))))" *) LUT4 i1_4_lut_adj_21 (.A(n686), .B(n690), 
-            .C(n689), .D(n687), .Z(n62));
-    defparam i1_4_lut_adj_21.INIT = "0xfffe";
-    (* lut_function="(A (B+!(C))+!A (B))" *) LUT4 i91_3_lut (.A(n62), .B(reset), 
-            .C(potential_decayed[31]), .Z(n183));
-    defparam i91_3_lut.INIT = "0xcece";
-    CCU2 potential_new_31__I_0_2_11 (.A1(potential_new_31__N_2190[10]), .B1(\wma_outputs[7] ), 
-         .C1(GND_net), .D1(VCC_net), .A0(potential_new_31__N_2190[9]), 
-         .B0(\wma_outputs[7] ), .C0(GND_net), .D0(VCC_net), .CIN(n550), 
-         .COUT(n551), .S1(potential_new[10]), .S0(potential_new[9]));
-    defparam potential_new_31__I_0_2_11.INJECT = "NO";
-    defparam potential_new_31__I_0_2_11.INIT0 = "0x66AA";
-    defparam potential_new_31__I_0_2_11.INIT1 = "0x66AA";
-    (* LSE_LINE_FILE_ID=106, LSE_LCOL=15, LSE_RCOL=3, LSE_LLINE=21, LSE_RLINE=26 *) FD1P3IX add_4_add_12_add_12_e1__i0 (.D(potential_decayed[0]), 
-            .CK(clk_c), .SP(VCC_net), .CD(n183), .Q(potential_new_31__N_2190[0]));
-    defparam add_4_add_12_add_12_e1__i0.GSR = "ENABLED";
-    (* LSE_LINE_FILE_ID=106, LSE_LCOL=15, LSE_RCOL=3, LSE_LLINE=21, LSE_RLINE=26 *) FD1P3IX spike_out (.D(n62), 
-            .CK(clk_c), .SP(VCC_net), .CD(n418), .Q(\net_outs[0] ));
-    defparam spike_out.GSR = "ENABLED";
-    (* lut_function="(A+(B))" *) LUT4 i1_2_lut_adj_22 (.A(potential_decayed[12]), 
-            .B(potential_decayed[15]), .Z(n671));
-    defparam i1_2_lut_adj_22.INIT = "0xeeee";
-    (* lut_function="(A+(B+(C)))" *) LUT4 i1_3_lut (.A(potential_decayed[7]), 
-            .B(potential_decayed[14]), .C(potential_decayed[9]), .Z(n681));
+    (* lut_function="(A+(B))" *) LUT4 i1_2_lut (.A(potential_decayed[20]), 
+            .B(potential_decayed[28]), .Z(n822));
+    defparam i1_2_lut.INIT = "0xeeee";
+    (* lut_function="(A+(B+(C+(D))))" *) LUT4 i1_4_lut_adj_12 (.A(potential_decayed[15]), 
+            .B(potential_decayed[17]), .C(potential_decayed[18]), .D(potential_decayed[21]), 
+            .Z(n768));
+    defparam i1_4_lut_adj_12.INIT = "0xfffe";
+    (* lut_function="(A+(B))" *) LUT4 i1_2_lut_adj_13 (.A(potential_decayed[24]), 
+            .B(potential_decayed[10]), .Z(n821));
+    defparam i1_2_lut_adj_13.INIT = "0xeeee";
+    (* lut_function="(A+(B+(C)))" *) LUT4 i1_3_lut (.A(potential_decayed[23]), 
+            .B(potential_decayed[25]), .C(potential_decayed[7]), .Z(n830));
     defparam i1_3_lut.INIT = "0xfefe";
-    (* lut_function="(A+(B+(C+(D))))" *) LUT4 i1_4_lut_adj_23 (.A(potential_decayed[19]), 
-            .B(potential_decayed[27]), .C(potential_decayed[6]), .D(potential_decayed[23]), 
-            .Z(n688));
-    defparam i1_4_lut_adj_23.INIT = "0xfffe";
-    (* lut_function="(A+(B+(C)))" *) LUT4 i1_3_lut_adj_24 (.A(potential_decayed[2]), 
-            .B(potential_decayed[3]), .C(potential_decayed[1]), .Z(n610));
-    defparam i1_3_lut_adj_24.INIT = "0xfefe";
-    (* lut_function="(A+(B))" *) LUT4 i1_2_lut_adj_25 (.A(potential_decayed[24]), 
-            .B(potential_decayed[28]), .Z(n672));
-    defparam i1_2_lut_adj_25.INIT = "0xeeee";
-    (* lut_function="(A+(B+(C+(D))))" *) LUT4 i1_4_lut_adj_26 (.A(potential_decayed[25]), 
-            .B(potential_decayed[13]), .C(potential_decayed[22]), .D(potential_decayed[26]), 
-            .Z(n685));
-    defparam i1_4_lut_adj_26.INIT = "0xfffe";
-    CCU2 potential_new_31__I_0_2_9 (.A1(potential_new_31__N_2190[8]), .B1(\wma_outputs[7] ), 
-         .C1(GND_net), .D1(VCC_net), .A0(potential_new_31__N_2190[7]), 
-         .B0(\wma_outputs[7] ), .C0(GND_net), .D0(VCC_net), .CIN(n549), 
-         .COUT(n550), .S1(potential_new[8]), .S0(potential_new[7]));
-    defparam potential_new_31__I_0_2_9.INJECT = "NO";
-    defparam potential_new_31__I_0_2_9.INIT0 = "0x66AA";
-    defparam potential_new_31__I_0_2_9.INIT1 = "0x66AA";
-    CCU2 potential_new_31__I_0_2_7 (.A1(potential_new_31__N_2190[6]), .B1(\wma_outputs[6] ), 
-         .C1(GND_net), .D1(VCC_net), .A0(potential_new_31__N_2190[5]), 
-         .B0(\wma_outputs[5] ), .C0(GND_net), .D0(VCC_net), .CIN(n548), 
-         .COUT(n549), .S1(potential_new[6]), .S0(potential_new[5]));
-    defparam potential_new_31__I_0_2_7.INJECT = "NO";
-    defparam potential_new_31__I_0_2_7.INIT0 = "0x66AA";
-    defparam potential_new_31__I_0_2_7.INIT1 = "0x66AA";
-    CCU2 potential_new_31__I_0_2_5 (.A1(potential_new_31__N_2190[4]), .B1(\wma_outputs[4] ), 
-         .C1(GND_net), .D1(VCC_net), .A0(potential_new_31__N_2190[3]), 
-         .B0(\wma_outputs[3] ), .C0(GND_net), .D0(VCC_net), .CIN(n547), 
-         .COUT(n548), .S1(potential_new[4]), .S0(potential_new[3]));
-    defparam potential_new_31__I_0_2_5.INJECT = "NO";
-    defparam potential_new_31__I_0_2_5.INIT0 = "0x66AA";
-    defparam potential_new_31__I_0_2_5.INIT1 = "0x66AA";
-    CCU2 potential_new_31__I_0_2_3 (.A1(potential_new_31__N_2190[2]), .B1(\wma_outputs[2] ), 
-         .C1(GND_net), .D1(VCC_net), .A0(potential_new_31__N_2190[1]), 
-         .B0(\wma_outputs[1] ), .C0(GND_net), .D0(VCC_net), .CIN(n546), 
-         .COUT(n547), .S1(potential_new[2]), .S0(potential_new[1]));
-    defparam potential_new_31__I_0_2_3.INJECT = "NO";
-    defparam potential_new_31__I_0_2_3.INIT0 = "0x66AA";
-    defparam potential_new_31__I_0_2_3.INIT1 = "0x66AA";
-    (* LSE_LINE_FILE_ID=106, LSE_LCOL=15, LSE_RCOL=3, LSE_LLINE=21, LSE_RLINE=26 *) FD1P3IX add_4_add_12_add_12_e1__i1 (.D(potential_decayed[1]), 
-            .CK(clk_c), .SP(VCC_net), .CD(n183), .Q(potential_new_31__N_2190[1]));
-    defparam add_4_add_12_add_12_e1__i1.GSR = "ENABLED";
-    (* LSE_LINE_FILE_ID=106, LSE_LCOL=15, LSE_RCOL=3, LSE_LLINE=21, LSE_RLINE=26 *) FD1P3IX add_4_add_12_add_12_e1__i2 (.D(potential_decayed[2]), 
-            .CK(clk_c), .SP(VCC_net), .CD(n183), .Q(potential_new_31__N_2190[2]));
-    defparam add_4_add_12_add_12_e1__i2.GSR = "ENABLED";
-    (* LSE_LINE_FILE_ID=106, LSE_LCOL=15, LSE_RCOL=3, LSE_LLINE=21, LSE_RLINE=26 *) FD1P3IX add_4_add_12_add_12_e1__i3 (.D(potential_decayed[3]), 
-            .CK(clk_c), .SP(VCC_net), .CD(n183), .Q(potential_new_31__N_2190[3]));
-    defparam add_4_add_12_add_12_e1__i3.GSR = "ENABLED";
-    (* LSE_LINE_FILE_ID=106, LSE_LCOL=15, LSE_RCOL=3, LSE_LLINE=21, LSE_RLINE=26 *) FD1P3IX add_4_add_12_add_12_e1__i4 (.D(potential_decayed[4]), 
-            .CK(clk_c), .SP(VCC_net), .CD(n183), .Q(potential_new_31__N_2190[4]));
-    defparam add_4_add_12_add_12_e1__i4.GSR = "ENABLED";
-    (* LSE_LINE_FILE_ID=106, LSE_LCOL=15, LSE_RCOL=3, LSE_LLINE=21, LSE_RLINE=26 *) FD1P3IX add_4_add_12_add_12_e1__i5 (.D(potential_decayed[5]), 
-            .CK(clk_c), .SP(VCC_net), .CD(n183), .Q(potential_new_31__N_2190[5]));
-    defparam add_4_add_12_add_12_e1__i5.GSR = "ENABLED";
-    (* LSE_LINE_FILE_ID=106, LSE_LCOL=15, LSE_RCOL=3, LSE_LLINE=21, LSE_RLINE=26 *) FD1P3IX add_4_add_12_add_12_e1__i6 (.D(potential_decayed[6]), 
-            .CK(clk_c), .SP(VCC_net), .CD(n183), .Q(potential_new_31__N_2190[6]));
-    defparam add_4_add_12_add_12_e1__i6.GSR = "ENABLED";
-    (* LSE_LINE_FILE_ID=106, LSE_LCOL=15, LSE_RCOL=3, LSE_LLINE=21, LSE_RLINE=26 *) FD1P3IX add_4_add_12_add_12_e1__i7 (.D(potential_decayed[7]), 
-            .CK(clk_c), .SP(VCC_net), .CD(n183), .Q(potential_new_31__N_2190[7]));
-    defparam add_4_add_12_add_12_e1__i7.GSR = "ENABLED";
-    (* LSE_LINE_FILE_ID=106, LSE_LCOL=15, LSE_RCOL=3, LSE_LLINE=21, LSE_RLINE=26 *) FD1P3IX add_4_add_12_add_12_e1__i8 (.D(potential_decayed[8]), 
-            .CK(clk_c), .SP(VCC_net), .CD(n183), .Q(potential_new_31__N_2190[8]));
-    defparam add_4_add_12_add_12_e1__i8.GSR = "ENABLED";
-    (* LSE_LINE_FILE_ID=106, LSE_LCOL=15, LSE_RCOL=3, LSE_LLINE=21, LSE_RLINE=26 *) FD1P3IX add_4_add_12_add_12_e1__i9 (.D(potential_decayed[9]), 
-            .CK(clk_c), .SP(VCC_net), .CD(n183), .Q(potential_new_31__N_2190[9]));
-    defparam add_4_add_12_add_12_e1__i9.GSR = "ENABLED";
-    (* LSE_LINE_FILE_ID=106, LSE_LCOL=15, LSE_RCOL=3, LSE_LLINE=21, LSE_RLINE=26 *) FD1P3IX add_4_add_12_add_12_e1__i10 (.D(potential_decayed[10]), 
-            .CK(clk_c), .SP(VCC_net), .CD(n183), .Q(potential_new_31__N_2190[10]));
-    defparam add_4_add_12_add_12_e1__i10.GSR = "ENABLED";
-    (* LSE_LINE_FILE_ID=106, LSE_LCOL=15, LSE_RCOL=3, LSE_LLINE=21, LSE_RLINE=26 *) FD1P3IX add_4_add_12_add_12_e1__i11 (.D(potential_decayed[11]), 
-            .CK(clk_c), .SP(VCC_net), .CD(n183), .Q(potential_new_31__N_2190[11]));
-    defparam add_4_add_12_add_12_e1__i11.GSR = "ENABLED";
-    (* LSE_LINE_FILE_ID=106, LSE_LCOL=15, LSE_RCOL=3, LSE_LLINE=21, LSE_RLINE=26 *) FD1P3IX add_4_add_12_add_12_e1__i12 (.D(potential_decayed[12]), 
-            .CK(clk_c), .SP(VCC_net), .CD(n183), .Q(potential_new_31__N_2190[12]));
-    defparam add_4_add_12_add_12_e1__i12.GSR = "ENABLED";
-    (* LSE_LINE_FILE_ID=106, LSE_LCOL=15, LSE_RCOL=3, LSE_LLINE=21, LSE_RLINE=26 *) FD1P3IX add_4_add_12_add_12_e1__i13 (.D(potential_decayed[13]), 
-            .CK(clk_c), .SP(VCC_net), .CD(n183), .Q(potential_new_31__N_2190[13]));
-    defparam add_4_add_12_add_12_e1__i13.GSR = "ENABLED";
-    (* LSE_LINE_FILE_ID=106, LSE_LCOL=15, LSE_RCOL=3, LSE_LLINE=21, LSE_RLINE=26 *) FD1P3IX add_4_add_12_add_12_e1__i14 (.D(potential_decayed[14]), 
-            .CK(clk_c), .SP(VCC_net), .CD(n183), .Q(potential_new_31__N_2190[14]));
-    defparam add_4_add_12_add_12_e1__i14.GSR = "ENABLED";
-    (* LSE_LINE_FILE_ID=106, LSE_LCOL=15, LSE_RCOL=3, LSE_LLINE=21, LSE_RLINE=26 *) FD1P3IX add_4_add_12_add_12_e1__i15 (.D(potential_decayed[15]), 
-            .CK(clk_c), .SP(VCC_net), .CD(n183), .Q(potential_new_31__N_2190[15]));
-    defparam add_4_add_12_add_12_e1__i15.GSR = "ENABLED";
-    (* LSE_LINE_FILE_ID=106, LSE_LCOL=15, LSE_RCOL=3, LSE_LLINE=21, LSE_RLINE=26 *) FD1P3IX add_4_add_12_add_12_e1__i16 (.D(potential_decayed[16]), 
-            .CK(clk_c), .SP(VCC_net), .CD(n183), .Q(potential_new_31__N_2190[16]));
-    defparam add_4_add_12_add_12_e1__i16.GSR = "ENABLED";
-    (* LSE_LINE_FILE_ID=106, LSE_LCOL=15, LSE_RCOL=3, LSE_LLINE=21, LSE_RLINE=26 *) FD1P3IX add_4_add_12_add_12_e1__i17 (.D(potential_decayed[17]), 
-            .CK(clk_c), .SP(VCC_net), .CD(n183), .Q(potential_new_31__N_2190[17]));
-    defparam add_4_add_12_add_12_e1__i17.GSR = "ENABLED";
-    (* LSE_LINE_FILE_ID=106, LSE_LCOL=15, LSE_RCOL=3, LSE_LLINE=21, LSE_RLINE=26 *) FD1P3IX add_4_add_12_add_12_e1__i18 (.D(potential_decayed[18]), 
-            .CK(clk_c), .SP(VCC_net), .CD(n183), .Q(potential_new_31__N_2190[18]));
-    defparam add_4_add_12_add_12_e1__i18.GSR = "ENABLED";
-    (* LSE_LINE_FILE_ID=106, LSE_LCOL=15, LSE_RCOL=3, LSE_LLINE=21, LSE_RLINE=26 *) FD1P3IX add_4_add_12_add_12_e1__i19 (.D(potential_decayed[19]), 
-            .CK(clk_c), .SP(VCC_net), .CD(n183), .Q(potential_new_31__N_2190[19]));
-    defparam add_4_add_12_add_12_e1__i19.GSR = "ENABLED";
-    (* LSE_LINE_FILE_ID=106, LSE_LCOL=15, LSE_RCOL=3, LSE_LLINE=21, LSE_RLINE=26 *) FD1P3IX add_4_add_12_add_12_e1__i20 (.D(potential_decayed[20]), 
-            .CK(clk_c), .SP(VCC_net), .CD(n183), .Q(potential_new_31__N_2190[20]));
-    defparam add_4_add_12_add_12_e1__i20.GSR = "ENABLED";
-    (* LSE_LINE_FILE_ID=106, LSE_LCOL=15, LSE_RCOL=3, LSE_LLINE=21, LSE_RLINE=26 *) FD1P3IX add_4_add_12_add_12_e1__i21 (.D(potential_decayed[21]), 
-            .CK(clk_c), .SP(VCC_net), .CD(n183), .Q(potential_new_31__N_2190[21]));
-    defparam add_4_add_12_add_12_e1__i21.GSR = "ENABLED";
-    (* LSE_LINE_FILE_ID=106, LSE_LCOL=15, LSE_RCOL=3, LSE_LLINE=21, LSE_RLINE=26 *) FD1P3IX add_4_add_12_add_12_e1__i22 (.D(potential_decayed[22]), 
-            .CK(clk_c), .SP(VCC_net), .CD(n183), .Q(potential_new_31__N_2190[22]));
-    defparam add_4_add_12_add_12_e1__i22.GSR = "ENABLED";
-    (* LSE_LINE_FILE_ID=106, LSE_LCOL=15, LSE_RCOL=3, LSE_LLINE=21, LSE_RLINE=26 *) FD1P3IX add_4_add_12_add_12_e1__i23 (.D(potential_decayed[23]), 
-            .CK(clk_c), .SP(VCC_net), .CD(n183), .Q(potential_new_31__N_2190[23]));
-    defparam add_4_add_12_add_12_e1__i23.GSR = "ENABLED";
-    (* LSE_LINE_FILE_ID=106, LSE_LCOL=15, LSE_RCOL=3, LSE_LLINE=21, LSE_RLINE=26 *) FD1P3IX add_4_add_12_add_12_e1__i24 (.D(potential_decayed[24]), 
-            .CK(clk_c), .SP(VCC_net), .CD(n183), .Q(potential_new_31__N_2190[24]));
-    defparam add_4_add_12_add_12_e1__i24.GSR = "ENABLED";
-    (* LSE_LINE_FILE_ID=106, LSE_LCOL=15, LSE_RCOL=3, LSE_LLINE=21, LSE_RLINE=26 *) FD1P3IX add_4_add_12_add_12_e1__i25 (.D(potential_decayed[25]), 
-            .CK(clk_c), .SP(VCC_net), .CD(n183), .Q(potential_new_31__N_2190[25]));
-    defparam add_4_add_12_add_12_e1__i25.GSR = "ENABLED";
-    (* LSE_LINE_FILE_ID=106, LSE_LCOL=15, LSE_RCOL=3, LSE_LLINE=21, LSE_RLINE=26 *) FD1P3IX add_4_add_12_add_12_e1__i26 (.D(potential_decayed[26]), 
-            .CK(clk_c), .SP(VCC_net), .CD(n183), .Q(potential_new_31__N_2190[26]));
-    defparam add_4_add_12_add_12_e1__i26.GSR = "ENABLED";
-    (* LSE_LINE_FILE_ID=106, LSE_LCOL=15, LSE_RCOL=3, LSE_LLINE=21, LSE_RLINE=26 *) FD1P3IX add_4_add_12_add_12_e1__i27 (.D(potential_decayed[27]), 
-            .CK(clk_c), .SP(VCC_net), .CD(n183), .Q(potential_new_31__N_2190[27]));
-    defparam add_4_add_12_add_12_e1__i27.GSR = "ENABLED";
-    (* LSE_LINE_FILE_ID=106, LSE_LCOL=15, LSE_RCOL=3, LSE_LLINE=21, LSE_RLINE=26 *) FD1P3IX add_4_add_12_add_12_e1__i28 (.D(potential_decayed[28]), 
-            .CK(clk_c), .SP(VCC_net), .CD(n183), .Q(potential_new_31__N_2190[28]));
-    defparam add_4_add_12_add_12_e1__i28.GSR = "ENABLED";
-    (* LSE_LINE_FILE_ID=106, LSE_LCOL=15, LSE_RCOL=3, LSE_LLINE=21, LSE_RLINE=26 *) FD1P3IX add_4_add_12_add_12_e1__i29 (.D(potential_decayed[29]), 
-            .CK(clk_c), .SP(VCC_net), .CD(n183), .Q(potential_new_31__N_2190[29]));
-    defparam add_4_add_12_add_12_e1__i29.GSR = "ENABLED";
-    (* LSE_LINE_FILE_ID=106, LSE_LCOL=15, LSE_RCOL=3, LSE_LLINE=21, LSE_RLINE=26 *) FD1P3IX add_4_add_12_add_12_e1__i30 (.D(potential_decayed[30]), 
-            .CK(clk_c), .SP(VCC_net), .CD(n183), .Q(potential_new_31__N_2190[30]));
-    defparam add_4_add_12_add_12_e1__i30.GSR = "ENABLED";
-    (* LSE_LINE_FILE_ID=106, LSE_LCOL=15, LSE_RCOL=3, LSE_LLINE=21, LSE_RLINE=26 *) FD1P3IX add_4_add_12_add_12_e1__i31 (.D(potential_decayed[31]), 
-            .CK(clk_c), .SP(VCC_net), .CD(n183), .Q(potential_new_31__N_2190[31]));
-    defparam add_4_add_12_add_12_e1__i31.GSR = "ENABLED";
-    (* lut_function="(A+(B))" *) LUT4 i196_2_lut (.A(potential_decayed[31]), 
-            .B(reset), .Z(n418));
-    defparam i196_2_lut.INIT = "0xeeee";
-    (* lut_function="(A (B))" *) LUT4 i1_2_lut_adj_27 (.A(potential_decayed[5]), 
-            .B(potential_decayed[4]), .Z(n667));
-    defparam i1_2_lut_adj_27.INIT = "0x8888";
+    (* lut_function="(A+(B+(C)))" *) LUT4 i1_3_lut_adj_14 (.A(potential_decayed[2]), 
+            .B(potential_decayed[3]), .C(potential_decayed[1]), .Z(n727));
+    defparam i1_3_lut_adj_14.INIT = "0xfefe";
+    (* lut_function="(A+(B))" *) LUT4 i1_2_lut_adj_15 (.A(potential_decayed[13]), 
+            .B(potential_decayed[26]), .Z(n824));
+    defparam i1_2_lut_adj_15.INIT = "0xeeee";
+    (* lut_function="(A+(B+(C+(D))))" *) LUT4 i1_4_lut_adj_16 (.A(potential_decayed[12]), 
+            .B(potential_decayed[8]), .C(potential_decayed[11]), .D(potential_decayed[16]), 
+            .Z(n835));
+    defparam i1_4_lut_adj_16.INIT = "0xfffe";
+    (* lut_function="(A (B))" *) LUT4 i1_2_lut_adj_17 (.A(potential_decayed[5]), 
+            .B(potential_decayed[4]), .Z(n818));
+    defparam i1_2_lut_adj_17.INIT = "0x8888";
+    (* lut_function="(A+(B+(C+(D))))" *) LUT4 i1_4_lut_adj_18 (.A(n768), .B(potential_decayed[9]), 
+            .C(n822), .D(potential_decayed[22]), .Z(n833));
+    defparam i1_4_lut_adj_18.INIT = "0xfffe";
+    CCU2 potential_new_31__I_0_7 (.A1(potential[6]), .B1(potential_new[14]), 
+         .C1(GND_net), .D1(VCC_net), .A0(potential[5]), .B0(potential_new[13]), 
+         .C0(GND_net), .D0(VCC_net), .CIN(n654), .COUT(n655), .S1(potential_decayed[6]), 
+         .S0(potential_decayed[5]));
+    defparam potential_new_31__I_0_7.INJECT = "NO";
+    defparam potential_new_31__I_0_7.INIT0 = "0x99AA";
+    defparam potential_new_31__I_0_7.INIT1 = "0x99AA";
+    CCU2 potential_new_31__I_0_5 (.A1(potential[4]), .B1(potential_new[12]), 
+         .C1(GND_net), .D1(VCC_net), .A0(potential[3]), .B0(potential_new[11]), 
+         .C0(GND_net), .D0(VCC_net), .CIN(n653), .COUT(n654), .S1(potential_decayed[4]), 
+         .S0(potential_decayed[3]));
+    defparam potential_new_31__I_0_5.INJECT = "NO";
+    defparam potential_new_31__I_0_5.INIT0 = "0x99AA";
+    defparam potential_new_31__I_0_5.INIT1 = "0x99AA";
+    (* lse_init_val=0, LSE_LINE_FILE_ID=106, LSE_LCOL=22, LSE_RCOL=10, LSE_LLINE=22, LSE_RLINE=27 *) FD1P3IX potential__i0 (.D(potential_decayed[0]), 
+            .CK(clk_c), .SP(VCC_net), .CD(n382), .Q(potential[0]));
+    defparam potential__i0.GSR = "ENABLED";
+    (* LSE_LINE_FILE_ID=106, LSE_LCOL=22, LSE_RCOL=10, LSE_LLINE=22, LSE_RLINE=27 *) FD1P3IX spike_out (.D(n62), 
+            .CK(clk_c), .SP(VCC_net), .CD(n596), .Q(\network_outputs_c[1] ));
+    defparam spike_out.GSR = "ENABLED";
+    (* lut_function="(A+(B+(C+(D))))" *) LUT4 i1_4_lut_adj_19 (.A(n836), .B(n839), 
+            .C(n837), .D(n833), .Z(n62));
+    defparam i1_4_lut_adj_19.INIT = "0xfffe";
+    CCU2 potential_new_31__I_0_21 (.A1(potential_new[20]), .B1(potential_new[28]), 
+         .C1(GND_net), .D1(VCC_net), .A0(potential_new[19]), .B0(potential_new[27]), 
+         .C0(GND_net), .D0(VCC_net), .CIN(n661), .COUT(n662), .S1(potential_decayed[20]), 
+         .S0(potential_decayed[19]));
+    defparam potential_new_31__I_0_21.INJECT = "NO";
+    defparam potential_new_31__I_0_21.INIT0 = "0x99AA";
+    defparam potential_new_31__I_0_21.INIT1 = "0x99AA";
+    (* lut_function="(A+(B+(C+(D))))" *) LUT4 i1_4_lut_adj_20 (.A(potential_decayed[30]), 
+            .B(n830), .C(potential_decayed[14]), .D(n821), .Z(n837));
+    defparam i1_4_lut_adj_20.INIT = "0xfffe";
+    (* lut_function="(A (B+(C+(D)))+!A (B+(C)))" *) LUT4 i1_4_lut_adj_21 (.A(n818), 
+            .B(n835), .C(n824), .D(n727), .Z(n839));
+    defparam i1_4_lut_adj_21.INIT = "0xfefc";
+    (* lse_init_val=0, LSE_LINE_FILE_ID=106, LSE_LCOL=22, LSE_RCOL=10, LSE_LLINE=22, LSE_RLINE=27 *) FD1P3IX potential__i2 (.D(potential_decayed[2]), 
+            .CK(clk_c), .SP(VCC_net), .CD(n382), .Q(potential[2]));
+    defparam potential__i2.GSR = "ENABLED";
+    (* lse_init_val=0, LSE_LINE_FILE_ID=106, LSE_LCOL=22, LSE_RCOL=10, LSE_LLINE=22, LSE_RLINE=27 *) FD1P3IX potential__i3 (.D(potential_decayed[3]), 
+            .CK(clk_c), .SP(VCC_net), .CD(n382), .Q(potential[3]));
+    defparam potential__i3.GSR = "ENABLED";
     CCU2 potential_new_31__I_0_33 (.A1(GND_net), .B1(GND_net), .C1(GND_net), 
          .D1(VCC_net), .A0(potential_new[31]), .B0(potential_new[31]), 
-         .C0(GND_net), .D0(VCC_net), .CIN(n577), .S0(potential_decayed[31]));
+         .C0(GND_net), .D0(VCC_net), .CIN(n667), .S0(\potential_decayed[31] ));
     defparam potential_new_31__I_0_33.INJECT = "NO";
     defparam potential_new_31__I_0_33.INIT0 = "0x99AA";
     defparam potential_new_31__I_0_33.INIT1 = "0x0000";
     CCU2 potential_new_31__I_0_31 (.A1(potential_new[30]), .B1(potential_new[31]), 
          .C1(GND_net), .D1(VCC_net), .A0(potential_new[29]), .B0(potential_new[31]), 
-         .C0(GND_net), .D0(VCC_net), .CIN(n576), .COUT(n577), .S1(potential_decayed[30]), 
+         .C0(GND_net), .D0(VCC_net), .CIN(n666), .COUT(n667), .S1(potential_decayed[30]), 
          .S0(potential_decayed[29]));
     defparam potential_new_31__I_0_31.INJECT = "NO";
     defparam potential_new_31__I_0_31.INIT0 = "0x99AA";
     defparam potential_new_31__I_0_31.INIT1 = "0x99AA";
     CCU2 potential_new_31__I_0_29 (.A1(potential_new[28]), .B1(potential_new[31]), 
          .C1(GND_net), .D1(VCC_net), .A0(potential_new[27]), .B0(potential_new[31]), 
-         .C0(GND_net), .D0(VCC_net), .CIN(n575), .COUT(n576), .S1(potential_decayed[28]), 
+         .C0(GND_net), .D0(VCC_net), .CIN(n665), .COUT(n666), .S1(potential_decayed[28]), 
          .S0(potential_decayed[27]));
     defparam potential_new_31__I_0_29.INJECT = "NO";
     defparam potential_new_31__I_0_29.INIT0 = "0x99AA";
     defparam potential_new_31__I_0_29.INIT1 = "0x99AA";
     CCU2 potential_new_31__I_0_27 (.A1(potential_new[26]), .B1(potential_new[31]), 
          .C1(GND_net), .D1(VCC_net), .A0(potential_new[25]), .B0(potential_new[31]), 
-         .C0(GND_net), .D0(VCC_net), .CIN(n574), .COUT(n575), .S1(potential_decayed[26]), 
+         .C0(GND_net), .D0(VCC_net), .CIN(n664), .COUT(n665), .S1(potential_decayed[26]), 
          .S0(potential_decayed[25]));
     defparam potential_new_31__I_0_27.INJECT = "NO";
     defparam potential_new_31__I_0_27.INIT0 = "0x99AA";
     defparam potential_new_31__I_0_27.INIT1 = "0x99AA";
     CCU2 potential_new_31__I_0_25 (.A1(potential_new[24]), .B1(potential_new[31]), 
          .C1(GND_net), .D1(VCC_net), .A0(potential_new[23]), .B0(potential_new[31]), 
-         .C0(GND_net), .D0(VCC_net), .CIN(n573), .COUT(n574), .S1(potential_decayed[24]), 
+         .C0(GND_net), .D0(VCC_net), .CIN(n663), .COUT(n664), .S1(potential_decayed[24]), 
          .S0(potential_decayed[23]));
     defparam potential_new_31__I_0_25.INJECT = "NO";
     defparam potential_new_31__I_0_25.INIT0 = "0x99AA";
     defparam potential_new_31__I_0_25.INIT1 = "0x99AA";
-    CCU2 potential_new_31__I_0_23 (.A1(potential_new[22]), .B1(potential_new[30]), 
-         .C1(GND_net), .D1(VCC_net), .A0(potential_new[21]), .B0(potential_new[29]), 
-         .C0(GND_net), .D0(VCC_net), .CIN(n572), .COUT(n573), .S1(potential_decayed[22]), 
-         .S0(potential_decayed[21]));
-    defparam potential_new_31__I_0_23.INJECT = "NO";
-    defparam potential_new_31__I_0_23.INIT0 = "0x99AA";
-    defparam potential_new_31__I_0_23.INIT1 = "0x99AA";
-    CCU2 potential_new_31__I_0_21 (.A1(potential_new[20]), .B1(potential_new[28]), 
-         .C1(GND_net), .D1(VCC_net), .A0(potential_new[19]), .B0(potential_new[27]), 
-         .C0(GND_net), .D0(VCC_net), .CIN(n571), .COUT(n572), .S1(potential_decayed[20]), 
-         .S0(potential_decayed[19]));
-    defparam potential_new_31__I_0_21.INJECT = "NO";
-    defparam potential_new_31__I_0_21.INIT0 = "0x99AA";
-    defparam potential_new_31__I_0_21.INIT1 = "0x99AA";
     CCU2 potential_new_31__I_0_19 (.A1(potential_new[18]), .B1(potential_new[26]), 
          .C1(GND_net), .D1(VCC_net), .A0(potential_new[17]), .B0(potential_new[25]), 
-         .C0(GND_net), .D0(VCC_net), .CIN(n570), .COUT(n571), .S1(potential_decayed[18]), 
+         .C0(GND_net), .D0(VCC_net), .CIN(n660), .COUT(n661), .S1(potential_decayed[18]), 
          .S0(potential_decayed[17]));
     defparam potential_new_31__I_0_19.INJECT = "NO";
     defparam potential_new_31__I_0_19.INIT0 = "0x99AA";
     defparam potential_new_31__I_0_19.INIT1 = "0x99AA";
+    CCU2 potential_new_31__I_0_3 (.A1(potential[2]), .B1(potential_new[10]), 
+         .C1(GND_net), .D1(VCC_net), .A0(potential[1]), .B0(potential_new[9]), 
+         .C0(GND_net), .D0(VCC_net), .CIN(n652), .COUT(n653), .S1(potential_decayed[2]), 
+         .S0(potential_decayed[1]));
+    defparam potential_new_31__I_0_3.INJECT = "NO";
+    defparam potential_new_31__I_0_3.INIT0 = "0x99AA";
+    defparam potential_new_31__I_0_3.INIT1 = "0x99AA";
+    (* lse_init_val=0, LSE_LINE_FILE_ID=106, LSE_LCOL=22, LSE_RCOL=10, LSE_LLINE=22, LSE_RLINE=27 *) FD1P3IX potential__i4 (.D(potential_decayed[4]), 
+            .CK(clk_c), .SP(VCC_net), .CD(n382), .Q(potential[4]));
+    defparam potential__i4.GSR = "ENABLED";
+    (* lse_init_val=0, LSE_LINE_FILE_ID=106, LSE_LCOL=22, LSE_RCOL=10, LSE_LLINE=22, LSE_RLINE=27 *) FD1P3IX potential__i5 (.D(potential_decayed[5]), 
+            .CK(clk_c), .SP(VCC_net), .CD(n382), .Q(potential[5]));
+    defparam potential__i5.GSR = "ENABLED";
+    (* lse_init_val=0, LSE_LINE_FILE_ID=106, LSE_LCOL=22, LSE_RCOL=10, LSE_LLINE=22, LSE_RLINE=27 *) FD1P3IX potential__i6 (.D(potential_decayed[6]), 
+            .CK(clk_c), .SP(VCC_net), .CD(n382), .Q(potential[6]));
+    defparam potential__i6.GSR = "ENABLED";
+    (* lse_init_val=0, LSE_LINE_FILE_ID=106, LSE_LCOL=22, LSE_RCOL=10, LSE_LLINE=22, LSE_RLINE=27 *) FD1P3IX potential__i7 (.D(potential_decayed[7]), 
+            .CK(clk_c), .SP(VCC_net), .CD(n382), .Q(potential[7]));
+    defparam potential__i7.GSR = "ENABLED";
+    (* lse_init_val=0, LSE_LINE_FILE_ID=106, LSE_LCOL=22, LSE_RCOL=10, LSE_LLINE=22, LSE_RLINE=27 *) FD1P3IX potential__i8 (.D(potential_decayed[8]), 
+            .CK(clk_c), .SP(VCC_net), .CD(n382), .Q(potential_new[8]));
+    defparam potential__i8.GSR = "ENABLED";
+    (* lse_init_val=0, LSE_LINE_FILE_ID=106, LSE_LCOL=22, LSE_RCOL=10, LSE_LLINE=22, LSE_RLINE=27 *) FD1P3IX potential__i9 (.D(potential_decayed[9]), 
+            .CK(clk_c), .SP(VCC_net), .CD(n382), .Q(potential_new[9]));
+    defparam potential__i9.GSR = "ENABLED";
+    (* lse_init_val=0, LSE_LINE_FILE_ID=106, LSE_LCOL=22, LSE_RCOL=10, LSE_LLINE=22, LSE_RLINE=27 *) FD1P3IX potential__i10 (.D(potential_decayed[10]), 
+            .CK(clk_c), .SP(VCC_net), .CD(n382), .Q(potential_new[10]));
+    defparam potential__i10.GSR = "ENABLED";
+    (* lse_init_val=0, LSE_LINE_FILE_ID=106, LSE_LCOL=22, LSE_RCOL=10, LSE_LLINE=22, LSE_RLINE=27 *) FD1P3IX potential__i11 (.D(potential_decayed[11]), 
+            .CK(clk_c), .SP(VCC_net), .CD(n382), .Q(potential_new[11]));
+    defparam potential__i11.GSR = "ENABLED";
+    (* lse_init_val=0, LSE_LINE_FILE_ID=106, LSE_LCOL=22, LSE_RCOL=10, LSE_LLINE=22, LSE_RLINE=27 *) FD1P3IX potential__i12 (.D(potential_decayed[12]), 
+            .CK(clk_c), .SP(VCC_net), .CD(n382), .Q(potential_new[12]));
+    defparam potential__i12.GSR = "ENABLED";
+    (* lse_init_val=0, LSE_LINE_FILE_ID=106, LSE_LCOL=22, LSE_RCOL=10, LSE_LLINE=22, LSE_RLINE=27 *) FD1P3IX potential__i13 (.D(potential_decayed[13]), 
+            .CK(clk_c), .SP(VCC_net), .CD(n382), .Q(potential_new[13]));
+    defparam potential__i13.GSR = "ENABLED";
+    (* lse_init_val=0, LSE_LINE_FILE_ID=106, LSE_LCOL=22, LSE_RCOL=10, LSE_LLINE=22, LSE_RLINE=27 *) FD1P3IX potential__i14 (.D(potential_decayed[14]), 
+            .CK(clk_c), .SP(VCC_net), .CD(n382), .Q(potential_new[14]));
+    defparam potential__i14.GSR = "ENABLED";
+    (* lse_init_val=0, LSE_LINE_FILE_ID=106, LSE_LCOL=22, LSE_RCOL=10, LSE_LLINE=22, LSE_RLINE=27 *) FD1P3IX potential__i15 (.D(potential_decayed[15]), 
+            .CK(clk_c), .SP(VCC_net), .CD(n382), .Q(potential_new[15]));
+    defparam potential__i15.GSR = "ENABLED";
+    (* lse_init_val=0, LSE_LINE_FILE_ID=106, LSE_LCOL=22, LSE_RCOL=10, LSE_LLINE=22, LSE_RLINE=27 *) FD1P3IX potential__i16 (.D(potential_decayed[16]), 
+            .CK(clk_c), .SP(VCC_net), .CD(n382), .Q(potential_new[16]));
+    defparam potential__i16.GSR = "ENABLED";
+    (* lse_init_val=0, LSE_LINE_FILE_ID=106, LSE_LCOL=22, LSE_RCOL=10, LSE_LLINE=22, LSE_RLINE=27 *) FD1P3IX potential__i17 (.D(potential_decayed[17]), 
+            .CK(clk_c), .SP(VCC_net), .CD(n382), .Q(potential_new[17]));
+    defparam potential__i17.GSR = "ENABLED";
+    (* lse_init_val=0, LSE_LINE_FILE_ID=106, LSE_LCOL=22, LSE_RCOL=10, LSE_LLINE=22, LSE_RLINE=27 *) FD1P3IX potential__i18 (.D(potential_decayed[18]), 
+            .CK(clk_c), .SP(VCC_net), .CD(n382), .Q(potential_new[18]));
+    defparam potential__i18.GSR = "ENABLED";
+    (* lse_init_val=0, LSE_LINE_FILE_ID=106, LSE_LCOL=22, LSE_RCOL=10, LSE_LLINE=22, LSE_RLINE=27 *) FD1P3IX potential__i19 (.D(potential_decayed[19]), 
+            .CK(clk_c), .SP(VCC_net), .CD(n382), .Q(potential_new[19]));
+    defparam potential__i19.GSR = "ENABLED";
+    (* lse_init_val=0, LSE_LINE_FILE_ID=106, LSE_LCOL=22, LSE_RCOL=10, LSE_LLINE=22, LSE_RLINE=27 *) FD1P3IX potential__i20 (.D(potential_decayed[20]), 
+            .CK(clk_c), .SP(VCC_net), .CD(n382), .Q(potential_new[20]));
+    defparam potential__i20.GSR = "ENABLED";
+    (* lse_init_val=0, LSE_LINE_FILE_ID=106, LSE_LCOL=22, LSE_RCOL=10, LSE_LLINE=22, LSE_RLINE=27 *) FD1P3IX potential__i21 (.D(potential_decayed[21]), 
+            .CK(clk_c), .SP(VCC_net), .CD(n382), .Q(potential_new[21]));
+    defparam potential__i21.GSR = "ENABLED";
+    (* lse_init_val=0, LSE_LINE_FILE_ID=106, LSE_LCOL=22, LSE_RCOL=10, LSE_LLINE=22, LSE_RLINE=27 *) FD1P3IX potential__i22 (.D(potential_decayed[22]), 
+            .CK(clk_c), .SP(VCC_net), .CD(n382), .Q(potential_new[22]));
+    defparam potential__i22.GSR = "ENABLED";
+    (* lse_init_val=0, LSE_LINE_FILE_ID=106, LSE_LCOL=22, LSE_RCOL=10, LSE_LLINE=22, LSE_RLINE=27 *) FD1P3IX potential__i23 (.D(potential_decayed[23]), 
+            .CK(clk_c), .SP(VCC_net), .CD(n382), .Q(potential_new[23]));
+    defparam potential__i23.GSR = "ENABLED";
+    (* lse_init_val=0, LSE_LINE_FILE_ID=106, LSE_LCOL=22, LSE_RCOL=10, LSE_LLINE=22, LSE_RLINE=27 *) FD1P3IX potential__i24 (.D(potential_decayed[24]), 
+            .CK(clk_c), .SP(VCC_net), .CD(n382), .Q(potential_new[24]));
+    defparam potential__i24.GSR = "ENABLED";
+    (* lse_init_val=0, LSE_LINE_FILE_ID=106, LSE_LCOL=22, LSE_RCOL=10, LSE_LLINE=22, LSE_RLINE=27 *) FD1P3IX potential__i25 (.D(potential_decayed[25]), 
+            .CK(clk_c), .SP(VCC_net), .CD(n382), .Q(potential_new[25]));
+    defparam potential__i25.GSR = "ENABLED";
+    (* lse_init_val=0, LSE_LINE_FILE_ID=106, LSE_LCOL=22, LSE_RCOL=10, LSE_LLINE=22, LSE_RLINE=27 *) FD1P3IX potential__i26 (.D(potential_decayed[26]), 
+            .CK(clk_c), .SP(VCC_net), .CD(n382), .Q(potential_new[26]));
+    defparam potential__i26.GSR = "ENABLED";
+    (* lse_init_val=0, LSE_LINE_FILE_ID=106, LSE_LCOL=22, LSE_RCOL=10, LSE_LLINE=22, LSE_RLINE=27 *) FD1P3IX potential__i27 (.D(potential_decayed[27]), 
+            .CK(clk_c), .SP(VCC_net), .CD(n382), .Q(potential_new[27]));
+    defparam potential__i27.GSR = "ENABLED";
+    (* lse_init_val=0, LSE_LINE_FILE_ID=106, LSE_LCOL=22, LSE_RCOL=10, LSE_LLINE=22, LSE_RLINE=27 *) FD1P3IX potential__i28 (.D(potential_decayed[28]), 
+            .CK(clk_c), .SP(VCC_net), .CD(n382), .Q(potential_new[28]));
+    defparam potential__i28.GSR = "ENABLED";
+    (* lse_init_val=0, LSE_LINE_FILE_ID=106, LSE_LCOL=22, LSE_RCOL=10, LSE_LLINE=22, LSE_RLINE=27 *) FD1P3IX potential__i29 (.D(potential_decayed[29]), 
+            .CK(clk_c), .SP(VCC_net), .CD(n382), .Q(potential_new[29]));
+    defparam potential__i29.GSR = "ENABLED";
+    (* lse_init_val=0, LSE_LINE_FILE_ID=106, LSE_LCOL=22, LSE_RCOL=10, LSE_LLINE=22, LSE_RLINE=27 *) FD1P3IX potential__i30 (.D(potential_decayed[30]), 
+            .CK(clk_c), .SP(VCC_net), .CD(n382), .Q(potential_new[30]));
+    defparam potential__i30.GSR = "ENABLED";
+    (* lse_init_val=0, LSE_LINE_FILE_ID=106, LSE_LCOL=22, LSE_RCOL=10, LSE_LLINE=22, LSE_RLINE=27 *) FD1P3IX potential__i31 (.D(\potential_decayed[31] ), 
+            .CK(clk_c), .SP(VCC_net), .CD(n382), .Q(potential_new[31]));
+    defparam potential__i31.GSR = "ENABLED";
     CCU2 potential_new_31__I_0_17 (.A1(potential_new[16]), .B1(potential_new[24]), 
          .C1(GND_net), .D1(VCC_net), .A0(potential_new[15]), .B0(potential_new[23]), 
-         .C0(GND_net), .D0(VCC_net), .CIN(n569), .COUT(n570), .S1(potential_decayed[16]), 
+         .C0(GND_net), .D0(VCC_net), .CIN(n659), .COUT(n660), .S1(potential_decayed[16]), 
          .S0(potential_decayed[15]));
     defparam potential_new_31__I_0_17.INJECT = "NO";
     defparam potential_new_31__I_0_17.INIT0 = "0x99AA";
     defparam potential_new_31__I_0_17.INIT1 = "0x99AA";
+    CCU2 potential_new_31__I_0_23 (.A1(potential_new[22]), .B1(potential_new[30]), 
+         .C1(GND_net), .D1(VCC_net), .A0(potential_new[21]), .B0(potential_new[29]), 
+         .C0(GND_net), .D0(VCC_net), .CIN(n662), .COUT(n663), .S1(potential_decayed[22]), 
+         .S0(potential_decayed[21]));
+    defparam potential_new_31__I_0_23.INJECT = "NO";
+    defparam potential_new_31__I_0_23.INIT0 = "0x99AA";
+    defparam potential_new_31__I_0_23.INIT1 = "0x99AA";
     CCU2 potential_new_31__I_0_15 (.A1(potential_new[14]), .B1(potential_new[22]), 
          .C1(GND_net), .D1(VCC_net), .A0(potential_new[13]), .B0(potential_new[21]), 
-         .C0(GND_net), .D0(VCC_net), .CIN(n568), .COUT(n569), .S1(potential_decayed[14]), 
+         .C0(GND_net), .D0(VCC_net), .CIN(n658), .COUT(n659), .S1(potential_decayed[14]), 
          .S0(potential_decayed[13]));
     defparam potential_new_31__I_0_15.INJECT = "NO";
     defparam potential_new_31__I_0_15.INIT0 = "0x99AA";
     defparam potential_new_31__I_0_15.INIT1 = "0x99AA";
     CCU2 potential_new_31__I_0_13 (.A1(potential_new[12]), .B1(potential_new[20]), 
          .C1(GND_net), .D1(VCC_net), .A0(potential_new[11]), .B0(potential_new[19]), 
-         .C0(GND_net), .D0(VCC_net), .CIN(n567), .COUT(n568), .S1(potential_decayed[12]), 
+         .C0(GND_net), .D0(VCC_net), .CIN(n657), .COUT(n658), .S1(potential_decayed[12]), 
          .S0(potential_decayed[11]));
     defparam potential_new_31__I_0_13.INJECT = "NO";
     defparam potential_new_31__I_0_13.INIT0 = "0x99AA";
     defparam potential_new_31__I_0_13.INIT1 = "0x99AA";
     CCU2 potential_new_31__I_0_11 (.A1(potential_new[10]), .B1(potential_new[18]), 
          .C1(GND_net), .D1(VCC_net), .A0(potential_new[9]), .B0(potential_new[17]), 
-         .C0(GND_net), .D0(VCC_net), .CIN(n566), .COUT(n567), .S1(potential_decayed[10]), 
+         .C0(GND_net), .D0(VCC_net), .CIN(n656), .COUT(n657), .S1(potential_decayed[10]), 
          .S0(potential_decayed[9]));
     defparam potential_new_31__I_0_11.INJECT = "NO";
     defparam potential_new_31__I_0_11.INIT0 = "0x99AA";
     defparam potential_new_31__I_0_11.INIT1 = "0x99AA";
     CCU2 potential_new_31__I_0_9 (.A1(potential_new[8]), .B1(potential_new[16]), 
-         .C1(GND_net), .D1(VCC_net), .A0(potential_new[7]), .B0(potential_new[15]), 
-         .C0(GND_net), .D0(VCC_net), .CIN(n565), .COUT(n566), .S1(potential_decayed[8]), 
+         .C1(GND_net), .D1(VCC_net), .A0(potential[7]), .B0(potential_new[15]), 
+         .C0(GND_net), .D0(VCC_net), .CIN(n655), .COUT(n656), .S1(potential_decayed[8]), 
          .S0(potential_decayed[7]));
     defparam potential_new_31__I_0_9.INJECT = "NO";
     defparam potential_new_31__I_0_9.INIT0 = "0x99AA";
     defparam potential_new_31__I_0_9.INIT1 = "0x99AA";
-    CCU2 potential_new_31__I_0_7 (.A1(potential_new[6]), .B1(potential_new[14]), 
-         .C1(GND_net), .D1(VCC_net), .A0(potential_new[5]), .B0(potential_new[13]), 
-         .C0(GND_net), .D0(VCC_net), .CIN(n564), .COUT(n565), .S1(potential_decayed[6]), 
+    CCU2 potential_new_31__I_0_cin (.A1(potential[0]), .B1(potential_new[8]), 
+         .C1(GND_net), .D1(VCC_net), .A0(GND_net), .B0(GND_net), .C0(GND_net), 
+         .D0(VCC_net), .CIN(VCC_net), .COUT(n652), .S1(potential_decayed[0]));
+    defparam potential_new_31__I_0_cin.INJECT = "NO";
+    defparam potential_new_31__I_0_cin.INIT0 = "0x00FF";
+    defparam potential_new_31__I_0_cin.INIT1 = "0x99AA";
+    VHI i1 (.Z(VCC_net));
+    VLO i2 (.Z(GND_net));
+    
+endmodule
+
+//
+// Verilog Description of module spike_neuron_U0
+//
+
+module spike_neuron_U0 (output n62, input clk_c, input n386, output \potential_decayed[31] , 
+            output \network_outputs_c[0] , input n604);
+    
+    wire [31:0]potential_decayed;
+    wire [31:0]potential_new;
+    wire [31:0]potential;
+    (* is_clock=1 *) wire clk_c;
+    
+    wire VCC_net, GND_net, n728, n683, n785, n673, n786, n677, 
+        n796, n801, n805, n803, n800, n679, n804, n787, n782, 
+        n802, n671, n670, n672, n682, n681, n680, n678, n676, 
+        n675, n674, n669, n668;
+    
+    (* lut_function="(A+(B))" *) LUT4 i1_2_lut (.A(potential_decayed[17]), 
+            .B(potential_decayed[10]), .Z(n785));
+    defparam i1_2_lut.INIT = "0xeeee";
+    (* lut_function="(A+(B))" *) LUT4 i1_2_lut_adj_2 (.A(potential_decayed[12]), 
+            .B(potential_decayed[15]), .Z(n786));
+    defparam i1_2_lut_adj_2.INIT = "0xeeee";
+    (* lut_function="(A+(B+(C)))" *) LUT4 i1_3_lut (.A(potential_decayed[7]), 
+            .B(potential_decayed[14]), .C(potential_decayed[9]), .Z(n796));
+    defparam i1_3_lut.INIT = "0xfefe";
+    (* lut_function="(A+(B+(C+(D))))" *) LUT4 i1_4_lut (.A(potential_decayed[19]), 
+            .B(potential_decayed[27]), .C(potential_decayed[6]), .D(potential_decayed[23]), 
+            .Z(n803));
+    defparam i1_4_lut.INIT = "0xfffe";
+    (* lut_function="(A+(B+(C)))" *) LUT4 i1_3_lut_adj_3 (.A(potential_decayed[2]), 
+            .B(potential_decayed[3]), .C(potential_decayed[1]), .Z(n728));
+    defparam i1_3_lut_adj_3.INIT = "0xfefe";
+    (* lut_function="(A+(B))" *) LUT4 i1_2_lut_adj_4 (.A(potential_decayed[24]), 
+            .B(potential_decayed[28]), .Z(n787));
+    defparam i1_2_lut_adj_4.INIT = "0xeeee";
+    (* lut_function="(A+(B+(C+(D))))" *) LUT4 i1_4_lut_adj_5 (.A(potential_decayed[25]), 
+            .B(potential_decayed[13]), .C(potential_decayed[22]), .D(potential_decayed[26]), 
+            .Z(n800));
+    defparam i1_4_lut_adj_5.INIT = "0xfffe";
+    (* lut_function="(A (B))" *) LUT4 i1_2_lut_adj_6 (.A(potential_decayed[5]), 
+            .B(potential_decayed[4]), .Z(n782));
+    defparam i1_2_lut_adj_6.INIT = "0x8888";
+    (* lse_init_val=0, LSE_LINE_FILE_ID=106, LSE_LCOL=22, LSE_RCOL=10, LSE_LLINE=22, LSE_RLINE=27 *) FD1P3IX potential__i0 (.D(potential_decayed[0]), 
+            .CK(clk_c), .SP(VCC_net), .CD(n386), .Q(potential[0]));
+    defparam potential__i0.GSR = "ENABLED";
+    (* lse_init_val=0, LSE_LINE_FILE_ID=106, LSE_LCOL=22, LSE_RCOL=10, LSE_LLINE=22, LSE_RLINE=27 *) FD1P3IX potential__i31 (.D(\potential_decayed[31] ), 
+            .CK(clk_c), .SP(VCC_net), .CD(n386), .Q(potential_new[31]));
+    defparam potential__i31.GSR = "ENABLED";
+    (* lse_init_val=0, LSE_LINE_FILE_ID=106, LSE_LCOL=22, LSE_RCOL=10, LSE_LLINE=22, LSE_RLINE=27 *) FD1P3IX potential__i30 (.D(potential_decayed[30]), 
+            .CK(clk_c), .SP(VCC_net), .CD(n386), .Q(potential_new[30]));
+    defparam potential__i30.GSR = "ENABLED";
+    (* lut_function="(A+(B+(C+(D))))" *) LUT4 i1_4_lut_adj_7 (.A(potential_decayed[21]), 
+            .B(potential_decayed[8]), .C(potential_decayed[29]), .D(potential_decayed[18]), 
+            .Z(n802));
+    defparam i1_4_lut_adj_7.INIT = "0xfffe";
+    (* lut_function="(A+(B+(C+(D))))" *) LUT4 i1_4_lut_adj_8 (.A(n803), .B(n796), 
+            .C(n786), .D(n785), .Z(n804));
+    defparam i1_4_lut_adj_8.INIT = "0xfffe";
+    (* lut_function="(A (B+(C+(D)))+!A (B+(C)))" *) LUT4 i1_4_lut_adj_9 (.A(n782), 
+            .B(n800), .C(n787), .D(n728), .Z(n805));
+    defparam i1_4_lut_adj_9.INIT = "0xfefc";
+    (* lut_function="(A+(B+(C+(D))))" *) LUT4 i1_4_lut_adj_10 (.A(potential_decayed[20]), 
+            .B(potential_decayed[30]), .C(potential_decayed[11]), .D(potential_decayed[16]), 
+            .Z(n801));
+    defparam i1_4_lut_adj_10.INIT = "0xfffe";
+    (* lut_function="(A+(B+(C+(D))))" *) LUT4 i1_4_lut_adj_11 (.A(n801), .B(n805), 
+            .C(n804), .D(n802), .Z(n62));
+    defparam i1_4_lut_adj_11.INIT = "0xfffe";
+    (* lse_init_val=0, LSE_LINE_FILE_ID=106, LSE_LCOL=22, LSE_RCOL=10, LSE_LLINE=22, LSE_RLINE=27 *) FD1P3IX potential__i29 (.D(potential_decayed[29]), 
+            .CK(clk_c), .SP(VCC_net), .CD(n386), .Q(potential_new[29]));
+    defparam potential__i29.GSR = "ENABLED";
+    (* lse_init_val=0, LSE_LINE_FILE_ID=106, LSE_LCOL=22, LSE_RCOL=10, LSE_LLINE=22, LSE_RLINE=27 *) FD1P3IX potential__i28 (.D(potential_decayed[28]), 
+            .CK(clk_c), .SP(VCC_net), .CD(n386), .Q(potential_new[28]));
+    defparam potential__i28.GSR = "ENABLED";
+    (* lse_init_val=0, LSE_LINE_FILE_ID=106, LSE_LCOL=22, LSE_RCOL=10, LSE_LLINE=22, LSE_RLINE=27 *) FD1P3IX potential__i27 (.D(potential_decayed[27]), 
+            .CK(clk_c), .SP(VCC_net), .CD(n386), .Q(potential_new[27]));
+    defparam potential__i27.GSR = "ENABLED";
+    (* lse_init_val=0, LSE_LINE_FILE_ID=106, LSE_LCOL=22, LSE_RCOL=10, LSE_LLINE=22, LSE_RLINE=27 *) FD1P3IX potential__i26 (.D(potential_decayed[26]), 
+            .CK(clk_c), .SP(VCC_net), .CD(n386), .Q(potential_new[26]));
+    defparam potential__i26.GSR = "ENABLED";
+    (* lse_init_val=0, LSE_LINE_FILE_ID=106, LSE_LCOL=22, LSE_RCOL=10, LSE_LLINE=22, LSE_RLINE=27 *) FD1P3IX potential__i25 (.D(potential_decayed[25]), 
+            .CK(clk_c), .SP(VCC_net), .CD(n386), .Q(potential_new[25]));
+    defparam potential__i25.GSR = "ENABLED";
+    (* lse_init_val=0, LSE_LINE_FILE_ID=106, LSE_LCOL=22, LSE_RCOL=10, LSE_LLINE=22, LSE_RLINE=27 *) FD1P3IX potential__i24 (.D(potential_decayed[24]), 
+            .CK(clk_c), .SP(VCC_net), .CD(n386), .Q(potential_new[24]));
+    defparam potential__i24.GSR = "ENABLED";
+    (* lse_init_val=0, LSE_LINE_FILE_ID=106, LSE_LCOL=22, LSE_RCOL=10, LSE_LLINE=22, LSE_RLINE=27 *) FD1P3IX potential__i23 (.D(potential_decayed[23]), 
+            .CK(clk_c), .SP(VCC_net), .CD(n386), .Q(potential_new[23]));
+    defparam potential__i23.GSR = "ENABLED";
+    (* lse_init_val=0, LSE_LINE_FILE_ID=106, LSE_LCOL=22, LSE_RCOL=10, LSE_LLINE=22, LSE_RLINE=27 *) FD1P3IX potential__i22 (.D(potential_decayed[22]), 
+            .CK(clk_c), .SP(VCC_net), .CD(n386), .Q(potential_new[22]));
+    defparam potential__i22.GSR = "ENABLED";
+    (* lse_init_val=0, LSE_LINE_FILE_ID=106, LSE_LCOL=22, LSE_RCOL=10, LSE_LLINE=22, LSE_RLINE=27 *) FD1P3IX potential__i21 (.D(potential_decayed[21]), 
+            .CK(clk_c), .SP(VCC_net), .CD(n386), .Q(potential_new[21]));
+    defparam potential__i21.GSR = "ENABLED";
+    (* lse_init_val=0, LSE_LINE_FILE_ID=106, LSE_LCOL=22, LSE_RCOL=10, LSE_LLINE=22, LSE_RLINE=27 *) FD1P3IX potential__i20 (.D(potential_decayed[20]), 
+            .CK(clk_c), .SP(VCC_net), .CD(n386), .Q(potential_new[20]));
+    defparam potential__i20.GSR = "ENABLED";
+    (* lse_init_val=0, LSE_LINE_FILE_ID=106, LSE_LCOL=22, LSE_RCOL=10, LSE_LLINE=22, LSE_RLINE=27 *) FD1P3IX potential__i19 (.D(potential_decayed[19]), 
+            .CK(clk_c), .SP(VCC_net), .CD(n386), .Q(potential_new[19]));
+    defparam potential__i19.GSR = "ENABLED";
+    (* lse_init_val=0, LSE_LINE_FILE_ID=106, LSE_LCOL=22, LSE_RCOL=10, LSE_LLINE=22, LSE_RLINE=27 *) FD1P3IX potential__i18 (.D(potential_decayed[18]), 
+            .CK(clk_c), .SP(VCC_net), .CD(n386), .Q(potential_new[18]));
+    defparam potential__i18.GSR = "ENABLED";
+    (* lse_init_val=0, LSE_LINE_FILE_ID=106, LSE_LCOL=22, LSE_RCOL=10, LSE_LLINE=22, LSE_RLINE=27 *) FD1P3IX potential__i17 (.D(potential_decayed[17]), 
+            .CK(clk_c), .SP(VCC_net), .CD(n386), .Q(potential_new[17]));
+    defparam potential__i17.GSR = "ENABLED";
+    (* lse_init_val=0, LSE_LINE_FILE_ID=106, LSE_LCOL=22, LSE_RCOL=10, LSE_LLINE=22, LSE_RLINE=27 *) FD1P3IX potential__i16 (.D(potential_decayed[16]), 
+            .CK(clk_c), .SP(VCC_net), .CD(n386), .Q(potential_new[16]));
+    defparam potential__i16.GSR = "ENABLED";
+    (* lse_init_val=0, LSE_LINE_FILE_ID=106, LSE_LCOL=22, LSE_RCOL=10, LSE_LLINE=22, LSE_RLINE=27 *) FD1P3IX potential__i15 (.D(potential_decayed[15]), 
+            .CK(clk_c), .SP(VCC_net), .CD(n386), .Q(potential_new[15]));
+    defparam potential__i15.GSR = "ENABLED";
+    (* lse_init_val=0, LSE_LINE_FILE_ID=106, LSE_LCOL=22, LSE_RCOL=10, LSE_LLINE=22, LSE_RLINE=27 *) FD1P3IX potential__i14 (.D(potential_decayed[14]), 
+            .CK(clk_c), .SP(VCC_net), .CD(n386), .Q(potential_new[14]));
+    defparam potential__i14.GSR = "ENABLED";
+    (* lse_init_val=0, LSE_LINE_FILE_ID=106, LSE_LCOL=22, LSE_RCOL=10, LSE_LLINE=22, LSE_RLINE=27 *) FD1P3IX potential__i13 (.D(potential_decayed[13]), 
+            .CK(clk_c), .SP(VCC_net), .CD(n386), .Q(potential_new[13]));
+    defparam potential__i13.GSR = "ENABLED";
+    (* lse_init_val=0, LSE_LINE_FILE_ID=106, LSE_LCOL=22, LSE_RCOL=10, LSE_LLINE=22, LSE_RLINE=27 *) FD1P3IX potential__i12 (.D(potential_decayed[12]), 
+            .CK(clk_c), .SP(VCC_net), .CD(n386), .Q(potential_new[12]));
+    defparam potential__i12.GSR = "ENABLED";
+    (* lse_init_val=0, LSE_LINE_FILE_ID=106, LSE_LCOL=22, LSE_RCOL=10, LSE_LLINE=22, LSE_RLINE=27 *) FD1P3IX potential__i11 (.D(potential_decayed[11]), 
+            .CK(clk_c), .SP(VCC_net), .CD(n386), .Q(potential_new[11]));
+    defparam potential__i11.GSR = "ENABLED";
+    (* lse_init_val=0, LSE_LINE_FILE_ID=106, LSE_LCOL=22, LSE_RCOL=10, LSE_LLINE=22, LSE_RLINE=27 *) FD1P3IX potential__i10 (.D(potential_decayed[10]), 
+            .CK(clk_c), .SP(VCC_net), .CD(n386), .Q(potential_new[10]));
+    defparam potential__i10.GSR = "ENABLED";
+    (* lse_init_val=0, LSE_LINE_FILE_ID=106, LSE_LCOL=22, LSE_RCOL=10, LSE_LLINE=22, LSE_RLINE=27 *) FD1P3IX potential__i9 (.D(potential_decayed[9]), 
+            .CK(clk_c), .SP(VCC_net), .CD(n386), .Q(potential_new[9]));
+    defparam potential__i9.GSR = "ENABLED";
+    (* lse_init_val=0, LSE_LINE_FILE_ID=106, LSE_LCOL=22, LSE_RCOL=10, LSE_LLINE=22, LSE_RLINE=27 *) FD1P3IX potential__i8 (.D(potential_decayed[8]), 
+            .CK(clk_c), .SP(VCC_net), .CD(n386), .Q(potential_new[8]));
+    defparam potential__i8.GSR = "ENABLED";
+    (* lse_init_val=0, LSE_LINE_FILE_ID=106, LSE_LCOL=22, LSE_RCOL=10, LSE_LLINE=22, LSE_RLINE=27 *) FD1P3IX potential__i7 (.D(potential_decayed[7]), 
+            .CK(clk_c), .SP(VCC_net), .CD(n386), .Q(potential[7]));
+    defparam potential__i7.GSR = "ENABLED";
+    (* lse_init_val=0, LSE_LINE_FILE_ID=106, LSE_LCOL=22, LSE_RCOL=10, LSE_LLINE=22, LSE_RLINE=27 *) FD1P3IX potential__i6 (.D(potential_decayed[6]), 
+            .CK(clk_c), .SP(VCC_net), .CD(n386), .Q(potential[6]));
+    defparam potential__i6.GSR = "ENABLED";
+    (* lse_init_val=0, LSE_LINE_FILE_ID=106, LSE_LCOL=22, LSE_RCOL=10, LSE_LLINE=22, LSE_RLINE=27 *) FD1P3IX potential__i5 (.D(potential_decayed[5]), 
+            .CK(clk_c), .SP(VCC_net), .CD(n386), .Q(potential[5]));
+    defparam potential__i5.GSR = "ENABLED";
+    (* lse_init_val=0, LSE_LINE_FILE_ID=106, LSE_LCOL=22, LSE_RCOL=10, LSE_LLINE=22, LSE_RLINE=27 *) FD1P3IX potential__i4 (.D(potential_decayed[4]), 
+            .CK(clk_c), .SP(VCC_net), .CD(n386), .Q(potential[4]));
+    defparam potential__i4.GSR = "ENABLED";
+    (* lse_init_val=0, LSE_LINE_FILE_ID=106, LSE_LCOL=22, LSE_RCOL=10, LSE_LLINE=22, LSE_RLINE=27 *) FD1P3IX potential__i3 (.D(potential_decayed[3]), 
+            .CK(clk_c), .SP(VCC_net), .CD(n386), .Q(potential[3]));
+    defparam potential__i3.GSR = "ENABLED";
+    (* lse_init_val=0, LSE_LINE_FILE_ID=106, LSE_LCOL=22, LSE_RCOL=10, LSE_LLINE=22, LSE_RLINE=27 *) FD1P3IX potential__i2 (.D(potential_decayed[2]), 
+            .CK(clk_c), .SP(VCC_net), .CD(n386), .Q(potential[2]));
+    defparam potential__i2.GSR = "ENABLED";
+    (* lse_init_val=0, LSE_LINE_FILE_ID=106, LSE_LCOL=22, LSE_RCOL=10, LSE_LLINE=22, LSE_RLINE=27 *) FD1P3IX potential__i1 (.D(potential_decayed[1]), 
+            .CK(clk_c), .SP(VCC_net), .CD(n386), .Q(potential[1]));
+    defparam potential__i1.GSR = "ENABLED";
+    CCU2 potential_new_31__I_0_33 (.A1(GND_net), .B1(GND_net), .C1(GND_net), 
+         .D1(VCC_net), .A0(potential_new[31]), .B0(potential_new[31]), 
+         .C0(GND_net), .D0(VCC_net), .CIN(n683), .S0(\potential_decayed[31] ));
+    defparam potential_new_31__I_0_33.INJECT = "NO";
+    defparam potential_new_31__I_0_33.INIT0 = "0x99AA";
+    defparam potential_new_31__I_0_33.INIT1 = "0x0000";
+    CCU2 potential_new_31__I_0_31 (.A1(potential_new[30]), .B1(potential_new[31]), 
+         .C1(GND_net), .D1(VCC_net), .A0(potential_new[29]), .B0(potential_new[31]), 
+         .C0(GND_net), .D0(VCC_net), .CIN(n682), .COUT(n683), .S1(potential_decayed[30]), 
+         .S0(potential_decayed[29]));
+    defparam potential_new_31__I_0_31.INJECT = "NO";
+    defparam potential_new_31__I_0_31.INIT0 = "0x99AA";
+    defparam potential_new_31__I_0_31.INIT1 = "0x99AA";
+    CCU2 potential_new_31__I_0_29 (.A1(potential_new[28]), .B1(potential_new[31]), 
+         .C1(GND_net), .D1(VCC_net), .A0(potential_new[27]), .B0(potential_new[31]), 
+         .C0(GND_net), .D0(VCC_net), .CIN(n681), .COUT(n682), .S1(potential_decayed[28]), 
+         .S0(potential_decayed[27]));
+    defparam potential_new_31__I_0_29.INJECT = "NO";
+    defparam potential_new_31__I_0_29.INIT0 = "0x99AA";
+    defparam potential_new_31__I_0_29.INIT1 = "0x99AA";
+    CCU2 potential_new_31__I_0_27 (.A1(potential_new[26]), .B1(potential_new[31]), 
+         .C1(GND_net), .D1(VCC_net), .A0(potential_new[25]), .B0(potential_new[31]), 
+         .C0(GND_net), .D0(VCC_net), .CIN(n680), .COUT(n681), .S1(potential_decayed[26]), 
+         .S0(potential_decayed[25]));
+    defparam potential_new_31__I_0_27.INJECT = "NO";
+    defparam potential_new_31__I_0_27.INIT0 = "0x99AA";
+    defparam potential_new_31__I_0_27.INIT1 = "0x99AA";
+    CCU2 potential_new_31__I_0_25 (.A1(potential_new[24]), .B1(potential_new[31]), 
+         .C1(GND_net), .D1(VCC_net), .A0(potential_new[23]), .B0(potential_new[31]), 
+         .C0(GND_net), .D0(VCC_net), .CIN(n679), .COUT(n680), .S1(potential_decayed[24]), 
+         .S0(potential_decayed[23]));
+    defparam potential_new_31__I_0_25.INJECT = "NO";
+    defparam potential_new_31__I_0_25.INIT0 = "0x99AA";
+    defparam potential_new_31__I_0_25.INIT1 = "0x99AA";
+    CCU2 potential_new_31__I_0_23 (.A1(potential_new[22]), .B1(potential_new[30]), 
+         .C1(GND_net), .D1(VCC_net), .A0(potential_new[21]), .B0(potential_new[29]), 
+         .C0(GND_net), .D0(VCC_net), .CIN(n678), .COUT(n679), .S1(potential_decayed[22]), 
+         .S0(potential_decayed[21]));
+    defparam potential_new_31__I_0_23.INJECT = "NO";
+    defparam potential_new_31__I_0_23.INIT0 = "0x99AA";
+    defparam potential_new_31__I_0_23.INIT1 = "0x99AA";
+    CCU2 potential_new_31__I_0_21 (.A1(potential_new[20]), .B1(potential_new[28]), 
+         .C1(GND_net), .D1(VCC_net), .A0(potential_new[19]), .B0(potential_new[27]), 
+         .C0(GND_net), .D0(VCC_net), .CIN(n677), .COUT(n678), .S1(potential_decayed[20]), 
+         .S0(potential_decayed[19]));
+    defparam potential_new_31__I_0_21.INJECT = "NO";
+    defparam potential_new_31__I_0_21.INIT0 = "0x99AA";
+    defparam potential_new_31__I_0_21.INIT1 = "0x99AA";
+    CCU2 potential_new_31__I_0_19 (.A1(potential_new[18]), .B1(potential_new[26]), 
+         .C1(GND_net), .D1(VCC_net), .A0(potential_new[17]), .B0(potential_new[25]), 
+         .C0(GND_net), .D0(VCC_net), .CIN(n676), .COUT(n677), .S1(potential_decayed[18]), 
+         .S0(potential_decayed[17]));
+    defparam potential_new_31__I_0_19.INJECT = "NO";
+    defparam potential_new_31__I_0_19.INIT0 = "0x99AA";
+    defparam potential_new_31__I_0_19.INIT1 = "0x99AA";
+    CCU2 potential_new_31__I_0_17 (.A1(potential_new[16]), .B1(potential_new[24]), 
+         .C1(GND_net), .D1(VCC_net), .A0(potential_new[15]), .B0(potential_new[23]), 
+         .C0(GND_net), .D0(VCC_net), .CIN(n675), .COUT(n676), .S1(potential_decayed[16]), 
+         .S0(potential_decayed[15]));
+    defparam potential_new_31__I_0_17.INJECT = "NO";
+    defparam potential_new_31__I_0_17.INIT0 = "0x99AA";
+    defparam potential_new_31__I_0_17.INIT1 = "0x99AA";
+    CCU2 potential_new_31__I_0_15 (.A1(potential_new[14]), .B1(potential_new[22]), 
+         .C1(GND_net), .D1(VCC_net), .A0(potential_new[13]), .B0(potential_new[21]), 
+         .C0(GND_net), .D0(VCC_net), .CIN(n674), .COUT(n675), .S1(potential_decayed[14]), 
+         .S0(potential_decayed[13]));
+    defparam potential_new_31__I_0_15.INJECT = "NO";
+    defparam potential_new_31__I_0_15.INIT0 = "0x99AA";
+    defparam potential_new_31__I_0_15.INIT1 = "0x99AA";
+    CCU2 potential_new_31__I_0_13 (.A1(potential_new[12]), .B1(potential_new[20]), 
+         .C1(GND_net), .D1(VCC_net), .A0(potential_new[11]), .B0(potential_new[19]), 
+         .C0(GND_net), .D0(VCC_net), .CIN(n673), .COUT(n674), .S1(potential_decayed[12]), 
+         .S0(potential_decayed[11]));
+    defparam potential_new_31__I_0_13.INJECT = "NO";
+    defparam potential_new_31__I_0_13.INIT0 = "0x99AA";
+    defparam potential_new_31__I_0_13.INIT1 = "0x99AA";
+    CCU2 potential_new_31__I_0_11 (.A1(potential_new[10]), .B1(potential_new[18]), 
+         .C1(GND_net), .D1(VCC_net), .A0(potential_new[9]), .B0(potential_new[17]), 
+         .C0(GND_net), .D0(VCC_net), .CIN(n672), .COUT(n673), .S1(potential_decayed[10]), 
+         .S0(potential_decayed[9]));
+    defparam potential_new_31__I_0_11.INJECT = "NO";
+    defparam potential_new_31__I_0_11.INIT0 = "0x99AA";
+    defparam potential_new_31__I_0_11.INIT1 = "0x99AA";
+    CCU2 potential_new_31__I_0_9 (.A1(potential_new[8]), .B1(potential_new[16]), 
+         .C1(GND_net), .D1(VCC_net), .A0(potential[7]), .B0(potential_new[15]), 
+         .C0(GND_net), .D0(VCC_net), .CIN(n671), .COUT(n672), .S1(potential_decayed[8]), 
+         .S0(potential_decayed[7]));
+    defparam potential_new_31__I_0_9.INJECT = "NO";
+    defparam potential_new_31__I_0_9.INIT0 = "0x99AA";
+    defparam potential_new_31__I_0_9.INIT1 = "0x99AA";
+    CCU2 potential_new_31__I_0_7 (.A1(potential[6]), .B1(potential_new[14]), 
+         .C1(GND_net), .D1(VCC_net), .A0(potential[5]), .B0(potential_new[13]), 
+         .C0(GND_net), .D0(VCC_net), .CIN(n670), .COUT(n671), .S1(potential_decayed[6]), 
          .S0(potential_decayed[5]));
     defparam potential_new_31__I_0_7.INJECT = "NO";
     defparam potential_new_31__I_0_7.INIT0 = "0x99AA";
     defparam potential_new_31__I_0_7.INIT1 = "0x99AA";
-    CCU2 potential_new_31__I_0_5 (.A1(potential_new[4]), .B1(potential_new[12]), 
-         .C1(GND_net), .D1(VCC_net), .A0(potential_new[3]), .B0(potential_new[11]), 
-         .C0(GND_net), .D0(VCC_net), .CIN(n563), .COUT(n564), .S1(potential_decayed[4]), 
+    CCU2 potential_new_31__I_0_5 (.A1(potential[4]), .B1(potential_new[12]), 
+         .C1(GND_net), .D1(VCC_net), .A0(potential[3]), .B0(potential_new[11]), 
+         .C0(GND_net), .D0(VCC_net), .CIN(n669), .COUT(n670), .S1(potential_decayed[4]), 
          .S0(potential_decayed[3]));
     defparam potential_new_31__I_0_5.INJECT = "NO";
     defparam potential_new_31__I_0_5.INIT0 = "0x99AA";
     defparam potential_new_31__I_0_5.INIT1 = "0x99AA";
-    CCU2 potential_new_31__I_0_3 (.A1(potential_new[2]), .B1(potential_new[10]), 
-         .C1(GND_net), .D1(VCC_net), .A0(potential_new[1]), .B0(potential_new[9]), 
-         .C0(GND_net), .D0(VCC_net), .CIN(n562), .COUT(n563), .S1(potential_decayed[2]), 
+    CCU2 potential_new_31__I_0_3 (.A1(potential[2]), .B1(potential_new[10]), 
+         .C1(GND_net), .D1(VCC_net), .A0(potential[1]), .B0(potential_new[9]), 
+         .C0(GND_net), .D0(VCC_net), .CIN(n668), .COUT(n669), .S1(potential_decayed[2]), 
          .S0(potential_decayed[1]));
     defparam potential_new_31__I_0_3.INJECT = "NO";
     defparam potential_new_31__I_0_3.INIT0 = "0x99AA";
     defparam potential_new_31__I_0_3.INIT1 = "0x99AA";
-    CCU2 potential_new_31__I_0_cin (.A1(potential_new[0]), .B1(potential_new[8]), 
+    CCU2 potential_new_31__I_0_cin (.A1(potential[0]), .B1(potential_new[8]), 
          .C1(GND_net), .D1(VCC_net), .A0(GND_net), .B0(GND_net), .C0(GND_net), 
-         .D0(VCC_net), .CIN(VCC_net), .COUT(n562), .S1(potential_decayed[0]));
+         .D0(VCC_net), .CIN(VCC_net), .COUT(n668), .S1(potential_decayed[0]));
     defparam potential_new_31__I_0_cin.INJECT = "NO";
     defparam potential_new_31__I_0_cin.INIT0 = "0x00FF";
     defparam potential_new_31__I_0_cin.INIT1 = "0x99AA";
-    CCU2 potential_new_31__I_0_2_33 (.A1(GND_net), .B1(GND_net), .C1(GND_net), 
-         .D1(VCC_net), .A0(potential_new_31__N_2190[31]), .B0(\wma_outputs[7] ), 
-         .C0(GND_net), .D0(VCC_net), .CIN(n561), .S0(potential_new[31]));
-    defparam potential_new_31__I_0_2_33.INJECT = "NO";
-    defparam potential_new_31__I_0_2_33.INIT0 = "0x66AA";
-    defparam potential_new_31__I_0_2_33.INIT1 = "0x0000";
-    CCU2 potential_new_31__I_0_2_31 (.A1(potential_new_31__N_2190[30]), .B1(\wma_outputs[7] ), 
-         .C1(GND_net), .D1(VCC_net), .A0(potential_new_31__N_2190[29]), 
-         .B0(\wma_outputs[7] ), .C0(GND_net), .D0(VCC_net), .CIN(n560), 
-         .COUT(n561), .S1(potential_new[30]), .S0(potential_new[29]));
-    defparam potential_new_31__I_0_2_31.INJECT = "NO";
-    defparam potential_new_31__I_0_2_31.INIT0 = "0x66AA";
-    defparam potential_new_31__I_0_2_31.INIT1 = "0x66AA";
-    CCU2 potential_new_31__I_0_2_cin (.A1(potential_new_31__N_2190[0]), .B1(\wma_outputs[0] ), 
-         .C1(GND_net), .D1(VCC_net), .A0(GND_net), .B0(GND_net), .C0(GND_net), 
-         .D0(VCC_net), .CIN(VCC_net), .COUT(n546), .S1(potential_new[0]));
-    defparam potential_new_31__I_0_2_cin.INJECT = "NO";
-    defparam potential_new_31__I_0_2_cin.INIT0 = "0x0000";
-    defparam potential_new_31__I_0_2_cin.INIT1 = "0x66AA";
-    CCU2 potential_new_31__I_0_2_29 (.A1(potential_new_31__N_2190[28]), .B1(\wma_outputs[7] ), 
-         .C1(GND_net), .D1(VCC_net), .A0(potential_new_31__N_2190[27]), 
-         .B0(\wma_outputs[7] ), .C0(GND_net), .D0(VCC_net), .CIN(n559), 
-         .COUT(n560), .S1(potential_new[28]), .S0(potential_new[27]));
-    defparam potential_new_31__I_0_2_29.INJECT = "NO";
-    defparam potential_new_31__I_0_2_29.INIT0 = "0x66AA";
-    defparam potential_new_31__I_0_2_29.INIT1 = "0x66AA";
-    CCU2 potential_new_31__I_0_2_27 (.A1(potential_new_31__N_2190[26]), .B1(\wma_outputs[7] ), 
-         .C1(GND_net), .D1(VCC_net), .A0(potential_new_31__N_2190[25]), 
-         .B0(\wma_outputs[7] ), .C0(GND_net), .D0(VCC_net), .CIN(n558), 
-         .COUT(n559), .S1(potential_new[26]), .S0(potential_new[25]));
-    defparam potential_new_31__I_0_2_27.INJECT = "NO";
-    defparam potential_new_31__I_0_2_27.INIT0 = "0x66AA";
-    defparam potential_new_31__I_0_2_27.INIT1 = "0x66AA";
-    CCU2 potential_new_31__I_0_2_25 (.A1(potential_new_31__N_2190[24]), .B1(\wma_outputs[7] ), 
-         .C1(GND_net), .D1(VCC_net), .A0(potential_new_31__N_2190[23]), 
-         .B0(\wma_outputs[7] ), .C0(GND_net), .D0(VCC_net), .CIN(n557), 
-         .COUT(n558), .S1(potential_new[24]), .S0(potential_new[23]));
-    defparam potential_new_31__I_0_2_25.INJECT = "NO";
-    defparam potential_new_31__I_0_2_25.INIT0 = "0x66AA";
-    defparam potential_new_31__I_0_2_25.INIT1 = "0x66AA";
-    CCU2 potential_new_31__I_0_2_23 (.A1(potential_new_31__N_2190[22]), .B1(\wma_outputs[7] ), 
-         .C1(GND_net), .D1(VCC_net), .A0(potential_new_31__N_2190[21]), 
-         .B0(\wma_outputs[7] ), .C0(GND_net), .D0(VCC_net), .CIN(n556), 
-         .COUT(n557), .S1(potential_new[22]), .S0(potential_new[21]));
-    defparam potential_new_31__I_0_2_23.INJECT = "NO";
-    defparam potential_new_31__I_0_2_23.INIT0 = "0x66AA";
-    defparam potential_new_31__I_0_2_23.INIT1 = "0x66AA";
-    CCU2 potential_new_31__I_0_2_21 (.A1(potential_new_31__N_2190[20]), .B1(\wma_outputs[7] ), 
-         .C1(GND_net), .D1(VCC_net), .A0(potential_new_31__N_2190[19]), 
-         .B0(\wma_outputs[7] ), .C0(GND_net), .D0(VCC_net), .CIN(n555), 
-         .COUT(n556), .S1(potential_new[20]), .S0(potential_new[19]));
-    defparam potential_new_31__I_0_2_21.INJECT = "NO";
-    defparam potential_new_31__I_0_2_21.INIT0 = "0x66AA";
-    defparam potential_new_31__I_0_2_21.INIT1 = "0x66AA";
-    CCU2 potential_new_31__I_0_2_19 (.A1(potential_new_31__N_2190[18]), .B1(\wma_outputs[7] ), 
-         .C1(GND_net), .D1(VCC_net), .A0(potential_new_31__N_2190[17]), 
-         .B0(\wma_outputs[7] ), .C0(GND_net), .D0(VCC_net), .CIN(n554), 
-         .COUT(n555), .S1(potential_new[18]), .S0(potential_new[17]));
-    defparam potential_new_31__I_0_2_19.INJECT = "NO";
-    defparam potential_new_31__I_0_2_19.INIT0 = "0x66AA";
-    defparam potential_new_31__I_0_2_19.INIT1 = "0x66AA";
-    CCU2 potential_new_31__I_0_2_17 (.A1(potential_new_31__N_2190[16]), .B1(\wma_outputs[7] ), 
-         .C1(GND_net), .D1(VCC_net), .A0(potential_new_31__N_2190[15]), 
-         .B0(\wma_outputs[7] ), .C0(GND_net), .D0(VCC_net), .CIN(n553), 
-         .COUT(n554), .S1(potential_new[16]), .S0(potential_new[15]));
-    defparam potential_new_31__I_0_2_17.INJECT = "NO";
-    defparam potential_new_31__I_0_2_17.INIT0 = "0x66AA";
-    defparam potential_new_31__I_0_2_17.INIT1 = "0x66AA";
-    CCU2 potential_new_31__I_0_2_15 (.A1(potential_new_31__N_2190[14]), .B1(\wma_outputs[7] ), 
-         .C1(GND_net), .D1(VCC_net), .A0(potential_new_31__N_2190[13]), 
-         .B0(\wma_outputs[7] ), .C0(GND_net), .D0(VCC_net), .CIN(n552), 
-         .COUT(n553), .S1(potential_new[14]), .S0(potential_new[13]));
-    defparam potential_new_31__I_0_2_15.INJECT = "NO";
-    defparam potential_new_31__I_0_2_15.INIT0 = "0x66AA";
-    defparam potential_new_31__I_0_2_15.INIT1 = "0x66AA";
-    CCU2 potential_new_31__I_0_2_13 (.A1(potential_new_31__N_2190[12]), .B1(\wma_outputs[7] ), 
-         .C1(GND_net), .D1(VCC_net), .A0(potential_new_31__N_2190[11]), 
-         .B0(\wma_outputs[7] ), .C0(GND_net), .D0(VCC_net), .CIN(n551), 
-         .COUT(n552), .S1(potential_new[12]), .S0(potential_new[11]));
-    defparam potential_new_31__I_0_2_13.INJECT = "NO";
-    defparam potential_new_31__I_0_2_13.INIT0 = "0x66AA";
-    defparam potential_new_31__I_0_2_13.INIT1 = "0x66AA";
-    VHI i2 (.Z(VCC_net));
-    VLO i1 (.Z(GND_net));
+    (* LSE_LINE_FILE_ID=106, LSE_LCOL=22, LSE_RCOL=10, LSE_LLINE=22, LSE_RLINE=27 *) FD1P3IX spike_out (.D(n62), 
+            .CK(clk_c), .SP(VCC_net), .CD(n604), .Q(\network_outputs_c[0] ));
+    defparam spike_out.GSR = "ENABLED";
+    VHI i1 (.Z(VCC_net));
+    VLO i2 (.Z(GND_net));
     
 endmodule
 
 //
-// Verilog Description of module weight_manager_unit
+// Verilog Description of module \weight_manager_unit(NUM_WEIGHTS=8) 
 //
 
-module weight_manager_unit (output \weight_line[3] , output [7:0]ram_addr_line, 
-            output [7:0]ram_addr_line_7__N_1, input n728, input [7:0]ram_output_line, 
-            output \weight_line[4] , input clk_c, output \weight_line[1] , 
-            output \weight_line[2] , output \weight_line[0] , output \weight_line[15] , 
-            input reset, output \weight_line[8] , output \weight_line[5] , 
-            output \weight_line[10] , output \weight_line[14] , output \weight_line[12] , 
-            output \weight_line[6] , output \weight_line[11] , output \weight_line[7] , 
-            output \weight_line[9] , output \weight_line[13] );
+module \weight_manager_unit(NUM_WEIGHTS=8)  (input clk_c, input reset_c, 
+            output weights_loaded_c);
     
-    wire [7:0]current_addr;
-    (* is_clock=1 *) wire clk_c;
-    wire [7:0]next_addr;
-    wire read_mode;
     wire [7:0]weight_idx;
-    
-    wire GND_net, VCC_net, clk_c_enable_24, clk_c_enable_16, n545;
-    wire [7:0]n86;
-    
-    wire clk_c_enable_23, n542, n544, n543;
-    
-    (* LSE_LINE_FILE_ID=104, LSE_LCOL=21, LSE_RCOL=2, LSE_LLINE=32, LSE_RLINE=39 *) FD1P3IX weights_out__i4 (.D(ram_output_line[4]), 
-            .CK(clk_c), .SP(clk_c_enable_24), .CD(n728), .Q(\weight_line[4] ));
-    defparam weights_out__i4.GSR = "ENABLED";
-    (* LSE_LINE_FILE_ID=104, LSE_LCOL=21, LSE_RCOL=2, LSE_LLINE=32, LSE_RLINE=39 *) FD1P3IX weights_out__i3 (.D(ram_output_line[3]), 
-            .CK(clk_c), .SP(clk_c_enable_24), .CD(n728), .Q(\weight_line[3] ));
-    defparam weights_out__i3.GSR = "ENABLED";
-    (* LSE_LINE_FILE_ID=104, LSE_LCOL=21, LSE_RCOL=2, LSE_LLINE=32, LSE_RLINE=39 *) FD1P3IX weights_out__i1 (.D(ram_output_line[1]), 
-            .CK(clk_c), .SP(clk_c_enable_24), .CD(n728), .Q(\weight_line[1] ));
-    defparam weights_out__i1.GSR = "ENABLED";
-    (* LSE_LINE_FILE_ID=104, LSE_LCOL=21, LSE_RCOL=2, LSE_LLINE=32, LSE_RLINE=39 *) FD1P3IX weights_out__i2 (.D(ram_output_line[2]), 
-            .CK(clk_c), .SP(clk_c_enable_24), .CD(n728), .Q(\weight_line[2] ));
-    defparam weights_out__i2.GSR = "ENABLED";
-    (* LSE_LINE_FILE_ID=104, LSE_LCOL=21, LSE_RCOL=2, LSE_LLINE=32, LSE_RLINE=39 *) FD1P3IX weights_out__i0 (.D(ram_output_line[0]), 
-            .CK(clk_c), .SP(clk_c_enable_24), .CD(n728), .Q(\weight_line[0] ));
-    defparam weights_out__i0.GSR = "ENABLED";
-    (* lse_init_val=0, LSE_LINE_FILE_ID=104, LSE_LCOL=21, LSE_RCOL=2, LSE_LLINE=32, LSE_RLINE=39 *) FD1P3IX weight_idx__i1 (.D(current_addr[0]), 
-            .CK(clk_c), .SP(read_mode), .CD(n728), .Q(weight_idx[0]));
-    defparam weight_idx__i1.GSR = "ENABLED";
-    (* lse_init_val=1, LSE_LINE_FILE_ID=104, LSE_LCOL=21, LSE_RCOL=2, LSE_LLINE=32, LSE_RLINE=39 *) FD1P3DX read_mode_c (.D(clk_c_enable_23), 
-            .CK(clk_c), .SP(VCC_net), .CD(GND_net), .Q(read_mode));
-    defparam read_mode_c.GSR = "ENABLED";
-    (* LSE_LINE_FILE_ID=104, LSE_LCOL=21, LSE_RCOL=2, LSE_LLINE=32, LSE_RLINE=39 *) FD1P3IX next_addr_e3_e3_e3__i0 (.D(n86[0]), 
-            .CK(clk_c), .SP(read_mode), .CD(reset), .Q(next_addr[0]));
-    defparam next_addr_e3_e3_e3__i0.GSR = "ENABLED";
-    FD1P3DX ram_addr_i0 (.D(ram_addr_line_7__N_1[0]), .CK(clk_c), .SP(VCC_net), 
-            .CD(GND_net), .Q(ram_addr_line[0]));
-    defparam ram_addr_i0.GSR = "ENABLED";
-    (* lse_init_val=0, LSE_LINE_FILE_ID=104, LSE_LCOL=21, LSE_RCOL=2, LSE_LLINE=32, LSE_RLINE=39 *) FD1P3IX current_addr__i0 (.D(next_addr[0]), 
-            .CK(clk_c), .SP(clk_c_enable_23), .CD(n728), .Q(current_addr[0]));
-    defparam current_addr__i0.GSR = "ENABLED";
-    (* lut_function="(A (B+!(C))+!A (B (C)))" *) LUT4 mux_190_i8_3_lut (.A(ram_addr_line[7]), 
-            .B(current_addr[7]), .C(read_mode), .Z(ram_addr_line_7__N_1[7]));
-    defparam mux_190_i8_3_lut.INIT = "0xcaca";
-    (* lut_function="(A (B+!(C))+!A (B (C)))" *) LUT4 mux_190_i7_3_lut (.A(ram_addr_line[6]), 
-            .B(current_addr[6]), .C(read_mode), .Z(ram_addr_line_7__N_1[6]));
-    defparam mux_190_i7_3_lut.INIT = "0xcaca";
-    (* lut_function="(A (B+!(C))+!A (B (C)))" *) LUT4 mux_190_i6_3_lut (.A(ram_addr_line[5]), 
-            .B(current_addr[5]), .C(read_mode), .Z(ram_addr_line_7__N_1[5]));
-    defparam mux_190_i6_3_lut.INIT = "0xcaca";
-    (* lut_function="(A (B+!(C))+!A (B (C)))" *) LUT4 mux_190_i5_3_lut (.A(ram_addr_line[4]), 
-            .B(current_addr[4]), .C(read_mode), .Z(ram_addr_line_7__N_1[4]));
-    defparam mux_190_i5_3_lut.INIT = "0xcaca";
-    (* lut_function="(A (B+!(C))+!A (B (C)))" *) LUT4 mux_190_i4_3_lut (.A(ram_addr_line[3]), 
-            .B(current_addr[3]), .C(read_mode), .Z(ram_addr_line_7__N_1[3]));
-    defparam mux_190_i4_3_lut.INIT = "0xcaca";
-    (* lut_function="(A (B+!(C))+!A (B (C)))" *) LUT4 mux_190_i3_3_lut (.A(ram_addr_line[2]), 
-            .B(current_addr[2]), .C(read_mode), .Z(ram_addr_line_7__N_1[2]));
-    defparam mux_190_i3_3_lut.INIT = "0xcaca";
-    (* lut_function="(A (B+!(C))+!A (B (C)))" *) LUT4 mux_190_i2_3_lut (.A(ram_addr_line[1]), 
-            .B(current_addr[1]), .C(read_mode), .Z(ram_addr_line_7__N_1[1]));
-    defparam mux_190_i2_3_lut.INIT = "0xcaca";
-    (* lut_function="(A (B+!(C))+!A (B (C)))" *) LUT4 mux_190_i1_3_lut (.A(ram_addr_line[0]), 
-            .B(current_addr[0]), .C(read_mode), .Z(ram_addr_line_7__N_1[0]));
-    defparam mux_190_i1_3_lut.INIT = "0xcaca";
-    (* lut_function="(!(A))" *) LUT4 i91_1_lut (.A(read_mode), .Z(clk_c_enable_23));
-    defparam i91_1_lut.INIT = "0x5555";
-    (* LSE_LINE_FILE_ID=104, LSE_LCOL=21, LSE_RCOL=2, LSE_LLINE=32, LSE_RLINE=39 *) FD1P3IX weights_out__i6 (.D(ram_output_line[6]), 
-            .CK(clk_c), .SP(clk_c_enable_24), .CD(n728), .Q(\weight_line[6] ));
-    defparam weights_out__i6.GSR = "ENABLED";
-    (* lut_function="(!(A+(B+(C+!(D)))))" *) LUT4 i434_2_lut_4_lut (.A(weight_idx[1]), 
-            .B(read_mode), .C(weight_idx[2]), .D(weight_idx[0]), .Z(clk_c_enable_16));
-    defparam i434_2_lut_4_lut.INIT = "0x0100";
-    (* LSE_LINE_FILE_ID=104, LSE_LCOL=21, LSE_RCOL=2, LSE_LLINE=32, LSE_RLINE=39 *) FD1P3IX weights_out__i7 (.D(ram_output_line[7]), 
-            .CK(clk_c), .SP(clk_c_enable_24), .CD(n728), .Q(\weight_line[7] ));
-    defparam weights_out__i7.GSR = "ENABLED";
-    (* LSE_LINE_FILE_ID=104, LSE_LCOL=21, LSE_RCOL=2, LSE_LLINE=32, LSE_RLINE=39 *) FD1P3IX weights_out__i8 (.D(ram_output_line[0]), 
-            .CK(clk_c), .SP(clk_c_enable_16), .CD(n728), .Q(\weight_line[8] ));
-    defparam weights_out__i8.GSR = "ENABLED";
-    (* LSE_LINE_FILE_ID=104, LSE_LCOL=21, LSE_RCOL=2, LSE_LLINE=32, LSE_RLINE=39 *) FD1P3IX weights_out__i9 (.D(ram_output_line[1]), 
-            .CK(clk_c), .SP(clk_c_enable_16), .CD(n728), .Q(\weight_line[9] ));
-    defparam weights_out__i9.GSR = "ENABLED";
-    (* LSE_LINE_FILE_ID=104, LSE_LCOL=21, LSE_RCOL=2, LSE_LLINE=32, LSE_RLINE=39 *) FD1P3IX weights_out__i10 (.D(ram_output_line[2]), 
-            .CK(clk_c), .SP(clk_c_enable_16), .CD(n728), .Q(\weight_line[10] ));
-    defparam weights_out__i10.GSR = "ENABLED";
-    (* LSE_LINE_FILE_ID=104, LSE_LCOL=21, LSE_RCOL=2, LSE_LLINE=32, LSE_RLINE=39 *) FD1P3IX weights_out__i11 (.D(ram_output_line[3]), 
-            .CK(clk_c), .SP(clk_c_enable_16), .CD(n728), .Q(\weight_line[11] ));
-    defparam weights_out__i11.GSR = "ENABLED";
-    (* LSE_LINE_FILE_ID=104, LSE_LCOL=21, LSE_RCOL=2, LSE_LLINE=32, LSE_RLINE=39 *) FD1P3IX weights_out__i12 (.D(ram_output_line[4]), 
-            .CK(clk_c), .SP(clk_c_enable_16), .CD(n728), .Q(\weight_line[12] ));
-    defparam weights_out__i12.GSR = "ENABLED";
-    (* LSE_LINE_FILE_ID=104, LSE_LCOL=21, LSE_RCOL=2, LSE_LLINE=32, LSE_RLINE=39 *) FD1P3IX weights_out__i13 (.D(ram_output_line[5]), 
-            .CK(clk_c), .SP(clk_c_enable_16), .CD(n728), .Q(\weight_line[13] ));
-    defparam weights_out__i13.GSR = "ENABLED";
-    (* LSE_LINE_FILE_ID=104, LSE_LCOL=21, LSE_RCOL=2, LSE_LLINE=32, LSE_RLINE=39 *) FD1P3IX weights_out__i14 (.D(ram_output_line[6]), 
-            .CK(clk_c), .SP(clk_c_enable_16), .CD(n728), .Q(\weight_line[14] ));
-    defparam weights_out__i14.GSR = "ENABLED";
-    (* LSE_LINE_FILE_ID=104, LSE_LCOL=21, LSE_RCOL=2, LSE_LLINE=32, LSE_RLINE=39 *) FD1P3IX weights_out__i15 (.D(ram_output_line[7]), 
-            .CK(clk_c), .SP(clk_c_enable_16), .CD(n728), .Q(\weight_line[15] ));
-    defparam weights_out__i15.GSR = "ENABLED";
-    (* lse_init_val=0, LSE_LINE_FILE_ID=104, LSE_LCOL=21, LSE_RCOL=2, LSE_LLINE=32, LSE_RLINE=39 *) FD1P3IX weight_idx__i2 (.D(current_addr[1]), 
-            .CK(clk_c), .SP(read_mode), .CD(reset), .Q(weight_idx[1]));
-    defparam weight_idx__i2.GSR = "ENABLED";
-    (* lse_init_val=0, LSE_LINE_FILE_ID=104, LSE_LCOL=21, LSE_RCOL=2, LSE_LLINE=32, LSE_RLINE=39 *) FD1P3IX weight_idx__i3 (.D(current_addr[2]), 
-            .CK(clk_c), .SP(read_mode), .CD(reset), .Q(weight_idx[2]));
-    defparam weight_idx__i3.GSR = "ENABLED";
-    (* LSE_LINE_FILE_ID=104, LSE_LCOL=21, LSE_RCOL=2, LSE_LLINE=32, LSE_RLINE=39 *) FD1P3IX next_addr_e3_e3_e3__i1 (.D(n86[1]), 
-            .CK(clk_c), .SP(read_mode), .CD(reset), .Q(next_addr[1]));
-    defparam next_addr_e3_e3_e3__i1.GSR = "ENABLED";
-    (* LSE_LINE_FILE_ID=104, LSE_LCOL=21, LSE_RCOL=2, LSE_LLINE=32, LSE_RLINE=39 *) FD1P3IX next_addr_e3_e3_e3__i2 (.D(n86[2]), 
-            .CK(clk_c), .SP(read_mode), .CD(reset), .Q(next_addr[2]));
-    defparam next_addr_e3_e3_e3__i2.GSR = "ENABLED";
-    (* LSE_LINE_FILE_ID=104, LSE_LCOL=21, LSE_RCOL=2, LSE_LLINE=32, LSE_RLINE=39 *) FD1P3IX next_addr_e3_e3_e3__i3 (.D(n86[3]), 
-            .CK(clk_c), .SP(read_mode), .CD(reset), .Q(next_addr[3]));
-    defparam next_addr_e3_e3_e3__i3.GSR = "ENABLED";
-    (* LSE_LINE_FILE_ID=104, LSE_LCOL=21, LSE_RCOL=2, LSE_LLINE=32, LSE_RLINE=39 *) FD1P3IX next_addr_e3_e3_e3__i4 (.D(n86[4]), 
-            .CK(clk_c), .SP(read_mode), .CD(reset), .Q(next_addr[4]));
-    defparam next_addr_e3_e3_e3__i4.GSR = "ENABLED";
-    (* LSE_LINE_FILE_ID=104, LSE_LCOL=21, LSE_RCOL=2, LSE_LLINE=32, LSE_RLINE=39 *) FD1P3IX next_addr_e3_e3_e3__i5 (.D(n86[5]), 
-            .CK(clk_c), .SP(read_mode), .CD(reset), .Q(next_addr[5]));
-    defparam next_addr_e3_e3_e3__i5.GSR = "ENABLED";
-    (* LSE_LINE_FILE_ID=104, LSE_LCOL=21, LSE_RCOL=2, LSE_LLINE=32, LSE_RLINE=39 *) FD1P3IX next_addr_e3_e3_e3__i6 (.D(n86[6]), 
-            .CK(clk_c), .SP(read_mode), .CD(reset), .Q(next_addr[6]));
-    defparam next_addr_e3_e3_e3__i6.GSR = "ENABLED";
-    (* LSE_LINE_FILE_ID=104, LSE_LCOL=21, LSE_RCOL=2, LSE_LLINE=32, LSE_RLINE=39 *) FD1P3IX next_addr_e3_e3_e3__i7 (.D(n86[7]), 
-            .CK(clk_c), .SP(read_mode), .CD(reset), .Q(next_addr[7]));
-    defparam next_addr_e3_e3_e3__i7.GSR = "ENABLED";
-    FD1P3DX ram_addr_i1 (.D(ram_addr_line_7__N_1[1]), .CK(clk_c), .SP(VCC_net), 
-            .CD(GND_net), .Q(ram_addr_line[1]));
-    defparam ram_addr_i1.GSR = "ENABLED";
-    FD1P3DX ram_addr_i2 (.D(ram_addr_line_7__N_1[2]), .CK(clk_c), .SP(VCC_net), 
-            .CD(GND_net), .Q(ram_addr_line[2]));
-    defparam ram_addr_i2.GSR = "ENABLED";
-    FD1P3DX ram_addr_i3 (.D(ram_addr_line_7__N_1[3]), .CK(clk_c), .SP(VCC_net), 
-            .CD(GND_net), .Q(ram_addr_line[3]));
-    defparam ram_addr_i3.GSR = "ENABLED";
-    FD1P3DX ram_addr_i4 (.D(ram_addr_line_7__N_1[4]), .CK(clk_c), .SP(VCC_net), 
-            .CD(GND_net), .Q(ram_addr_line[4]));
-    defparam ram_addr_i4.GSR = "ENABLED";
-    FD1P3DX ram_addr_i5 (.D(ram_addr_line_7__N_1[5]), .CK(clk_c), .SP(VCC_net), 
-            .CD(GND_net), .Q(ram_addr_line[5]));
-    defparam ram_addr_i5.GSR = "ENABLED";
-    FD1P3DX ram_addr_i6 (.D(ram_addr_line_7__N_1[6]), .CK(clk_c), .SP(VCC_net), 
-            .CD(GND_net), .Q(ram_addr_line[6]));
-    defparam ram_addr_i6.GSR = "ENABLED";
-    FD1P3DX ram_addr_i7 (.D(ram_addr_line_7__N_1[7]), .CK(clk_c), .SP(VCC_net), 
-            .CD(GND_net), .Q(ram_addr_line[7]));
-    defparam ram_addr_i7.GSR = "ENABLED";
-    (* lse_init_val=0, LSE_LINE_FILE_ID=104, LSE_LCOL=21, LSE_RCOL=2, LSE_LLINE=32, LSE_RLINE=39 *) FD1P3IX current_addr__i1 (.D(next_addr[1]), 
-            .CK(clk_c), .SP(clk_c_enable_23), .CD(n728), .Q(current_addr[1]));
-    defparam current_addr__i1.GSR = "ENABLED";
-    (* lse_init_val=0, LSE_LINE_FILE_ID=104, LSE_LCOL=21, LSE_RCOL=2, LSE_LLINE=32, LSE_RLINE=39 *) FD1P3IX current_addr__i2 (.D(next_addr[2]), 
-            .CK(clk_c), .SP(clk_c_enable_23), .CD(n728), .Q(current_addr[2]));
-    defparam current_addr__i2.GSR = "ENABLED";
-    (* lse_init_val=0, LSE_LINE_FILE_ID=104, LSE_LCOL=21, LSE_RCOL=2, LSE_LLINE=32, LSE_RLINE=39 *) FD1P3IX current_addr__i3 (.D(next_addr[3]), 
-            .CK(clk_c), .SP(clk_c_enable_23), .CD(n728), .Q(current_addr[3]));
-    defparam current_addr__i3.GSR = "ENABLED";
-    (* lse_init_val=0, LSE_LINE_FILE_ID=104, LSE_LCOL=21, LSE_RCOL=2, LSE_LLINE=32, LSE_RLINE=39 *) FD1P3IX current_addr__i4 (.D(next_addr[4]), 
-            .CK(clk_c), .SP(clk_c_enable_23), .CD(n728), .Q(current_addr[4]));
-    defparam current_addr__i4.GSR = "ENABLED";
-    (* lse_init_val=0, LSE_LINE_FILE_ID=104, LSE_LCOL=21, LSE_RCOL=2, LSE_LLINE=32, LSE_RLINE=39 *) FD1P3IX current_addr__i5 (.D(next_addr[5]), 
-            .CK(clk_c), .SP(clk_c_enable_23), .CD(n728), .Q(current_addr[5]));
-    defparam current_addr__i5.GSR = "ENABLED";
-    (* lse_init_val=0, LSE_LINE_FILE_ID=104, LSE_LCOL=21, LSE_RCOL=2, LSE_LLINE=32, LSE_RLINE=39 *) FD1P3IX current_addr__i6 (.D(next_addr[6]), 
-            .CK(clk_c), .SP(clk_c_enable_23), .CD(n728), .Q(current_addr[6]));
-    defparam current_addr__i6.GSR = "ENABLED";
-    (* lse_init_val=0, LSE_LINE_FILE_ID=104, LSE_LCOL=21, LSE_RCOL=2, LSE_LLINE=32, LSE_RLINE=39 *) FD1P3IX current_addr__i7 (.D(next_addr[7]), 
-            .CK(clk_c), .SP(clk_c_enable_23), .CD(n728), .Q(current_addr[7]));
-    defparam current_addr__i7.GSR = "ENABLED";
-    CCU2 next_addr_e3_e3_add_12_9 (.A1(GND_net), .B1(GND_net), .C1(GND_net), 
-         .D1(VCC_net), .A0(current_addr[7]), .B0(GND_net), .C0(GND_net), 
-         .D0(VCC_net), .CIN(n545), .S0(n86[7]));
-    defparam next_addr_e3_e3_add_12_9.INJECT = "NO";
-    defparam next_addr_e3_e3_add_12_9.INIT0 = "0xAAAA";
-    defparam next_addr_e3_e3_add_12_9.INIT1 = "0x0000";
-    CCU2 next_addr_e3_e3_add_12_7 (.A1(current_addr[6]), .B1(GND_net), .C1(GND_net), 
-         .D1(VCC_net), .A0(current_addr[5]), .B0(GND_net), .C0(GND_net), 
-         .D0(VCC_net), .CIN(n544), .COUT(n545), .S1(n86[6]), .S0(n86[5]));
-    defparam next_addr_e3_e3_add_12_7.INJECT = "NO";
-    defparam next_addr_e3_e3_add_12_7.INIT0 = "0xAAAA";
-    defparam next_addr_e3_e3_add_12_7.INIT1 = "0xAAAA";
-    CCU2 next_addr_e3_e3_add_12_5 (.A1(current_addr[4]), .B1(GND_net), .C1(GND_net), 
-         .D1(VCC_net), .A0(current_addr[3]), .B0(GND_net), .C0(GND_net), 
-         .D0(VCC_net), .CIN(n543), .COUT(n544), .S1(n86[4]), .S0(n86[3]));
-    defparam next_addr_e3_e3_add_12_5.INJECT = "NO";
-    defparam next_addr_e3_e3_add_12_5.INIT0 = "0xAAAA";
-    defparam next_addr_e3_e3_add_12_5.INIT1 = "0xAAAA";
-    CCU2 next_addr_e3_e3_add_12_3 (.A1(current_addr[2]), .B1(GND_net), .C1(GND_net), 
-         .D1(VCC_net), .A0(current_addr[1]), .B0(GND_net), .C0(GND_net), 
-         .D0(VCC_net), .CIN(n542), .COUT(n543), .S1(n86[2]), .S0(n86[1]));
-    defparam next_addr_e3_e3_add_12_3.INJECT = "NO";
-    defparam next_addr_e3_e3_add_12_3.INIT0 = "0xAAAA";
-    defparam next_addr_e3_e3_add_12_3.INIT1 = "0xAAAA";
-    CCU2 next_addr_e3_e3_add_12_cin (.A1(current_addr[0]), .B1(GND_net), 
-         .C1(GND_net), .D1(VCC_net), .A0(GND_net), .B0(GND_net), .C0(GND_net), 
-         .D0(VCC_net), .CIN(VCC_net), .COUT(n542), .S1(n86[0]));
-    defparam next_addr_e3_e3_add_12_cin.INJECT = "NO";
-    defparam next_addr_e3_e3_add_12_cin.INIT0 = "0x0000";
-    defparam next_addr_e3_e3_add_12_cin.INIT1 = "0x99AA";
-    (* lut_function="(!(A+(B+(C+(D)))))" *) LUT4 i432_2_lut_4_lut (.A(weight_idx[1]), 
-            .B(read_mode), .C(weight_idx[2]), .D(weight_idx[0]), .Z(clk_c_enable_24));
-    defparam i432_2_lut_4_lut.INIT = "0x0001";
-    (* LSE_LINE_FILE_ID=104, LSE_LCOL=21, LSE_RCOL=2, LSE_LLINE=32, LSE_RLINE=39 *) FD1P3IX weights_out__i5 (.D(ram_output_line[5]), 
-            .CK(clk_c), .SP(clk_c_enable_24), .CD(n728), .Q(\weight_line[5] ));
-    defparam weights_out__i5.GSR = "ENABLED";
-    VHI i2 (.Z(VCC_net));
-    VLO i1 (.Z(GND_net));
-    
-endmodule
-
-//
-// Verilog Description of module single_port_ram
-//
-
-module single_port_ram (input [7:0]ram_addr_line_7__N_1, input [7:0]ram_addr_line, 
-            output [7:0]ram_output_line, input clk_c);
-    
+    wire [1:0]state;
     (* is_clock=1 *) wire clk_c;
     
-    wire GND_net, VCC_net;
+    wire VCC_net, GND_net, n723, n844, n686, n809;
+    wire [1:0]n336;
+    wire [7:0]n261;
     
-    PDPSC16K ram_addr_line_0__I_0 (.DI({GND_net, GND_net, GND_net, GND_net, 
-            GND_net, GND_net, GND_net, GND_net, GND_net, GND_net, 
-            GND_net, GND_net, GND_net, GND_net, GND_net, GND_net, 
-            GND_net, GND_net, GND_net, GND_net, GND_net, GND_net, 
-            GND_net, GND_net, GND_net, GND_net, GND_net, GND_net, 
-            GND_net, GND_net, GND_net, GND_net, GND_net, GND_net, 
-            GND_net, GND_net}), .ADW({GND_net, GND_net, GND_net, ram_addr_line, 
-            VCC_net, VCC_net, VCC_net}), .ADR({GND_net, GND_net, GND_net, 
-            ram_addr_line_7__N_1, VCC_net, VCC_net, VCC_net}), .CLK(clk_c), 
-            .CER(VCC_net), .CEW(GND_net), .CSW({VCC_net, VCC_net, VCC_net}), 
-            .CSR({VCC_net, VCC_net, VCC_net}), .RST(GND_net), .DO({Open_0, 
-            Open_1, Open_2, Open_3, Open_4, Open_5, Open_6, Open_7, 
-            Open_8, Open_9, Open_10, Open_11, Open_12, Open_13, 
-            Open_14, Open_15, Open_16, Open_17, Open_18, Open_19, 
-            Open_20, Open_21, Open_22, Open_23, Open_24, Open_25, 
-            Open_26, Open_27, ram_output_line})) /* synthesis ECO_MEM_TYPE="EBR" ECO_MEM_ID="\ram/memory" ECO_MEM_SIZE="[8, 256]" ECO_MEM_BLOCK_SIZE="[9, 256]" ECO_MEM_BLOCK_POS="[0, 0]" */;
-    defparam ram_addr_line_0__I_0.DATA_WIDTH_W = "X9";
-    defparam ram_addr_line_0__I_0.DATA_WIDTH_R = "X9";
-    defparam ram_addr_line_0__I_0.OUTREG = "USED";
-    defparam ram_addr_line_0__I_0.RESETMODE = "SYNC";
-    defparam ram_addr_line_0__I_0.GSR = "DISABLED";
-    defparam ram_addr_line_0__I_0.ECC = "DISABLED";
-    defparam ram_addr_line_0__I_0.INITVAL_00 = "0x004000300B00C010140400C02000100400004010004000300B00C010140400C02000100400004010";
-    defparam ram_addr_line_0__I_0.INITVAL_01 = "0x004000300B00C010140400C02000100400004010004000300B00C010140400C02000100400004010";
-    defparam ram_addr_line_0__I_0.INITVAL_02 = "0x004000300B00C010140400C02000100400004010004000300B00C010140400C02000100400004010";
-    defparam ram_addr_line_0__I_0.INITVAL_03 = "0x004000300B00C010140400C02000100400004010004000300B00C010140400C02000100400004010";
-    defparam ram_addr_line_0__I_0.INITVAL_04 = "0x004000300B00C010140400C02000100400004010004000300B00C010140400C02000100400004010";
-    defparam ram_addr_line_0__I_0.INITVAL_05 = "0x004000300B00C010140400C02000100400004010004000300B00C010140400C02000100400004010";
-    defparam ram_addr_line_0__I_0.INITVAL_06 = "0x004000300B00C010140400C02000100400004010004000300B00C010140400C02000100400004010";
-    defparam ram_addr_line_0__I_0.INITVAL_07 = "0x004000300B00C010140400C02000100400004010004000300B00C010140400C02000100400004010";
-    defparam ram_addr_line_0__I_0.CSDECODE_W = "000";
-    defparam ram_addr_line_0__I_0.CSDECODE_R = "000";
-    defparam ram_addr_line_0__I_0.ASYNC_RST_RELEASE = "SYNC";
-    defparam ram_addr_line_0__I_0.INIT_DATA = "STATIC";
-    VHI i2 (.Z(VCC_net));
-    VLO i1 (.Z(GND_net));
+    wire clk_c_enable_1, clk_c_enable_10, clk_c_enable_3, n687, clk_c_enable_8, 
+        n685, n684;
     
-endmodule
-
-//
-// Verilog Description of module weight_multiply_array
-//
-
-module weight_multiply_array (output \wma_outputs[15] , input \weight_line[4] , 
-            output \wma_outputs[0] , input \weight_line[2] , output \wma_outputs[7] , 
-            output \wma_outputs[5] , output \wma_outputs[6] , input \weight_line[9] , 
-            input \weight_line[0] , input \weight_line[13] , output \wma_outputs[3] , 
-            output \wma_outputs[4] , input \weight_line[7] , output \wma_outputs[1] , 
-            input \weight_line[10] , output \wma_outputs[2] , input [1:0]network_inputs_c, 
-            input clk_c, input \weight_line[8] , input \weight_line[15] , 
-            input reset, input \weight_line[14] , input \weight_line[11] , 
-            input \weight_line[12] , input \weight_line[1] , input \weight_line[5] , 
-            input \weight_line[6] , input \weight_line[3] );
-    
-    wire [15:0]\unit_outputs[0] ;
-    wire [15:0]\unit_outputs[1] ;
-    (* is_clock=1 *) wire clk_c;
-    
-    wire GND_net, VCC_net, n540, n539, n538, n537;
-    
-    CCU2 unit_outputs_0__7__I_0_9 (.A1(\unit_outputs[0] [7]), .B1(\unit_outputs[1] [7]), 
-         .C1(GND_net), .D1(VCC_net), .A0(\unit_outputs[0] [7]), .B0(\unit_outputs[1] [7]), 
-         .C0(GND_net), .D0(VCC_net), .CIN(n540), .S1(\wma_outputs[15] ), 
-         .S0(\wma_outputs[7] ));
-    defparam unit_outputs_0__7__I_0_9.INJECT = "NO";
-    defparam unit_outputs_0__7__I_0_9.INIT0 = "0x66AA";
-    defparam unit_outputs_0__7__I_0_9.INIT1 = "0x66AA";
-    CCU2 unit_outputs_0__7__I_0_7 (.A1(\unit_outputs[0] [6]), .B1(\unit_outputs[1] [6]), 
-         .C1(GND_net), .D1(VCC_net), .A0(\unit_outputs[0] [5]), .B0(\unit_outputs[1] [5]), 
-         .C0(GND_net), .D0(VCC_net), .CIN(n539), .COUT(n540), .S1(\wma_outputs[6] ), 
-         .S0(\wma_outputs[5] ));
-    defparam unit_outputs_0__7__I_0_7.INJECT = "NO";
-    defparam unit_outputs_0__7__I_0_7.INIT0 = "0x66AA";
-    defparam unit_outputs_0__7__I_0_7.INIT1 = "0x66AA";
-    CCU2 unit_outputs_0__7__I_0_5 (.A1(\unit_outputs[0] [4]), .B1(\unit_outputs[1] [4]), 
-         .C1(GND_net), .D1(VCC_net), .A0(\unit_outputs[0] [3]), .B0(\unit_outputs[1] [3]), 
-         .C0(GND_net), .D0(VCC_net), .CIN(n538), .COUT(n539), .S1(\wma_outputs[4] ), 
-         .S0(\wma_outputs[3] ));
-    defparam unit_outputs_0__7__I_0_5.INJECT = "NO";
-    defparam unit_outputs_0__7__I_0_5.INIT0 = "0x66AA";
-    defparam unit_outputs_0__7__I_0_5.INIT1 = "0x66AA";
-    CCU2 unit_outputs_0__7__I_0_3 (.A1(\unit_outputs[0] [2]), .B1(\unit_outputs[1] [2]), 
-         .C1(GND_net), .D1(VCC_net), .A0(\unit_outputs[0] [1]), .B0(\unit_outputs[1] [1]), 
-         .C0(GND_net), .D0(VCC_net), .CIN(n537), .COUT(n538), .S1(\wma_outputs[2] ), 
-         .S0(\wma_outputs[1] ));
-    defparam unit_outputs_0__7__I_0_3.INJECT = "NO";
-    defparam unit_outputs_0__7__I_0_3.INIT0 = "0x66AA";
-    defparam unit_outputs_0__7__I_0_3.INIT1 = "0x66AA";
-    CCU2 unit_outputs_0__7__I_0_cin (.A1(\unit_outputs[0] [0]), .B1(\unit_outputs[1] [0]), 
-         .C1(GND_net), .D1(VCC_net), .A0(GND_net), .B0(GND_net), .C0(GND_net), 
-         .D0(VCC_net), .CIN(VCC_net), .COUT(n537), .S1(\wma_outputs[0] ));
-    defparam unit_outputs_0__7__I_0_cin.INJECT = "NO";
-    defparam unit_outputs_0__7__I_0_cin.INIT0 = "0x0000";
-    defparam unit_outputs_0__7__I_0_cin.INIT1 = "0x66AA";
-    (* LSE_LINE_FILE_ID=110, LSE_LCOL=34, LSE_RCOL=14, LSE_LLINE=32, LSE_RLINE=38 *) weight_multiply_unit \GEN_OUTPUT[0].GEN_INPUT[1].wmu  (clk_c, 
-            \unit_outputs[1] [7], \weight_line[8] , \unit_outputs[1] [0], 
-            \unit_outputs[1] [4], \weight_line[15] , reset, \unit_outputs[1] [6], 
-            network_inputs_c[1], \weight_line[10] , \unit_outputs[1] [1], 
-            \weight_line[14] , \weight_line[9] , \weight_line[13] , \weight_line[11] , 
-            \unit_outputs[1] [2], \unit_outputs[1] [3], \unit_outputs[1] [5], 
-            \weight_line[12] );
-    (* LSE_LINE_FILE_ID=110, LSE_LCOL=34, LSE_RCOL=14, LSE_LLINE=32, LSE_RLINE=38 *) weight_multiply_unit_U0 \GEN_OUTPUT[0].GEN_INPUT[0].wmu  (\weight_line[1] , 
-            \unit_outputs[0] [0], clk_c, reset, \unit_outputs[0] [2], 
-            network_inputs_c[0], \unit_outputs[0] [7], \weight_line[4] , 
-            \weight_line[5] , \unit_outputs[0] [5], \unit_outputs[0] [4], 
-            \unit_outputs[0] [3], \weight_line[6] , \weight_line[7] , 
-            \unit_outputs[0] [1], \unit_outputs[0] [6], \weight_line[2] , 
-            \weight_line[0] , \weight_line[3] );
-    VHI i2 (.Z(VCC_net));
-    VLO i1 (.Z(GND_net));
-    
-endmodule
-
-//
-// Verilog Description of module weight_multiply_unit
-//
-
-module weight_multiply_unit (input clk_c, output \unit_outputs[1][7] , input \weight_line[8] , 
-            output \unit_outputs[1][0] , output \unit_outputs[1][4] , input \weight_line[15] , 
-            input reset, output \unit_outputs[1][6] , input \network_inputs_c[1] , 
-            input \weight_line[10] , output \unit_outputs[1][1] , input \weight_line[14] , 
-            input \weight_line[9] , input \weight_line[13] , input \weight_line[11] , 
-            output \unit_outputs[1][2] , output \unit_outputs[1][3] , output \unit_outputs[1][5] , 
-            input \weight_line[12] );
-    
-    (* is_clock=1 *) wire clk_c;
-    
-    wire VCC_net;
-    wire [7:0]unit_outputs_1__7__N_115;
-    
-    (* LSE_LINE_FILE_ID=110, LSE_LCOL=34, LSE_RCOL=14, LSE_LLINE=32, LSE_RLINE=38 *) FD1P3DX out__i1 (.D(unit_outputs_1__7__N_115[0]), 
-            .CK(clk_c), .SP(VCC_net), .CD(reset), .Q(\unit_outputs[1][0] ));
-    defparam out__i1.GSR = "ENABLED";
-    (* lut_function="(A (B))" *) LUT4 i287_2_lut (.A(\weight_line[15] ), .B(\network_inputs_c[1] ), 
-            .Z(unit_outputs_1__7__N_115[7]));
-    defparam i287_2_lut.INIT = "0x8888";
-    (* lut_function="(A (B))" *) LUT4 i282_2_lut (.A(\weight_line[10] ), .B(\network_inputs_c[1] ), 
-            .Z(unit_outputs_1__7__N_115[2]));
-    defparam i282_2_lut.INIT = "0x8888";
-    (* lut_function="(A (B))" *) LUT4 i281_2_lut (.A(\weight_line[9] ), .B(\network_inputs_c[1] ), 
-            .Z(unit_outputs_1__7__N_115[1]));
-    defparam i281_2_lut.INIT = "0x8888";
-    (* lut_function="(A (B))" *) LUT4 i275_2_lut (.A(\weight_line[8] ), .B(\network_inputs_c[1] ), 
-            .Z(unit_outputs_1__7__N_115[0]));
-    defparam i275_2_lut.INIT = "0x8888";
-    (* lut_function="(A (B))" *) LUT4 i286_2_lut (.A(\weight_line[14] ), .B(\network_inputs_c[1] ), 
-            .Z(unit_outputs_1__7__N_115[6]));
-    defparam i286_2_lut.INIT = "0x8888";
-    (* lut_function="(A (B))" *) LUT4 i285_2_lut (.A(\weight_line[13] ), .B(\network_inputs_c[1] ), 
-            .Z(unit_outputs_1__7__N_115[5]));
-    defparam i285_2_lut.INIT = "0x8888";
-    (* LSE_LINE_FILE_ID=110, LSE_LCOL=34, LSE_RCOL=14, LSE_LLINE=32, LSE_RLINE=38 *) FD1P3DX out__i2 (.D(unit_outputs_1__7__N_115[1]), 
-            .CK(clk_c), .SP(VCC_net), .CD(reset), .Q(\unit_outputs[1][1] ));
-    defparam out__i2.GSR = "ENABLED";
-    (* LSE_LINE_FILE_ID=110, LSE_LCOL=34, LSE_RCOL=14, LSE_LLINE=32, LSE_RLINE=38 *) FD1P3DX out__i3 (.D(unit_outputs_1__7__N_115[2]), 
-            .CK(clk_c), .SP(VCC_net), .CD(reset), .Q(\unit_outputs[1][2] ));
-    defparam out__i3.GSR = "ENABLED";
-    (* LSE_LINE_FILE_ID=110, LSE_LCOL=34, LSE_RCOL=14, LSE_LLINE=32, LSE_RLINE=38 *) FD1P3DX out__i4 (.D(unit_outputs_1__7__N_115[3]), 
-            .CK(clk_c), .SP(VCC_net), .CD(reset), .Q(\unit_outputs[1][3] ));
-    defparam out__i4.GSR = "ENABLED";
-    (* LSE_LINE_FILE_ID=110, LSE_LCOL=34, LSE_RCOL=14, LSE_LLINE=32, LSE_RLINE=38 *) FD1P3DX out__i5 (.D(unit_outputs_1__7__N_115[4]), 
-            .CK(clk_c), .SP(VCC_net), .CD(reset), .Q(\unit_outputs[1][4] ));
-    defparam out__i5.GSR = "ENABLED";
-    (* LSE_LINE_FILE_ID=110, LSE_LCOL=34, LSE_RCOL=14, LSE_LLINE=32, LSE_RLINE=38 *) FD1P3DX out__i6 (.D(unit_outputs_1__7__N_115[5]), 
-            .CK(clk_c), .SP(VCC_net), .CD(reset), .Q(\unit_outputs[1][5] ));
-    defparam out__i6.GSR = "ENABLED";
-    (* LSE_LINE_FILE_ID=110, LSE_LCOL=34, LSE_RCOL=14, LSE_LLINE=32, LSE_RLINE=38 *) FD1P3DX out__i7 (.D(unit_outputs_1__7__N_115[6]), 
-            .CK(clk_c), .SP(VCC_net), .CD(reset), .Q(\unit_outputs[1][6] ));
-    defparam out__i7.GSR = "ENABLED";
-    (* LSE_LINE_FILE_ID=110, LSE_LCOL=34, LSE_RCOL=14, LSE_LLINE=32, LSE_RLINE=38 *) FD1P3DX out__i8 (.D(unit_outputs_1__7__N_115[7]), 
-            .CK(clk_c), .SP(VCC_net), .CD(reset), .Q(\unit_outputs[1][7] ));
-    defparam out__i8.GSR = "ENABLED";
-    (* lut_function="(A (B))" *) LUT4 i284_2_lut (.A(\weight_line[12] ), .B(\network_inputs_c[1] ), 
-            .Z(unit_outputs_1__7__N_115[4]));
-    defparam i284_2_lut.INIT = "0x8888";
-    (* lut_function="(A (B))" *) LUT4 i283_2_lut (.A(\weight_line[11] ), .B(\network_inputs_c[1] ), 
-            .Z(unit_outputs_1__7__N_115[3]));
-    defparam i283_2_lut.INIT = "0x8888";
+    (* lut_function="(A+!(B (C (D))))" *) LUT4 i1_4_lut (.A(weight_idx[3]), 
+            .B(weight_idx[0]), .C(weight_idx[2]), .D(weight_idx[1]), .Z(n844));
+    defparam i1_4_lut.INIT = "0xbfff";
+    (* lut_function="(A+(B+(C+(D))))" *) LUT4 i1_4_lut_adj_1 (.A(n844), .B(weight_idx[7]), 
+            .C(n809), .D(weight_idx[5]), .Z(n723));
+    defparam i1_4_lut_adj_1.INIT = "0xfffe";
+    (* LSE_LINE_FILE_ID=104, LSE_LCOL=3, LSE_RCOL=2, LSE_LLINE=61, LSE_RLINE=69 *) FD1P3IX state___i0 (.D(n336[0]), 
+            .CK(clk_c), .SP(VCC_net), .CD(reset_c), .Q(state[0]));
+    defparam state___i0.GSR = "ENABLED";
+    (* lut_function="(!(A (B)))" *) LUT4 i503_2_lut (.A(state[0]), .B(state[1]), 
+            .Z(clk_c_enable_1));
+    defparam i503_2_lut.INIT = "0x7777";
+    (* lut_function="(!(A (B (C))+!A (B+!(C))))" *) LUT4 mux_142_Mux_1_i3_3_lut (.A(state[0]), 
+            .B(n723), .C(state[1]), .Z(n336[1]));
+    defparam mux_142_Mux_1_i3_3_lut.INIT = "0x3a3a";
+    (* LSE_LINE_FILE_ID=104, LSE_LCOL=3, LSE_RCOL=2, LSE_LLINE=61, LSE_RLINE=69 *) FD1P3IX state___i1 (.D(n336[1]), 
+            .CK(clk_c), .SP(clk_c_enable_1), .CD(reset_c), .Q(state[1]));
+    defparam state___i1.GSR = "ENABLED";
+    (* LSE_LINE_FILE_ID=104, LSE_LCOL=3, LSE_RCOL=2, LSE_LLINE=61, LSE_RLINE=69 *) FD1P3IX weight_idx___i0 (.D(n261[0]), 
+            .CK(clk_c), .SP(clk_c_enable_10), .CD(reset_c), .Q(weight_idx[0]));
+    defparam weight_idx___i0.GSR = "ENABLED";
+    (* LSE_LINE_FILE_ID=104, LSE_LCOL=3, LSE_RCOL=2, LSE_LLINE=61, LSE_RLINE=69 *) FD1P3IX weights_loaded (.D(VCC_net), 
+            .CK(clk_c), .SP(clk_c_enable_3), .CD(reset_c), .Q(weights_loaded_c));
+    defparam weights_loaded.GSR = "ENABLED";
+    (* lut_function="(!((B)+!A))" *) LUT4 i302_2_lut (.A(state[1]), .B(state[0]), 
+            .Z(clk_c_enable_8));
+    defparam i302_2_lut.INIT = "0x2222";
+    (* lut_function="(!(A+!(B)))" *) LUT4 i505_2_lut (.A(state[0]), .B(state[1]), 
+            .Z(clk_c_enable_10));
+    defparam i505_2_lut.INIT = "0x4444";
+    (* lut_function="(A+(B))" *) LUT4 i1_2_lut (.A(weight_idx[4]), .B(weight_idx[6]), 
+            .Z(n809));
+    defparam i1_2_lut.INIT = "0xeeee";
+    (* LSE_LINE_FILE_ID=104, LSE_LCOL=3, LSE_RCOL=2, LSE_LLINE=61, LSE_RLINE=69 *) FD1P3IX weight_idx___i7 (.D(n261[7]), 
+            .CK(clk_c), .SP(clk_c_enable_10), .CD(reset_c), .Q(weight_idx[7]));
+    defparam weight_idx___i7.GSR = "ENABLED";
+    (* LSE_LINE_FILE_ID=104, LSE_LCOL=3, LSE_RCOL=2, LSE_LLINE=61, LSE_RLINE=69 *) FD1P3IX weight_idx___i6 (.D(n261[6]), 
+            .CK(clk_c), .SP(clk_c_enable_10), .CD(reset_c), .Q(weight_idx[6]));
+    defparam weight_idx___i6.GSR = "ENABLED";
+    (* LSE_LINE_FILE_ID=104, LSE_LCOL=3, LSE_RCOL=2, LSE_LLINE=61, LSE_RLINE=69 *) FD1P3IX weight_idx___i5 (.D(n261[5]), 
+            .CK(clk_c), .SP(clk_c_enable_8), .CD(reset_c), .Q(weight_idx[5]));
+    defparam weight_idx___i5.GSR = "ENABLED";
+    (* LSE_LINE_FILE_ID=104, LSE_LCOL=3, LSE_RCOL=2, LSE_LLINE=61, LSE_RLINE=69 *) FD1P3IX weight_idx___i4 (.D(n261[4]), 
+            .CK(clk_c), .SP(clk_c_enable_8), .CD(reset_c), .Q(weight_idx[4]));
+    defparam weight_idx___i4.GSR = "ENABLED";
+    (* LSE_LINE_FILE_ID=104, LSE_LCOL=3, LSE_RCOL=2, LSE_LLINE=61, LSE_RLINE=69 *) FD1P3IX weight_idx___i3 (.D(n261[3]), 
+            .CK(clk_c), .SP(clk_c_enable_8), .CD(reset_c), .Q(weight_idx[3]));
+    defparam weight_idx___i3.GSR = "ENABLED";
+    (* LSE_LINE_FILE_ID=104, LSE_LCOL=3, LSE_RCOL=2, LSE_LLINE=61, LSE_RLINE=69 *) FD1P3IX weight_idx___i2 (.D(n261[2]), 
+            .CK(clk_c), .SP(clk_c_enable_10), .CD(reset_c), .Q(weight_idx[2]));
+    defparam weight_idx___i2.GSR = "ENABLED";
+    (* LSE_LINE_FILE_ID=104, LSE_LCOL=3, LSE_RCOL=2, LSE_LLINE=61, LSE_RLINE=69 *) FD1P3IX weight_idx___i1 (.D(n261[1]), 
+            .CK(clk_c), .SP(clk_c_enable_10), .CD(reset_c), .Q(weight_idx[1]));
+    defparam weight_idx___i1.GSR = "ENABLED";
+    CCU2 add_195_9 (.A1(GND_net), .B1(GND_net), .C1(GND_net), .D1(VCC_net), 
+         .A0(weight_idx[7]), .B0(GND_net), .C0(GND_net), .D0(VCC_net), 
+         .CIN(n687), .S0(n261[7]));
+    defparam add_195_9.INJECT = "NO";
+    defparam add_195_9.INIT0 = "0xAAAA";
+    defparam add_195_9.INIT1 = "0x0000";
+    CCU2 add_195_7 (.A1(weight_idx[6]), .B1(GND_net), .C1(GND_net), .D1(VCC_net), 
+         .A0(weight_idx[5]), .B0(GND_net), .C0(GND_net), .D0(VCC_net), 
+         .CIN(n686), .COUT(n687), .S1(n261[6]), .S0(n261[5]));
+    defparam add_195_7.INJECT = "NO";
+    defparam add_195_7.INIT0 = "0xAAAA";
+    defparam add_195_7.INIT1 = "0xAAAA";
+    CCU2 add_195_5 (.A1(weight_idx[4]), .B1(GND_net), .C1(GND_net), .D1(VCC_net), 
+         .A0(weight_idx[3]), .B0(GND_net), .C0(GND_net), .D0(VCC_net), 
+         .CIN(n685), .COUT(n686), .S1(n261[4]), .S0(n261[3]));
+    defparam add_195_5.INJECT = "NO";
+    defparam add_195_5.INIT0 = "0xAAAA";
+    defparam add_195_5.INIT1 = "0xAAAA";
+    CCU2 add_195_3 (.A1(weight_idx[2]), .B1(GND_net), .C1(GND_net), .D1(VCC_net), 
+         .A0(weight_idx[1]), .B0(GND_net), .C0(GND_net), .D0(VCC_net), 
+         .CIN(n684), .COUT(n685), .S1(n261[2]), .S0(n261[1]));
+    defparam add_195_3.INJECT = "NO";
+    defparam add_195_3.INIT0 = "0xAAAA";
+    defparam add_195_3.INIT1 = "0xAAAA";
+    CCU2 add_195_cin (.A1(weight_idx[0]), .B1(n723), .C1(GND_net), .D1(VCC_net), 
+         .A0(GND_net), .B0(GND_net), .C0(GND_net), .D0(VCC_net), .CIN(VCC_net), 
+         .COUT(n684), .S1(n261[0]));
+    defparam add_195_cin.INJECT = "NO";
+    defparam add_195_cin.INIT0 = "0x0000";
+    defparam add_195_cin.INIT1 = "0x66AA";
+    (* lut_function="(A (B (C))+!A (C))" *) LUT4 i308_2_lut_3_lut (.A(n723), 
+            .B(state[0]), .C(state[1]), .Z(clk_c_enable_3));
+    defparam i308_2_lut_3_lut.INIT = "0xd0d0";
+    (* lut_function="(A (B (C)+!B !(C))+!A ((C)+!B))" *) LUT4 mux_142_Mux_0_i3_3_lut_3_lut (.A(n723), 
+            .B(state[0]), .C(state[1]), .Z(n336[0]));
+    defparam mux_142_Mux_0_i3_3_lut_3_lut.INIT = "0xd3d3";
     VHI i1 (.Z(VCC_net));
-    
-endmodule
-
-//
-// Verilog Description of module weight_multiply_unit_U0
-//
-
-module weight_multiply_unit_U0 (input \weight_line[1] , output \unit_outputs[0][0] , 
-            input clk_c, input reset, output \unit_outputs[0][2] , input \network_inputs_c[0] , 
-            output \unit_outputs[0][7] , input \weight_line[4] , input \weight_line[5] , 
-            output \unit_outputs[0][5] , output \unit_outputs[0][4] , output \unit_outputs[0][3] , 
-            input \weight_line[6] , input \weight_line[7] , output \unit_outputs[0][1] , 
-            output \unit_outputs[0][6] , input \weight_line[2] , input \weight_line[0] , 
-            input \weight_line[3] );
-    
-    (* is_clock=1 *) wire clk_c;
-    
-    wire VCC_net;
-    wire [7:0]unit_outputs_0__7__N_107;
-    
-    (* LSE_LINE_FILE_ID=110, LSE_LCOL=34, LSE_RCOL=14, LSE_LLINE=32, LSE_RLINE=38 *) FD1P3DX out__i1 (.D(unit_outputs_0__7__N_107[0]), 
-            .CK(clk_c), .SP(VCC_net), .CD(reset), .Q(\unit_outputs[0][0] ));
-    defparam out__i1.GSR = "ENABLED";
-    (* LSE_LINE_FILE_ID=110, LSE_LCOL=34, LSE_RCOL=14, LSE_LLINE=32, LSE_RLINE=38 *) FD1P3DX out__i3 (.D(unit_outputs_0__7__N_107[2]), 
-            .CK(clk_c), .SP(VCC_net), .CD(reset), .Q(\unit_outputs[0][2] ));
-    defparam out__i3.GSR = "ENABLED";
-    (* LSE_LINE_FILE_ID=110, LSE_LCOL=34, LSE_RCOL=14, LSE_LLINE=32, LSE_RLINE=38 *) FD1P3DX out__i8 (.D(unit_outputs_0__7__N_107[7]), 
-            .CK(clk_c), .SP(VCC_net), .CD(reset), .Q(\unit_outputs[0][7] ));
-    defparam out__i8.GSR = "ENABLED";
-    (* LSE_LINE_FILE_ID=110, LSE_LCOL=34, LSE_RCOL=14, LSE_LLINE=32, LSE_RLINE=38 *) FD1P3DX out__i6 (.D(unit_outputs_0__7__N_107[5]), 
-            .CK(clk_c), .SP(VCC_net), .CD(reset), .Q(\unit_outputs[0][5] ));
-    defparam out__i6.GSR = "ENABLED";
-    (* LSE_LINE_FILE_ID=110, LSE_LCOL=34, LSE_RCOL=14, LSE_LLINE=32, LSE_RLINE=38 *) FD1P3DX out__i5 (.D(unit_outputs_0__7__N_107[4]), 
-            .CK(clk_c), .SP(VCC_net), .CD(reset), .Q(\unit_outputs[0][4] ));
-    defparam out__i5.GSR = "ENABLED";
-    (* LSE_LINE_FILE_ID=110, LSE_LCOL=34, LSE_RCOL=14, LSE_LLINE=32, LSE_RLINE=38 *) FD1P3DX out__i4 (.D(unit_outputs_0__7__N_107[3]), 
-            .CK(clk_c), .SP(VCC_net), .CD(reset), .Q(\unit_outputs[0][3] ));
-    defparam out__i4.GSR = "ENABLED";
-    (* lut_function="(A (B))" *) LUT4 i291_2_lut (.A(\weight_line[4] ), .B(\network_inputs_c[0] ), 
-            .Z(unit_outputs_0__7__N_107[4]));
-    defparam i291_2_lut.INIT = "0x8888";
-    (* lut_function="(A (B))" *) LUT4 i292_2_lut (.A(\weight_line[5] ), .B(\network_inputs_c[0] ), 
-            .Z(unit_outputs_0__7__N_107[5]));
-    defparam i292_2_lut.INIT = "0x8888";
-    (* lut_function="(A (B))" *) LUT4 i293_2_lut (.A(\weight_line[6] ), .B(\network_inputs_c[0] ), 
-            .Z(unit_outputs_0__7__N_107[6]));
-    defparam i293_2_lut.INIT = "0x8888";
-    (* lut_function="(A (B))" *) LUT4 i294_2_lut (.A(\weight_line[7] ), .B(\network_inputs_c[0] ), 
-            .Z(unit_outputs_0__7__N_107[7]));
-    defparam i294_2_lut.INIT = "0x8888";
-    (* lut_function="(A (B))" *) LUT4 i288_2_lut (.A(\weight_line[1] ), .B(\network_inputs_c[0] ), 
-            .Z(unit_outputs_0__7__N_107[1]));
-    defparam i288_2_lut.INIT = "0x8888";
-    (* LSE_LINE_FILE_ID=110, LSE_LCOL=34, LSE_RCOL=14, LSE_LLINE=32, LSE_RLINE=38 *) FD1P3DX out__i2 (.D(unit_outputs_0__7__N_107[1]), 
-            .CK(clk_c), .SP(VCC_net), .CD(reset), .Q(\unit_outputs[0][1] ));
-    defparam out__i2.GSR = "ENABLED";
-    (* LSE_LINE_FILE_ID=110, LSE_LCOL=34, LSE_RCOL=14, LSE_LLINE=32, LSE_RLINE=38 *) FD1P3DX out__i7 (.D(unit_outputs_0__7__N_107[6]), 
-            .CK(clk_c), .SP(VCC_net), .CD(reset), .Q(\unit_outputs[0][6] ));
-    defparam out__i7.GSR = "ENABLED";
-    (* lut_function="(A (B))" *) LUT4 i289_2_lut (.A(\weight_line[2] ), .B(\network_inputs_c[0] ), 
-            .Z(unit_outputs_0__7__N_107[2]));
-    defparam i289_2_lut.INIT = "0x8888";
-    (* lut_function="(A (B))" *) LUT4 i276_2_lut (.A(\weight_line[0] ), .B(\network_inputs_c[0] ), 
-            .Z(unit_outputs_0__7__N_107[0]));
-    defparam i276_2_lut.INIT = "0x8888";
-    (* lut_function="(A (B))" *) LUT4 i290_2_lut (.A(\weight_line[3] ), .B(\network_inputs_c[0] ), 
-            .Z(unit_outputs_0__7__N_107[3]));
-    defparam i290_2_lut.INIT = "0x8888";
-    VHI i1 (.Z(VCC_net));
+    VLO i2 (.Z(GND_net));
     
 endmodule

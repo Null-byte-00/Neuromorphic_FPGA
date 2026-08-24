@@ -1,7 +1,8 @@
 `include "constants.vh"
 
 module weight_manager_unit #(
-    parameter NUM_WEIGHTS = `NUM_INPUTS * `NUM_OUTPUTS
+    parameter NUM_WEIGHTS = `NUM_INPUTS * `NUM_OUTPUTS,
+	parameter INIT_ADDRESS = 0
 )(
     input  wire                              clk,
     input  wire                              reset,
@@ -24,7 +25,7 @@ reg [`RAM_ADDRESS_WIDTH-1:0] weight_idx;
 always @(posedge clk) begin
     if (reset) begin
         state          <= SET_ADDR;
-        ram_addr       <= 0;
+        ram_addr       <= INIT_ADDRESS;
         weight_idx     <= 0;
         weights_out    <= 0;
         write_enable   <= 0;
@@ -35,7 +36,7 @@ always @(posedge clk) begin
         case (state)
 
             SET_ADDR: begin
-                ram_addr <= weight_idx;
+                ram_addr <= INIT_ADDRESS + weight_idx;
                 state <= WAIT_RAM;
             end
 

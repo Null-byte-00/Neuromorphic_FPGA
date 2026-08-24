@@ -7,6 +7,7 @@ module weight_multiply_array #(
     input  wire                              clk,
     input  wire                              reset,
     input  wire [(8*IN_SIZE*OUT_SIZE)-1:0]   weights_in,
+	input wire 								  weights_loaded,
     input  wire [IN_SIZE-1:0]                input_signals,
     output reg  [(16*OUT_SIZE)-1:0]          added_outputs
 );
@@ -53,7 +54,7 @@ integer n;
 
 always @(*) begin
     added_outputs = 0;
-
+	if (weights_loaded) begin
     for (k = 0; k < OUT_SIZE; k = k + 1) begin
         for (n = 0; n < IN_SIZE; n = n + 1) begin
             added_outputs[(k * 16) +: 16] =
@@ -65,6 +66,7 @@ always @(*) begin
                 });
         end
     end
+	end
 end
 
 endmodule
