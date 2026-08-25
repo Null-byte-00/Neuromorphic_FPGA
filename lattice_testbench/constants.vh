@@ -1,3 +1,4 @@
 `define NUM_INPUTS 5
 `define	NUM_OUTPUTS 5
 `define RAM_ADDRESS_WIDTH 16
+`define HIDDEN_SIZE 20
