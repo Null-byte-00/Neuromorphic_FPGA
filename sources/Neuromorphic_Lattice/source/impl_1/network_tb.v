@@ -1,7 +1,7 @@
 `include "constants.vh"
 
 module network_tb #(
-    parameter integer HIDDEN_SIZE = 2,
+    parameter integer HIDDEN_SIZE = 20,
     parameter integer INIT_ADDRESS = 0
 )(
     input  wire                       clk,

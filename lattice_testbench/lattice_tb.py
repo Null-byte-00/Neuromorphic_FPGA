@@ -1,18 +1,31 @@
 import cocotb
 from cocotb.clock import Clock
 from cocotb.triggers import FallingEdge, RisingEdge, ReadOnly
-import random
-import matplotlib.pyplot as plt
-import numpy as np
+
+
+def unpack_signed_words(bus_value, count, width=16):
+
+    raw = int(bus_value)
+    mask = (1 << width) - 1
+    sign_bit = 1 << (width - 1)
+
+    values = []
+
+    for index in range(count):
+        word = (raw >> (index * width)) & mask
+
+        if word & sign_bit:
+            word -= 1 << width
+
+        values.append(word)
+
+    return values
 
 
 @cocotb.test(timeout_time=10000, timeout_unit="ns")
 async def test_ffn(dut):
 
-    clock = Clock(dut.clk, 2, unit="ns")
-    clock.start(start_high=False)
-
-    dut.network_inputs.value = 0B11
+    Clock(dut.clk, 2, unit="ns").start(start_high=False)
 
     dut.reset.value = 1
     dut.network_inputs.value = 0
@@ -22,41 +35,49 @@ async def test_ffn(dut):
 
     dut.reset.value = 0
 
-    while not dut.weights_loaded.value:
-        await RisingEdge(dut.clk)
-
-    for i in range(100):
+    while True:
         await RisingEdge(dut.clk)
         await ReadOnly()
-        
-        await FallingEdge(dut.clk)
-        dut.network_inputs.value = 0B11
 
-        cocotb.log.info("___________________________________________________________________")
-        """
-        #cocotb.log.info("inputs are %s, potentials are %s, spike outputs are %s",
-        #                        dut.network_inputs.value, 
-        #                        dut.wma_outputs.value,
-        #                        dut.network_outputs.value,
-        #                        )
-        #cocotb.log.info("loaded weights are %s", dut.wma.weights_in)
-        #cocotb.log.info("wma outputs: %s", dut.wma_outputs.value)       
-        cocotb.log.info("***** neuron 1 *****")
-        cocotb.log.info("neuron 1 input current %s", dut.sa.GEN_NEURONS[0].sn.input_current.value)
-        cocotb.log.info("neuron 1 potential current %s", dut.sa.GEN_NEURONS[0].sn.potential.value)
-        cocotb.log.info("neuron 1 decayed potential %s", dut.sa.GEN_NEURONS[0].sn.potential_decayed.value)
-        cocotb.log.info("***** neuron 2 *****")
-        cocotb.log.info("neuron 2 input current %s", dut.sa.GEN_NEURONS[1].sn.input_current.value)
-        cocotb.log.info("neuron 2 potential current %s", dut.sa.GEN_NEURONS[1].sn.potential.value)
-        cocotb.log.info("neuron 2 decayed potential %s", dut.sa.GEN_NEURONS[1].sn.potential_decayed.value)
-        #cocotb.log.info("network_outputs is %s", dut.network_outputs)#wmu.weights_out)
-        #cocotb.log.info("input is %s", dut.network_inputs)
-        #cocotb.log.info("ram output is %s", dut.ram.data_out)
-        """
-        cocotb.log.info("network outputs: %s", dut.network_outputs)
-        cocotb.log.info("Layer 1 weights: %s", dut.layer1_weights)
-        cocotb.log.info("Layer 2 weights: %s", dut.layer2_weights)
-        cocotb.log.info("Last layer potentials: %s", dut.layer2_currents)
-        cocotb.log.info("Ram output: %s", dut.ram.data_out)
+        if int(dut.weights_loaded.value) == 1:
+            break
 
+    assert int(dut.weights_loaded.value) == 1
 
+    cocotb.log.info("Weights loaded")
+
+    await FallingEdge(dut.clk)
+    dut.network_inputs.value = 0b10000
+
+    hidden_size = 20
+
+    for cycle in range(300):
+        await RisingEdge(dut.clk)
+        await ReadOnly()
+
+        layer1_values = unpack_signed_words(
+            dut.layer1_currents.value,
+            count=hidden_size,
+            width=16,
+        )
+
+        cocotb.log.info(
+            "cycle=%d layer1 currents=%s",
+            cycle,
+            layer1_values,
+        )
+
+        cocotb.log.info(
+            "cycle=%d hidden spikes=%s output spikes=%s",
+            cycle,
+            dut.hidden_spikes.value,
+            dut.network_outputs.value,
+        )
+
+        layer2_values = unpack_signed_words(
+        dut.layer2_currents.value,
+        count=5,
+        width=16,
+        )
+
+        cocotb.log.info("layer2 currents=%s", layer2_values)

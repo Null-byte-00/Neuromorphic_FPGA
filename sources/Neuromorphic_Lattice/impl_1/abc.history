@@ -1,0 +1,2 @@
+strash -c; dc2 -b -l;  dretime; strash; balance; refactor -z; dch -f -x; if -W 0.12 -d ; mfs2; lutpack {S} -z
+bdd -s; reorder
