@@ -1,6 +1,7 @@
 import cocotb
 from cocotb.clock import Clock
 from cocotb.triggers import FallingEdge, RisingEdge, ReadOnly
+import random
 
 
 def unpack_signed_words(bus_value, count, width=16):
@@ -47,11 +48,14 @@ async def test_ffn(dut):
     cocotb.log.info("Weights loaded")
 
     await FallingEdge(dut.clk)
-    dut.network_inputs.value = 0b10000
+    dut.network_inputs.value = random.randint(0,31)
 
     hidden_size = 20
 
     for cycle in range(300):
+        await FallingEdge(dut.clk)
+        random_input = random.randint(0,31)
+        dut.network_inputs.value = random_input
         await RisingEdge(dut.clk)
         await ReadOnly()
 
@@ -62,6 +66,8 @@ async def test_ffn(dut):
             count=hidden_size,
             width=16,
         )
+
+        cocotb.log.info(f"network input: {random_input:05b}")
 
         cocotb.log.info(
             "cycle=%d layer1 currents=%s",
