@@ -55,6 +55,8 @@ async def test_ffn(dut):
         await RisingEdge(dut.clk)
         await ReadOnly()
 
+
+        cocotb.log.info("_________________________________________________________________")
         layer1_values = unpack_signed_words(
             dut.layer1_currents.value,
             count=hidden_size,

@@ -1,5 +1,5 @@
 module spike_neuron #(
-	parameter signed threshold = 32'sd100,
+	parameter signed threshold = 32'sd110,
 	parameter integer beta_shift = 8
 )(
 	input clk,

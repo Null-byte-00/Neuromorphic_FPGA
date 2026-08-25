@@ -49,7 +49,7 @@ Package: CABGA400
 Performance Grade:  9_High-Performance_1.0V
 
 Mapper:    version Radiant Software (64-bit) 2026.1.0.37.0
-Mapped on: Thu Aug 20 22:21:10 2026
+Mapped on: Tue Aug 25 20:12:51 2026
 
 <A name="mrp_di"></A><B><U><big>Design Information</big></U></B>
 
@@ -60,26 +60,26 @@ Command line:   map -i Neuromorphic_Lattice_impl_1_syn.udb -o
 
 <A name="mrp_ds"></A><B><U><big>Design Summary</big></U></B>
 
-   Number of registers:         617 out of 32811 (2%)
-      Number of SLICE         registers:  617 out of 32256 (2%)
+   Number of registers:        4063 out of 32811 (12%)
+      Number of SLICE         registers: 4063 out of 32256 (13%)
       Number of PIO Input     registers:    0 out of   185 (0%)
       Number of PIO Output    registers:    0 out of   185 (0%)
       Number of PIO Tri-State registers:    0 out of   185 (0%)
-   Number of LUT4s:             830 out of 32256 (3%)
-      Number used as logic LUT4s:                        346
+   Number of LUT4s:            8674 out of 32256 (27%)
+      Number used as logic LUT4s:                       3586
       Number used as distributed RAM:                      0 (6 per 16X4 RAM)
-      Number used as ripple logic:                       484 (2 per CCU2)
-   Number of PIOs used/reserved:   28 out of   185 (15%)
+      Number used as ripple logic:                      5088 (2 per CCU2)
+   Number of PIOs used/reserved:   20 out of   185 (11%)
       Number of PIOs reserved:      7 (per sysConfig and/or prohibit constraint)
-      Number of PIOs used:         21
-        Number of PIOs used for single ended IO:        21
+      Number of PIOs used:         13
+        Number of PIOs used for single ended IO:        13
         Number of PIO pairs used for differential IO:    0
-        Number allocated to regular speed PIOs:    21 out of  111 (19%)
+        Number allocated to regular speed PIOs:    13 out of  111 (12%)
         Number allocated to high speed PIOs:        0 out of   74 (0%)
    Number of Dedicated IO used for ADC/PCIE/DPHY:    0 out of   32 (0%)
    Number of IDDR/ODDR/TDDR functions used:      0 out of   444 (0%)
    Number of IOs using at least one DDR function: 0 (0 differential)
-   Number of Block RAMs:          1 out of 84 (1%)
+   Number of Block RAMs:          32 out of 84 (38%)
    Number of Large RAMs:          0 out of 2 (0%)
    Number of Logical DSP Functions:
       Number of Pre-Adders (9+9):    0 out of 112 (0%)
@@ -127,60 +127,277 @@ Command line:   map -i Neuromorphic_Lattice_impl_1_syn.udb -o
    Number of Config WDT:          0 out of 1 (0%)
    Number of PCIEs:               0 out of 1 (0%)
    Number of Clocks:  1
-      Net clk_c: 619 loads, 619 rising, 0 falling (Driver: Port clk)
-   Number of Clock Enables:  32
-      Net VCC_net: 2 loads, 0 SLICEs
-      Net wmu.clk_c_enable_241: 8 loads, 8 SLICEs
-      Net wmu.clk_c_enable_186: 8 loads, 8 SLICEs
-      Net wmu.clk_c_enable_194: 8 loads, 8 SLICEs
-      Net wmu.clk_c_enable_202: 8 loads, 8 SLICEs
-      Net wmu.read_mode: 23 loads, 23 SLICEs
-      Net wmu.clk_c_enable_26: 8 loads, 8 SLICEs
-      Net wmu.clk_c_enable_210: 8 loads, 8 SLICEs
-      Net wmu.clk_c_enable_146: 8 loads, 8 SLICEs
-      Net wmu.clk_c_enable_18: 8 loads, 8 SLICEs
-      Net wmu.clk_c_enable_82: 8 loads, 8 SLICEs
-      Net wmu.clk_c_enable_10: 8 loads, 8 SLICEs
-      Net wmu.clk_c_enable_122: 8 loads, 8 SLICEs
-      Net wmu.clk_c_enable_130: 8 loads, 8 SLICEs
-      Net wmu.clk_c_enable_34: 8 loads, 8 SLICEs
-      Net wmu.clk_c_enable_218: 8 loads, 8 SLICEs
+      Net clk_c: 4127 loads, 4127 rising, 0 falling (Driver: Port clk)
+   Number of Clock Enables:  205
+      Net VCC_net: 64 loads, 0 SLICEs
+      Net wmu.clk_c_enable_416: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_1617: 16 loads, 16 SLICEs
+      Net wmu.clk_c_enable_670: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_682: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_564: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_562: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_782: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_862: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_943: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_830: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_798: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_1066: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_1481: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_602: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_710: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_490: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_838: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_1417: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_1116: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_444: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_679: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_549: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_774: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_967: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_1425: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_1100: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_647: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_766: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_522: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_1513: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_1034: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_583: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_551: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_438: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_806: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_1449: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_1621: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_653: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_500: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_742: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_870: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_1018: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_1529: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_411: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_557: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_685: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_790: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_1082: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_1433: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_1465: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_758: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_652: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_631: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_517: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_496: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_726: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_854: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_886: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_1097: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_1074: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_1126: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_1473: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_1441: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_498: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_649: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_718: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_614: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_750: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_510: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_878: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_846: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_1521: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_1265: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_1112: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_1273: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_1257: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_187: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_243: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_1537: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_263: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_268: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_249: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_180: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_1385: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_1393: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_1321: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_1281: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_1297: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_1289: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_1620: 2 loads, 2 SLICEs
+      Net wmu.clk_c_enable_1602: 2 loads, 2 SLICEs
+      Net wmu.clk_c_enable_1345: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_165: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_1353: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_1026: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_1010: 8 loads, 8 SLICEs
       Net wmu.clk_c_enable_154: 8 loads, 8 SLICEs
-      Net wmu.clk_c_enable_90: 8 loads, 8 SLICEs
-      Net wmu.clk_c_enable_234: 8 loads, 8 SLICEs
-      Net wmu.clk_c_enable_106: 8 loads, 8 SLICEs
-      Net wmu.clk_c_enable_170: 8 loads, 8 SLICEs
-      Net wmu.clk_c_enable_138: 8 loads, 8 SLICEs
-      Net wmu.clk_c_enable_42: 8 loads, 8 SLICEs
-      Net wmu.clk_c_enable_178: 8 loads, 8 SLICEs
-      Net wmu.clk_c_enable_114: 8 loads, 8 SLICEs
-      Net wmu.clk_c_enable_98: 8 loads, 8 SLICEs
-      Net wmu.clk_c_enable_162: 8 loads, 8 SLICEs
-      Net wmu.clk_c_enable_226: 8 loads, 8 SLICEs
-      Net wmu.clk_c_enable_58: 8 loads, 8 SLICEs
-      Net wmu.clk_c_enable_66: 8 loads, 8 SLICEs
-      Net wmu.clk_c_enable_74: 8 loads, 8 SLICEs
-      Net wmu.clk_c_enable_50: 8 loads, 8 SLICEs
-   Number of LSRs:  8
-      Net reset: 263 loads, 263 SLICEs
-      Net sa.genblk1[2].sn.n2709: 1 loads, 1 SLICEs
-      Net sa.genblk1[2].sn.n1197: 32 loads, 32 SLICEs
-      Net sa.genblk1[1].sn.n1195: 32 loads, 32 SLICEs
-      Net sa.genblk1[1].sn.n2711: 1 loads, 1 SLICEs
-      Net sa.genblk1[0].sn.n2713: 1 loads, 1 SLICEs
-      Net sa.genblk1[0].sn.n1199: 32 loads, 32 SLICEs
-      Net n6115: 240 loads, 240 SLICEs
+      Net wmu.clk_c_enable_163: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_115: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_68: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_140: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_1118: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_1313: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_1169: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_53: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_292: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_128: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_232: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_269: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_206: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_78: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_1110: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_1337: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_1209: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_1401: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_1161: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_1177: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_1409: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_1185: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_1305: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_143: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_1109: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_1193: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_1217: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_1225: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_360: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_392: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_354: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_417: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_378: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_390: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_389: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_301: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_948: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_1002: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_986: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_994: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_970: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_978: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_937: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_1129: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_929: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_1137: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_1153: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_1145: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_353: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_299: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_317: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_295: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_1561: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_1577: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_1593: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_1545: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_1569: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_1601: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_1553: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_201: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_1249: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_341: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_1050: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_1042: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_904: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_1114: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_79: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_913: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_1505: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_1241: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_1377: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_333: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_1497: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_683: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_581: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_473: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_202: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_582: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_436: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_693: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_822: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_814: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_1369: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_121: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_356: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_1090: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_1329: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_959: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_1457: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_251: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_734: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_644: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_492: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_1585: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_1201: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_1233: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_1058: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_921: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_1489: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_185: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_1361: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_348: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_592: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_701: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_464: 8 loads, 8 SLICEs
+      Net wmu.clk_c_enable_1618: 1 loads, 1 SLICEs
+      Net wmu.clk_c_enable_1103: 8 loads, 8 SLICEs
+   Number of LSRs:  52
+      Pin reset: 1622 loads, 1622 SLICEs (Net: reset_c)
+      Net computation_reset: 1600 loads, 1600 SLICEs
+      Net n21452: 1 loads, 1 SLICEs
+      Net n21450: 1 loads, 1 SLICEs
+      Net n21448: 1 loads, 1 SLICEs
+      Net n21446: 1 loads, 1 SLICEs
+      Net n21444: 1 loads, 1 SLICEs
+      Net n21442: 1 loads, 1 SLICEs
+      Net output_neurons.GEN_NEURONS[4].sn.n4875: 32 loads, 32 SLICEs
+      Net n21484: 1 loads, 1 SLICEs
+      Net output_neurons.GEN_NEURONS[3].sn.n4873: 32 loads, 32 SLICEs
+      Net n21486: 1 loads, 1 SLICEs
+      Net output_neurons.GEN_NEURONS[2].sn.n4871: 32 loads, 32 SLICEs
+      Net n21488: 1 loads, 1 SLICEs
+      Net output_neurons.GEN_NEURONS[1].sn.n4869: 32 loads, 32 SLICEs
+      Net n21490: 1 loads, 1 SLICEs
+      Net output_neurons.GEN_NEURONS[0].sn.n4879: 32 loads, 32 SLICEs
+      Net n21480: 1 loads, 1 SLICEs
+      Net hidden_neurons.GEN_NEURONS[9].sn.n4827: 32 loads, 32 SLICEs
+      Net n21462: 1 loads, 1 SLICEs
+      Net hidden_neurons.GEN_NEURONS[8].sn.n4825: 32 loads, 32 SLICEs
+      Net n21464: 1 loads, 1 SLICEs
+      Net hidden_neurons.GEN_NEURONS[7].sn.n4823: 32 loads, 32 SLICEs
+      Net n21466: 1 loads, 1 SLICEs
+      Net hidden_neurons.GEN_NEURONS[6].sn.n4821: 32 loads, 32 SLICEs
+      Net n21468: 1 loads, 1 SLICEs
+      Net hidden_neurons.GEN_NEURONS[5].sn.n4819: 32 loads, 32 SLICEs
+      Net n21470: 1 loads, 1 SLICEs
+      Net hidden_neurons.GEN_NEURONS[4].sn.n4817: 32 loads, 32 SLICEs
+      Net n21472: 1 loads, 1 SLICEs
+      Net hidden_neurons.GEN_NEURONS[3].sn.n4815: 32 loads, 32 SLICEs
+      Net n21474: 1 loads, 1 SLICEs
+      Net hidden_neurons.GEN_NEURONS[2].sn.n4813: 32 loads, 32 SLICEs
+      Net n21476: 1 loads, 1 SLICEs
+      Net hidden_neurons.GEN_NEURONS[1].sn.n4811: 32 loads, 32 SLICEs
+      Net n21478: 1 loads, 1 SLICEs
+      Net hidden_neurons.GEN_NEURONS[19].sn.n4847: 32 loads, 32 SLICEs
+      Net hidden_neurons.GEN_NEURONS[18].sn.n4845: 32 loads, 32 SLICEs
+      Net hidden_neurons.GEN_NEURONS[17].sn.n4843: 32 loads, 32 SLICEs
+      Net hidden_neurons.GEN_NEURONS[16].sn.n4841: 32 loads, 32 SLICEs
+      Net hidden_neurons.GEN_NEURONS[15].sn.n4839: 32 loads, 32 SLICEs
+      Net hidden_neurons.GEN_NEURONS[14].sn.n4837: 32 loads, 32 SLICEs
+      Net hidden_neurons.GEN_NEURONS[13].sn.n4835: 32 loads, 32 SLICEs
+      Net n21454: 1 loads, 1 SLICEs
+      Net hidden_neurons.GEN_NEURONS[12].sn.n4833: 32 loads, 32 SLICEs
+      Net n21456: 1 loads, 1 SLICEs
+      Net hidden_neurons.GEN_NEURONS[11].sn.n4831: 32 loads, 32 SLICEs
+      Net n21458: 1 loads, 1 SLICEs
+      Net hidden_neurons.GEN_NEURONS[10].sn.n4829: 32 loads, 32 SLICEs
+      Net n21460: 1 loads, 1 SLICEs
+      Net hidden_neurons.GEN_NEURONS[0].sn.n4877: 32 loads, 32 SLICEs
+      Net n21482: 1 loads, 1 SLICEs
    Top 10 highest fanout non-clock nets:
-      Net reset: 269 loads
-      Net n6115: 240 loads
-      Net wmu.read_mode: 43 loads
-      Net sa.genblk1[0].sn.n1199: 32 loads
-      Net sa.genblk1[1].sn.n1195: 32 loads
-      Net sa.genblk1[2].sn.n1197: 32 loads
-      Net ram_output_line[0]: 30 loads
-      Net ram_output_line[1]: 30 loads
-      Net ram_output_line[2]: 30 loads
-      Net ram_output_line[3]: 30 loads
+      Net reset_c: 1687 loads
+      Net computation_reset: 1600 loads
+      Net weights_loaded_c: 1092 loads
+      Net maxfan_replicated_net_401: 402 loads
+      Net VCC_net: 320 loads
+      Net ram_output_line[0]: 200 loads
+      Net ram_output_line[1]: 200 loads
+      Net ram_output_line[2]: 200 loads
+      Net ram_output_line[3]: 200 loads
+      Net ram_output_line[4]: 200 loads
 
    Number of warnings:  0
    Number of criticals: 0
@@ -196,19 +413,11 @@ Command line:   map -i Neuromorphic_Lattice_impl_1_syn.udb -o
 | IO Name             | Direction | Levelmode |  IO   |  IO   | Special   |
 |                     |           |  IO_TYPE  |  REG  |  DDR  | IO Buffer |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| network_outputs[0]  | OUTPUT    |           |       |       |           |
+| weights_loaded      | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
 | clk                 | INPUT     |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| network_inputs[9]   | INPUT     |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| network_inputs[8]   | INPUT     |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| network_inputs[7]   | INPUT     |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| network_inputs[6]   | INPUT     |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| network_inputs[5]   | INPUT     |           |       |       |           |
+| reset               | INPUT     |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
 | network_inputs[4]   | INPUT     |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
@@ -220,16 +429,6 @@ Command line:   map -i Neuromorphic_Lattice_impl_1_syn.udb -o
 +---------------------+-----------+-----------+-------+-------+-----------+
 | network_inputs[0]   | INPUT     |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| network_outputs[9]  | OUTPUT    |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| network_outputs[8]  | OUTPUT    |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| network_outputs[7]  | OUTPUT    |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| network_outputs[6]  | OUTPUT    |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| network_outputs[5]  | OUTPUT    |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
 | network_outputs[4]  | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
 | network_outputs[3]  | OUTPUT    |           |       |       |           |
@@ -238,15 +437,79 @@ Command line:   map -i Neuromorphic_Lattice_impl_1_syn.udb -o
 +---------------------+-----------+-----------+-------+-------+-----------+
 | network_outputs[1]  | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
+| network_outputs[0]  | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
 
 <A name="mrp_rm"></A><B><U><big>Removed logic</big></U></B>
 
 Block GSR_INST undriven or does not drive anything - clipped.
-Block i71 was optimized away.
+Block i11 was optimized away.
 
 <A name="mrp_asic"></A><B><U><big>ASIC Components</big></U></B>
 
-Instance Name: ram/ram_addr_line_0__I_0.PDPSC16K_MODE_inst
+Instance Name: ram/memory24.PDPSC16K_MODE_inst
+         Type: EBR_CORE
+Instance Name: ram/memory31.PDPSC16K_MODE_inst
+         Type: EBR_CORE
+Instance Name: ram/memory22.PDPSC16K_MODE_inst
+         Type: EBR_CORE
+Instance Name: ram/memory30.PDPSC16K_MODE_inst
+         Type: EBR_CORE
+Instance Name: ram/memory20.PDPSC16K_MODE_inst
+         Type: EBR_CORE
+Instance Name: ram/memory29.PDPSC16K_MODE_inst
+         Type: EBR_CORE
+Instance Name: ram/memory18.PDPSC16K_MODE_inst
+         Type: EBR_CORE
+Instance Name: ram/memory28.PDPSC16K_MODE_inst
+         Type: EBR_CORE
+Instance Name: ram/memory16.PDPSC16K_MODE_inst
+         Type: EBR_CORE
+Instance Name: ram/memory27.PDPSC16K_MODE_inst
+         Type: EBR_CORE
+Instance Name: ram/memory13.PDPSC16K_MODE_inst
+         Type: EBR_CORE
+Instance Name: ram/memory26.PDPSC16K_MODE_inst
+         Type: EBR_CORE
+Instance Name: ram/memory11.PDPSC16K_MODE_inst
+         Type: EBR_CORE
+Instance Name: ram/memory25.PDPSC16K_MODE_inst
+         Type: EBR_CORE
+Instance Name: ram/memory9.PDPSC16K_MODE_inst
+         Type: EBR_CORE
+Instance Name: ram/memory0.PDPSC16K_MODE_inst
+         Type: EBR_CORE
+Instance Name: ram/memory23.PDPSC16K_MODE_inst
+         Type: EBR_CORE
+Instance Name: ram/memory8.PDPSC16K_MODE_inst
+         Type: EBR_CORE
+Instance Name: ram/memory21.PDPSC16K_MODE_inst
+         Type: EBR_CORE
+Instance Name: ram/memory7.PDPSC16K_MODE_inst
+         Type: EBR_CORE
+Instance Name: ram/memory19.PDPSC16K_MODE_inst
+         Type: EBR_CORE
+Instance Name: ram/memory6.PDPSC16K_MODE_inst
+         Type: EBR_CORE
+Instance Name: ram/memory17.PDPSC16K_MODE_inst
+         Type: EBR_CORE
+Instance Name: ram/memory5.PDPSC16K_MODE_inst
+         Type: EBR_CORE
+Instance Name: ram/memory15.PDPSC16K_MODE_inst
+         Type: EBR_CORE
+Instance Name: ram/memory4.PDPSC16K_MODE_inst
+         Type: EBR_CORE
+Instance Name: ram/memory14.PDPSC16K_MODE_inst
+         Type: EBR_CORE
+Instance Name: ram/memory3.PDPSC16K_MODE_inst
+         Type: EBR_CORE
+Instance Name: ram/memory12.PDPSC16K_MODE_inst
+         Type: EBR_CORE
+Instance Name: ram/memory2.PDPSC16K_MODE_inst
+         Type: EBR_CORE
+Instance Name: ram/memory10.PDPSC16K_MODE_inst
+         Type: EBR_CORE
+Instance Name: ram/memory1.PDPSC16K_MODE_inst
          Type: EBR_CORE
 
 <A name="mrp_consum"></A><B><U><big>Constraint Summary</big></U></B>
@@ -256,10 +519,10 @@ Instance Name: ram/ram_addr_line_0__I_0.PDPSC16K_MODE_inst
 
 <A name="mrp_runtime"></A><B><U><big>Run Time and Memory Usage</big></U></B>
 
-   Total CPU Time: 2 secs
-   Total REAL Time: 3 secs
-   Peak Memory Usage: 351 MB
-Checksum -- map: 211d1f9caa12467ebf075a9b24643e8c3150db2b
+   Total CPU Time: 5 secs
+   Total REAL Time: 6 secs
+   Peak Memory Usage: 489 MB
+Checksum -- map: 14ab0e5ba851d35ca09e9b7fc54ca15691e9c753
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995
      AT&amp;T Corp.   All rights reserved.

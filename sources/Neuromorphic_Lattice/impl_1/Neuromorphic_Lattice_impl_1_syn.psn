@@ -7,16 +7,16 @@ Command Line: postsyn -a LIFCL -p LIFCL-40 -t CABGA400 -sp 9_High-Performance_1.
 Reading input file 'Neuromorphic_Lattice_impl_1.vm' ...
 Reading constraint file 'Neuromorphic_Lattice_impl_1.ldc' ...
 Removing unused logic ...
-INFO <35811146> - Signal ram/i7402.intGnd undriven or does not drive anything - clipped
-INFO <35811146> - Signal ram/i7370.intGnd undriven or does not drive anything - clipped
-INFO <35811146> - Signal wmu/weights_out___i46.intGnd undriven or does not drive anything - clipped
-INFO <35811146> - Signal wmu/weights_out___i1.intGnd undriven or does not drive anything - clipped
-INFO <35811146> - Signal wmu/ram_addr___i0.intGnd undriven or does not drive anything - clipped
-INFO <35811146> - Signal wmu/weights_out___i2716.intGnd undriven or does not drive anything - clipped
-INFO <35811146> - Signal wmu/weights_out___i2717.intGnd undriven or does not drive anything - clipped
-INFO <35811146> - Signal wmu/weights_out___i2718.intGnd undriven or does not drive anything - clipped
-INFO <35811146> - Signal wmu/weights_out___i7996.intGnd undriven or does not drive anything - clipped
-INFO <35811146> - Signal wmu/weights_out___i7995.intGnd undriven or does not drive anything - clipped
+INFO <35811146> - Signal ram/i2626.intGnd undriven or does not drive anything - clipped
+INFO <35811146> - Signal ram/i2594.intGnd undriven or does not drive anything - clipped
+INFO <35811146> - Signal layer2_wma/GEN_OUTPUT[0].GEN_INPUT[0].wmu/out__i0.intGnd undriven or does not drive anything - clipped
+INFO <35811146> - Signal layer2_wma/GEN_OUTPUT[0].GEN_INPUT[0].wmu/out__i1.intGnd undriven or does not drive anything - clipped
+INFO <35811146> - Signal layer2_wma/GEN_OUTPUT[0].GEN_INPUT[0].wmu/out__i2.intGnd undriven or does not drive anything - clipped
+INFO <35811146> - Signal layer2_wma/GEN_OUTPUT[0].GEN_INPUT[0].wmu/out__i3.intGnd undriven or does not drive anything - clipped
+INFO <35811146> - Signal layer2_wma/GEN_OUTPUT[0].GEN_INPUT[0].wmu/out__i4.intGnd undriven or does not drive anything - clipped
+INFO <35811146> - Signal layer2_wma/GEN_OUTPUT[0].GEN_INPUT[0].wmu/out__i5.intGnd undriven or does not drive anything - clipped
+INFO <35811146> - Signal layer2_wma/GEN_OUTPUT[0].GEN_INPUT[0].wmu/out__i6.intGnd undriven or does not drive anything - clipped
+INFO <35811146> - Signal layer2_wma/GEN_OUTPUT[0].GEN_INPUT[0].wmu/out__i7.intGnd undriven or does not drive anything - clipped
 INFO <35811149> - ... More signals are undriven or does not drive anything - clipped
 Starting design annotation....
  
@@ -26,7 +26,7 @@ Constraint Summary:
  
 Writing output file 'Neuromorphic_Lattice_impl_1_syn.udb'.
 POSTSYN finished successfully.
-Total CPU Time: 16 secs 
-Total REAL Time: 17 secs 
-Peak Memory Usage: 507 MB
-Checksum -- postsyn: ca9309e8410690fc57813d08886c1f4aa93c4def
+Total CPU Time: 4 secs 
+Total REAL Time: 5 secs 
+Peak Memory Usage: 224 MB
+Checksum -- postsyn: 56a719f6ca4786cccd93645cf8bcc9ea5cb56c94

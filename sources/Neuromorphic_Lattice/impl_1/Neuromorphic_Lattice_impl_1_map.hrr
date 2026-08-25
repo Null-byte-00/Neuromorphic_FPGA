@@ -3,352 +3,1725 @@ Report for cell network_tb
    Instance path: network_tb
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	        830        100.0
-                               LUTGATE	        346        100.0
-                                LUTCCU	        484        100.0
-                                 IOBUF	         21        100.0
-                                PFUREG	        617        100.0
-                                   EBR	          1        100.0
+                                  LUT4	       8674        100.0
+                               LUTGATE	       3586        100.0
+                                LUTCCU	       5088        100.0
+                                 IOBUF	         13        100.0
+                                PFUREG	       4063        100.0
+                                   EBR	         32        100.0
 SUB MODULES
                                   cell	      count    LUT4 Usage(%)
                        single_port_ram	          1         0.0
-                           spike_array	          1        30.0
-                   weight_manager_unit	          1         8.4
-                 weight_multiply_array	          1        61.4
+                           spike_array	          1        11.8
+                  spike_array(SIZE=20)	          1        47.3
+  weight_manager_unit(NUM_WEIGHTS=200)	          1        21.2
+     weight_multiply_array(IN_SIZE=20)	          1        11.4
+    weight_multiply_array(OUT_SIZE=20)	          1         7.8
 ---------------------------------------------------
 Report for cell spike_array
-   Instance path: network_tb/sa
+   Instance path: network_tb/output_neurons
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	        249        30.0
-                               LUTGATE	         45        13.0
-                                LUTCCU	        204        42.1
-                                PFUREG	         99        16.0
+                                  LUT4	       1020        11.8
+                               LUTGATE	        340         9.5
+                                LUTCCU	        680        13.4
+                                PFUREG	        165         4.1
 SUB MODULES
                                   cell	      count    LUT4 Usage(%)
-                          spike_neuron	          1        10.0
-                      spike_neuron_U29	          1        10.0
-                      spike_neuron_U30	          1        10.0
+                          spike_neuron	          1         2.4
+                       spike_neuron_U0	          1         2.4
+                       spike_neuron_U1	          1         2.4
+                       spike_neuron_U2	          1         2.4
+                       spike_neuron_U3	          1         2.4
 ---------------------------------------------------
 Report for cell spike_neuron
-   Instance path: network_tb/sa/genblk1[2].sn
+   Instance path: network_tb/output_neurons/GEN_NEURONS[4].sn
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	         83        10.0
-                               LUTGATE	         15         4.3
-                                LUTCCU	         68        14.0
-                                PFUREG	         33         5.3
+                                  LUT4	        204         2.4
+                               LUTGATE	         68         1.9
+                                LUTCCU	        136         2.7
+                                PFUREG	         33         0.8
 ---------------------------------------------------
-Report for cell spike_neuron_U29
-   Instance path: network_tb/sa/genblk1[1].sn
+Report for cell spike_neuron_U0
+   Instance path: network_tb/output_neurons/GEN_NEURONS[3].sn
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	         83        10.0
-                               LUTGATE	         15         4.3
-                                LUTCCU	         68        14.0
-                                PFUREG	         33         5.3
+                                  LUT4	        204         2.4
+                               LUTGATE	         68         1.9
+                                LUTCCU	        136         2.7
+                                PFUREG	         33         0.8
 ---------------------------------------------------
-Report for cell spike_neuron_U30
-   Instance path: network_tb/sa/genblk1[0].sn
+Report for cell spike_neuron_U1
+   Instance path: network_tb/output_neurons/GEN_NEURONS[2].sn
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	         83        10.0
-                               LUTGATE	         15         4.3
-                                LUTCCU	         68        14.0
-                                PFUREG	         33         5.3
+                                  LUT4	        204         2.4
+                               LUTGATE	         68         1.9
+                                LUTCCU	        136         2.7
+                                PFUREG	         33         0.8
+---------------------------------------------------
+Report for cell spike_neuron_U2
+   Instance path: network_tb/output_neurons/GEN_NEURONS[1].sn
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	        204         2.4
+                               LUTGATE	         68         1.9
+                                LUTCCU	        136         2.7
+                                PFUREG	         33         0.8
+---------------------------------------------------
+Report for cell spike_neuron_U3
+   Instance path: network_tb/output_neurons/GEN_NEURONS[0].sn
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	        204         2.4
+                               LUTGATE	         68         1.9
+                                LUTCCU	        136         2.7
+                                PFUREG	         33         0.8
+---------------------------------------------------
+Report for cell spike_array(SIZE=20)
+   Instance path: network_tb/hidden_neurons
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	       4100        47.3
+                               LUTGATE	       1380        38.5
+                                LUTCCU	       2720        53.5
+                                PFUREG	        660        16.2
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+                     spike_neuron_U203	          1         2.4
+                     spike_neuron_U204	          1         2.4
+                     spike_neuron_U205	          1         2.4
+                     spike_neuron_U206	          1         2.4
+                     spike_neuron_U207	          1         2.4
+                     spike_neuron_U208	          1         2.4
+                     spike_neuron_U209	          1         2.4
+                     spike_neuron_U210	          1         2.4
+                     spike_neuron_U211	          1         2.4
+                     spike_neuron_U212	          1         2.4
+                     spike_neuron_U213	          1         2.4
+                     spike_neuron_U214	          1         2.4
+                     spike_neuron_U215	          1         2.4
+                     spike_neuron_U216	          1         2.4
+                     spike_neuron_U217	          1         2.4
+                     spike_neuron_U218	          1         2.4
+                     spike_neuron_U219	          1         2.4
+                     spike_neuron_U220	          1         2.4
+                     spike_neuron_U221	          1         2.4
+                     spike_neuron_U222	          1         2.4
+---------------------------------------------------
+Report for cell spike_neuron_U203
+   Instance path: network_tb/hidden_neurons/GEN_NEURONS[9].sn
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	        205         2.4
+                               LUTGATE	         69         1.9
+                                LUTCCU	        136         2.7
+                                PFUREG	         33         0.8
+---------------------------------------------------
+Report for cell spike_neuron_U204
+   Instance path: network_tb/hidden_neurons/GEN_NEURONS[8].sn
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	        205         2.4
+                               LUTGATE	         69         1.9
+                                LUTCCU	        136         2.7
+                                PFUREG	         33         0.8
+---------------------------------------------------
+Report for cell spike_neuron_U205
+   Instance path: network_tb/hidden_neurons/GEN_NEURONS[7].sn
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	        205         2.4
+                               LUTGATE	         69         1.9
+                                LUTCCU	        136         2.7
+                                PFUREG	         33         0.8
+---------------------------------------------------
+Report for cell spike_neuron_U206
+   Instance path: network_tb/hidden_neurons/GEN_NEURONS[6].sn
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	        205         2.4
+                               LUTGATE	         69         1.9
+                                LUTCCU	        136         2.7
+                                PFUREG	         33         0.8
+---------------------------------------------------
+Report for cell spike_neuron_U207
+   Instance path: network_tb/hidden_neurons/GEN_NEURONS[5].sn
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	        205         2.4
+                               LUTGATE	         69         1.9
+                                LUTCCU	        136         2.7
+                                PFUREG	         33         0.8
+---------------------------------------------------
+Report for cell spike_neuron_U208
+   Instance path: network_tb/hidden_neurons/GEN_NEURONS[4].sn
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	        205         2.4
+                               LUTGATE	         69         1.9
+                                LUTCCU	        136         2.7
+                                PFUREG	         33         0.8
+---------------------------------------------------
+Report for cell spike_neuron_U209
+   Instance path: network_tb/hidden_neurons/GEN_NEURONS[3].sn
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	        205         2.4
+                               LUTGATE	         69         1.9
+                                LUTCCU	        136         2.7
+                                PFUREG	         33         0.8
+---------------------------------------------------
+Report for cell spike_neuron_U210
+   Instance path: network_tb/hidden_neurons/GEN_NEURONS[2].sn
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	        205         2.4
+                               LUTGATE	         69         1.9
+                                LUTCCU	        136         2.7
+                                PFUREG	         33         0.8
+---------------------------------------------------
+Report for cell spike_neuron_U211
+   Instance path: network_tb/hidden_neurons/GEN_NEURONS[1].sn
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	        205         2.4
+                               LUTGATE	         69         1.9
+                                LUTCCU	        136         2.7
+                                PFUREG	         33         0.8
+---------------------------------------------------
+Report for cell spike_neuron_U212
+   Instance path: network_tb/hidden_neurons/GEN_NEURONS[19].sn
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	        205         2.4
+                               LUTGATE	         69         1.9
+                                LUTCCU	        136         2.7
+                                PFUREG	         33         0.8
+---------------------------------------------------
+Report for cell spike_neuron_U213
+   Instance path: network_tb/hidden_neurons/GEN_NEURONS[18].sn
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	        205         2.4
+                               LUTGATE	         69         1.9
+                                LUTCCU	        136         2.7
+                                PFUREG	         33         0.8
+---------------------------------------------------
+Report for cell spike_neuron_U214
+   Instance path: network_tb/hidden_neurons/GEN_NEURONS[17].sn
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	        205         2.4
+                               LUTGATE	         69         1.9
+                                LUTCCU	        136         2.7
+                                PFUREG	         33         0.8
+---------------------------------------------------
+Report for cell spike_neuron_U215
+   Instance path: network_tb/hidden_neurons/GEN_NEURONS[16].sn
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	        205         2.4
+                               LUTGATE	         69         1.9
+                                LUTCCU	        136         2.7
+                                PFUREG	         33         0.8
+---------------------------------------------------
+Report for cell spike_neuron_U216
+   Instance path: network_tb/hidden_neurons/GEN_NEURONS[15].sn
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	        205         2.4
+                               LUTGATE	         69         1.9
+                                LUTCCU	        136         2.7
+                                PFUREG	         33         0.8
+---------------------------------------------------
+Report for cell spike_neuron_U217
+   Instance path: network_tb/hidden_neurons/GEN_NEURONS[14].sn
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	        205         2.4
+                               LUTGATE	         69         1.9
+                                LUTCCU	        136         2.7
+                                PFUREG	         33         0.8
+---------------------------------------------------
+Report for cell spike_neuron_U218
+   Instance path: network_tb/hidden_neurons/GEN_NEURONS[13].sn
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	        205         2.4
+                               LUTGATE	         69         1.9
+                                LUTCCU	        136         2.7
+                                PFUREG	         33         0.8
+---------------------------------------------------
+Report for cell spike_neuron_U219
+   Instance path: network_tb/hidden_neurons/GEN_NEURONS[12].sn
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	        205         2.4
+                               LUTGATE	         69         1.9
+                                LUTCCU	        136         2.7
+                                PFUREG	         33         0.8
+---------------------------------------------------
+Report for cell spike_neuron_U220
+   Instance path: network_tb/hidden_neurons/GEN_NEURONS[11].sn
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	        205         2.4
+                               LUTGATE	         69         1.9
+                                LUTCCU	        136         2.7
+                                PFUREG	         33         0.8
+---------------------------------------------------
+Report for cell spike_neuron_U221
+   Instance path: network_tb/hidden_neurons/GEN_NEURONS[10].sn
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	        205         2.4
+                               LUTGATE	         69         1.9
+                                LUTCCU	        136         2.7
+                                PFUREG	         33         0.8
+---------------------------------------------------
+Report for cell spike_neuron_U222
+   Instance path: network_tb/hidden_neurons/GEN_NEURONS[0].sn
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	        205         2.4
+                               LUTGATE	         69         1.9
+                                LUTCCU	        136         2.7
+                                PFUREG	         33         0.8
+---------------------------------------------------
+Report for cell weight_multiply_array(OUT_SIZE=20)
+   Instance path: network_tb/layer1_wma
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	        680         7.8
+                                LUTCCU	        680        13.4
+                                PFUREG	        800        19.7
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+             weight_multiply_unit_U103	          1         0.0
+             weight_multiply_unit_U104	          1         0.0
+             weight_multiply_unit_U105	          1         0.0
+             weight_multiply_unit_U106	          1         0.0
+             weight_multiply_unit_U107	          1         0.0
+             weight_multiply_unit_U108	          1         0.0
+             weight_multiply_unit_U109	          1         0.0
+             weight_multiply_unit_U110	          1         0.0
+             weight_multiply_unit_U111	          1         0.0
+             weight_multiply_unit_U112	          1         0.0
+             weight_multiply_unit_U113	          1         0.0
+             weight_multiply_unit_U114	          1         0.0
+             weight_multiply_unit_U115	          1         0.0
+             weight_multiply_unit_U116	          1         0.0
+             weight_multiply_unit_U117	          1         0.0
+             weight_multiply_unit_U118	          1         0.0
+             weight_multiply_unit_U119	          1         0.0
+             weight_multiply_unit_U120	          1         0.0
+             weight_multiply_unit_U121	          1         0.0
+             weight_multiply_unit_U122	          1         0.0
+             weight_multiply_unit_U123	          1         0.0
+             weight_multiply_unit_U124	          1         0.0
+             weight_multiply_unit_U125	          1         0.0
+             weight_multiply_unit_U126	          1         0.0
+             weight_multiply_unit_U127	          1         0.0
+             weight_multiply_unit_U128	          1         0.0
+             weight_multiply_unit_U129	          1         0.0
+             weight_multiply_unit_U130	          1         0.0
+             weight_multiply_unit_U131	          1         0.0
+             weight_multiply_unit_U132	          1         0.0
+             weight_multiply_unit_U133	          1         0.0
+             weight_multiply_unit_U134	          1         0.0
+             weight_multiply_unit_U135	          1         0.0
+             weight_multiply_unit_U136	          1         0.0
+             weight_multiply_unit_U137	          1         0.0
+             weight_multiply_unit_U138	          1         0.0
+             weight_multiply_unit_U139	          1         0.0
+             weight_multiply_unit_U140	          1         0.0
+             weight_multiply_unit_U141	          1         0.0
+             weight_multiply_unit_U142	          1         0.0
+             weight_multiply_unit_U143	          1         0.0
+             weight_multiply_unit_U144	          1         0.0
+             weight_multiply_unit_U145	          1         0.0
+             weight_multiply_unit_U146	          1         0.0
+             weight_multiply_unit_U147	          1         0.0
+             weight_multiply_unit_U148	          1         0.0
+             weight_multiply_unit_U149	          1         0.0
+             weight_multiply_unit_U150	          1         0.0
+             weight_multiply_unit_U151	          1         0.0
+             weight_multiply_unit_U152	          1         0.0
+             weight_multiply_unit_U153	          1         0.0
+             weight_multiply_unit_U154	          1         0.0
+             weight_multiply_unit_U155	          1         0.0
+             weight_multiply_unit_U156	          1         0.0
+             weight_multiply_unit_U157	          1         0.0
+             weight_multiply_unit_U158	          1         0.0
+             weight_multiply_unit_U159	          1         0.0
+             weight_multiply_unit_U160	          1         0.0
+             weight_multiply_unit_U161	          1         0.0
+             weight_multiply_unit_U162	          1         0.0
+             weight_multiply_unit_U163	          1         0.0
+             weight_multiply_unit_U164	          1         0.0
+             weight_multiply_unit_U165	          1         0.0
+             weight_multiply_unit_U166	          1         0.0
+             weight_multiply_unit_U167	          1         0.0
+             weight_multiply_unit_U168	          1         0.0
+             weight_multiply_unit_U169	          1         0.0
+             weight_multiply_unit_U170	          1         0.0
+             weight_multiply_unit_U171	          1         0.0
+             weight_multiply_unit_U172	          1         0.0
+             weight_multiply_unit_U173	          1         0.0
+             weight_multiply_unit_U174	          1         0.0
+             weight_multiply_unit_U175	          1         0.0
+             weight_multiply_unit_U176	          1         0.0
+             weight_multiply_unit_U177	          1         0.0
+             weight_multiply_unit_U178	          1         0.0
+             weight_multiply_unit_U179	          1         0.0
+             weight_multiply_unit_U180	          1         0.0
+             weight_multiply_unit_U181	          1         0.0
+             weight_multiply_unit_U182	          1         0.0
+             weight_multiply_unit_U183	          1         0.0
+             weight_multiply_unit_U184	          1         0.0
+             weight_multiply_unit_U185	          1         0.0
+             weight_multiply_unit_U186	          1         0.0
+             weight_multiply_unit_U187	          1         0.0
+             weight_multiply_unit_U188	          1         0.0
+             weight_multiply_unit_U189	          1         0.0
+             weight_multiply_unit_U190	          1         0.0
+             weight_multiply_unit_U191	          1         0.0
+             weight_multiply_unit_U192	          1         0.0
+             weight_multiply_unit_U193	          1         0.0
+             weight_multiply_unit_U194	          1         0.0
+             weight_multiply_unit_U195	          1         0.0
+             weight_multiply_unit_U196	          1         0.0
+             weight_multiply_unit_U197	          1         0.0
+             weight_multiply_unit_U198	          1         0.0
+             weight_multiply_unit_U199	          1         0.0
+             weight_multiply_unit_U200	          1         0.0
+             weight_multiply_unit_U201	          1         0.0
+             weight_multiply_unit_U202	          1         0.0
+---------------------------------------------------
+Report for cell weight_multiply_unit_U103
+   Instance path: network_tb/layer1_wma/GEN_OUTPUT[9].GEN_INPUT[4].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U104
+   Instance path: network_tb/layer1_wma/GEN_OUTPUT[9].GEN_INPUT[3].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U105
+   Instance path: network_tb/layer1_wma/GEN_OUTPUT[9].GEN_INPUT[2].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U106
+   Instance path: network_tb/layer1_wma/GEN_OUTPUT[9].GEN_INPUT[1].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U107
+   Instance path: network_tb/layer1_wma/GEN_OUTPUT[9].GEN_INPUT[0].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U108
+   Instance path: network_tb/layer1_wma/GEN_OUTPUT[8].GEN_INPUT[4].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U109
+   Instance path: network_tb/layer1_wma/GEN_OUTPUT[8].GEN_INPUT[3].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U110
+   Instance path: network_tb/layer1_wma/GEN_OUTPUT[8].GEN_INPUT[2].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U111
+   Instance path: network_tb/layer1_wma/GEN_OUTPUT[8].GEN_INPUT[1].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U112
+   Instance path: network_tb/layer1_wma/GEN_OUTPUT[8].GEN_INPUT[0].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U113
+   Instance path: network_tb/layer1_wma/GEN_OUTPUT[7].GEN_INPUT[4].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U114
+   Instance path: network_tb/layer1_wma/GEN_OUTPUT[7].GEN_INPUT[3].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U115
+   Instance path: network_tb/layer1_wma/GEN_OUTPUT[7].GEN_INPUT[2].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U116
+   Instance path: network_tb/layer1_wma/GEN_OUTPUT[7].GEN_INPUT[1].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U117
+   Instance path: network_tb/layer1_wma/GEN_OUTPUT[7].GEN_INPUT[0].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U118
+   Instance path: network_tb/layer1_wma/GEN_OUTPUT[6].GEN_INPUT[4].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U119
+   Instance path: network_tb/layer1_wma/GEN_OUTPUT[6].GEN_INPUT[3].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U120
+   Instance path: network_tb/layer1_wma/GEN_OUTPUT[6].GEN_INPUT[2].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U121
+   Instance path: network_tb/layer1_wma/GEN_OUTPUT[6].GEN_INPUT[1].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U122
+   Instance path: network_tb/layer1_wma/GEN_OUTPUT[6].GEN_INPUT[0].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U123
+   Instance path: network_tb/layer1_wma/GEN_OUTPUT[5].GEN_INPUT[4].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U124
+   Instance path: network_tb/layer1_wma/GEN_OUTPUT[5].GEN_INPUT[3].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U125
+   Instance path: network_tb/layer1_wma/GEN_OUTPUT[5].GEN_INPUT[2].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U126
+   Instance path: network_tb/layer1_wma/GEN_OUTPUT[5].GEN_INPUT[1].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U127
+   Instance path: network_tb/layer1_wma/GEN_OUTPUT[5].GEN_INPUT[0].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U128
+   Instance path: network_tb/layer1_wma/GEN_OUTPUT[4].GEN_INPUT[4].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U129
+   Instance path: network_tb/layer1_wma/GEN_OUTPUT[4].GEN_INPUT[3].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U130
+   Instance path: network_tb/layer1_wma/GEN_OUTPUT[4].GEN_INPUT[2].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U131
+   Instance path: network_tb/layer1_wma/GEN_OUTPUT[4].GEN_INPUT[1].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U132
+   Instance path: network_tb/layer1_wma/GEN_OUTPUT[4].GEN_INPUT[0].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U133
+   Instance path: network_tb/layer1_wma/GEN_OUTPUT[3].GEN_INPUT[4].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U134
+   Instance path: network_tb/layer1_wma/GEN_OUTPUT[3].GEN_INPUT[3].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U135
+   Instance path: network_tb/layer1_wma/GEN_OUTPUT[3].GEN_INPUT[2].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U136
+   Instance path: network_tb/layer1_wma/GEN_OUTPUT[3].GEN_INPUT[1].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U137
+   Instance path: network_tb/layer1_wma/GEN_OUTPUT[3].GEN_INPUT[0].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U138
+   Instance path: network_tb/layer1_wma/GEN_OUTPUT[2].GEN_INPUT[4].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U139
+   Instance path: network_tb/layer1_wma/GEN_OUTPUT[2].GEN_INPUT[3].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U140
+   Instance path: network_tb/layer1_wma/GEN_OUTPUT[2].GEN_INPUT[2].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U141
+   Instance path: network_tb/layer1_wma/GEN_OUTPUT[2].GEN_INPUT[1].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U142
+   Instance path: network_tb/layer1_wma/GEN_OUTPUT[2].GEN_INPUT[0].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U143
+   Instance path: network_tb/layer1_wma/GEN_OUTPUT[1].GEN_INPUT[4].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U144
+   Instance path: network_tb/layer1_wma/GEN_OUTPUT[1].GEN_INPUT[3].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U145
+   Instance path: network_tb/layer1_wma/GEN_OUTPUT[1].GEN_INPUT[2].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U146
+   Instance path: network_tb/layer1_wma/GEN_OUTPUT[1].GEN_INPUT[1].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U147
+   Instance path: network_tb/layer1_wma/GEN_OUTPUT[1].GEN_INPUT[0].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U148
+   Instance path: network_tb/layer1_wma/GEN_OUTPUT[19].GEN_INPUT[4].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U149
+   Instance path: network_tb/layer1_wma/GEN_OUTPUT[19].GEN_INPUT[3].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U150
+   Instance path: network_tb/layer1_wma/GEN_OUTPUT[19].GEN_INPUT[2].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U151
+   Instance path: network_tb/layer1_wma/GEN_OUTPUT[19].GEN_INPUT[1].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U152
+   Instance path: network_tb/layer1_wma/GEN_OUTPUT[19].GEN_INPUT[0].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U153
+   Instance path: network_tb/layer1_wma/GEN_OUTPUT[18].GEN_INPUT[4].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U154
+   Instance path: network_tb/layer1_wma/GEN_OUTPUT[18].GEN_INPUT[3].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U155
+   Instance path: network_tb/layer1_wma/GEN_OUTPUT[18].GEN_INPUT[2].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U156
+   Instance path: network_tb/layer1_wma/GEN_OUTPUT[18].GEN_INPUT[1].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U157
+   Instance path: network_tb/layer1_wma/GEN_OUTPUT[18].GEN_INPUT[0].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U158
+   Instance path: network_tb/layer1_wma/GEN_OUTPUT[17].GEN_INPUT[4].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U159
+   Instance path: network_tb/layer1_wma/GEN_OUTPUT[17].GEN_INPUT[3].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U160
+   Instance path: network_tb/layer1_wma/GEN_OUTPUT[17].GEN_INPUT[2].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U161
+   Instance path: network_tb/layer1_wma/GEN_OUTPUT[17].GEN_INPUT[1].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U162
+   Instance path: network_tb/layer1_wma/GEN_OUTPUT[17].GEN_INPUT[0].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U163
+   Instance path: network_tb/layer1_wma/GEN_OUTPUT[16].GEN_INPUT[4].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U164
+   Instance path: network_tb/layer1_wma/GEN_OUTPUT[16].GEN_INPUT[3].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U165
+   Instance path: network_tb/layer1_wma/GEN_OUTPUT[16].GEN_INPUT[2].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U166
+   Instance path: network_tb/layer1_wma/GEN_OUTPUT[16].GEN_INPUT[1].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U167
+   Instance path: network_tb/layer1_wma/GEN_OUTPUT[16].GEN_INPUT[0].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U168
+   Instance path: network_tb/layer1_wma/GEN_OUTPUT[15].GEN_INPUT[4].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U169
+   Instance path: network_tb/layer1_wma/GEN_OUTPUT[15].GEN_INPUT[3].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U170
+   Instance path: network_tb/layer1_wma/GEN_OUTPUT[15].GEN_INPUT[2].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U171
+   Instance path: network_tb/layer1_wma/GEN_OUTPUT[15].GEN_INPUT[1].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U172
+   Instance path: network_tb/layer1_wma/GEN_OUTPUT[15].GEN_INPUT[0].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U173
+   Instance path: network_tb/layer1_wma/GEN_OUTPUT[14].GEN_INPUT[4].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U174
+   Instance path: network_tb/layer1_wma/GEN_OUTPUT[14].GEN_INPUT[3].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U175
+   Instance path: network_tb/layer1_wma/GEN_OUTPUT[14].GEN_INPUT[2].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U176
+   Instance path: network_tb/layer1_wma/GEN_OUTPUT[14].GEN_INPUT[1].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U177
+   Instance path: network_tb/layer1_wma/GEN_OUTPUT[14].GEN_INPUT[0].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U178
+   Instance path: network_tb/layer1_wma/GEN_OUTPUT[13].GEN_INPUT[4].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U179
+   Instance path: network_tb/layer1_wma/GEN_OUTPUT[13].GEN_INPUT[3].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U180
+   Instance path: network_tb/layer1_wma/GEN_OUTPUT[13].GEN_INPUT[2].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U181
+   Instance path: network_tb/layer1_wma/GEN_OUTPUT[13].GEN_INPUT[1].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U182
+   Instance path: network_tb/layer1_wma/GEN_OUTPUT[13].GEN_INPUT[0].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U183
+   Instance path: network_tb/layer1_wma/GEN_OUTPUT[12].GEN_INPUT[4].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U184
+   Instance path: network_tb/layer1_wma/GEN_OUTPUT[12].GEN_INPUT[3].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U185
+   Instance path: network_tb/layer1_wma/GEN_OUTPUT[12].GEN_INPUT[2].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U186
+   Instance path: network_tb/layer1_wma/GEN_OUTPUT[12].GEN_INPUT[1].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U187
+   Instance path: network_tb/layer1_wma/GEN_OUTPUT[12].GEN_INPUT[0].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U188
+   Instance path: network_tb/layer1_wma/GEN_OUTPUT[11].GEN_INPUT[4].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U189
+   Instance path: network_tb/layer1_wma/GEN_OUTPUT[11].GEN_INPUT[3].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U190
+   Instance path: network_tb/layer1_wma/GEN_OUTPUT[11].GEN_INPUT[2].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U191
+   Instance path: network_tb/layer1_wma/GEN_OUTPUT[11].GEN_INPUT[1].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U192
+   Instance path: network_tb/layer1_wma/GEN_OUTPUT[11].GEN_INPUT[0].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U193
+   Instance path: network_tb/layer1_wma/GEN_OUTPUT[10].GEN_INPUT[4].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U194
+   Instance path: network_tb/layer1_wma/GEN_OUTPUT[10].GEN_INPUT[3].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U195
+   Instance path: network_tb/layer1_wma/GEN_OUTPUT[10].GEN_INPUT[2].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U196
+   Instance path: network_tb/layer1_wma/GEN_OUTPUT[10].GEN_INPUT[1].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U197
+   Instance path: network_tb/layer1_wma/GEN_OUTPUT[10].GEN_INPUT[0].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U198
+   Instance path: network_tb/layer1_wma/GEN_OUTPUT[0].GEN_INPUT[4].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U199
+   Instance path: network_tb/layer1_wma/GEN_OUTPUT[0].GEN_INPUT[3].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U200
+   Instance path: network_tb/layer1_wma/GEN_OUTPUT[0].GEN_INPUT[2].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U201
+   Instance path: network_tb/layer1_wma/GEN_OUTPUT[0].GEN_INPUT[1].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U202
+   Instance path: network_tb/layer1_wma/GEN_OUTPUT[0].GEN_INPUT[0].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_manager_unit(NUM_WEIGHTS=200)
+   Instance path: network_tb/wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	       1836        21.2
+                               LUTGATE	       1818        50.7
+                                LUTCCU	         18         0.4
+                                PFUREG	       1636        40.3
+---------------------------------------------------
+Report for cell weight_multiply_array(IN_SIZE=20)
+   Instance path: network_tb/layer2_wma
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	        990        11.4
+                                LUTCCU	        990        19.5
+                                PFUREG	        800        19.7
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+                  weight_multiply_unit	          1         0.0
+              weight_multiply_unit_U10	          1         0.0
+             weight_multiply_unit_U100	          1         0.0
+             weight_multiply_unit_U101	          1         0.0
+             weight_multiply_unit_U102	          1         0.0
+              weight_multiply_unit_U11	          1         0.0
+              weight_multiply_unit_U12	          1         0.0
+              weight_multiply_unit_U13	          1         0.0
+              weight_multiply_unit_U14	          1         0.0
+              weight_multiply_unit_U15	          1         0.0
+              weight_multiply_unit_U16	          1         0.0
+              weight_multiply_unit_U17	          1         0.0
+              weight_multiply_unit_U18	          1         0.0
+              weight_multiply_unit_U19	          1         0.0
+              weight_multiply_unit_U20	          1         0.0
+              weight_multiply_unit_U21	          1         0.0
+              weight_multiply_unit_U22	          1         0.0
+              weight_multiply_unit_U23	          1         0.0
+              weight_multiply_unit_U24	          1         0.0
+              weight_multiply_unit_U25	          1         0.0
+              weight_multiply_unit_U26	          1         0.0
+              weight_multiply_unit_U27	          1         0.0
+              weight_multiply_unit_U28	          1         0.0
+              weight_multiply_unit_U29	          1         0.0
+              weight_multiply_unit_U30	          1         0.0
+              weight_multiply_unit_U31	          1         0.0
+              weight_multiply_unit_U32	          1         0.0
+              weight_multiply_unit_U33	          1         0.0
+              weight_multiply_unit_U34	          1         0.0
+              weight_multiply_unit_U35	          1         0.0
+              weight_multiply_unit_U36	          1         0.0
+              weight_multiply_unit_U37	          1         0.0
+              weight_multiply_unit_U38	          1         0.0
+              weight_multiply_unit_U39	          1         0.0
+               weight_multiply_unit_U4	          1         0.0
+              weight_multiply_unit_U40	          1         0.0
+              weight_multiply_unit_U41	          1         0.0
+              weight_multiply_unit_U42	          1         0.0
+              weight_multiply_unit_U43	          1         0.0
+              weight_multiply_unit_U44	          1         0.0
+              weight_multiply_unit_U45	          1         0.0
+              weight_multiply_unit_U46	          1         0.0
+              weight_multiply_unit_U47	          1         0.0
+              weight_multiply_unit_U48	          1         0.0
+              weight_multiply_unit_U49	          1         0.0
+               weight_multiply_unit_U5	          1         0.0
+              weight_multiply_unit_U50	          1         0.0
+              weight_multiply_unit_U51	          1         0.0
+              weight_multiply_unit_U52	          1         0.0
+              weight_multiply_unit_U53	          1         0.0
+              weight_multiply_unit_U54	          1         0.0
+              weight_multiply_unit_U55	          1         0.0
+              weight_multiply_unit_U56	          1         0.0
+              weight_multiply_unit_U57	          1         0.0
+              weight_multiply_unit_U58	          1         0.0
+              weight_multiply_unit_U59	          1         0.0
+               weight_multiply_unit_U6	          1         0.0
+              weight_multiply_unit_U60	          1         0.0
+              weight_multiply_unit_U61	          1         0.0
+              weight_multiply_unit_U62	          1         0.0
+              weight_multiply_unit_U63	          1         0.0
+              weight_multiply_unit_U64	          1         0.0
+              weight_multiply_unit_U65	          1         0.0
+              weight_multiply_unit_U66	          1         0.0
+              weight_multiply_unit_U67	          1         0.0
+              weight_multiply_unit_U68	          1         0.0
+              weight_multiply_unit_U69	          1         0.0
+               weight_multiply_unit_U7	          1         0.0
+              weight_multiply_unit_U70	          1         0.0
+              weight_multiply_unit_U71	          1         0.0
+              weight_multiply_unit_U72	          1         0.0
+              weight_multiply_unit_U73	          1         0.0
+              weight_multiply_unit_U74	          1         0.0
+              weight_multiply_unit_U75	          1         0.0
+              weight_multiply_unit_U76	          1         0.0
+              weight_multiply_unit_U77	          1         0.0
+              weight_multiply_unit_U78	          1         0.0
+              weight_multiply_unit_U79	          1         0.0
+               weight_multiply_unit_U8	          1         0.0
+              weight_multiply_unit_U80	          1         0.0
+              weight_multiply_unit_U81	          1         0.0
+              weight_multiply_unit_U82	          1         0.0
+              weight_multiply_unit_U83	          1         0.0
+              weight_multiply_unit_U84	          1         0.0
+              weight_multiply_unit_U85	          1         0.0
+              weight_multiply_unit_U86	          1         0.0
+              weight_multiply_unit_U87	          1         0.0
+              weight_multiply_unit_U88	          1         0.0
+              weight_multiply_unit_U89	          1         0.0
+               weight_multiply_unit_U9	          1         0.0
+              weight_multiply_unit_U90	          1         0.0
+              weight_multiply_unit_U91	          1         0.0
+              weight_multiply_unit_U92	          1         0.0
+              weight_multiply_unit_U93	          1         0.0
+              weight_multiply_unit_U94	          1         0.0
+              weight_multiply_unit_U95	          1         0.0
+              weight_multiply_unit_U96	          1         0.0
+              weight_multiply_unit_U97	          1         0.0
+              weight_multiply_unit_U98	          1         0.0
+              weight_multiply_unit_U99	          1         0.0
+---------------------------------------------------
+Report for cell weight_multiply_unit
+   Instance path: network_tb/layer2_wma/GEN_OUTPUT[4].GEN_INPUT[9].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U4
+   Instance path: network_tb/layer2_wma/GEN_OUTPUT[4].GEN_INPUT[8].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U5
+   Instance path: network_tb/layer2_wma/GEN_OUTPUT[4].GEN_INPUT[7].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U6
+   Instance path: network_tb/layer2_wma/GEN_OUTPUT[4].GEN_INPUT[6].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U7
+   Instance path: network_tb/layer2_wma/GEN_OUTPUT[4].GEN_INPUT[5].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U8
+   Instance path: network_tb/layer2_wma/GEN_OUTPUT[4].GEN_INPUT[4].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U9
+   Instance path: network_tb/layer2_wma/GEN_OUTPUT[4].GEN_INPUT[3].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U10
+   Instance path: network_tb/layer2_wma/GEN_OUTPUT[4].GEN_INPUT[2].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U11
+   Instance path: network_tb/layer2_wma/GEN_OUTPUT[4].GEN_INPUT[1].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U12
+   Instance path: network_tb/layer2_wma/GEN_OUTPUT[4].GEN_INPUT[19].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U13
+   Instance path: network_tb/layer2_wma/GEN_OUTPUT[4].GEN_INPUT[18].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U14
+   Instance path: network_tb/layer2_wma/GEN_OUTPUT[4].GEN_INPUT[17].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U15
+   Instance path: network_tb/layer2_wma/GEN_OUTPUT[4].GEN_INPUT[16].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U16
+   Instance path: network_tb/layer2_wma/GEN_OUTPUT[4].GEN_INPUT[15].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U17
+   Instance path: network_tb/layer2_wma/GEN_OUTPUT[4].GEN_INPUT[14].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U18
+   Instance path: network_tb/layer2_wma/GEN_OUTPUT[4].GEN_INPUT[13].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U19
+   Instance path: network_tb/layer2_wma/GEN_OUTPUT[4].GEN_INPUT[12].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U20
+   Instance path: network_tb/layer2_wma/GEN_OUTPUT[4].GEN_INPUT[11].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U21
+   Instance path: network_tb/layer2_wma/GEN_OUTPUT[4].GEN_INPUT[10].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U22
+   Instance path: network_tb/layer2_wma/GEN_OUTPUT[4].GEN_INPUT[0].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U23
+   Instance path: network_tb/layer2_wma/GEN_OUTPUT[3].GEN_INPUT[9].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U24
+   Instance path: network_tb/layer2_wma/GEN_OUTPUT[3].GEN_INPUT[8].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U25
+   Instance path: network_tb/layer2_wma/GEN_OUTPUT[3].GEN_INPUT[7].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U26
+   Instance path: network_tb/layer2_wma/GEN_OUTPUT[3].GEN_INPUT[6].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U27
+   Instance path: network_tb/layer2_wma/GEN_OUTPUT[3].GEN_INPUT[5].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U28
+   Instance path: network_tb/layer2_wma/GEN_OUTPUT[3].GEN_INPUT[4].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U29
+   Instance path: network_tb/layer2_wma/GEN_OUTPUT[3].GEN_INPUT[3].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U30
+   Instance path: network_tb/layer2_wma/GEN_OUTPUT[3].GEN_INPUT[2].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U31
+   Instance path: network_tb/layer2_wma/GEN_OUTPUT[3].GEN_INPUT[1].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U32
+   Instance path: network_tb/layer2_wma/GEN_OUTPUT[3].GEN_INPUT[19].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U33
+   Instance path: network_tb/layer2_wma/GEN_OUTPUT[3].GEN_INPUT[18].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U34
+   Instance path: network_tb/layer2_wma/GEN_OUTPUT[3].GEN_INPUT[17].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U35
+   Instance path: network_tb/layer2_wma/GEN_OUTPUT[3].GEN_INPUT[16].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U36
+   Instance path: network_tb/layer2_wma/GEN_OUTPUT[3].GEN_INPUT[15].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U37
+   Instance path: network_tb/layer2_wma/GEN_OUTPUT[3].GEN_INPUT[14].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U38
+   Instance path: network_tb/layer2_wma/GEN_OUTPUT[3].GEN_INPUT[13].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U39
+   Instance path: network_tb/layer2_wma/GEN_OUTPUT[3].GEN_INPUT[12].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U40
+   Instance path: network_tb/layer2_wma/GEN_OUTPUT[3].GEN_INPUT[11].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U41
+   Instance path: network_tb/layer2_wma/GEN_OUTPUT[3].GEN_INPUT[10].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U42
+   Instance path: network_tb/layer2_wma/GEN_OUTPUT[3].GEN_INPUT[0].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U43
+   Instance path: network_tb/layer2_wma/GEN_OUTPUT[2].GEN_INPUT[9].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U44
+   Instance path: network_tb/layer2_wma/GEN_OUTPUT[2].GEN_INPUT[8].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U45
+   Instance path: network_tb/layer2_wma/GEN_OUTPUT[2].GEN_INPUT[7].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U46
+   Instance path: network_tb/layer2_wma/GEN_OUTPUT[2].GEN_INPUT[6].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U47
+   Instance path: network_tb/layer2_wma/GEN_OUTPUT[2].GEN_INPUT[5].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U48
+   Instance path: network_tb/layer2_wma/GEN_OUTPUT[2].GEN_INPUT[4].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U49
+   Instance path: network_tb/layer2_wma/GEN_OUTPUT[2].GEN_INPUT[3].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U50
+   Instance path: network_tb/layer2_wma/GEN_OUTPUT[2].GEN_INPUT[2].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U51
+   Instance path: network_tb/layer2_wma/GEN_OUTPUT[2].GEN_INPUT[1].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U52
+   Instance path: network_tb/layer2_wma/GEN_OUTPUT[2].GEN_INPUT[19].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U53
+   Instance path: network_tb/layer2_wma/GEN_OUTPUT[2].GEN_INPUT[18].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U54
+   Instance path: network_tb/layer2_wma/GEN_OUTPUT[2].GEN_INPUT[17].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U55
+   Instance path: network_tb/layer2_wma/GEN_OUTPUT[2].GEN_INPUT[16].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U56
+   Instance path: network_tb/layer2_wma/GEN_OUTPUT[2].GEN_INPUT[15].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U57
+   Instance path: network_tb/layer2_wma/GEN_OUTPUT[2].GEN_INPUT[14].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U58
+   Instance path: network_tb/layer2_wma/GEN_OUTPUT[2].GEN_INPUT[13].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U59
+   Instance path: network_tb/layer2_wma/GEN_OUTPUT[2].GEN_INPUT[12].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U60
+   Instance path: network_tb/layer2_wma/GEN_OUTPUT[2].GEN_INPUT[11].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U61
+   Instance path: network_tb/layer2_wma/GEN_OUTPUT[2].GEN_INPUT[10].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U62
+   Instance path: network_tb/layer2_wma/GEN_OUTPUT[2].GEN_INPUT[0].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U63
+   Instance path: network_tb/layer2_wma/GEN_OUTPUT[1].GEN_INPUT[9].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U64
+   Instance path: network_tb/layer2_wma/GEN_OUTPUT[1].GEN_INPUT[8].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U65
+   Instance path: network_tb/layer2_wma/GEN_OUTPUT[1].GEN_INPUT[7].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U66
+   Instance path: network_tb/layer2_wma/GEN_OUTPUT[1].GEN_INPUT[6].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U67
+   Instance path: network_tb/layer2_wma/GEN_OUTPUT[1].GEN_INPUT[5].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U68
+   Instance path: network_tb/layer2_wma/GEN_OUTPUT[1].GEN_INPUT[4].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U69
+   Instance path: network_tb/layer2_wma/GEN_OUTPUT[1].GEN_INPUT[3].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U70
+   Instance path: network_tb/layer2_wma/GEN_OUTPUT[1].GEN_INPUT[2].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U71
+   Instance path: network_tb/layer2_wma/GEN_OUTPUT[1].GEN_INPUT[1].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U72
+   Instance path: network_tb/layer2_wma/GEN_OUTPUT[1].GEN_INPUT[19].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U73
+   Instance path: network_tb/layer2_wma/GEN_OUTPUT[1].GEN_INPUT[18].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U74
+   Instance path: network_tb/layer2_wma/GEN_OUTPUT[1].GEN_INPUT[17].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U75
+   Instance path: network_tb/layer2_wma/GEN_OUTPUT[1].GEN_INPUT[16].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U76
+   Instance path: network_tb/layer2_wma/GEN_OUTPUT[1].GEN_INPUT[15].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U77
+   Instance path: network_tb/layer2_wma/GEN_OUTPUT[1].GEN_INPUT[14].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U78
+   Instance path: network_tb/layer2_wma/GEN_OUTPUT[1].GEN_INPUT[13].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U79
+   Instance path: network_tb/layer2_wma/GEN_OUTPUT[1].GEN_INPUT[12].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U80
+   Instance path: network_tb/layer2_wma/GEN_OUTPUT[1].GEN_INPUT[11].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U81
+   Instance path: network_tb/layer2_wma/GEN_OUTPUT[1].GEN_INPUT[10].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U82
+   Instance path: network_tb/layer2_wma/GEN_OUTPUT[1].GEN_INPUT[0].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U83
+   Instance path: network_tb/layer2_wma/GEN_OUTPUT[0].GEN_INPUT[9].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U84
+   Instance path: network_tb/layer2_wma/GEN_OUTPUT[0].GEN_INPUT[8].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U85
+   Instance path: network_tb/layer2_wma/GEN_OUTPUT[0].GEN_INPUT[7].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U86
+   Instance path: network_tb/layer2_wma/GEN_OUTPUT[0].GEN_INPUT[6].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U87
+   Instance path: network_tb/layer2_wma/GEN_OUTPUT[0].GEN_INPUT[5].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U88
+   Instance path: network_tb/layer2_wma/GEN_OUTPUT[0].GEN_INPUT[4].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U89
+   Instance path: network_tb/layer2_wma/GEN_OUTPUT[0].GEN_INPUT[3].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U90
+   Instance path: network_tb/layer2_wma/GEN_OUTPUT[0].GEN_INPUT[2].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U91
+   Instance path: network_tb/layer2_wma/GEN_OUTPUT[0].GEN_INPUT[1].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U92
+   Instance path: network_tb/layer2_wma/GEN_OUTPUT[0].GEN_INPUT[19].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U93
+   Instance path: network_tb/layer2_wma/GEN_OUTPUT[0].GEN_INPUT[18].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U94
+   Instance path: network_tb/layer2_wma/GEN_OUTPUT[0].GEN_INPUT[17].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U95
+   Instance path: network_tb/layer2_wma/GEN_OUTPUT[0].GEN_INPUT[16].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U96
+   Instance path: network_tb/layer2_wma/GEN_OUTPUT[0].GEN_INPUT[15].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U97
+   Instance path: network_tb/layer2_wma/GEN_OUTPUT[0].GEN_INPUT[14].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U98
+   Instance path: network_tb/layer2_wma/GEN_OUTPUT[0].GEN_INPUT[13].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U99
+   Instance path: network_tb/layer2_wma/GEN_OUTPUT[0].GEN_INPUT[12].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U100
+   Instance path: network_tb/layer2_wma/GEN_OUTPUT[0].GEN_INPUT[11].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U101
+   Instance path: network_tb/layer2_wma/GEN_OUTPUT[0].GEN_INPUT[10].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell weight_multiply_unit_U102
+   Instance path: network_tb/layer2_wma/GEN_OUTPUT[0].GEN_INPUT[0].wmu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         0.2
 ---------------------------------------------------
 Report for cell single_port_ram
    Instance path: network_tb/ram
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                   EBR	          1        100.0
----------------------------------------------------
-Report for cell weight_multiply_array
-   Instance path: network_tb/wma
-                     Cell usage:
-                                  cell	      count    Res Usage(%)
-                                  LUT4	        510        61.4
-                               LUTGATE	        240        69.4
-                                LUTCCU	        270        55.8
-                                PFUREG	        240        38.9
-SUB MODULES
-                                  cell	      count    LUT4 Usage(%)
-                  weight_multiply_unit	          1         1.0
-               weight_multiply_unit_U0	          1         1.0
-               weight_multiply_unit_U1	          1         1.0
-              weight_multiply_unit_U10	          1         1.0
-              weight_multiply_unit_U11	          1         1.0
-              weight_multiply_unit_U12	          1         1.0
-              weight_multiply_unit_U13	          1         1.0
-              weight_multiply_unit_U14	          1         1.0
-              weight_multiply_unit_U15	          1         1.0
-              weight_multiply_unit_U16	          1         1.0
-              weight_multiply_unit_U17	          1         1.0
-              weight_multiply_unit_U18	          1         1.0
-              weight_multiply_unit_U19	          1         1.0
-               weight_multiply_unit_U2	          1         1.0
-              weight_multiply_unit_U20	          1         1.0
-              weight_multiply_unit_U21	          1         1.0
-              weight_multiply_unit_U22	          1         1.0
-              weight_multiply_unit_U23	          1         1.0
-              weight_multiply_unit_U24	          1         1.0
-              weight_multiply_unit_U25	          1         1.0
-              weight_multiply_unit_U26	          1         1.0
-              weight_multiply_unit_U27	          1         1.0
-              weight_multiply_unit_U28	          1         1.0
-               weight_multiply_unit_U3	          1         1.0
-               weight_multiply_unit_U4	          1         1.0
-               weight_multiply_unit_U5	          1         1.0
-               weight_multiply_unit_U6	          1         1.0
-               weight_multiply_unit_U7	          1         1.0
-               weight_multiply_unit_U8	          1         1.0
-               weight_multiply_unit_U9	          1         1.0
----------------------------------------------------
-Report for cell weight_multiply_unit
-   Instance path: network_tb/wma/GEN_OUTPUT[2].GEN_INPUT[9].wmu
-                     Cell usage:
-                                  cell	      count    Res Usage(%)
-                                  LUT4	          8         1.0
-                               LUTGATE	          8         2.3
-                                PFUREG	          8         1.3
----------------------------------------------------
-Report for cell weight_multiply_unit_U0
-   Instance path: network_tb/wma/GEN_OUTPUT[2].GEN_INPUT[8].wmu
-                     Cell usage:
-                                  cell	      count    Res Usage(%)
-                                  LUT4	          8         1.0
-                               LUTGATE	          8         2.3
-                                PFUREG	          8         1.3
----------------------------------------------------
-Report for cell weight_multiply_unit_U1
-   Instance path: network_tb/wma/GEN_OUTPUT[2].GEN_INPUT[7].wmu
-                     Cell usage:
-                                  cell	      count    Res Usage(%)
-                                  LUT4	          8         1.0
-                               LUTGATE	          8         2.3
-                                PFUREG	          8         1.3
----------------------------------------------------
-Report for cell weight_multiply_unit_U2
-   Instance path: network_tb/wma/GEN_OUTPUT[2].GEN_INPUT[6].wmu
-                     Cell usage:
-                                  cell	      count    Res Usage(%)
-                                  LUT4	          8         1.0
-                               LUTGATE	          8         2.3
-                                PFUREG	          8         1.3
----------------------------------------------------
-Report for cell weight_multiply_unit_U3
-   Instance path: network_tb/wma/GEN_OUTPUT[2].GEN_INPUT[5].wmu
-                     Cell usage:
-                                  cell	      count    Res Usage(%)
-                                  LUT4	          8         1.0
-                               LUTGATE	          8         2.3
-                                PFUREG	          8         1.3
----------------------------------------------------
-Report for cell weight_multiply_unit_U4
-   Instance path: network_tb/wma/GEN_OUTPUT[2].GEN_INPUT[4].wmu
-                     Cell usage:
-                                  cell	      count    Res Usage(%)
-                                  LUT4	          8         1.0
-                               LUTGATE	          8         2.3
-                                PFUREG	          8         1.3
----------------------------------------------------
-Report for cell weight_multiply_unit_U5
-   Instance path: network_tb/wma/GEN_OUTPUT[2].GEN_INPUT[3].wmu
-                     Cell usage:
-                                  cell	      count    Res Usage(%)
-                                  LUT4	          8         1.0
-                               LUTGATE	          8         2.3
-                                PFUREG	          8         1.3
----------------------------------------------------
-Report for cell weight_multiply_unit_U6
-   Instance path: network_tb/wma/GEN_OUTPUT[2].GEN_INPUT[2].wmu
-                     Cell usage:
-                                  cell	      count    Res Usage(%)
-                                  LUT4	          8         1.0
-                               LUTGATE	          8         2.3
-                                PFUREG	          8         1.3
----------------------------------------------------
-Report for cell weight_multiply_unit_U7
-   Instance path: network_tb/wma/GEN_OUTPUT[2].GEN_INPUT[1].wmu
-                     Cell usage:
-                                  cell	      count    Res Usage(%)
-                                  LUT4	          8         1.0
-                               LUTGATE	          8         2.3
-                                PFUREG	          8         1.3
----------------------------------------------------
-Report for cell weight_multiply_unit_U8
-   Instance path: network_tb/wma/GEN_OUTPUT[2].GEN_INPUT[0].wmu
-                     Cell usage:
-                                  cell	      count    Res Usage(%)
-                                  LUT4	          8         1.0
-                               LUTGATE	          8         2.3
-                                PFUREG	          8         1.3
----------------------------------------------------
-Report for cell weight_multiply_unit_U9
-   Instance path: network_tb/wma/GEN_OUTPUT[1].GEN_INPUT[9].wmu
-                     Cell usage:
-                                  cell	      count    Res Usage(%)
-                                  LUT4	          8         1.0
-                               LUTGATE	          8         2.3
-                                PFUREG	          8         1.3
----------------------------------------------------
-Report for cell weight_multiply_unit_U10
-   Instance path: network_tb/wma/GEN_OUTPUT[1].GEN_INPUT[8].wmu
-                     Cell usage:
-                                  cell	      count    Res Usage(%)
-                                  LUT4	          8         1.0
-                               LUTGATE	          8         2.3
-                                PFUREG	          8         1.3
----------------------------------------------------
-Report for cell weight_multiply_unit_U11
-   Instance path: network_tb/wma/GEN_OUTPUT[1].GEN_INPUT[7].wmu
-                     Cell usage:
-                                  cell	      count    Res Usage(%)
-                                  LUT4	          8         1.0
-                               LUTGATE	          8         2.3
-                                PFUREG	          8         1.3
----------------------------------------------------
-Report for cell weight_multiply_unit_U12
-   Instance path: network_tb/wma/GEN_OUTPUT[1].GEN_INPUT[6].wmu
-                     Cell usage:
-                                  cell	      count    Res Usage(%)
-                                  LUT4	          8         1.0
-                               LUTGATE	          8         2.3
-                                PFUREG	          8         1.3
----------------------------------------------------
-Report for cell weight_multiply_unit_U13
-   Instance path: network_tb/wma/GEN_OUTPUT[1].GEN_INPUT[5].wmu
-                     Cell usage:
-                                  cell	      count    Res Usage(%)
-                                  LUT4	          8         1.0
-                               LUTGATE	          8         2.3
-                                PFUREG	          8         1.3
----------------------------------------------------
-Report for cell weight_multiply_unit_U14
-   Instance path: network_tb/wma/GEN_OUTPUT[1].GEN_INPUT[4].wmu
-                     Cell usage:
-                                  cell	      count    Res Usage(%)
-                                  LUT4	          8         1.0
-                               LUTGATE	          8         2.3
-                                PFUREG	          8         1.3
----------------------------------------------------
-Report for cell weight_multiply_unit_U15
-   Instance path: network_tb/wma/GEN_OUTPUT[1].GEN_INPUT[3].wmu
-                     Cell usage:
-                                  cell	      count    Res Usage(%)
-                                  LUT4	          8         1.0
-                               LUTGATE	          8         2.3
-                                PFUREG	          8         1.3
----------------------------------------------------
-Report for cell weight_multiply_unit_U16
-   Instance path: network_tb/wma/GEN_OUTPUT[1].GEN_INPUT[2].wmu
-                     Cell usage:
-                                  cell	      count    Res Usage(%)
-                                  LUT4	          8         1.0
-                               LUTGATE	          8         2.3
-                                PFUREG	          8         1.3
----------------------------------------------------
-Report for cell weight_multiply_unit_U17
-   Instance path: network_tb/wma/GEN_OUTPUT[1].GEN_INPUT[1].wmu
-                     Cell usage:
-                                  cell	      count    Res Usage(%)
-                                  LUT4	          8         1.0
-                               LUTGATE	          8         2.3
-                                PFUREG	          8         1.3
----------------------------------------------------
-Report for cell weight_multiply_unit_U18
-   Instance path: network_tb/wma/GEN_OUTPUT[1].GEN_INPUT[0].wmu
-                     Cell usage:
-                                  cell	      count    Res Usage(%)
-                                  LUT4	          8         1.0
-                               LUTGATE	          8         2.3
-                                PFUREG	          8         1.3
----------------------------------------------------
-Report for cell weight_multiply_unit_U19
-   Instance path: network_tb/wma/GEN_OUTPUT[0].GEN_INPUT[9].wmu
-                     Cell usage:
-                                  cell	      count    Res Usage(%)
-                                  LUT4	          8         1.0
-                               LUTGATE	          8         2.3
-                                PFUREG	          8         1.3
----------------------------------------------------
-Report for cell weight_multiply_unit_U20
-   Instance path: network_tb/wma/GEN_OUTPUT[0].GEN_INPUT[8].wmu
-                     Cell usage:
-                                  cell	      count    Res Usage(%)
-                                  LUT4	          8         1.0
-                               LUTGATE	          8         2.3
-                                PFUREG	          8         1.3
----------------------------------------------------
-Report for cell weight_multiply_unit_U21
-   Instance path: network_tb/wma/GEN_OUTPUT[0].GEN_INPUT[7].wmu
-                     Cell usage:
-                                  cell	      count    Res Usage(%)
-                                  LUT4	          8         1.0
-                               LUTGATE	          8         2.3
-                                PFUREG	          8         1.3
----------------------------------------------------
-Report for cell weight_multiply_unit_U22
-   Instance path: network_tb/wma/GEN_OUTPUT[0].GEN_INPUT[6].wmu
-                     Cell usage:
-                                  cell	      count    Res Usage(%)
-                                  LUT4	          8         1.0
-                               LUTGATE	          8         2.3
-                                PFUREG	          8         1.3
----------------------------------------------------
-Report for cell weight_multiply_unit_U23
-   Instance path: network_tb/wma/GEN_OUTPUT[0].GEN_INPUT[5].wmu
-                     Cell usage:
-                                  cell	      count    Res Usage(%)
-                                  LUT4	          8         1.0
-                               LUTGATE	          8         2.3
-                                PFUREG	          8         1.3
----------------------------------------------------
-Report for cell weight_multiply_unit_U24
-   Instance path: network_tb/wma/GEN_OUTPUT[0].GEN_INPUT[4].wmu
-                     Cell usage:
-                                  cell	      count    Res Usage(%)
-                                  LUT4	          8         1.0
-                               LUTGATE	          8         2.3
-                                PFUREG	          8         1.3
----------------------------------------------------
-Report for cell weight_multiply_unit_U25
-   Instance path: network_tb/wma/GEN_OUTPUT[0].GEN_INPUT[3].wmu
-                     Cell usage:
-                                  cell	      count    Res Usage(%)
-                                  LUT4	          8         1.0
-                               LUTGATE	          8         2.3
-                                PFUREG	          8         1.3
----------------------------------------------------
-Report for cell weight_multiply_unit_U26
-   Instance path: network_tb/wma/GEN_OUTPUT[0].GEN_INPUT[2].wmu
-                     Cell usage:
-                                  cell	      count    Res Usage(%)
-                                  LUT4	          8         1.0
-                               LUTGATE	          8         2.3
-                                PFUREG	          8         1.3
----------------------------------------------------
-Report for cell weight_multiply_unit_U27
-   Instance path: network_tb/wma/GEN_OUTPUT[0].GEN_INPUT[1].wmu
-                     Cell usage:
-                                  cell	      count    Res Usage(%)
-                                  LUT4	          8         1.0
-                               LUTGATE	          8         2.3
-                                PFUREG	          8         1.3
----------------------------------------------------
-Report for cell weight_multiply_unit_U28
-   Instance path: network_tb/wma/GEN_OUTPUT[0].GEN_INPUT[0].wmu
-                     Cell usage:
-                                  cell	      count    Res Usage(%)
-                                  LUT4	          8         1.0
-                               LUTGATE	          8         2.3
-                                PFUREG	          8         1.3
----------------------------------------------------
-Report for cell weight_manager_unit
-   Instance path: network_tb/wmu
-                     Cell usage:
-                                  cell	      count    Res Usage(%)
-                                  LUT4	         70         8.4
-                               LUTGATE	         60        17.3
-                                LUTCCU	         10         2.1
-                                PFUREG	        272        44.1
+                                PFUREG	          2         0.0
+                                   EBR	         32        100.0

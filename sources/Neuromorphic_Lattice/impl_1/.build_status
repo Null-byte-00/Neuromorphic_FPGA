@@ -6,19 +6,19 @@
             <Task name="IBIS" build_result="0" update_result="2" update_time="1787071343"/>
             <Task name="TimingSimFileVlg" build_result="0" update_result="2" update_time="1787071343"/>
         </Milestone>
-        <Milestone name="Map" build_result="0" build_time="1787267749">
-            <Task name="Map" build_result="0" update_result="2" update_time="1787267749"/>
+        <Milestone name="Map" build_result="2" build_time="1787676175">
+            <Task name="Map" build_result="2" update_result="0" update_time="1787676175"/>
             <Task name="MapTrace" build_result="0" update_result="2" update_time="1787071343"/>
         </Milestone>
-        <Milestone name="PAR" build_result="0" build_time="1787267749">
-            <Task name="PAR" build_result="0" update_result="2" update_time="1787267749"/>
+        <Milestone name="PAR" build_result="2" build_time="1787676242">
+            <Task name="PAR" build_result="2" update_result="0" update_time="1787676242"/>
             <Task name="PostParVM" build_result="0" update_result="2" update_time="1787071343"/>
-            <Task name="PARTrace" build_result="0" update_result="2" update_time="1787267749"/>
+            <Task name="PARTrace" build_result="2" update_result="0" update_time="1787676251"/>
             <Task name="IOTiming" build_result="0" update_result="2" update_time="1787071343"/>
         </Milestone>
-        <Milestone name="Synthesis" build_result="2" build_time="1787598756">
-            <Task name="Lattice_Synthesis" build_result="2" update_result="0" update_time="1787598756"/>
-            <Task name="LSE_Compile" build_result="2" update_result="0" update_time="1787598756"/>
+        <Milestone name="Synthesis" build_result="2" build_time="1787676083">
+            <Task name="Lattice_Synthesis" build_result="2" update_result="0" update_time="1787676083"/>
+            <Task name="LSE_Compile" build_result="2" update_result="0" update_time="1787676083"/>
             <Task name="LSE_Lint" build_result="0" update_result="2" update_time="1787248069"/>
             <Task name="SynTrace" build_result="0" update_result="2" update_time="1787248069"/>
             <Task name="SynVerilogSimFile" build_result="0" update_result="2" update_time="1787248069"/>
@@ -33,11 +33,11 @@
         <Report name="Neuromorphic_Lattice_impl_1.bgn" last_build_time="1787251900" last_build_size="4619"/>
         <Report name="Neuromorphic_Lattice_impl_1.bit" last_build_time="1787251900" last_build_size="813597"/>
         <Report name="Neuromorphic_Lattice_impl_1.lsedata" last_build_time="0" last_build_size="0"/>
-        <Report name="Neuromorphic_Lattice_impl_1.twr.html" last_build_time="1787251893" last_build_size="14877"/>
-        <Report name="Neuromorphic_Lattice_impl_1.udb" last_build_time="1787251889" last_build_size="130002"/>
-        <Report name="Neuromorphic_Lattice_impl_1_map.udb" last_build_time="1787251871" last_build_size="74465"/>
-        <Report name="Neuromorphic_Lattice_impl_1_rtl.udb" last_build_time="1787598677" last_build_size="1545142"/>
-        <Report name="Neuromorphic_Lattice_impl_1_syn.udb" last_build_time="1787598749" last_build_size="1637436"/>
+        <Report name="Neuromorphic_Lattice_impl_1.twr.html" last_build_time="1787676251" last_build_size="14877"/>
+        <Report name="Neuromorphic_Lattice_impl_1.udb" last_build_time="1787676242" last_build_size="1161654"/>
+        <Report name="Neuromorphic_Lattice_impl_1_map.udb" last_build_time="1787676173" last_build_size="616237"/>
+        <Report name="Neuromorphic_Lattice_impl_1_rtl.udb" last_build_time="1787676066" last_build_size="384171"/>
+        <Report name="Neuromorphic_Lattice_impl_1_syn.udb" last_build_time="1787676081" last_build_size="445121"/>
     </Strategy>
 </BuildStatus>
-              
+                                                                 
