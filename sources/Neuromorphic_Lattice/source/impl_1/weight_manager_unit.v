@@ -1,16 +1,19 @@
 `include "constants.vh"
 
 module weight_manager_unit #(
-    parameter NUM_WEIGHTS = `NUM_INPUTS * `NUM_OUTPUTS,
-	parameter INIT_ADDRESS = 0
+    parameter integer NUM_WEIGHTS  = `NUM_INPUTS * `NUM_OUTPUTS,
+    parameter integer INIT_ADDRESS = 0
 )(
     input  wire                              clk,
     input  wire                              reset,
     input  wire [7:0]                        ram_data,
 
     output reg [`RAM_ADDRESS_WIDTH-1:0]       ram_addr,
-    output reg                               write_enable,
-    output reg [(8*NUM_WEIGHTS)-1:0]         weights_out,
+    output wire                              write_enable,
+
+    output reg [7:0]                         weight_data,
+    output reg [`RAM_ADDRESS_WIDTH-1:0]       weight_index,
+    output reg                               weight_valid,
     output reg                               weights_loaded
 );
 
@@ -20,44 +23,58 @@ localparam [1:0] CAPTURE  = 2'd2;
 localparam [1:0] DONE     = 2'd3;
 
 reg [1:0] state;
-reg [`RAM_ADDRESS_WIDTH-1:0] weight_idx;
+reg [`RAM_ADDRESS_WIDTH-1:0] read_index;
+
+
+// This module never writes to RAM.
+assign write_enable = 1'b0;
+
 
 always @(posedge clk) begin
     if (reset) begin
         state          <= SET_ADDR;
+        read_index     <= 0;
         ram_addr       <= INIT_ADDRESS;
-        weight_idx     <= 0;
-        weights_out    <= 0;
-        write_enable   <= 0;
+
+        weight_data    <= 0;
+        weight_index   <= 0;
+        weight_valid   <= 0;
         weights_loaded <= 0;
     end else begin
-        write_enable <= 0;
+        // Weight valid is a one-clock pulse.
+        weight_valid <= 1'b0;
 
         case (state)
 
             SET_ADDR: begin
-                ram_addr <= INIT_ADDRESS + weight_idx;
+                ram_addr <= INIT_ADDRESS + read_index;
                 state <= WAIT_RAM;
             end
 
             WAIT_RAM: begin
+                // Wait for synchronous RAM output.
                 state <= CAPTURE;
             end
 
             CAPTURE: begin
-                weights_out[(weight_idx * 8) +: 8] <= ram_data;
+                weight_data  <= ram_data;
+                weight_index <= read_index;
+                weight_valid <= 1'b1;
 
-                if (weight_idx == NUM_WEIGHTS - 1) begin
-                    weights_loaded <= 1;
+                if (read_index == NUM_WEIGHTS - 1) begin
                     state <= DONE;
                 end else begin
-                    weight_idx <= weight_idx + 1'b1;
+                    read_index <= read_index + 1'b1;
                     state <= SET_ADDR;
                 end
             end
 
             DONE: begin
-                weights_loaded <= 1;
+                /*
+                 * The last weight_valid pulse is consumed by the
+                 * layer memories when this state is entered.
+                 */
+                weights_loaded <= 1'b1;
             end
 
             default: begin

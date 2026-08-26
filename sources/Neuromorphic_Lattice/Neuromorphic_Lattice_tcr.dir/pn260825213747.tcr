@@ -1,0 +1,18 @@
+#Start recording tcl command: 8/24/2026 20:46:05
+#Project Location: D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice; Project name: Neuromorphic_Lattice
+prj_open "D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice/Neuromorphic_Lattice.rdf"
+prj_run Synthesis -impl impl_1
+prj_run Synthesis -impl impl_1
+prj_run Synthesis -impl impl_1
+prj_run Synthesis -impl impl_1
+prj_run Synthesis -impl impl_1
+prj_run Synthesis -impl impl_1
+prj_run Map -impl impl_1
+prj_run PAR -impl impl_1
+prj_run PAR -impl impl_1
+prj_run PAR -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Synthesis -impl impl_1
+prj_run Synthesis -impl impl_1
+prj_run Map -impl impl_1
+#Stop recording: 8/25/2026 21:37:47

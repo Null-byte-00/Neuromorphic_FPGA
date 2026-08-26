@@ -1,6 +1,6 @@
 Lattice Timing Report -  Setup  and Hold, Version Radiant Software (64-bit) 2026.1.0.37.0
 
-Tue Aug 25 20:14:07 2026
+Tue Aug 25 21:54:59 2026
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -98,17 +98,17 @@ create_generated_clock,
 -------------------------------------------------------------------
 clk                                     |                     input
 reset                                   |                     input
+network_inputs[9]                       |                     input
+network_inputs[8]                       |                     input
+network_inputs[7]                       |                     input
+network_inputs[6]                       |                     input
+network_inputs[5]                       |                     input
 network_inputs[4]                       |                     input
 network_inputs[3]                       |                     input
 network_inputs[2]                       |                     input
-network_inputs[1]                       |                     input
-network_inputs[0]                       |                     input
-weights_loaded                          |                    output
-network_outputs[4]                      |                    output
-network_outputs[3]                      |                    output
 -------------------------------------------------------------------
                                         |                          
-Number of I/O ports without constraint  |                        13
+Number of I/O ports without constraint  |                        23
                                         |                          
 -------------------------------------------------------------------
 

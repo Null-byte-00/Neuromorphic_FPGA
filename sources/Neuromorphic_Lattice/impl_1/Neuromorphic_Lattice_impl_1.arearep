@@ -1,165 +1,80 @@
 ----------------------------------------------------------------------
 Report for cell network_tb.TECH
-Register bits:  4063 of 32256 (12.596%)
-I/O cells:      13
+Register bits:  2291 of 32256 (7.103%)
+I/O cells:      45
                                   Cell usage:
                                cell     count   Res Usage(%)
-                               CCU2      2544          100.0
-                            FD1P3DX      1616          100.0
-                            FD1P3IX      2447          100.0
+                               CCU2      1813          100.0
+                            DPR16X4       168          100.0
+                            FD1P3DX        14          100.0
+                            FD1P3IX      2277          100.0
                                 GSR         1          100.0
-                                 IB         7          100.0
-                               LUT4      3582          100.0
-                                 OB         6          100.0
-                           PDPSC16K        32          100.0
-                            WIDEFN9         8          100.0
+                                 IB        34          100.0
+                               LUT4      2946          100.0
+                                 OB        11          100.0
+                           PDPSC16K         2          100.0
+                            WIDEFN9        20          100.0
 SUB MODULES
                     single_port_ram         1
                         spike_array         1
-               spike_array(SIZE=20)         1
+               spike_array(SIZE=32)         1
                        spike_neuron         1
                     spike_neuron_U0         1
                     spike_neuron_U1         1
                     spike_neuron_U2         1
-                  spike_neuron_U203         1
-                  spike_neuron_U204         1
-                  spike_neuron_U205         1
-                  spike_neuron_U206         1
-                  spike_neuron_U207         1
-                  spike_neuron_U208         1
-                  spike_neuron_U209         1
-                  spike_neuron_U210         1
-                  spike_neuron_U211         1
-                  spike_neuron_U212         1
-                  spike_neuron_U213         1
-                  spike_neuron_U214         1
-                  spike_neuron_U215         1
-                  spike_neuron_U216         1
-                  spike_neuron_U217         1
-                  spike_neuron_U218         1
-                  spike_neuron_U219         1
-                  spike_neuron_U220         1
-                  spike_neuron_U221         1
-                  spike_neuron_U222         1
                     spike_neuron_U3         1
-weight_manager_unit(NUM_WEIGHTS=200)         1
-  weight_multiply_array(IN_SIZE=20)         1
- weight_multiply_array(OUT_SIZE=20)         1
+                    spike_neuron_U4         1
+                    spike_neuron_U5         1
+                   spike_neuron_U50         1
+                   spike_neuron_U51         1
+                   spike_neuron_U52         1
+                   spike_neuron_U53         1
+                   spike_neuron_U54         1
+                   spike_neuron_U55         1
+                   spike_neuron_U56         1
+                   spike_neuron_U57         1
+                   spike_neuron_U58         1
+                   spike_neuron_U59         1
+                    spike_neuron_U6         1
+                   spike_neuron_U60         1
+                   spike_neuron_U61         1
+                   spike_neuron_U62         1
+                   spike_neuron_U63         1
+                   spike_neuron_U64         1
+                   spike_neuron_U65         1
+                   spike_neuron_U66         1
+                   spike_neuron_U67         1
+                   spike_neuron_U68         1
+                   spike_neuron_U69         1
+                    spike_neuron_U7         1
+                   spike_neuron_U70         1
+                   spike_neuron_U71         1
+                   spike_neuron_U72         1
+                   spike_neuron_U73         1
+                   spike_neuron_U74         1
+                   spike_neuron_U75         1
+                   spike_neuron_U76         1
+                   spike_neuron_U77         1
+                   spike_neuron_U78         1
+                   spike_neuron_U79         1
+                    spike_neuron_U8         1
+                   spike_neuron_U80         1
+                   spike_neuron_U81         1
+weight_manager_unit(NUM_WEIGHTS=1344)         1
+              weight_multiply_array         1
+ weight_multiply_array(OUT_SIZE=32)         1
                weight_multiply_unit         1
            weight_multiply_unit_U10         1
-          weight_multiply_unit_U100         1
-          weight_multiply_unit_U101         1
-          weight_multiply_unit_U102         1
-          weight_multiply_unit_U103         1
-          weight_multiply_unit_U104         1
-          weight_multiply_unit_U105         1
-          weight_multiply_unit_U106         1
-          weight_multiply_unit_U107         1
-          weight_multiply_unit_U108         1
-          weight_multiply_unit_U109         1
            weight_multiply_unit_U11         1
-          weight_multiply_unit_U110         1
-          weight_multiply_unit_U111         1
-          weight_multiply_unit_U112         1
-          weight_multiply_unit_U113         1
-          weight_multiply_unit_U114         1
-          weight_multiply_unit_U115         1
-          weight_multiply_unit_U116         1
-          weight_multiply_unit_U117         1
-          weight_multiply_unit_U118         1
-          weight_multiply_unit_U119         1
            weight_multiply_unit_U12         1
-          weight_multiply_unit_U120         1
-          weight_multiply_unit_U121         1
-          weight_multiply_unit_U122         1
-          weight_multiply_unit_U123         1
-          weight_multiply_unit_U124         1
-          weight_multiply_unit_U125         1
-          weight_multiply_unit_U126         1
-          weight_multiply_unit_U127         1
-          weight_multiply_unit_U128         1
-          weight_multiply_unit_U129         1
            weight_multiply_unit_U13         1
-          weight_multiply_unit_U130         1
-          weight_multiply_unit_U131         1
-          weight_multiply_unit_U132         1
-          weight_multiply_unit_U133         1
-          weight_multiply_unit_U134         1
-          weight_multiply_unit_U135         1
-          weight_multiply_unit_U136         1
-          weight_multiply_unit_U137         1
-          weight_multiply_unit_U138         1
-          weight_multiply_unit_U139         1
            weight_multiply_unit_U14         1
-          weight_multiply_unit_U140         1
-          weight_multiply_unit_U141         1
-          weight_multiply_unit_U142         1
-          weight_multiply_unit_U143         1
-          weight_multiply_unit_U144         1
-          weight_multiply_unit_U145         1
-          weight_multiply_unit_U146         1
-          weight_multiply_unit_U147         1
-          weight_multiply_unit_U148         1
-          weight_multiply_unit_U149         1
            weight_multiply_unit_U15         1
-          weight_multiply_unit_U150         1
-          weight_multiply_unit_U151         1
-          weight_multiply_unit_U152         1
-          weight_multiply_unit_U153         1
-          weight_multiply_unit_U154         1
-          weight_multiply_unit_U155         1
-          weight_multiply_unit_U156         1
-          weight_multiply_unit_U157         1
-          weight_multiply_unit_U158         1
-          weight_multiply_unit_U159         1
            weight_multiply_unit_U16         1
-          weight_multiply_unit_U160         1
-          weight_multiply_unit_U161         1
-          weight_multiply_unit_U162         1
-          weight_multiply_unit_U163         1
-          weight_multiply_unit_U164         1
-          weight_multiply_unit_U165         1
-          weight_multiply_unit_U166         1
-          weight_multiply_unit_U167         1
-          weight_multiply_unit_U168         1
-          weight_multiply_unit_U169         1
            weight_multiply_unit_U17         1
-          weight_multiply_unit_U170         1
-          weight_multiply_unit_U171         1
-          weight_multiply_unit_U172         1
-          weight_multiply_unit_U173         1
-          weight_multiply_unit_U174         1
-          weight_multiply_unit_U175         1
-          weight_multiply_unit_U176         1
-          weight_multiply_unit_U177         1
-          weight_multiply_unit_U178         1
-          weight_multiply_unit_U179         1
            weight_multiply_unit_U18         1
-          weight_multiply_unit_U180         1
-          weight_multiply_unit_U181         1
-          weight_multiply_unit_U182         1
-          weight_multiply_unit_U183         1
-          weight_multiply_unit_U184         1
-          weight_multiply_unit_U185         1
-          weight_multiply_unit_U186         1
-          weight_multiply_unit_U187         1
-          weight_multiply_unit_U188         1
-          weight_multiply_unit_U189         1
            weight_multiply_unit_U19         1
-          weight_multiply_unit_U190         1
-          weight_multiply_unit_U191         1
-          weight_multiply_unit_U192         1
-          weight_multiply_unit_U193         1
-          weight_multiply_unit_U194         1
-          weight_multiply_unit_U195         1
-          weight_multiply_unit_U196         1
-          weight_multiply_unit_U197         1
-          weight_multiply_unit_U198         1
-          weight_multiply_unit_U199         1
            weight_multiply_unit_U20         1
-          weight_multiply_unit_U200         1
-          weight_multiply_unit_U201         1
-          weight_multiply_unit_U202         1
            weight_multiply_unit_U21         1
            weight_multiply_unit_U22         1
            weight_multiply_unit_U23         1
@@ -179,7 +94,6 @@ weight_manager_unit(NUM_WEIGHTS=200)         1
            weight_multiply_unit_U37         1
            weight_multiply_unit_U38         1
            weight_multiply_unit_U39         1
-            weight_multiply_unit_U4         1
            weight_multiply_unit_U40         1
            weight_multiply_unit_U41         1
            weight_multiply_unit_U42         1
@@ -190,1171 +104,130 @@ weight_manager_unit(NUM_WEIGHTS=200)         1
            weight_multiply_unit_U47         1
            weight_multiply_unit_U48         1
            weight_multiply_unit_U49         1
-            weight_multiply_unit_U5         1
-           weight_multiply_unit_U50         1
-           weight_multiply_unit_U51         1
-           weight_multiply_unit_U52         1
-           weight_multiply_unit_U53         1
-           weight_multiply_unit_U54         1
-           weight_multiply_unit_U55         1
-           weight_multiply_unit_U56         1
-           weight_multiply_unit_U57         1
-           weight_multiply_unit_U58         1
-           weight_multiply_unit_U59         1
-            weight_multiply_unit_U6         1
-           weight_multiply_unit_U60         1
-           weight_multiply_unit_U61         1
-           weight_multiply_unit_U62         1
-           weight_multiply_unit_U63         1
-           weight_multiply_unit_U64         1
-           weight_multiply_unit_U65         1
-           weight_multiply_unit_U66         1
-           weight_multiply_unit_U67         1
-           weight_multiply_unit_U68         1
-           weight_multiply_unit_U69         1
-            weight_multiply_unit_U7         1
-           weight_multiply_unit_U70         1
-           weight_multiply_unit_U71         1
-           weight_multiply_unit_U72         1
-           weight_multiply_unit_U73         1
-           weight_multiply_unit_U74         1
-           weight_multiply_unit_U75         1
-           weight_multiply_unit_U76         1
-           weight_multiply_unit_U77         1
-           weight_multiply_unit_U78         1
-           weight_multiply_unit_U79         1
-            weight_multiply_unit_U8         1
-           weight_multiply_unit_U80         1
-           weight_multiply_unit_U81         1
-           weight_multiply_unit_U82         1
-           weight_multiply_unit_U83         1
-           weight_multiply_unit_U84         1
-           weight_multiply_unit_U85         1
-           weight_multiply_unit_U86         1
-           weight_multiply_unit_U87         1
-           weight_multiply_unit_U88         1
-           weight_multiply_unit_U89         1
             weight_multiply_unit_U9         1
-           weight_multiply_unit_U90         1
-           weight_multiply_unit_U91         1
-           weight_multiply_unit_U92         1
-           weight_multiply_unit_U93         1
-           weight_multiply_unit_U94         1
-           weight_multiply_unit_U95         1
-           weight_multiply_unit_U96         1
-           weight_multiply_unit_U97         1
-           weight_multiply_unit_U98         1
-           weight_multiply_unit_U99         1
-                              TOTAL     10474
+                              TOTAL      7376
 ----------------------------------------------------------------------
 Report for cell spike_array.v1
 Instance Path : output_neurons
                                   Cell usage:
                                cell     count   Res Usage(%)
-                               CCU2       340           13.4
-                            FD1P3IX       165            6.7
-                               LUT4       340            9.5
+                               CCU2       340           18.8
+                            FD1P3IX       330           14.5
+                               LUT4       412           14.0
 SUB MODULES
                        spike_neuron         1
                     spike_neuron_U0         1
                     spike_neuron_U1         1
                     spike_neuron_U2         1
                     spike_neuron_U3         1
-                              TOTAL       850
+                    spike_neuron_U4         1
+                    spike_neuron_U5         1
+                    spike_neuron_U6         1
+                    spike_neuron_U7         1
+                    spike_neuron_U8         1
+                              TOTAL      1092
 ----------------------------------------------------------------------
 Report for cell spike_neuron.v1
+Instance Path : output_neurons.GEN_NEURONS[9].sn
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               CCU2        34            1.9
+                            FD1P3IX        33            1.4
+                               LUT4        41            1.4
+                              TOTAL       108
+----------------------------------------------------------------------
+Report for cell spike_neuron_U0.v1
+Instance Path : output_neurons.GEN_NEURONS[8].sn
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               CCU2        34            1.9
+                            FD1P3IX        33            1.4
+                               LUT4        41            1.4
+                              TOTAL       108
+----------------------------------------------------------------------
+Report for cell spike_neuron_U1.v1
+Instance Path : output_neurons.GEN_NEURONS[7].sn
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               CCU2        34            1.9
+                            FD1P3IX        33            1.4
+                               LUT4        41            1.4
+                              TOTAL       108
+----------------------------------------------------------------------
+Report for cell spike_neuron_U2.v1
+Instance Path : output_neurons.GEN_NEURONS[6].sn
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               CCU2        34            1.9
+                            FD1P3IX        33            1.4
+                               LUT4        41            1.4
+                              TOTAL       108
+----------------------------------------------------------------------
+Report for cell spike_neuron_U3.v1
+Instance Path : output_neurons.GEN_NEURONS[5].sn
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               CCU2        34            1.9
+                            FD1P3IX        33            1.4
+                               LUT4        42            1.4
+                              TOTAL       109
+----------------------------------------------------------------------
+Report for cell spike_neuron_U4.v1
 Instance Path : output_neurons.GEN_NEURONS[4].sn
                                   Cell usage:
                                cell     count   Res Usage(%)
-                               CCU2        68            2.7
-                            FD1P3IX        33            1.3
-                               LUT4        68            1.9
-                              TOTAL       169
+                               CCU2        34            1.9
+                            FD1P3IX        33            1.4
+                               LUT4        41            1.4
+                              TOTAL       108
 ----------------------------------------------------------------------
-Report for cell spike_neuron_U0.v1
+Report for cell spike_neuron_U5.v1
 Instance Path : output_neurons.GEN_NEURONS[3].sn
                                   Cell usage:
                                cell     count   Res Usage(%)
-                               CCU2        68            2.7
-                            FD1P3IX        33            1.3
-                               LUT4        68            1.9
-                              TOTAL       169
+                               CCU2        34            1.9
+                            FD1P3IX        33            1.4
+                               LUT4        41            1.4
+                              TOTAL       108
 ----------------------------------------------------------------------
-Report for cell spike_neuron_U1.v1
+Report for cell spike_neuron_U6.v1
 Instance Path : output_neurons.GEN_NEURONS[2].sn
                                   Cell usage:
                                cell     count   Res Usage(%)
-                               CCU2        68            2.7
-                            FD1P3IX        33            1.3
-                               LUT4        68            1.9
-                              TOTAL       169
+                               CCU2        34            1.9
+                            FD1P3IX        33            1.4
+                               LUT4        41            1.4
+                              TOTAL       108
 ----------------------------------------------------------------------
-Report for cell spike_neuron_U2.v1
+Report for cell spike_neuron_U7.v1
 Instance Path : output_neurons.GEN_NEURONS[1].sn
                                   Cell usage:
                                cell     count   Res Usage(%)
-                               CCU2        68            2.7
-                            FD1P3IX        33            1.3
-                               LUT4        68            1.9
-                              TOTAL       169
+                               CCU2        34            1.9
+                            FD1P3IX        33            1.4
+                               LUT4        41            1.4
+                              TOTAL       108
 ----------------------------------------------------------------------
-Report for cell spike_neuron_U3.v1
+Report for cell spike_neuron_U8.v1
 Instance Path : output_neurons.GEN_NEURONS[0].sn
                                   Cell usage:
                                cell     count   Res Usage(%)
-                               CCU2        68            2.7
-                            FD1P3IX        33            1.3
-                               LUT4        68            1.9
-                              TOTAL       169
+                               CCU2        34            1.9
+                            FD1P3IX        33            1.4
+                               LUT4        42            1.4
+                              TOTAL       109
 ----------------------------------------------------------------------
-Report for cell spike_array(SIZE=20).v1
-Instance Path : hidden_neurons
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                               CCU2      1360           53.5
-                            FD1P3IX       660           27.0
-                               LUT4      1380           38.5
-SUB MODULES
-                  spike_neuron_U203         1
-                  spike_neuron_U204         1
-                  spike_neuron_U205         1
-                  spike_neuron_U206         1
-                  spike_neuron_U207         1
-                  spike_neuron_U208         1
-                  spike_neuron_U209         1
-                  spike_neuron_U210         1
-                  spike_neuron_U211         1
-                  spike_neuron_U212         1
-                  spike_neuron_U213         1
-                  spike_neuron_U214         1
-                  spike_neuron_U215         1
-                  spike_neuron_U216         1
-                  spike_neuron_U217         1
-                  spike_neuron_U218         1
-                  spike_neuron_U219         1
-                  spike_neuron_U220         1
-                  spike_neuron_U221         1
-                  spike_neuron_U222         1
-                              TOTAL      3420
-----------------------------------------------------------------------
-Report for cell spike_neuron_U203.v1
-Instance Path : hidden_neurons.GEN_NEURONS[9].sn
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                               CCU2        68            2.7
-                            FD1P3IX        33            1.3
-                               LUT4        69            1.9
-                              TOTAL       170
-----------------------------------------------------------------------
-Report for cell spike_neuron_U204.v1
-Instance Path : hidden_neurons.GEN_NEURONS[8].sn
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                               CCU2        68            2.7
-                            FD1P3IX        33            1.3
-                               LUT4        69            1.9
-                              TOTAL       170
-----------------------------------------------------------------------
-Report for cell spike_neuron_U205.v1
-Instance Path : hidden_neurons.GEN_NEURONS[7].sn
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                               CCU2        68            2.7
-                            FD1P3IX        33            1.3
-                               LUT4        69            1.9
-                              TOTAL       170
-----------------------------------------------------------------------
-Report for cell spike_neuron_U206.v1
-Instance Path : hidden_neurons.GEN_NEURONS[6].sn
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                               CCU2        68            2.7
-                            FD1P3IX        33            1.3
-                               LUT4        69            1.9
-                              TOTAL       170
-----------------------------------------------------------------------
-Report for cell spike_neuron_U207.v1
-Instance Path : hidden_neurons.GEN_NEURONS[5].sn
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                               CCU2        68            2.7
-                            FD1P3IX        33            1.3
-                               LUT4        69            1.9
-                              TOTAL       170
-----------------------------------------------------------------------
-Report for cell spike_neuron_U208.v1
-Instance Path : hidden_neurons.GEN_NEURONS[4].sn
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                               CCU2        68            2.7
-                            FD1P3IX        33            1.3
-                               LUT4        69            1.9
-                              TOTAL       170
-----------------------------------------------------------------------
-Report for cell spike_neuron_U209.v1
-Instance Path : hidden_neurons.GEN_NEURONS[3].sn
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                               CCU2        68            2.7
-                            FD1P3IX        33            1.3
-                               LUT4        69            1.9
-                              TOTAL       170
-----------------------------------------------------------------------
-Report for cell spike_neuron_U210.v1
-Instance Path : hidden_neurons.GEN_NEURONS[2].sn
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                               CCU2        68            2.7
-                            FD1P3IX        33            1.3
-                               LUT4        69            1.9
-                              TOTAL       170
-----------------------------------------------------------------------
-Report for cell spike_neuron_U211.v1
-Instance Path : hidden_neurons.GEN_NEURONS[1].sn
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                               CCU2        68            2.7
-                            FD1P3IX        33            1.3
-                               LUT4        69            1.9
-                              TOTAL       170
-----------------------------------------------------------------------
-Report for cell spike_neuron_U212.v1
-Instance Path : hidden_neurons.GEN_NEURONS[19].sn
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                               CCU2        68            2.7
-                            FD1P3IX        33            1.3
-                               LUT4        69            1.9
-                              TOTAL       170
-----------------------------------------------------------------------
-Report for cell spike_neuron_U213.v1
-Instance Path : hidden_neurons.GEN_NEURONS[18].sn
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                               CCU2        68            2.7
-                            FD1P3IX        33            1.3
-                               LUT4        69            1.9
-                              TOTAL       170
-----------------------------------------------------------------------
-Report for cell spike_neuron_U214.v1
-Instance Path : hidden_neurons.GEN_NEURONS[17].sn
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                               CCU2        68            2.7
-                            FD1P3IX        33            1.3
-                               LUT4        69            1.9
-                              TOTAL       170
-----------------------------------------------------------------------
-Report for cell spike_neuron_U215.v1
-Instance Path : hidden_neurons.GEN_NEURONS[16].sn
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                               CCU2        68            2.7
-                            FD1P3IX        33            1.3
-                               LUT4        69            1.9
-                              TOTAL       170
-----------------------------------------------------------------------
-Report for cell spike_neuron_U216.v1
-Instance Path : hidden_neurons.GEN_NEURONS[15].sn
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                               CCU2        68            2.7
-                            FD1P3IX        33            1.3
-                               LUT4        69            1.9
-                              TOTAL       170
-----------------------------------------------------------------------
-Report for cell spike_neuron_U217.v1
-Instance Path : hidden_neurons.GEN_NEURONS[14].sn
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                               CCU2        68            2.7
-                            FD1P3IX        33            1.3
-                               LUT4        69            1.9
-                              TOTAL       170
-----------------------------------------------------------------------
-Report for cell spike_neuron_U218.v1
-Instance Path : hidden_neurons.GEN_NEURONS[13].sn
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                               CCU2        68            2.7
-                            FD1P3IX        33            1.3
-                               LUT4        69            1.9
-                              TOTAL       170
-----------------------------------------------------------------------
-Report for cell spike_neuron_U219.v1
-Instance Path : hidden_neurons.GEN_NEURONS[12].sn
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                               CCU2        68            2.7
-                            FD1P3IX        33            1.3
-                               LUT4        69            1.9
-                              TOTAL       170
-----------------------------------------------------------------------
-Report for cell spike_neuron_U220.v1
-Instance Path : hidden_neurons.GEN_NEURONS[11].sn
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                               CCU2        68            2.7
-                            FD1P3IX        33            1.3
-                               LUT4        69            1.9
-                              TOTAL       170
-----------------------------------------------------------------------
-Report for cell spike_neuron_U221.v1
-Instance Path : hidden_neurons.GEN_NEURONS[10].sn
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                               CCU2        68            2.7
-                            FD1P3IX        33            1.3
-                               LUT4        69            1.9
-                              TOTAL       170
-----------------------------------------------------------------------
-Report for cell spike_neuron_U222.v1
-Instance Path : hidden_neurons.GEN_NEURONS[0].sn
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                               CCU2        68            2.7
-                            FD1P3IX        33            1.3
-                               LUT4        69            1.9
-                              TOTAL       170
-----------------------------------------------------------------------
-Report for cell weight_multiply_array(OUT_SIZE=20).v1
+Report for cell weight_multiply_array(OUT_SIZE=32).v1
 Instance Path : layer1_wma
                                   Cell usage:
                                cell     count   Res Usage(%)
-                               CCU2       340           13.4
-                            FD1P3DX       800           49.5
+                               CCU2       288           15.9
+                            DPR16X4       128           76.2
+                            FD1P3DX         1            7.1
+                            FD1P3IX       628           27.6
+                               LUT4       825           28.0
+                            WIDEFN9        10           50.0
 SUB MODULES
-          weight_multiply_unit_U103         1
-          weight_multiply_unit_U104         1
-          weight_multiply_unit_U105         1
-          weight_multiply_unit_U106         1
-          weight_multiply_unit_U107         1
-          weight_multiply_unit_U108         1
-          weight_multiply_unit_U109         1
-          weight_multiply_unit_U110         1
-          weight_multiply_unit_U111         1
-          weight_multiply_unit_U112         1
-          weight_multiply_unit_U113         1
-          weight_multiply_unit_U114         1
-          weight_multiply_unit_U115         1
-          weight_multiply_unit_U116         1
-          weight_multiply_unit_U117         1
-          weight_multiply_unit_U118         1
-          weight_multiply_unit_U119         1
-          weight_multiply_unit_U120         1
-          weight_multiply_unit_U121         1
-          weight_multiply_unit_U122         1
-          weight_multiply_unit_U123         1
-          weight_multiply_unit_U124         1
-          weight_multiply_unit_U125         1
-          weight_multiply_unit_U126         1
-          weight_multiply_unit_U127         1
-          weight_multiply_unit_U128         1
-          weight_multiply_unit_U129         1
-          weight_multiply_unit_U130         1
-          weight_multiply_unit_U131         1
-          weight_multiply_unit_U132         1
-          weight_multiply_unit_U133         1
-          weight_multiply_unit_U134         1
-          weight_multiply_unit_U135         1
-          weight_multiply_unit_U136         1
-          weight_multiply_unit_U137         1
-          weight_multiply_unit_U138         1
-          weight_multiply_unit_U139         1
-          weight_multiply_unit_U140         1
-          weight_multiply_unit_U141         1
-          weight_multiply_unit_U142         1
-          weight_multiply_unit_U143         1
-          weight_multiply_unit_U144         1
-          weight_multiply_unit_U145         1
-          weight_multiply_unit_U146         1
-          weight_multiply_unit_U147         1
-          weight_multiply_unit_U148         1
-          weight_multiply_unit_U149         1
-          weight_multiply_unit_U150         1
-          weight_multiply_unit_U151         1
-          weight_multiply_unit_U152         1
-          weight_multiply_unit_U153         1
-          weight_multiply_unit_U154         1
-          weight_multiply_unit_U155         1
-          weight_multiply_unit_U156         1
-          weight_multiply_unit_U157         1
-          weight_multiply_unit_U158         1
-          weight_multiply_unit_U159         1
-          weight_multiply_unit_U160         1
-          weight_multiply_unit_U161         1
-          weight_multiply_unit_U162         1
-          weight_multiply_unit_U163         1
-          weight_multiply_unit_U164         1
-          weight_multiply_unit_U165         1
-          weight_multiply_unit_U166         1
-          weight_multiply_unit_U167         1
-          weight_multiply_unit_U168         1
-          weight_multiply_unit_U169         1
-          weight_multiply_unit_U170         1
-          weight_multiply_unit_U171         1
-          weight_multiply_unit_U172         1
-          weight_multiply_unit_U173         1
-          weight_multiply_unit_U174         1
-          weight_multiply_unit_U175         1
-          weight_multiply_unit_U176         1
-          weight_multiply_unit_U177         1
-          weight_multiply_unit_U178         1
-          weight_multiply_unit_U179         1
-          weight_multiply_unit_U180         1
-          weight_multiply_unit_U181         1
-          weight_multiply_unit_U182         1
-          weight_multiply_unit_U183         1
-          weight_multiply_unit_U184         1
-          weight_multiply_unit_U185         1
-          weight_multiply_unit_U186         1
-          weight_multiply_unit_U187         1
-          weight_multiply_unit_U188         1
-          weight_multiply_unit_U189         1
-          weight_multiply_unit_U190         1
-          weight_multiply_unit_U191         1
-          weight_multiply_unit_U192         1
-          weight_multiply_unit_U193         1
-          weight_multiply_unit_U194         1
-          weight_multiply_unit_U195         1
-          weight_multiply_unit_U196         1
-          weight_multiply_unit_U197         1
-          weight_multiply_unit_U198         1
-          weight_multiply_unit_U199         1
-          weight_multiply_unit_U200         1
-          weight_multiply_unit_U201         1
-          weight_multiply_unit_U202         1
-                              TOTAL      1240
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U103.v1
-Instance Path : layer1_wma.GEN_OUTPUT[9].GEN_INPUT[4].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U104.v1
-Instance Path : layer1_wma.GEN_OUTPUT[9].GEN_INPUT[3].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U105.v1
-Instance Path : layer1_wma.GEN_OUTPUT[9].GEN_INPUT[2].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U106.v1
-Instance Path : layer1_wma.GEN_OUTPUT[9].GEN_INPUT[1].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U107.v1
-Instance Path : layer1_wma.GEN_OUTPUT[9].GEN_INPUT[0].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U108.v1
-Instance Path : layer1_wma.GEN_OUTPUT[8].GEN_INPUT[4].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U109.v1
-Instance Path : layer1_wma.GEN_OUTPUT[8].GEN_INPUT[3].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U110.v1
-Instance Path : layer1_wma.GEN_OUTPUT[8].GEN_INPUT[2].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U111.v1
-Instance Path : layer1_wma.GEN_OUTPUT[8].GEN_INPUT[1].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U112.v1
-Instance Path : layer1_wma.GEN_OUTPUT[8].GEN_INPUT[0].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U113.v1
-Instance Path : layer1_wma.GEN_OUTPUT[7].GEN_INPUT[4].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U114.v1
-Instance Path : layer1_wma.GEN_OUTPUT[7].GEN_INPUT[3].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U115.v1
-Instance Path : layer1_wma.GEN_OUTPUT[7].GEN_INPUT[2].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U116.v1
-Instance Path : layer1_wma.GEN_OUTPUT[7].GEN_INPUT[1].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U117.v1
-Instance Path : layer1_wma.GEN_OUTPUT[7].GEN_INPUT[0].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U118.v1
-Instance Path : layer1_wma.GEN_OUTPUT[6].GEN_INPUT[4].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U119.v1
-Instance Path : layer1_wma.GEN_OUTPUT[6].GEN_INPUT[3].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U120.v1
-Instance Path : layer1_wma.GEN_OUTPUT[6].GEN_INPUT[2].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U121.v1
-Instance Path : layer1_wma.GEN_OUTPUT[6].GEN_INPUT[1].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U122.v1
-Instance Path : layer1_wma.GEN_OUTPUT[6].GEN_INPUT[0].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U123.v1
-Instance Path : layer1_wma.GEN_OUTPUT[5].GEN_INPUT[4].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U124.v1
-Instance Path : layer1_wma.GEN_OUTPUT[5].GEN_INPUT[3].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U125.v1
-Instance Path : layer1_wma.GEN_OUTPUT[5].GEN_INPUT[2].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U126.v1
-Instance Path : layer1_wma.GEN_OUTPUT[5].GEN_INPUT[1].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U127.v1
-Instance Path : layer1_wma.GEN_OUTPUT[5].GEN_INPUT[0].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U128.v1
-Instance Path : layer1_wma.GEN_OUTPUT[4].GEN_INPUT[4].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U129.v1
-Instance Path : layer1_wma.GEN_OUTPUT[4].GEN_INPUT[3].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U130.v1
-Instance Path : layer1_wma.GEN_OUTPUT[4].GEN_INPUT[2].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U131.v1
-Instance Path : layer1_wma.GEN_OUTPUT[4].GEN_INPUT[1].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U132.v1
-Instance Path : layer1_wma.GEN_OUTPUT[4].GEN_INPUT[0].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U133.v1
-Instance Path : layer1_wma.GEN_OUTPUT[3].GEN_INPUT[4].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U134.v1
-Instance Path : layer1_wma.GEN_OUTPUT[3].GEN_INPUT[3].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U135.v1
-Instance Path : layer1_wma.GEN_OUTPUT[3].GEN_INPUT[2].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U136.v1
-Instance Path : layer1_wma.GEN_OUTPUT[3].GEN_INPUT[1].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U137.v1
-Instance Path : layer1_wma.GEN_OUTPUT[3].GEN_INPUT[0].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U138.v1
-Instance Path : layer1_wma.GEN_OUTPUT[2].GEN_INPUT[4].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U139.v1
-Instance Path : layer1_wma.GEN_OUTPUT[2].GEN_INPUT[3].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U140.v1
-Instance Path : layer1_wma.GEN_OUTPUT[2].GEN_INPUT[2].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U141.v1
-Instance Path : layer1_wma.GEN_OUTPUT[2].GEN_INPUT[1].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U142.v1
-Instance Path : layer1_wma.GEN_OUTPUT[2].GEN_INPUT[0].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U143.v1
-Instance Path : layer1_wma.GEN_OUTPUT[1].GEN_INPUT[4].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U144.v1
-Instance Path : layer1_wma.GEN_OUTPUT[1].GEN_INPUT[3].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U145.v1
-Instance Path : layer1_wma.GEN_OUTPUT[1].GEN_INPUT[2].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U146.v1
-Instance Path : layer1_wma.GEN_OUTPUT[1].GEN_INPUT[1].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U147.v1
-Instance Path : layer1_wma.GEN_OUTPUT[1].GEN_INPUT[0].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U148.v1
-Instance Path : layer1_wma.GEN_OUTPUT[19].GEN_INPUT[4].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U149.v1
-Instance Path : layer1_wma.GEN_OUTPUT[19].GEN_INPUT[3].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U150.v1
-Instance Path : layer1_wma.GEN_OUTPUT[19].GEN_INPUT[2].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U151.v1
-Instance Path : layer1_wma.GEN_OUTPUT[19].GEN_INPUT[1].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U152.v1
-Instance Path : layer1_wma.GEN_OUTPUT[19].GEN_INPUT[0].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U153.v1
-Instance Path : layer1_wma.GEN_OUTPUT[18].GEN_INPUT[4].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U154.v1
-Instance Path : layer1_wma.GEN_OUTPUT[18].GEN_INPUT[3].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U155.v1
-Instance Path : layer1_wma.GEN_OUTPUT[18].GEN_INPUT[2].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U156.v1
-Instance Path : layer1_wma.GEN_OUTPUT[18].GEN_INPUT[1].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U157.v1
-Instance Path : layer1_wma.GEN_OUTPUT[18].GEN_INPUT[0].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U158.v1
-Instance Path : layer1_wma.GEN_OUTPUT[17].GEN_INPUT[4].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U159.v1
-Instance Path : layer1_wma.GEN_OUTPUT[17].GEN_INPUT[3].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U160.v1
-Instance Path : layer1_wma.GEN_OUTPUT[17].GEN_INPUT[2].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U161.v1
-Instance Path : layer1_wma.GEN_OUTPUT[17].GEN_INPUT[1].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U162.v1
-Instance Path : layer1_wma.GEN_OUTPUT[17].GEN_INPUT[0].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U163.v1
-Instance Path : layer1_wma.GEN_OUTPUT[16].GEN_INPUT[4].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U164.v1
-Instance Path : layer1_wma.GEN_OUTPUT[16].GEN_INPUT[3].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U165.v1
-Instance Path : layer1_wma.GEN_OUTPUT[16].GEN_INPUT[2].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U166.v1
-Instance Path : layer1_wma.GEN_OUTPUT[16].GEN_INPUT[1].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U167.v1
-Instance Path : layer1_wma.GEN_OUTPUT[16].GEN_INPUT[0].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U168.v1
-Instance Path : layer1_wma.GEN_OUTPUT[15].GEN_INPUT[4].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U169.v1
-Instance Path : layer1_wma.GEN_OUTPUT[15].GEN_INPUT[3].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U170.v1
-Instance Path : layer1_wma.GEN_OUTPUT[15].GEN_INPUT[2].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U171.v1
-Instance Path : layer1_wma.GEN_OUTPUT[15].GEN_INPUT[1].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U172.v1
-Instance Path : layer1_wma.GEN_OUTPUT[15].GEN_INPUT[0].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U173.v1
-Instance Path : layer1_wma.GEN_OUTPUT[14].GEN_INPUT[4].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U174.v1
-Instance Path : layer1_wma.GEN_OUTPUT[14].GEN_INPUT[3].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U175.v1
-Instance Path : layer1_wma.GEN_OUTPUT[14].GEN_INPUT[2].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U176.v1
-Instance Path : layer1_wma.GEN_OUTPUT[14].GEN_INPUT[1].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U177.v1
-Instance Path : layer1_wma.GEN_OUTPUT[14].GEN_INPUT[0].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U178.v1
-Instance Path : layer1_wma.GEN_OUTPUT[13].GEN_INPUT[4].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U179.v1
-Instance Path : layer1_wma.GEN_OUTPUT[13].GEN_INPUT[3].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U180.v1
-Instance Path : layer1_wma.GEN_OUTPUT[13].GEN_INPUT[2].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U181.v1
-Instance Path : layer1_wma.GEN_OUTPUT[13].GEN_INPUT[1].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U182.v1
-Instance Path : layer1_wma.GEN_OUTPUT[13].GEN_INPUT[0].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U183.v1
-Instance Path : layer1_wma.GEN_OUTPUT[12].GEN_INPUT[4].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U184.v1
-Instance Path : layer1_wma.GEN_OUTPUT[12].GEN_INPUT[3].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U185.v1
-Instance Path : layer1_wma.GEN_OUTPUT[12].GEN_INPUT[2].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U186.v1
-Instance Path : layer1_wma.GEN_OUTPUT[12].GEN_INPUT[1].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U187.v1
-Instance Path : layer1_wma.GEN_OUTPUT[12].GEN_INPUT[0].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U188.v1
-Instance Path : layer1_wma.GEN_OUTPUT[11].GEN_INPUT[4].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U189.v1
-Instance Path : layer1_wma.GEN_OUTPUT[11].GEN_INPUT[3].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U190.v1
-Instance Path : layer1_wma.GEN_OUTPUT[11].GEN_INPUT[2].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U191.v1
-Instance Path : layer1_wma.GEN_OUTPUT[11].GEN_INPUT[1].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U192.v1
-Instance Path : layer1_wma.GEN_OUTPUT[11].GEN_INPUT[0].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U193.v1
-Instance Path : layer1_wma.GEN_OUTPUT[10].GEN_INPUT[4].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U194.v1
-Instance Path : layer1_wma.GEN_OUTPUT[10].GEN_INPUT[3].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U195.v1
-Instance Path : layer1_wma.GEN_OUTPUT[10].GEN_INPUT[2].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U196.v1
-Instance Path : layer1_wma.GEN_OUTPUT[10].GEN_INPUT[1].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U197.v1
-Instance Path : layer1_wma.GEN_OUTPUT[10].GEN_INPUT[0].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U198.v1
-Instance Path : layer1_wma.GEN_OUTPUT[0].GEN_INPUT[4].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U199.v1
-Instance Path : layer1_wma.GEN_OUTPUT[0].GEN_INPUT[3].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U200.v1
-Instance Path : layer1_wma.GEN_OUTPUT[0].GEN_INPUT[2].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U201.v1
-Instance Path : layer1_wma.GEN_OUTPUT[0].GEN_INPUT[1].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U202.v1
-Instance Path : layer1_wma.GEN_OUTPUT[0].GEN_INPUT[0].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_manager_unit(NUM_WEIGHTS=200).v1
-Instance Path : wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                               CCU2         9            0.4
-                            FD1P3DX        14            0.9
-                            FD1P3IX      1622           66.3
-                               LUT4      1831           51.1
-                              TOTAL      3476
-----------------------------------------------------------------------
-Report for cell weight_multiply_array(IN_SIZE=20).v1
-Instance Path : layer2_wma
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                               CCU2       495           19.5
-                            FD1P3DX       800           49.5
-SUB MODULES
-               weight_multiply_unit         1
-           weight_multiply_unit_U10         1
-          weight_multiply_unit_U100         1
-          weight_multiply_unit_U101         1
-          weight_multiply_unit_U102         1
-           weight_multiply_unit_U11         1
-           weight_multiply_unit_U12         1
-           weight_multiply_unit_U13         1
-           weight_multiply_unit_U14         1
-           weight_multiply_unit_U15         1
-           weight_multiply_unit_U16         1
-           weight_multiply_unit_U17         1
            weight_multiply_unit_U18         1
            weight_multiply_unit_U19         1
            weight_multiply_unit_U20         1
@@ -1377,7 +250,6 @@ SUB MODULES
            weight_multiply_unit_U37         1
            weight_multiply_unit_U38         1
            weight_multiply_unit_U39         1
-            weight_multiply_unit_U4         1
            weight_multiply_unit_U40         1
            weight_multiply_unit_U41         1
            weight_multiply_unit_U42         1
@@ -1388,767 +260,752 @@ SUB MODULES
            weight_multiply_unit_U47         1
            weight_multiply_unit_U48         1
            weight_multiply_unit_U49         1
-            weight_multiply_unit_U5         1
-           weight_multiply_unit_U50         1
-           weight_multiply_unit_U51         1
-           weight_multiply_unit_U52         1
-           weight_multiply_unit_U53         1
-           weight_multiply_unit_U54         1
-           weight_multiply_unit_U55         1
-           weight_multiply_unit_U56         1
-           weight_multiply_unit_U57         1
-           weight_multiply_unit_U58         1
-           weight_multiply_unit_U59         1
-            weight_multiply_unit_U6         1
-           weight_multiply_unit_U60         1
-           weight_multiply_unit_U61         1
-           weight_multiply_unit_U62         1
-           weight_multiply_unit_U63         1
-           weight_multiply_unit_U64         1
-           weight_multiply_unit_U65         1
-           weight_multiply_unit_U66         1
-           weight_multiply_unit_U67         1
-           weight_multiply_unit_U68         1
-           weight_multiply_unit_U69         1
-            weight_multiply_unit_U7         1
-           weight_multiply_unit_U70         1
-           weight_multiply_unit_U71         1
-           weight_multiply_unit_U72         1
-           weight_multiply_unit_U73         1
-           weight_multiply_unit_U74         1
-           weight_multiply_unit_U75         1
-           weight_multiply_unit_U76         1
-           weight_multiply_unit_U77         1
-           weight_multiply_unit_U78         1
-           weight_multiply_unit_U79         1
-            weight_multiply_unit_U8         1
-           weight_multiply_unit_U80         1
-           weight_multiply_unit_U81         1
-           weight_multiply_unit_U82         1
-           weight_multiply_unit_U83         1
-           weight_multiply_unit_U84         1
-           weight_multiply_unit_U85         1
-           weight_multiply_unit_U86         1
-           weight_multiply_unit_U87         1
-           weight_multiply_unit_U88         1
-           weight_multiply_unit_U89         1
-            weight_multiply_unit_U9         1
-           weight_multiply_unit_U90         1
-           weight_multiply_unit_U91         1
-           weight_multiply_unit_U92         1
-           weight_multiply_unit_U93         1
-           weight_multiply_unit_U94         1
-           weight_multiply_unit_U95         1
-           weight_multiply_unit_U96         1
-           weight_multiply_unit_U97         1
-           weight_multiply_unit_U98         1
-           weight_multiply_unit_U99         1
-                              TOTAL      1395
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit.v1
-Instance Path : layer2_wma.GEN_OUTPUT[4].GEN_INPUT[9].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U4.v1
-Instance Path : layer2_wma.GEN_OUTPUT[4].GEN_INPUT[8].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U5.v1
-Instance Path : layer2_wma.GEN_OUTPUT[4].GEN_INPUT[7].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U6.v1
-Instance Path : layer2_wma.GEN_OUTPUT[4].GEN_INPUT[6].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U7.v1
-Instance Path : layer2_wma.GEN_OUTPUT[4].GEN_INPUT[5].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U8.v1
-Instance Path : layer2_wma.GEN_OUTPUT[4].GEN_INPUT[4].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U9.v1
-Instance Path : layer2_wma.GEN_OUTPUT[4].GEN_INPUT[3].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U10.v1
-Instance Path : layer2_wma.GEN_OUTPUT[4].GEN_INPUT[2].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U11.v1
-Instance Path : layer2_wma.GEN_OUTPUT[4].GEN_INPUT[1].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U12.v1
-Instance Path : layer2_wma.GEN_OUTPUT[4].GEN_INPUT[19].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U13.v1
-Instance Path : layer2_wma.GEN_OUTPUT[4].GEN_INPUT[18].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U14.v1
-Instance Path : layer2_wma.GEN_OUTPUT[4].GEN_INPUT[17].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U15.v1
-Instance Path : layer2_wma.GEN_OUTPUT[4].GEN_INPUT[16].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U16.v1
-Instance Path : layer2_wma.GEN_OUTPUT[4].GEN_INPUT[15].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U17.v1
-Instance Path : layer2_wma.GEN_OUTPUT[4].GEN_INPUT[14].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
+                              TOTAL      1912
 ----------------------------------------------------------------------
 Report for cell weight_multiply_unit_U18.v1
-Instance Path : layer2_wma.GEN_OUTPUT[4].GEN_INPUT[13].wmu
+Instance Path : layer1_wma.GEN_OUTPUT_UNITS[9].unit
                                   Cell usage:
                                cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
+                               CCU2         9            0.5
+                            DPR16X4         4            2.4
+                            FD1P3IX        16            0.7
+                              TOTAL        29
 ----------------------------------------------------------------------
 Report for cell weight_multiply_unit_U19.v1
-Instance Path : layer2_wma.GEN_OUTPUT[4].GEN_INPUT[12].wmu
+Instance Path : layer1_wma.GEN_OUTPUT_UNITS[8].unit
                                   Cell usage:
                                cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
+                               CCU2         9            0.5
+                            DPR16X4         4            2.4
+                            FD1P3IX        16            0.7
+                              TOTAL        29
 ----------------------------------------------------------------------
 Report for cell weight_multiply_unit_U20.v1
-Instance Path : layer2_wma.GEN_OUTPUT[4].GEN_INPUT[11].wmu
+Instance Path : layer1_wma.GEN_OUTPUT_UNITS[7].unit
                                   Cell usage:
                                cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
+                               CCU2         9            0.5
+                            DPR16X4         4            2.4
+                            FD1P3IX        16            0.7
+                              TOTAL        29
 ----------------------------------------------------------------------
 Report for cell weight_multiply_unit_U21.v1
-Instance Path : layer2_wma.GEN_OUTPUT[4].GEN_INPUT[10].wmu
+Instance Path : layer1_wma.GEN_OUTPUT_UNITS[6].unit
                                   Cell usage:
                                cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
+                               CCU2         9            0.5
+                            DPR16X4         4            2.4
+                            FD1P3IX        16            0.7
+                              TOTAL        29
 ----------------------------------------------------------------------
 Report for cell weight_multiply_unit_U22.v1
-Instance Path : layer2_wma.GEN_OUTPUT[4].GEN_INPUT[0].wmu
+Instance Path : layer1_wma.GEN_OUTPUT_UNITS[5].unit
                                   Cell usage:
                                cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
+                               CCU2         9            0.5
+                            DPR16X4         4            2.4
+                            FD1P3IX        16            0.7
+                              TOTAL        29
 ----------------------------------------------------------------------
 Report for cell weight_multiply_unit_U23.v1
-Instance Path : layer2_wma.GEN_OUTPUT[3].GEN_INPUT[9].wmu
+Instance Path : layer1_wma.GEN_OUTPUT_UNITS[4].unit
                                   Cell usage:
                                cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
+                               CCU2         9            0.5
+                            DPR16X4         4            2.4
+                            FD1P3IX        16            0.7
+                              TOTAL        29
 ----------------------------------------------------------------------
 Report for cell weight_multiply_unit_U24.v1
-Instance Path : layer2_wma.GEN_OUTPUT[3].GEN_INPUT[8].wmu
+Instance Path : layer1_wma.GEN_OUTPUT_UNITS[3].unit
                                   Cell usage:
                                cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
+                               CCU2         9            0.5
+                            DPR16X4         4            2.4
+                            FD1P3IX        16            0.7
+                              TOTAL        29
 ----------------------------------------------------------------------
 Report for cell weight_multiply_unit_U25.v1
-Instance Path : layer2_wma.GEN_OUTPUT[3].GEN_INPUT[7].wmu
+Instance Path : layer1_wma.GEN_OUTPUT_UNITS[31].unit
                                   Cell usage:
                                cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
+                               CCU2         9            0.5
+                            DPR16X4         4            2.4
+                            FD1P3IX        16            0.7
+                              TOTAL        29
 ----------------------------------------------------------------------
 Report for cell weight_multiply_unit_U26.v1
-Instance Path : layer2_wma.GEN_OUTPUT[3].GEN_INPUT[6].wmu
+Instance Path : layer1_wma.GEN_OUTPUT_UNITS[30].unit
                                   Cell usage:
                                cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
+                               CCU2         9            0.5
+                            DPR16X4         4            2.4
+                            FD1P3IX        16            0.7
+                              TOTAL        29
 ----------------------------------------------------------------------
 Report for cell weight_multiply_unit_U27.v1
-Instance Path : layer2_wma.GEN_OUTPUT[3].GEN_INPUT[5].wmu
+Instance Path : layer1_wma.GEN_OUTPUT_UNITS[2].unit
                                   Cell usage:
                                cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
+                               CCU2         9            0.5
+                            DPR16X4         4            2.4
+                            FD1P3IX        16            0.7
+                              TOTAL        29
 ----------------------------------------------------------------------
 Report for cell weight_multiply_unit_U28.v1
-Instance Path : layer2_wma.GEN_OUTPUT[3].GEN_INPUT[4].wmu
+Instance Path : layer1_wma.GEN_OUTPUT_UNITS[29].unit
                                   Cell usage:
                                cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
+                               CCU2         9            0.5
+                            DPR16X4         4            2.4
+                            FD1P3IX        16            0.7
+                              TOTAL        29
 ----------------------------------------------------------------------
 Report for cell weight_multiply_unit_U29.v1
-Instance Path : layer2_wma.GEN_OUTPUT[3].GEN_INPUT[3].wmu
+Instance Path : layer1_wma.GEN_OUTPUT_UNITS[28].unit
                                   Cell usage:
                                cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
+                               CCU2         9            0.5
+                            DPR16X4         4            2.4
+                            FD1P3IX        16            0.7
+                              TOTAL        29
 ----------------------------------------------------------------------
 Report for cell weight_multiply_unit_U30.v1
-Instance Path : layer2_wma.GEN_OUTPUT[3].GEN_INPUT[2].wmu
+Instance Path : layer1_wma.GEN_OUTPUT_UNITS[27].unit
                                   Cell usage:
                                cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
+                               CCU2         9            0.5
+                            DPR16X4         4            2.4
+                            FD1P3IX        16            0.7
+                              TOTAL        29
 ----------------------------------------------------------------------
 Report for cell weight_multiply_unit_U31.v1
-Instance Path : layer2_wma.GEN_OUTPUT[3].GEN_INPUT[1].wmu
+Instance Path : layer1_wma.GEN_OUTPUT_UNITS[26].unit
                                   Cell usage:
                                cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
+                               CCU2         9            0.5
+                            DPR16X4         4            2.4
+                            FD1P3IX        16            0.7
+                              TOTAL        29
 ----------------------------------------------------------------------
 Report for cell weight_multiply_unit_U32.v1
-Instance Path : layer2_wma.GEN_OUTPUT[3].GEN_INPUT[19].wmu
+Instance Path : layer1_wma.GEN_OUTPUT_UNITS[25].unit
                                   Cell usage:
                                cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
+                               CCU2         9            0.5
+                            DPR16X4         4            2.4
+                            FD1P3IX        16            0.7
+                              TOTAL        29
 ----------------------------------------------------------------------
 Report for cell weight_multiply_unit_U33.v1
-Instance Path : layer2_wma.GEN_OUTPUT[3].GEN_INPUT[18].wmu
+Instance Path : layer1_wma.GEN_OUTPUT_UNITS[24].unit
                                   Cell usage:
                                cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
+                               CCU2         9            0.5
+                            DPR16X4         4            2.4
+                            FD1P3IX        16            0.7
+                              TOTAL        29
 ----------------------------------------------------------------------
 Report for cell weight_multiply_unit_U34.v1
-Instance Path : layer2_wma.GEN_OUTPUT[3].GEN_INPUT[17].wmu
+Instance Path : layer1_wma.GEN_OUTPUT_UNITS[23].unit
                                   Cell usage:
                                cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
+                               CCU2         9            0.5
+                            DPR16X4         4            2.4
+                            FD1P3IX        16            0.7
+                              TOTAL        29
 ----------------------------------------------------------------------
 Report for cell weight_multiply_unit_U35.v1
-Instance Path : layer2_wma.GEN_OUTPUT[3].GEN_INPUT[16].wmu
+Instance Path : layer1_wma.GEN_OUTPUT_UNITS[22].unit
                                   Cell usage:
                                cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
+                               CCU2         9            0.5
+                            DPR16X4         4            2.4
+                            FD1P3IX        16            0.7
+                              TOTAL        29
 ----------------------------------------------------------------------
 Report for cell weight_multiply_unit_U36.v1
-Instance Path : layer2_wma.GEN_OUTPUT[3].GEN_INPUT[15].wmu
+Instance Path : layer1_wma.GEN_OUTPUT_UNITS[21].unit
                                   Cell usage:
                                cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
+                               CCU2         9            0.5
+                            DPR16X4         4            2.4
+                            FD1P3IX        16            0.7
+                              TOTAL        29
 ----------------------------------------------------------------------
 Report for cell weight_multiply_unit_U37.v1
-Instance Path : layer2_wma.GEN_OUTPUT[3].GEN_INPUT[14].wmu
+Instance Path : layer1_wma.GEN_OUTPUT_UNITS[20].unit
                                   Cell usage:
                                cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
+                               CCU2         9            0.5
+                            DPR16X4         4            2.4
+                            FD1P3IX        16            0.7
+                              TOTAL        29
 ----------------------------------------------------------------------
 Report for cell weight_multiply_unit_U38.v1
-Instance Path : layer2_wma.GEN_OUTPUT[3].GEN_INPUT[13].wmu
+Instance Path : layer1_wma.GEN_OUTPUT_UNITS[1].unit
                                   Cell usage:
                                cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
+                               CCU2         9            0.5
+                            DPR16X4         4            2.4
+                            FD1P3IX        16            0.7
+                              TOTAL        29
 ----------------------------------------------------------------------
 Report for cell weight_multiply_unit_U39.v1
-Instance Path : layer2_wma.GEN_OUTPUT[3].GEN_INPUT[12].wmu
+Instance Path : layer1_wma.GEN_OUTPUT_UNITS[19].unit
                                   Cell usage:
                                cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
+                               CCU2         9            0.5
+                            DPR16X4         4            2.4
+                            FD1P3IX        16            0.7
+                              TOTAL        29
 ----------------------------------------------------------------------
 Report for cell weight_multiply_unit_U40.v1
-Instance Path : layer2_wma.GEN_OUTPUT[3].GEN_INPUT[11].wmu
+Instance Path : layer1_wma.GEN_OUTPUT_UNITS[18].unit
                                   Cell usage:
                                cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
+                               CCU2         9            0.5
+                            DPR16X4         4            2.4
+                            FD1P3IX        16            0.7
+                              TOTAL        29
 ----------------------------------------------------------------------
 Report for cell weight_multiply_unit_U41.v1
-Instance Path : layer2_wma.GEN_OUTPUT[3].GEN_INPUT[10].wmu
+Instance Path : layer1_wma.GEN_OUTPUT_UNITS[17].unit
                                   Cell usage:
                                cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
+                               CCU2         9            0.5
+                            DPR16X4         4            2.4
+                            FD1P3IX        16            0.7
+                              TOTAL        29
 ----------------------------------------------------------------------
 Report for cell weight_multiply_unit_U42.v1
-Instance Path : layer2_wma.GEN_OUTPUT[3].GEN_INPUT[0].wmu
+Instance Path : layer1_wma.GEN_OUTPUT_UNITS[16].unit
                                   Cell usage:
                                cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
+                               CCU2         9            0.5
+                            DPR16X4         4            2.4
+                            FD1P3IX        16            0.7
+                              TOTAL        29
 ----------------------------------------------------------------------
 Report for cell weight_multiply_unit_U43.v1
-Instance Path : layer2_wma.GEN_OUTPUT[2].GEN_INPUT[9].wmu
+Instance Path : layer1_wma.GEN_OUTPUT_UNITS[15].unit
                                   Cell usage:
                                cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
+                               CCU2         9            0.5
+                            DPR16X4         4            2.4
+                            FD1P3IX        16            0.7
+                              TOTAL        29
 ----------------------------------------------------------------------
 Report for cell weight_multiply_unit_U44.v1
-Instance Path : layer2_wma.GEN_OUTPUT[2].GEN_INPUT[8].wmu
+Instance Path : layer1_wma.GEN_OUTPUT_UNITS[14].unit
                                   Cell usage:
                                cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
+                               CCU2         9            0.5
+                            DPR16X4         4            2.4
+                            FD1P3IX        16            0.7
+                              TOTAL        29
 ----------------------------------------------------------------------
 Report for cell weight_multiply_unit_U45.v1
-Instance Path : layer2_wma.GEN_OUTPUT[2].GEN_INPUT[7].wmu
+Instance Path : layer1_wma.GEN_OUTPUT_UNITS[13].unit
                                   Cell usage:
                                cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
+                               CCU2         9            0.5
+                            DPR16X4         4            2.4
+                            FD1P3IX        16            0.7
+                              TOTAL        29
 ----------------------------------------------------------------------
 Report for cell weight_multiply_unit_U46.v1
-Instance Path : layer2_wma.GEN_OUTPUT[2].GEN_INPUT[6].wmu
+Instance Path : layer1_wma.GEN_OUTPUT_UNITS[12].unit
                                   Cell usage:
                                cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
+                               CCU2         9            0.5
+                            DPR16X4         4            2.4
+                            FD1P3IX        16            0.7
+                              TOTAL        29
 ----------------------------------------------------------------------
 Report for cell weight_multiply_unit_U47.v1
-Instance Path : layer2_wma.GEN_OUTPUT[2].GEN_INPUT[5].wmu
+Instance Path : layer1_wma.GEN_OUTPUT_UNITS[11].unit
                                   Cell usage:
                                cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
+                               CCU2         9            0.5
+                            DPR16X4         4            2.4
+                            FD1P3IX        16            0.7
+                              TOTAL        29
 ----------------------------------------------------------------------
 Report for cell weight_multiply_unit_U48.v1
-Instance Path : layer2_wma.GEN_OUTPUT[2].GEN_INPUT[4].wmu
+Instance Path : layer1_wma.GEN_OUTPUT_UNITS[10].unit
                                   Cell usage:
                                cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
+                               CCU2         9            0.5
+                            DPR16X4         4            2.4
+                            FD1P3IX        16            0.7
+                              TOTAL        29
 ----------------------------------------------------------------------
 Report for cell weight_multiply_unit_U49.v1
-Instance Path : layer2_wma.GEN_OUTPUT[2].GEN_INPUT[3].wmu
+Instance Path : layer1_wma.GEN_OUTPUT_UNITS[0].unit
                                   Cell usage:
                                cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
+                               CCU2         9            0.5
+                            DPR16X4         4            2.4
+                            FD1P3IX        16            0.7
+                              TOTAL        29
 ----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U50.v1
-Instance Path : layer2_wma.GEN_OUTPUT[2].GEN_INPUT[2].wmu
+Report for cell spike_array(SIZE=32).v1
+Instance Path : hidden_neurons
                                   Cell usage:
                                cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
+                               CCU2      1088           60.0
+                            FD1P3IX      1056           46.4
+                               LUT4      1312           44.5
+SUB MODULES
+                   spike_neuron_U50         1
+                   spike_neuron_U51         1
+                   spike_neuron_U52         1
+                   spike_neuron_U53         1
+                   spike_neuron_U54         1
+                   spike_neuron_U55         1
+                   spike_neuron_U56         1
+                   spike_neuron_U57         1
+                   spike_neuron_U58         1
+                   spike_neuron_U59         1
+                   spike_neuron_U60         1
+                   spike_neuron_U61         1
+                   spike_neuron_U62         1
+                   spike_neuron_U63         1
+                   spike_neuron_U64         1
+                   spike_neuron_U65         1
+                   spike_neuron_U66         1
+                   spike_neuron_U67         1
+                   spike_neuron_U68         1
+                   spike_neuron_U69         1
+                   spike_neuron_U70         1
+                   spike_neuron_U71         1
+                   spike_neuron_U72         1
+                   spike_neuron_U73         1
+                   spike_neuron_U74         1
+                   spike_neuron_U75         1
+                   spike_neuron_U76         1
+                   spike_neuron_U77         1
+                   spike_neuron_U78         1
+                   spike_neuron_U79         1
+                   spike_neuron_U80         1
+                   spike_neuron_U81         1
+                              TOTAL      3488
 ----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U51.v1
-Instance Path : layer2_wma.GEN_OUTPUT[2].GEN_INPUT[1].wmu
+Report for cell spike_neuron_U50.v1
+Instance Path : hidden_neurons.GEN_NEURONS[9].sn
                                   Cell usage:
                                cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
+                               CCU2        34            1.9
+                            FD1P3IX        33            1.4
+                               LUT4        41            1.4
+                              TOTAL       108
 ----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U52.v1
-Instance Path : layer2_wma.GEN_OUTPUT[2].GEN_INPUT[19].wmu
+Report for cell spike_neuron_U51.v1
+Instance Path : hidden_neurons.GEN_NEURONS[8].sn
                                   Cell usage:
                                cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
+                               CCU2        34            1.9
+                            FD1P3IX        33            1.4
+                               LUT4        41            1.4
+                              TOTAL       108
 ----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U53.v1
-Instance Path : layer2_wma.GEN_OUTPUT[2].GEN_INPUT[18].wmu
+Report for cell spike_neuron_U52.v1
+Instance Path : hidden_neurons.GEN_NEURONS[7].sn
                                   Cell usage:
                                cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
+                               CCU2        34            1.9
+                            FD1P3IX        33            1.4
+                               LUT4        41            1.4
+                              TOTAL       108
 ----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U54.v1
-Instance Path : layer2_wma.GEN_OUTPUT[2].GEN_INPUT[17].wmu
+Report for cell spike_neuron_U53.v1
+Instance Path : hidden_neurons.GEN_NEURONS[6].sn
                                   Cell usage:
                                cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
+                               CCU2        34            1.9
+                            FD1P3IX        33            1.4
+                               LUT4        41            1.4
+                              TOTAL       108
 ----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U55.v1
-Instance Path : layer2_wma.GEN_OUTPUT[2].GEN_INPUT[16].wmu
+Report for cell spike_neuron_U54.v1
+Instance Path : hidden_neurons.GEN_NEURONS[5].sn
                                   Cell usage:
                                cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
+                               CCU2        34            1.9
+                            FD1P3IX        33            1.4
+                               LUT4        41            1.4
+                              TOTAL       108
 ----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U56.v1
-Instance Path : layer2_wma.GEN_OUTPUT[2].GEN_INPUT[15].wmu
+Report for cell spike_neuron_U55.v1
+Instance Path : hidden_neurons.GEN_NEURONS[4].sn
                                   Cell usage:
                                cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
+                               CCU2        34            1.9
+                            FD1P3IX        33            1.4
+                               LUT4        41            1.4
+                              TOTAL       108
 ----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U57.v1
-Instance Path : layer2_wma.GEN_OUTPUT[2].GEN_INPUT[14].wmu
+Report for cell spike_neuron_U56.v1
+Instance Path : hidden_neurons.GEN_NEURONS[3].sn
                                   Cell usage:
                                cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
+                               CCU2        34            1.9
+                            FD1P3IX        33            1.4
+                               LUT4        41            1.4
+                              TOTAL       108
 ----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U58.v1
-Instance Path : layer2_wma.GEN_OUTPUT[2].GEN_INPUT[13].wmu
+Report for cell spike_neuron_U57.v1
+Instance Path : hidden_neurons.GEN_NEURONS[31].sn
                                   Cell usage:
                                cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
+                               CCU2        34            1.9
+                            FD1P3IX        33            1.4
+                               LUT4        41            1.4
+                              TOTAL       108
 ----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U59.v1
-Instance Path : layer2_wma.GEN_OUTPUT[2].GEN_INPUT[12].wmu
+Report for cell spike_neuron_U58.v1
+Instance Path : hidden_neurons.GEN_NEURONS[30].sn
                                   Cell usage:
                                cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
+                               CCU2        34            1.9
+                            FD1P3IX        33            1.4
+                               LUT4        41            1.4
+                              TOTAL       108
 ----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U60.v1
-Instance Path : layer2_wma.GEN_OUTPUT[2].GEN_INPUT[11].wmu
+Report for cell spike_neuron_U59.v1
+Instance Path : hidden_neurons.GEN_NEURONS[2].sn
                                   Cell usage:
                                cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
+                               CCU2        34            1.9
+                            FD1P3IX        33            1.4
+                               LUT4        41            1.4
+                              TOTAL       108
 ----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U61.v1
-Instance Path : layer2_wma.GEN_OUTPUT[2].GEN_INPUT[10].wmu
+Report for cell spike_neuron_U60.v1
+Instance Path : hidden_neurons.GEN_NEURONS[29].sn
                                   Cell usage:
                                cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
+                               CCU2        34            1.9
+                            FD1P3IX        33            1.4
+                               LUT4        41            1.4
+                              TOTAL       108
 ----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U62.v1
-Instance Path : layer2_wma.GEN_OUTPUT[2].GEN_INPUT[0].wmu
+Report for cell spike_neuron_U61.v1
+Instance Path : hidden_neurons.GEN_NEURONS[28].sn
                                   Cell usage:
                                cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
+                               CCU2        34            1.9
+                            FD1P3IX        33            1.4
+                               LUT4        41            1.4
+                              TOTAL       108
 ----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U63.v1
-Instance Path : layer2_wma.GEN_OUTPUT[1].GEN_INPUT[9].wmu
+Report for cell spike_neuron_U62.v1
+Instance Path : hidden_neurons.GEN_NEURONS[27].sn
                                   Cell usage:
                                cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
+                               CCU2        34            1.9
+                            FD1P3IX        33            1.4
+                               LUT4        41            1.4
+                              TOTAL       108
 ----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U64.v1
-Instance Path : layer2_wma.GEN_OUTPUT[1].GEN_INPUT[8].wmu
+Report for cell spike_neuron_U63.v1
+Instance Path : hidden_neurons.GEN_NEURONS[26].sn
                                   Cell usage:
                                cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
+                               CCU2        34            1.9
+                            FD1P3IX        33            1.4
+                               LUT4        41            1.4
+                              TOTAL       108
 ----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U65.v1
-Instance Path : layer2_wma.GEN_OUTPUT[1].GEN_INPUT[7].wmu
+Report for cell spike_neuron_U64.v1
+Instance Path : hidden_neurons.GEN_NEURONS[25].sn
                                   Cell usage:
                                cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
+                               CCU2        34            1.9
+                            FD1P3IX        33            1.4
+                               LUT4        41            1.4
+                              TOTAL       108
 ----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U66.v1
-Instance Path : layer2_wma.GEN_OUTPUT[1].GEN_INPUT[6].wmu
+Report for cell spike_neuron_U65.v1
+Instance Path : hidden_neurons.GEN_NEURONS[24].sn
                                   Cell usage:
                                cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
+                               CCU2        34            1.9
+                            FD1P3IX        33            1.4
+                               LUT4        41            1.4
+                              TOTAL       108
 ----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U67.v1
-Instance Path : layer2_wma.GEN_OUTPUT[1].GEN_INPUT[5].wmu
+Report for cell spike_neuron_U66.v1
+Instance Path : hidden_neurons.GEN_NEURONS[23].sn
                                   Cell usage:
                                cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
+                               CCU2        34            1.9
+                            FD1P3IX        33            1.4
+                               LUT4        41            1.4
+                              TOTAL       108
 ----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U68.v1
-Instance Path : layer2_wma.GEN_OUTPUT[1].GEN_INPUT[4].wmu
+Report for cell spike_neuron_U67.v1
+Instance Path : hidden_neurons.GEN_NEURONS[22].sn
                                   Cell usage:
                                cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
+                               CCU2        34            1.9
+                            FD1P3IX        33            1.4
+                               LUT4        41            1.4
+                              TOTAL       108
 ----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U69.v1
-Instance Path : layer2_wma.GEN_OUTPUT[1].GEN_INPUT[3].wmu
+Report for cell spike_neuron_U68.v1
+Instance Path : hidden_neurons.GEN_NEURONS[21].sn
                                   Cell usage:
                                cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
+                               CCU2        34            1.9
+                            FD1P3IX        33            1.4
+                               LUT4        41            1.4
+                              TOTAL       108
 ----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U70.v1
-Instance Path : layer2_wma.GEN_OUTPUT[1].GEN_INPUT[2].wmu
+Report for cell spike_neuron_U69.v1
+Instance Path : hidden_neurons.GEN_NEURONS[20].sn
                                   Cell usage:
                                cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
+                               CCU2        34            1.9
+                            FD1P3IX        33            1.4
+                               LUT4        41            1.4
+                              TOTAL       108
 ----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U71.v1
-Instance Path : layer2_wma.GEN_OUTPUT[1].GEN_INPUT[1].wmu
+Report for cell spike_neuron_U70.v1
+Instance Path : hidden_neurons.GEN_NEURONS[1].sn
                                   Cell usage:
                                cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
+                               CCU2        34            1.9
+                            FD1P3IX        33            1.4
+                               LUT4        41            1.4
+                              TOTAL       108
 ----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U72.v1
-Instance Path : layer2_wma.GEN_OUTPUT[1].GEN_INPUT[19].wmu
+Report for cell spike_neuron_U71.v1
+Instance Path : hidden_neurons.GEN_NEURONS[19].sn
                                   Cell usage:
                                cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
+                               CCU2        34            1.9
+                            FD1P3IX        33            1.4
+                               LUT4        41            1.4
+                              TOTAL       108
 ----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U73.v1
-Instance Path : layer2_wma.GEN_OUTPUT[1].GEN_INPUT[18].wmu
+Report for cell spike_neuron_U72.v1
+Instance Path : hidden_neurons.GEN_NEURONS[18].sn
                                   Cell usage:
                                cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
+                               CCU2        34            1.9
+                            FD1P3IX        33            1.4
+                               LUT4        41            1.4
+                              TOTAL       108
 ----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U74.v1
-Instance Path : layer2_wma.GEN_OUTPUT[1].GEN_INPUT[17].wmu
+Report for cell spike_neuron_U73.v1
+Instance Path : hidden_neurons.GEN_NEURONS[17].sn
                                   Cell usage:
                                cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
+                               CCU2        34            1.9
+                            FD1P3IX        33            1.4
+                               LUT4        41            1.4
+                              TOTAL       108
 ----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U75.v1
-Instance Path : layer2_wma.GEN_OUTPUT[1].GEN_INPUT[16].wmu
+Report for cell spike_neuron_U74.v1
+Instance Path : hidden_neurons.GEN_NEURONS[16].sn
                                   Cell usage:
                                cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
+                               CCU2        34            1.9
+                            FD1P3IX        33            1.4
+                               LUT4        41            1.4
+                              TOTAL       108
 ----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U76.v1
-Instance Path : layer2_wma.GEN_OUTPUT[1].GEN_INPUT[15].wmu
+Report for cell spike_neuron_U75.v1
+Instance Path : hidden_neurons.GEN_NEURONS[15].sn
                                   Cell usage:
                                cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
+                               CCU2        34            1.9
+                            FD1P3IX        33            1.4
+                               LUT4        41            1.4
+                              TOTAL       108
 ----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U77.v1
-Instance Path : layer2_wma.GEN_OUTPUT[1].GEN_INPUT[14].wmu
+Report for cell spike_neuron_U76.v1
+Instance Path : hidden_neurons.GEN_NEURONS[14].sn
                                   Cell usage:
                                cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
+                               CCU2        34            1.9
+                            FD1P3IX        33            1.4
+                               LUT4        41            1.4
+                              TOTAL       108
 ----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U78.v1
-Instance Path : layer2_wma.GEN_OUTPUT[1].GEN_INPUT[13].wmu
+Report for cell spike_neuron_U77.v1
+Instance Path : hidden_neurons.GEN_NEURONS[13].sn
                                   Cell usage:
                                cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
+                               CCU2        34            1.9
+                            FD1P3IX        33            1.4
+                               LUT4        41            1.4
+                              TOTAL       108
 ----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U79.v1
-Instance Path : layer2_wma.GEN_OUTPUT[1].GEN_INPUT[12].wmu
+Report for cell spike_neuron_U78.v1
+Instance Path : hidden_neurons.GEN_NEURONS[12].sn
                                   Cell usage:
                                cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
+                               CCU2        34            1.9
+                            FD1P3IX        33            1.4
+                               LUT4        41            1.4
+                              TOTAL       108
 ----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U80.v1
-Instance Path : layer2_wma.GEN_OUTPUT[1].GEN_INPUT[11].wmu
+Report for cell spike_neuron_U79.v1
+Instance Path : hidden_neurons.GEN_NEURONS[11].sn
                                   Cell usage:
                                cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
+                               CCU2        34            1.9
+                            FD1P3IX        33            1.4
+                               LUT4        41            1.4
+                              TOTAL       108
 ----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U81.v1
-Instance Path : layer2_wma.GEN_OUTPUT[1].GEN_INPUT[10].wmu
+Report for cell spike_neuron_U80.v1
+Instance Path : hidden_neurons.GEN_NEURONS[10].sn
                                   Cell usage:
                                cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
+                               CCU2        34            1.9
+                            FD1P3IX        33            1.4
+                               LUT4        41            1.4
+                              TOTAL       108
 ----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U82.v1
-Instance Path : layer2_wma.GEN_OUTPUT[1].GEN_INPUT[0].wmu
+Report for cell spike_neuron_U81.v1
+Instance Path : hidden_neurons.GEN_NEURONS[0].sn
                                   Cell usage:
                                cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
+                               CCU2        34            1.9
+                            FD1P3IX        33            1.4
+                               LUT4        41            1.4
+                              TOTAL       108
 ----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U83.v1
-Instance Path : layer2_wma.GEN_OUTPUT[0].GEN_INPUT[9].wmu
+Report for cell weight_multiply_array.v1
+Instance Path : layer2_wma
                                   Cell usage:
                                cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
+                               CCU2        90            5.0
+                            DPR16X4        40           23.8
+                            FD1P3DX         1            7.1
+                            FD1P3IX       225            9.9
+                               LUT4       266            9.0
+                            WIDEFN9        10           50.0
+SUB MODULES
+               weight_multiply_unit         1
+           weight_multiply_unit_U10         1
+           weight_multiply_unit_U11         1
+           weight_multiply_unit_U12         1
+           weight_multiply_unit_U13         1
+           weight_multiply_unit_U14         1
+           weight_multiply_unit_U15         1
+           weight_multiply_unit_U16         1
+           weight_multiply_unit_U17         1
+            weight_multiply_unit_U9         1
+                              TOTAL       642
 ----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U84.v1
-Instance Path : layer2_wma.GEN_OUTPUT[0].GEN_INPUT[8].wmu
+Report for cell weight_multiply_unit.v1
+Instance Path : layer2_wma.GEN_OUTPUT_UNITS[9].unit
                                   Cell usage:
                                cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
+                               CCU2         9            0.5
+                            DPR16X4         4            2.4
+                            FD1P3IX        16            0.7
+                              TOTAL        29
 ----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U85.v1
-Instance Path : layer2_wma.GEN_OUTPUT[0].GEN_INPUT[7].wmu
+Report for cell weight_multiply_unit_U9.v1
+Instance Path : layer2_wma.GEN_OUTPUT_UNITS[8].unit
                                   Cell usage:
                                cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
+                               CCU2         9            0.5
+                            DPR16X4         4            2.4
+                            FD1P3IX        16            0.7
+                              TOTAL        29
 ----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U86.v1
-Instance Path : layer2_wma.GEN_OUTPUT[0].GEN_INPUT[6].wmu
+Report for cell weight_multiply_unit_U10.v1
+Instance Path : layer2_wma.GEN_OUTPUT_UNITS[7].unit
                                   Cell usage:
                                cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
+                               CCU2         9            0.5
+                            DPR16X4         4            2.4
+                            FD1P3IX        16            0.7
+                              TOTAL        29
 ----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U87.v1
-Instance Path : layer2_wma.GEN_OUTPUT[0].GEN_INPUT[5].wmu
+Report for cell weight_multiply_unit_U11.v1
+Instance Path : layer2_wma.GEN_OUTPUT_UNITS[6].unit
                                   Cell usage:
                                cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
+                               CCU2         9            0.5
+                            DPR16X4         4            2.4
+                            FD1P3IX        16            0.7
+                              TOTAL        29
 ----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U88.v1
-Instance Path : layer2_wma.GEN_OUTPUT[0].GEN_INPUT[4].wmu
+Report for cell weight_multiply_unit_U12.v1
+Instance Path : layer2_wma.GEN_OUTPUT_UNITS[5].unit
                                   Cell usage:
                                cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
+                               CCU2         9            0.5
+                            DPR16X4         4            2.4
+                            FD1P3IX        16            0.7
+                              TOTAL        29
 ----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U89.v1
-Instance Path : layer2_wma.GEN_OUTPUT[0].GEN_INPUT[3].wmu
+Report for cell weight_multiply_unit_U13.v1
+Instance Path : layer2_wma.GEN_OUTPUT_UNITS[4].unit
                                   Cell usage:
                                cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
+                               CCU2         9            0.5
+                            DPR16X4         4            2.4
+                            FD1P3IX        16            0.7
+                              TOTAL        29
 ----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U90.v1
-Instance Path : layer2_wma.GEN_OUTPUT[0].GEN_INPUT[2].wmu
+Report for cell weight_multiply_unit_U14.v1
+Instance Path : layer2_wma.GEN_OUTPUT_UNITS[3].unit
                                   Cell usage:
                                cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
+                               CCU2         9            0.5
+                            DPR16X4         4            2.4
+                            FD1P3IX        16            0.7
+                              TOTAL        29
 ----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U91.v1
-Instance Path : layer2_wma.GEN_OUTPUT[0].GEN_INPUT[1].wmu
+Report for cell weight_multiply_unit_U15.v1
+Instance Path : layer2_wma.GEN_OUTPUT_UNITS[2].unit
                                   Cell usage:
                                cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
+                               CCU2         9            0.5
+                            DPR16X4         4            2.4
+                            FD1P3IX        16            0.7
+                              TOTAL        29
 ----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U92.v1
-Instance Path : layer2_wma.GEN_OUTPUT[0].GEN_INPUT[19].wmu
+Report for cell weight_multiply_unit_U16.v1
+Instance Path : layer2_wma.GEN_OUTPUT_UNITS[1].unit
                                   Cell usage:
                                cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
+                               CCU2         9            0.5
+                            DPR16X4         4            2.4
+                            FD1P3IX        16            0.7
+                              TOTAL        29
 ----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U93.v1
-Instance Path : layer2_wma.GEN_OUTPUT[0].GEN_INPUT[18].wmu
+Report for cell weight_multiply_unit_U17.v1
+Instance Path : layer2_wma.GEN_OUTPUT_UNITS[0].unit
                                   Cell usage:
                                cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
+                               CCU2         9            0.5
+                            DPR16X4         4            2.4
+                            FD1P3IX        16            0.7
+                              TOTAL        29
 ----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U94.v1
-Instance Path : layer2_wma.GEN_OUTPUT[0].GEN_INPUT[17].wmu
+Report for cell weight_manager_unit(NUM_WEIGHTS=1344).v1
+Instance Path : wmu
                                   Cell usage:
                                cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U95.v1
-Instance Path : layer2_wma.GEN_OUTPUT[0].GEN_INPUT[16].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U96.v1
-Instance Path : layer2_wma.GEN_OUTPUT[0].GEN_INPUT[15].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U97.v1
-Instance Path : layer2_wma.GEN_OUTPUT[0].GEN_INPUT[14].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U98.v1
-Instance Path : layer2_wma.GEN_OUTPUT[0].GEN_INPUT[13].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U99.v1
-Instance Path : layer2_wma.GEN_OUTPUT[0].GEN_INPUT[12].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U100.v1
-Instance Path : layer2_wma.GEN_OUTPUT[0].GEN_INPUT[11].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U101.v1
-Instance Path : layer2_wma.GEN_OUTPUT[0].GEN_INPUT[10].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
-----------------------------------------------------------------------
-Report for cell weight_multiply_unit_U102.v1
-Instance Path : layer2_wma.GEN_OUTPUT[0].GEN_INPUT[0].wmu
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3DX         8            0.5
-                              TOTAL         8
+                               CCU2         7            0.4
+                            FD1P3DX        12           85.7
+                            FD1P3IX        34            1.5
+                               LUT4        54            1.8
+                              TOTAL       107
 ----------------------------------------------------------------------
 Report for cell single_port_ram.v1
 Instance Path : ram
                                   Cell usage:
                                cell     count   Res Usage(%)
-                            FD1P3DX         2            0.1
-                           PDPSC16K        32          100.0
-                              TOTAL        34
+                           PDPSC16K         2          100.0
+                              TOTAL         2

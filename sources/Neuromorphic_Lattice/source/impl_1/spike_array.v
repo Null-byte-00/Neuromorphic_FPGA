@@ -3,6 +3,7 @@
 module spike_array #(
     parameter SIZE = `NUM_OUTPUTS
 )(
+	input wire enable,
     input  wire                 clk,
     input  wire                 reset,
     input  wire [(SIZE*16)-1:0] ins,
@@ -19,12 +20,13 @@ generate
         assign current_16[i] =
             $signed(ins[(i * 16) +: 16]);
 
-        spike_neuron sn (
-            .clk           (clk),
-            .reset         (reset),
-            .input_current (current_16[i]),
-            .spike_out     (neuron_outs[i])
-        );
+			spike_neuron sn (
+				.clk           (clk),
+				.reset         (reset),
+				.enable        (enable),
+				.input_current (current_16[i]),
+				.spike_out     (neuron_outs[i])
+			);
 
     end
 endgenerate

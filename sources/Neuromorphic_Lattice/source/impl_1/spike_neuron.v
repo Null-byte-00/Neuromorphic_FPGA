@@ -1,14 +1,15 @@
 module spike_neuron #(
-	parameter signed threshold = 32'sd120,
-	parameter integer beta_shift = 3
+    parameter signed [31:0] threshold = 32'sd120,
+    parameter integer beta_shift = 3
 )(
-	input clk,
-	input reset,
-	input wire signed [15:0] input_current,
-	output reg spike_out
+    input  wire               clk,
+    input  wire               reset,
+    input  wire               enable,
+    input  wire signed [15:0] input_current,
+    output reg                spike_out
 );
 
-reg signed [31:0] potential = 0;wire signed [31:0] potential_new;
+reg signed [31:0] potential;wire signed [31:0] potential_new;
 wire signed [31:0] potential_decayed;
 wire signed [31:0] input_current_extended;
 
@@ -24,18 +25,21 @@ assign potential_decayed =
 
 
 always @(posedge clk) begin
-	if (reset) begin
-		potential <= 0;
-		spike_out <= 0;
-	end else begin
-		if (potential_decayed >= threshold) begin
-			spike_out <= 1;
-			potential <= 0;
-		end else begin
-			spike_out <= 0;
-			potential <= potential_decayed;
-		end
-	end
+    if (reset) begin
+        potential <= 0;
+        spike_out <= 0;
+    end else if (enable) begin
+        if (potential_decayed >= threshold) begin
+            spike_out <= 1;
+            potential <= 0;
+        end else begin
+            spike_out <= 0;
+            potential <= potential_decayed;
+        end
+    end else begin
+        // Preserve potential between completed network timesteps.
+        spike_out <= 0;
+    end
 end
 
 

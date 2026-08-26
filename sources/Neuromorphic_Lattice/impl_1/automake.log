@@ -1,445 +1,327 @@
 
-pnmainc -log pnmain "Neuromorphic_Lattice_impl_1_par.tcl"
-
-PAR: Place And Route Radiant Software (64-bit) 2026.1.0.37.0.
-PARed on: Tue Aug 25 20:13:05 2026
-
-Command Line: par -w -t 1 -cores 1 -hsp m -exp parPathBased=OFF \
-	Neuromorphic_Lattice_impl_1_map.udb \
-	Neuromorphic_Lattice_impl_1_par.dir/5_1.udb 
-
-Loading Neuromorphic_Lattice_impl_1_map.udb ...
-Loading device for application GENERIC from file 'je5d30.nph' in environment: D:/lscc/radiant/2026.1/ispfpga.
-Package Status:                     Final          Version 1.
-Successfully read the udb in 0.00 s.
-
-Performance Hardware Data Status:   Final          Version 131.5.
-
-
-
-Design:  network_tb
-Family:  LIFCL
-Device:  LIFCL-40
-Package: CABGA400
-Performance Grade:   9_High-Performance_1.0V
-
-Constraint Summary
-   Total number of constraints: 1
-   Total number of constraints dropped: 0
-
-Successfully loaded device info and constraints in 2.00 s.
-
-Beginning Place Design 
-Phase 1 Placer Initialization 
-Phase 1 Placer Initialization Complete: Time (s) - CPU Time : 0.00, Real Time : 0.02  |   Memory (MB) - Peak Memory : 472.68, Gain Memory : 1.16  
-
-Time: cpu = 00:00:00 ; elapsed : 00:00:00 . Memory (MB): peak = 472.68 ; gain = 1.16 
-
-Phase 2 Logic Packing 
-
-Device SLICE utilization summary after final SLICE packing:
-   SLICE           7720/16128        47% used
-
-Number of Signals: 14660
-Number of Connections: 43447
-Device utilization summary:
-
-   VHI                   1/1           100% used
-   EBR                  32/84           38% used
-   SEIO33               13/185           7% used
-                        13/111          11% bonded
-   SLICE              7720/16128        48% used
-     LUT              8674/32256        27% used
-     REG              4063/32256        13% used
-
-
-Phase 2 Logic Packing Complete: Time (s) - CPU Time : 1.83, Real Time : 1.83  |   Memory (MB) - Peak Memory : 476.48, Gain Memory : 3.77  
-
-Time: cpu = 00:00:02 ; elapsed : 00:00:02 . Memory (MB): peak = 476.48 ; gain = 3.77 
-
-Phase 3 Hierarchical Placement 
-Pin Constraint Summary:
-   0 out of 13 pins locked (0% locked).
-.
-Phase 3.1 Clustering & Global Placement 
-.............Phase 3.1 Clustering & Global Placement Complete: Time (s) - CPU Time : 1.38, Real Time : 1.37  |   Memory (MB) - Peak Memory : 489.62, Gain Memory : 0.03  
-
-Time: cpu = 00:00:04 ; elapsed : 00:00:04 . Memory (MB): peak = 489.62 ; gain = 0.03 
-
-Phase 3 Hierarchical Placement Complete: Time (s) - CPU Time : 2.47, Real Time : 2.47  |   Memory (MB) - Peak Memory : 489.63, Gain Memory : 13.15  
-
-Time: cpu = 00:00:04 ; elapsed : 00:00:04 . Memory (MB): peak = 489.63 ; gain = 13.15 
-
-Phase 4 Constructive Placement 
-Phase 4.1 Iterative Refinement 
-..  ..
-.....................
-
-Placer score = 2834039.
-Phase 4.1 Iterative Refinement Complete: Time (s) - CPU Time : 8.84, Real Time : 8.90  |   Memory (MB) - Peak Memory : 497.02, Gain Memory : 0.66  
-
-Time: cpu = 00:00:13 ; elapsed : 00:00:13 . Memory (MB): peak = 497.02 ; gain = 0.66 
-
-Phase 4 Constructive Placement Complete: Time (s) - CPU Time : 9.03, Real Time : 9.08  |   Memory (MB) - Peak Memory : 497.02, Gain Memory : 7.38  
-
-Time: cpu = 00:00:13 ; elapsed : 00:00:13 . Memory (MB): peak = 497.02 ; gain = 7.38 
-
-Phase 5 Placement Optimization 
-Phase 5.1 Local Optimization 
-.
-
-Placer score =  2756202
-Phase 5.1 Local Optimization Complete: Time (s) - CPU Time : 0.47, Real Time : 0.48  |   Memory (MB) - Peak Memory : 497.03, Gain Memory : 0.01  
-
-Time: cpu = 00:00:14 ; elapsed : 00:00:14 . Memory (MB): peak = 497.03 ; gain = 0.01 
-
-Phase 5 Placement Optimization Complete: Time (s) - CPU Time : 0.47, Real Time : 0.48  |   Memory (MB) - Peak Memory : 497.03, Gain Memory : 0.01  
-
-Time: cpu = 00:00:14 ; elapsed : 00:00:14 . Memory (MB): peak = 497.03 ; gain = 0.01 
-
-Phase 6 Post-Placement Processing 
-
------------------- Clock Report ------------------
-
-Global Clock Resources:
-  CLK_PIN    : 2 out of 26 (7%)
-  PLL        : 0 out of 3 (0%)
-  DCS        : 0 out of 1 (0%)
-  DCC        : 0 out of 62 (0%)
-  ECLKDIV    : 0 out of 12 (0%)
-  PCLKDIV    : 0 out of 1 (0%)
-  OSC        : 0 out of 1 (0%)
-  DPHY       : 0 out of 2 (0%)
-  PCIE       : 0 out of 1 (0%)
-
-Global Clocks:
-  PRIMARY "clk_c" from comp "clk" on CLK_PIN site "E12 (PT76A)", clk load = 4120, ce load = 0, sr load = 0
-  PRIMARY "reset_c" from comp "reset" on CLK_PIN site "E13 (PT78A)", clk load = 0, ce load = 0, sr load = 1615
-  PRIMARY "computation_reset" from F0 on comp "LUT4_1" on site "R38C49A", clk load = 0, ce load = 0, sr load = 1600
-
-  PRIMARY  : 3 out of 16 (18%)
-
-Edge Clocks:
-
-  No edge clock selected.
-
-
---------------- End of Clock Report ---------------
-
-
-I/O Usage Summary (final):
-   13 out of 185 (7.0%) SEIO33 sites used.
-   13 out of 111 (11.7%) bonded SEIO33 sites used.
-   Number of SEIO33 components: 13; differential: 0
-   Number of Vref pins used: 0
-   0 out of 74 (0.0%) SEIO18 sites used.
-   0 out of 74 (0.0%) bonded SEIO18 sites used.
-   Number of SEIO18 components: 0; differential: 0
-   0 out of 37 (0.0%) DIFFIO18 sites used.
-   0 out of 37 (0.0%) bonded DIFFIO18 sites used.
-   Number of DIFFIO18 components: 0; differential: 0
-
-I/O Bank Usage Summary:
-+----------+---------------+------------+------------+------------+
-| I/O Bank | Usage         | Bank Vccio | Bank Vref1 | Bank Vref2 |
-+----------+---------------+------------+------------+------------+
-| 0        | 2 / 12 ( 16%) | 3.3V       | -          | -          |
-| 1        | 1 / 21 (  4%) | 3.3V       | -          | -          |
-| 2        | 4 / 28 ( 14%) | 3.3V       | -          | -          |
-| 3        | 0 / 32 (  0%) | -          | -          | -          |
-| 4        | 0 / 32 (  0%) | -          | -          | -          |
-| 5        | 0 / 10 (  0%) | -          | -          | -          |
-| 6        | 3 / 28 ( 10%) | 3.3V       | -          | -          |
-| 7        | 3 / 22 ( 13%) | 3.3V       | -          | -          |
-+----------+---------------+------------+------------+------------+
-
-Device utilization summary:
-
-   VHI                   1/1           100% used
-   EBR                  32/84           38% used
-   SEIO33               13/185           7% used
-                        13/111          11% bonded
-   SLICE              7720/16128        48% used
-     LUT              8674/32256        27% used
-     REG              4063/32256        13% used
-
-
-Phase 6 Post-Placement Processing Complete: Time (s) - CPU Time : 0.12, Real Time : 0.13  |   Memory (MB) - Peak Memory : 498.35, Gain Memory : 1.32  
-
-Time: cpu = 00:00:14 ; elapsed : 00:00:14 . Memory (MB): peak = 498.35 ; gain = 1.32 
-
-Total Placer CPU time: 14 secs, REAL time = 14 secs
-
-
-Checksum -- place: 712abadb47ab2cdd9f9666ff290a3330783e9053
-Ending Place Design : Time (s) - CPU Time : 15.12, Real Time : 15.23  |   Memory (MB) - Peak Memory : 498.41, Gain Memory : 26.91  
-
-Time: cpu = 00:00:15 ; elapsed : 00:00:15 . Memory (MB): peak = 498.41 ; gain = 26.91 
-
-
- Phase Summary Table: 	
-+--------------------------------------------------------+-------------+--------------+-----------------+----------------+
-| Phase Name                                             | CPU Time(s) | Wall Time(s) | Peak Memory(MB) | Memory Gain(MB)|
-+--------------------------------------------------------+-------------+--------------+-----------------+----------------+
-| Phase 1 Placer Initialization                          | 0.00        |         0.02 |          472.68 |           1.16 |
-| Phase 2 Logic Packing                                  | 1.83        |         1.83 |          476.48 |           3.77 |
-| Phase 3 Hierarchical Placement                         | 2.47        |         2.47 |          489.63 |          13.15 |
-| Phase 3.1 Clustering & Global Placement                | 1.38        |         1.37 |          489.62 |           0.03 |
-| Phase 4 Constructive Placement                         | 9.03        |         9.08 |          497.02 |           7.38 |
-| Phase 4.1 Iterative Refinement                         | 8.84        |         8.90 |          497.02 |           0.66 |
-| Phase 5 Placement Optimization                         | 0.47        |         0.48 |          497.03 |           0.01 |
-| Phase 5.1 Local Optimization                           | 0.47        |         0.48 |          497.03 |           0.01 |
-| Phase 6 Post-Placement Processing                      | 0.12        |         0.13 |          498.35 |           1.32 |
-+--------------------------------------------------------+-------------+--------------+-----------------+----------------+
-Writing design to file Neuromorphic_Lattice_impl_1_par.dir/5_1.udb ...
-
-Starting Route Task
-Beginning Route Design 
-Phase 1 Build Route Design 
-
------------------------------------------------------------------
-INFO - par: ASE feature is off due to non timing-driven settings.  
------------------------------------------------------------------
-
-
-Start NBR router at 20:13:25 08/25/26
-
-*****************************************************************
-Info: NBR allows conflicts(one node used by more than one signal)
-      in the earlier iterations. In each iteration, it tries to  
-      solve the conflicts while keeping the critical connections 
-      routed as short as possible. The routing process is said to
-      be completed when no conflicts exist and all connections   
-      are routed.                                                
-Note: NBR uses a different method to calculate timing slacks. The
-      worst slack and total negative slack may not be the same as
-      that in timing report. You should always run the timing    
-      tool to verify your design.                                
-*****************************************************************
-
-Phase 1 Build Route Design Complete: Time (s) - CPU Time : 1.03, Real Time : 1.03  |   Memory (MB) - Peak Memory : 619.52, Gain Memory : 121.03  
-
-Time: cpu = 00:00:01 ; elapsed : 00:00:01 . Memory (MB): peak = 619.52 ; gain = 121.03 
-
-Phase 2 Design Checks and Routing Setup 
-Phase 2 Design Checks and Routing Setup Complete: Time (s) - CPU Time : 0.00, Real Time : 0.00  |   Memory (MB) - Peak Memory : 619.58, Gain Memory : 0.00  
-
-Time: cpu = 00:00:01 ; elapsed : 00:00:01 . Memory (MB): peak = 619.58 ; gain = 0.00 
-
-Phase 3 Dedicated Net and Clock Routing 
-Phase 3.1 Routing User Constraints 
-Phase 3.1 Routing User Constraints Complete: Time (s) - CPU Time : 4.72, Real Time : 4.71  |   Memory (MB) - Peak Memory : 700.88, Gain Memory : 81.29  
-
-Time: cpu = 00:00:06 ; elapsed : 00:00:06 . Memory (MB): peak = 700.88 ; gain = 81.29 
-
-Phase 3.2 Dedicated Routing 
-Phase 3.2 Dedicated Routing Complete: Time (s) - CPU Time : 0.06, Real Time : 0.07  |   Memory (MB) - Peak Memory : 700.88, Gain Memory : 77.21  
-
-Time: cpu = 00:00:06 ; elapsed : 00:00:06 . Memory (MB): peak = 700.88 ; gain = 77.21 
-
-Phase 3.3 Clock Net Routing 
-Phase 3.3 Clock Net Routing Complete: Time (s) - CPU Time : 0.55, Real Time : 0.54  |   Memory (MB) - Peak Memory : 700.88, Gain Memory : 116.36  
-
-Time: cpu = 00:00:06 ; elapsed : 00:00:06 . Memory (MB): peak = 700.88 ; gain = 116.36 
-
-Phase 3.4 Dedicated Net and Clock Routing Finalization 
-Preassignment Summary:
---------------------------------------------------------------------------------
-2465 connections routed with dedicated routing resources
-3 global clock signals routed
-12413 connections routed (of 43447 total) (28.57%)
----------------------------------------------------------
-Clock routing summary:
-Primary clocks (6 used out of 32 available):
-    Signal "reset_c" (4, 20)
-       Control loads: 1615  out of  1615 routed (100.00%)
-       Data    loads: 0     out of    65 routed (  0.00%)
-    Signal "computation_reset" (3, 19)
-       Control loads: 1600  out of  1600 routed (100.00%)
-    Signal "clk_c" (0, 16)
-       Clock   loads: 4120  out of  4120 routed (100.00%)
----------------------------------------------------------
---------------------------------------------------------------------------------
-Phase 3.4 Dedicated Net and Clock Routing Finalization Complete: Time (s) - CPU Time : 0.02, Real Time : 0.02  |   Memory (MB) - Peak Memory : 700.88, Gain Memory : 115.91  
-
-Time: cpu = 00:00:06 ; elapsed : 00:00:06 . Memory (MB): peak = 700.88 ; gain = 115.91 
-
-Phase 3 Dedicated Net and Clock Routing Complete: Time (s) - CPU Time : 5.56, Real Time : 5.57  |   Memory (MB) - Peak Memory : 700.88, Gain Memory : 81.29  
-
-Time: cpu = 00:00:07 ; elapsed : 00:00:07 . Memory (MB): peak = 700.88 ; gain = 81.29 
-
-Phase 4 Pre-Detailed Routing 
-Phase 4 Pre-Detailed Routing Complete: Time (s) - CPU Time : 0.00, Real Time : 0.00  |   Memory (MB) - Peak Memory : 700.88, Gain Memory : 115.48  
-
-Time: cpu = 00:00:07 ; elapsed : 00:00:07 . Memory (MB): peak = 700.88 ; gain = 115.48 
-
-Phase 5 Detailed Routing 
-Phase 5.1 Initial Detailed Routing 
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-Routing in Serial Mode ......
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-Start NBR section for initial routing at 20:13:31 08/25/26
-Level 4, iteration 1
-2867(0.16%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; real time: 24 secs 
-
-Info: Initial congestion level at 75.00% usage is 0
-Info: Initial congestion area  at 75.00% usage is 0 (0.00%)
-Phase 5.1 Initial Detailed Routing Complete: Time (s) - CPU Time : 17.22, Real Time : 17.36  |   Memory (MB) - Peak Memory : 700.88, Gain Memory : 115.47  
-
-Time: cpu = 00:00:24 ; elapsed : 00:00:24 . Memory (MB): peak = 700.88 ; gain = 115.47 
-
-Phase 5.2 Rip-Up and Route 
-
-Start NBR section for normal routing at 20:13:48 08/25/26
-Level 4, iteration 1
-1654(0.09%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; real time: 29 secs 
-Level 4, iteration 2
-656(0.04%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; real time: 32 secs 
-Level 4, iteration 3
-168(0.01%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; real time: 33 secs 
-Level 4, iteration 4
-56(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; real time: 33 secs 
-Level 4, iteration 5
-20(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; real time: 33 secs 
-Level 4, iteration 6
-13(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; real time: 33 secs 
-Level 4, iteration 7
-8(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; real time: 33 secs 
-Level 4, iteration 8
-8(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; real time: 33 secs 
-Level 4, iteration 9
-1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; real time: 33 secs 
-Level 4, iteration 10
-0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; real time: 34 secs 
-Phase 5.2 Rip-Up and Route Complete: Time (s) - CPU Time : 9.22, Real Time : 9.37  |   Memory (MB) - Peak Memory : 700.88, Gain Memory : 107.74  
-
-Time: cpu = 00:00:33 ; elapsed : 00:00:33 . Memory (MB): peak = 700.88 ; gain = 107.74 
-
-Phase 5.3 Rip-Up and Reroute for setup timing improvement 
-Phase 5.3 Rip-Up and Reroute for setup timing improvement Complete: Time (s) - CPU Time : 0.00, Real Time : 0.00  |   Memory (MB) - Peak Memory : 700.88, Gain Memory : 107.61  
-
-Time: cpu = 00:00:33 ; elapsed : 00:00:33 . Memory (MB): peak = 700.88 ; gain = 107.61 
-
-Phase 5.4 Rip-Up and Reroute for hold timing fix 
-Phase 5.4 Rip-Up and Reroute for hold timing fix Complete: Time (s) - CPU Time : 0.00, Real Time : 0.00  |   Memory (MB) - Peak Memory : 700.88, Gain Memory : 107.61  
-
-Time: cpu = 00:00:33 ; elapsed : 00:00:33 . Memory (MB): peak = 700.88 ; gain = 107.61 
-
-Phase 5.5 TNS CleanUp 
-
-Start NBR section for post-routing at 20:13:58 08/25/26
-Phase 5.5 TNS CleanUp Complete: Time (s) - CPU Time : 0.33, Real Time : 0.33  |   Memory (MB) - Peak Memory : 700.88, Gain Memory : 107.61  
-
-Time: cpu = 00:00:33 ; elapsed : 00:00:34 . Memory (MB): peak = 700.88 ; gain = 107.61 
-
-Phase 5.6 Detail Routing Finalization 
-
-End NBR router with 0 unrouted connection(s)
-
-Checksum -- route: 82bf1aabb35fdd93b4ec76174aadb3161e838e3
-Phase 5.6 Detail Routing Finalization Complete: Time (s) - CPU Time : 2.20, Real Time : 2.20  |   Memory (MB) - Peak Memory : 700.88, Gain Memory : 107.61  
-
-Time: cpu = 00:00:36 ; elapsed : 00:00:36 . Memory (MB): peak = 700.88 ; gain = 107.61 
-
-
-Phase 5 Detailed Routing Complete: Time (s) - CPU Time : 28.97, Real Time : 29.26  |   Memory (MB) - Peak Memory : 700.88, Gain Memory : 115.48  
-
-Time: cpu = 00:00:36 ; elapsed : 00:00:36 . Memory (MB): peak = 700.88 ; gain = 115.48 
-
-Phase 6 Router Finalization 
-Total Router CPU time 35 secs , REAL time: 36 secs 
-Completely routed.
-End of route.  43447 routed (100.00%); 0 unrouted.
-Phase 6 Router Finalization Complete: Time (s) - CPU Time : 0.61, Real Time : 0.61  |   Memory (MB) - Peak Memory : 700.88, Gain Memory : 104.24  
-
-Time: cpu = 00:00:36 ; elapsed : 00:00:36 . Memory (MB): peak = 700.88 ; gain = 104.24 
-
-Ending Route Design : Time (s) - CPU Time : 36.19, Real Time : 36.49  |   Memory (MB) - Peak Memory : 700.88, Gain Memory : 202.43  
-
-Time: cpu = 00:00:36 ; elapsed : 00:00:36 . Memory (MB): peak = 700.88 ; gain = 202.43 
-
-
- Phase Summary Table: 	
-+--------------------------------------------------------+-------------+--------------+-----------------+----------------+
-| Phase Name                                             | CPU Time(s) | Wall Time(s) | Peak Memory(MB) | Memory Gain(MB)|
-+--------------------------------------------------------+-------------+--------------+-----------------+----------------+
-| Phase 1 Build Route Design                             | 1.03        |         1.03 |          619.52 |         121.03 |
-| Phase 2 Design Checks and Routing Setup                | 0.00        |         0.00 |          619.58 |           0.00 |
-| Phase 3 Dedicated Net and Clock Routing                | 5.56        |         5.57 |          700.88 |          81.29 |
-| Phase 3.1 Routing User Constraints                     | 4.72        |         4.71 |          700.88 |          81.29 |
-| Phase 3.2 Dedicated Routing                            | 0.06        |         0.07 |          700.88 |          77.21 |
-| Phase 3.3 Clock Net Routing                            | 0.55        |         0.54 |          700.88 |         116.36 |
-| Phase 3.4 Dedicated Net and Clock Routing Finalization | 0.02        |         0.02 |          700.88 |         115.91 |
-| Phase 4 Pre-Detailed Routing                           | 0.00        |         0.00 |          700.88 |         115.48 |
-| Phase 5 Detailed Routing                               | 28.97       |        29.26 |          700.88 |         115.48 |
-| Phase 5.1 Initial Detailed Routing                     | 17.22       |        17.36 |          700.88 |         115.47 |
-| Phase 5.2 Rip-Up and Route                             | 9.22        |         9.37 |          700.88 |         107.74 |
-| Phase 5.3 Rip-Up and Reroute for setup timing improve* | 0.00        |         0.00 |          700.88 |         107.61 |
-| Phase 5.4 Rip-Up and Reroute for hold timing fix       | 0.00        |         0.00 |          700.88 |         107.61 |
-| Phase 5.5 TNS CleanUp                                  | 0.33        |         0.33 |          700.88 |         107.61 |
-| Phase 5.6 Detail Routing Finalization                  | 2.20        |         2.20 |          700.88 |         107.61 |
-| Phase 6 Router Finalization                            | 0.61        |         0.61 |          700.88 |         104.24 |
-+--------------------------------------------------------+-------------+--------------+-----------------+----------------+
-
-Writing design to file Neuromorphic_Lattice_impl_1_par.dir/5_1.udb ...
-
-
-PAR_SUMMARY::Run status = Completed
-PAR_SUMMARY::Number of unrouted conns = 0
-PAR_SUMMARY::Estimated worst slack<setup/<ns>> = <n/a>
-PAR_SUMMARY::Timing score<setup/<ns>> = <n/a>
-PAR_SUMMARY::Estimated worst slack<hold/<ns>> = <n/a>
-PAR_SUMMARY::Timing score<hold/<ns>> = <n/a>
-PAR_SUMMARY::Number of errors = 0
-
-Note: user must run 'timing' for timing closure signoff.
-
-Total CPU  Time: 57 secs 
-Total REAL Time: 57 secs 
-Peak Memory Usage: 700.88 MB
-
-
-par done!
+pnmainc -log pnmain "Neuromorphic_Lattice_impl_1_map.tcl"
+map:  version Radiant Software (64-bit) 2026.1.0.37.0
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2026 Lattice Semiconductor Corporation,  All rights reserved.
-**** CMD par_run - CPU/Elapsed: 0 secs / 57 secs , MEM/Increased: 59.470 Mb/ 0.229 Mb, DATE: 20:14:02 08/25/26
-Thank you for using Radiant. Total CPU/Elapsed time: 0 secs /57 secs 
 
-timing -sethld -v 10 -u 10 -endpoints 10 -nperend 1 -sp 9_High-Performance_1.0V -hsp m   -pwrprd -html -rpt "Neuromorphic_Lattice_impl_1.twr" "Neuromorphic_Lattice_impl_1.udb" 
-timing -sethld -v 10 -u 10 -endpoints 10 -nperend 1 -sp 9_High-Performance_1.0V -hsp m -pwrprd -html -rpt Neuromorphic_Lattice_impl_1.twr Neuromorphic_Lattice_impl_1.udb -gui -msgset D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice/promote.xml
-Starting design reading...
+Command line:   map -i Neuromorphic_Lattice_impl_1_syn.udb -o Neuromorphic_Lattice_impl_1_map.udb -mp Neuromorphic_Lattice_impl_1.mrp -hierrpt -gui -msgset D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice/promote.xml 
+
 Loading device for application GENERIC from file 'je5d30.nph' in environment: D:/lscc/radiant/2026.1/ispfpga.
 Package Status:                     Final          Version 1.
-Performance Hardware Data Status:   Final          Version 131.5.
-Loading udb::Database ...
+
+
+
 Design:  network_tb
 Family:  LIFCL
 Device:  LIFCL-40
 Package: CABGA400
-Performance Grade:   9_High-Performance_1.0V
+Performance Grade:  9_High-Performance_1.0V
+
+Running general design DRC...
 
 
 
-Successfully loading udb, 1.45 seconds
 
-Initializing timer
-Starting design annotation....
+Design Summary:
+   Number of registers:        2291 out of 32811 (7%)
+      Number of SLICE         registers: 2291 out of 32256 (7%)
+      Number of PIO Input     registers:    0 out of   185 (0%)
+      Number of PIO Output    registers:    0 out of   185 (0%)
+      Number of PIO Tri-State registers:    0 out of   185 (0%)
+   Number of LUT4s:            7613 out of 32256 (24%)
+      Number used as logic LUT4s:                       2979
+      Number used as distributed RAM:                   1008 (6 per 16X4 RAM)
+      Number used as ripple logic:                      3626 (2 per CCU2)
+   Number of PIOs used/reserved:   52 out of   185 (28%)
+      Number of PIOs reserved:      7 (per sysConfig and/or prohibit constraint)
+      Number of PIOs used:         45
+        Number of PIOs used for single ended IO:        45
+        Number of PIO pairs used for differential IO:    0
 
-Starting full timing analysis...
-Performance Hardware Data Status:   Final          Version 131.5.
-Connections ignored  4120  counted  31954  covered  0
-Changing speed to 9_High-Performance_1.0V;   changing temperature to 0
-Changing speed to m;   changing temperature to 0
+        Number allocated to regular speed PIOs:    45 out of  111 (41%)
+        Number allocated to high speed PIOs:        0 out of   74 (0%)
+   Number of Dedicated IO used for ADC/PCIE/DPHY:    0 out of   32 (0%)
+   Number of IDDR/ODDR/TDDR functions used:      0 out of   444 (0%)
+   Number of IOs using at least one DDR function: 0 (0 differential)
+   Number of Block RAMs:          2 out of 84 (2%)
+   Number of Large RAMs:          0 out of 2 (0%)
+   Number of Logical DSP Functions:
+      Number of Pre-Adders (9+9):    0 out of 112 (0%)
+      Number of Multipliers (18x18): 0 out of 56 (0%)
+         Number of 9X9:        0 (1 18x18 = 2   9x9)
+         Number of 18x18:      0 (1 18x18 = 1 18x18)
+         Number of 18x36:      0 (2 18x18 = 1 18x36)
+         Number of 36x36:      0 (4 18x18 = 1 36x36)
+      Number of 54-bit Accumulators: 0 out of 28 (0%)
+      Number of 18-bit Registers:    0 out of 112 (0%)
+   Number of Physical DSP Components:
+      Number of PREADD9:             0 out of 112 (0%)
+      Number of MULT9:               0 out of 112 (0%)
+      Number of MULT18:              0 out of 56 (0%)
+      Number of MULT18X36:           0 out of 28 (0%)
+      Number of MULT36:              0 out of 14 (0%)
+      Number of ACC54:               0 out of 28 (0%)
+      Number of REG18:               0 out of 112 (0%)
+   Number of ALUREGs:             0 out of 1 (0%)
+   Number of PLLs:                0 out of 3 (0%)
+   Number of DDRDLLs:             0 out of 2 (0%)
+   Number of DLLDELs:             0 out of 10 (0%)
+   Number of DQSs:                0 out of 4 (0%)
+   Number of DCSs:                0 out of 1 (0%)
+   Number of DCCs:                0 out of 62 (0%)
+   Number of PCLKDIVs:            0 out of 1 (0%)
+   Number of ECLKDIVs:            0 out of 12 (0%)
+   Number of ECLKSYNCs:           0 out of 12 (0%)
+   Number of ADC Blocks:          0 out of 1 (0%)
+   Number of SGMIICDRs:           0 out of 2 (0%)
+   Number of PMUs:                0 out of 1 (0%)
+   Number of BNKREF18s:           0 out of 3 (0%)
+   Number of BNKREF33s:           0 out of 5 (0%)
+   Number of I2CFIFOs:            0 out of 1 (0%)
+   Number of DPHYs:               0 out of 2 (0%)
+   Number of Oscillator:          0 out of 1 (0%)
+   Number of GSR:                 0 out of 1 (0%)
+   Number of Cryptographic Block: 0 out of 1 (0%)
+   Number of Config IP:           0 out of 1 (0%)
+                 TSALL:           0 out of 1 (0%)
+   Number of JTAG:                0 out of 1 (0%)
+   Number of Config LMMI:         0 out of 1 (0%)
+   Number of Config MULTIBOOT:    0 out of 1 (0%)
+   Number of SED:                 0 out of 1 (0%)
+   Number of Config WDT:          0 out of 1 (0%)
+   Number of PCIEs:               0 out of 1 (0%)
+   Number of Clocks:  1
+      Net clk_c: 2463 loads, 2463 rising, 0 falling (Driver: Port clk)
+   Number of Clock Enables:  61
+      Net VCC_net: 4 loads, 0 SLICEs
+      Net clk_c_enable_1841: 50 loads, 50 SLICEs
+      Net clk_c_enable_2098: 50 loads, 50 SLICEs
+      Net clk_c_enable_2041: 50 loads, 50 SLICEs
+      Net clk_c_enable_1991: 50 loads, 50 SLICEs
+      Net clk_c_enable_1941: 50 loads, 50 SLICEs
+      Net clk_c_enable_1891: 50 loads, 50 SLICEs
+      Net layer2_done: 20 loads, 20 SLICEs
+      Net clk_c_enable_138: 32 loads, 32 SLICEs
+      Net clk_c_enable_2106: 7 loads, 7 SLICEs
+      Net clk_c_enable_178: 32 loads, 32 SLICEs
+      Net clk_c_enable_2102: 4 loads, 4 SLICEs
+      Net layer1_wma.clk_c_enable_388: 30 loads, 30 SLICEs
+      Net layer1_wma.clk_c_enable_2116: 9 loads, 9 SLICEs
+      Net layer1_wma.clk_c_enable_389: 1 loads, 1 SLICEs
+      Net layer1_wma.clk_c_enable_51: 1 loads, 1 SLICEs
+      Net layer1_wma.clk_c_enable_196: 50 loads, 50 SLICEs
+      Net layer1_wma.clk_c_enable_346: 50 loads, 50 SLICEs
+      Net layer1_wma.clk_c_enable_296: 50 loads, 50 SLICEs
+      Net layer1_wma.clk_c_enable_246: 50 loads, 50 SLICEs
+      Net layer1_wma.clk_c_enable_691: 50 loads, 50 SLICEs
+      Net layer1_wma.busy: 12 loads, 12 SLICEs
+      Net layer1_wma.clk_c_enable_641: 50 loads, 50 SLICEs
+      Net layer1_wma.clk_c_enable_591: 50 loads, 50 SLICEs
+      Net layer1_wma.clk_c_enable_527: 50 loads, 50 SLICEs
+      Net layer1_wma.clk_c_enable_477: 50 loads, 50 SLICEs
+      Net layer1_wma.clk_c_enable_427: 50 loads, 50 SLICEs
+      Net layer1_done: 24 loads, 24 SLICEs
+      Net clk_c_enable_2087: 50 loads, 50 SLICEs
+      Net clk_c_enable_1609: 50 loads, 50 SLICEs
+      Net clk_c_enable_1559: 50 loads, 50 SLICEs
+      Net clk_c_enable_1509: 50 loads, 50 SLICEs
+      Net clk_c_enable_1459: 50 loads, 50 SLICEs
+      Net clk_c_enable_1409: 50 loads, 50 SLICEs
+      Net clk_c_enable_1359: 50 loads, 50 SLICEs
+      Net clk_c_enable_1309: 50 loads, 50 SLICEs
+      Net clk_c_enable_1259: 50 loads, 50 SLICEs
+      Net clk_c_enable_1209: 50 loads, 50 SLICEs
+      Net clk_c_enable_1159: 50 loads, 50 SLICEs
+      Net clk_c_enable_1109: 50 loads, 50 SLICEs
+      Net clk_c_enable_1059: 50 loads, 50 SLICEs
+      Net clk_c_enable_1009: 50 loads, 50 SLICEs
+      Net clk_c_enable_959: 50 loads, 50 SLICEs
+      Net clk_c_enable_909: 50 loads, 50 SLICEs
+      Net clk_c_enable_859: 50 loads, 50 SLICEs
+      Net clk_c_enable_809: 50 loads, 50 SLICEs
+      Net clk_c_enable_759: 50 loads, 50 SLICEs
+      Net clk_c_enable_709: 50 loads, 50 SLICEs
+      Net layer2_wma.clk_c_enable_1692: 50 loads, 50 SLICEs
+      Net layer2_wma.clk_c_enable_1801: 50 loads, 50 SLICEs
+      Net layer2_wma.busy: 10 loads, 10 SLICEs
+      Net layer2_wma.clk_c_enable_1742: 50 loads, 50 SLICEs
+      Net clk_c_enable_46: 1 loads, 1 SLICEs
+      Net clk_c_enable_77: 1 loads, 1 SLICEs
+      Net clk_c_enable_2115: 5 loads, 5 SLICEs
+      Net clk_c_enable_1765: 8 loads, 8 SLICEs
+      Net clk_c_enable_1766: 1 loads, 1 SLICEs
+      Net wmu.clk_c_enable_84: 2 loads, 2 SLICEs
+      Net clk_c_enable_1: 1 loads, 1 SLICEs
+      Net clk_c_enable_94: 1 loads, 1 SLICEs
+      Net wmu.clk_c_enable_568: 30 loads, 30 SLICEs
+   Number of LSRs:  134
+      Pin reset: 2188 loads, 2188 SLICEs (Net: reset_c)
+      Net n8785: 1 loads, 1 SLICEs
+      Net n8784: 1 loads, 1 SLICEs
+      Net n8783: 1 loads, 1 SLICEs
+      Net n8782: 1 loads, 1 SLICEs
+      Net output_neurons.GEN_NEURONS[5].sn.n8781: 1 loads, 1 SLICEs
+      Net n8780: 1 loads, 1 SLICEs
+      Net n8779: 1 loads, 1 SLICEs
+      Net n8776: 1 loads, 1 SLICEs
+      Net n8778: 1 loads, 1 SLICEs
+      Net output_neurons.GEN_NEURONS[0].sn.n8777: 1 loads, 1 SLICEs
+      Net n1493: 5 loads, 5 SLICEs
+      Net n1488: 9 loads, 9 SLICEs
+      Net n18155: 1 loads, 1 SLICEs
+      Net n8774: 1 loads, 1 SLICEs
+      Net n8773: 1 loads, 1 SLICEs
+      Net n8772: 1 loads, 1 SLICEs
+      Net n8771: 1 loads, 1 SLICEs
+      Net n8770: 1 loads, 1 SLICEs
+      Net n8769: 1 loads, 1 SLICEs
+      Net n8768: 1 loads, 1 SLICEs
+      Net n8767: 1 loads, 1 SLICEs
+      Net n8766: 1 loads, 1 SLICEs
+      Net n8765: 1 loads, 1 SLICEs
+      Net n8764: 1 loads, 1 SLICEs
+      Net n8763: 1 loads, 1 SLICEs
+      Net n8762: 1 loads, 1 SLICEs
+      Net n8761: 1 loads, 1 SLICEs
+      Net n8760: 1 loads, 1 SLICEs
+      Net n8759: 1 loads, 1 SLICEs
+      Net n8758: 1 loads, 1 SLICEs
+      Net n8757: 1 loads, 1 SLICEs
+      Net n8756: 1 loads, 1 SLICEs
+      Net n8755: 1 loads, 1 SLICEs
+      Net n8754: 1 loads, 1 SLICEs
+      Net n8753: 1 loads, 1 SLICEs
+      Net n8752: 1 loads, 1 SLICEs
+      Net n8751: 1 loads, 1 SLICEs
+      Net n8750: 1 loads, 1 SLICEs
+      Net n8749: 1 loads, 1 SLICEs
+      Net n8748: 1 loads, 1 SLICEs
+      Net n8747: 1 loads, 1 SLICEs
+      Net n8746: 1 loads, 1 SLICEs
+      Net n8745: 1 loads, 1 SLICEs
+      Net n8744: 1 loads, 1 SLICEs
+      Net n8743: 1 loads, 1 SLICEs
+      Net n7141: 2 loads, 2 SLICEs
+      Net n7142: 2 loads, 2 SLICEs
+      Net n7119: 2 loads, 2 SLICEs
+      Net n7120: 2 loads, 2 SLICEs
+      Net n7108: 2 loads, 2 SLICEs
+      Net n7109: 2 loads, 2 SLICEs
+      Net n7076: 2 loads, 2 SLICEs
+      Net n7086: 2 loads, 2 SLICEs
+      Net n7064: 2 loads, 2 SLICEs
+      Net n7065: 2 loads, 2 SLICEs
+      Net n7042: 2 loads, 2 SLICEs
+      Net n7043: 2 loads, 2 SLICEs
+      Net n7020: 2 loads, 2 SLICEs
+      Net n7021: 2 loads, 2 SLICEs
+      Net n7636: 2 loads, 2 SLICEs
+      Net n7637: 2 loads, 2 SLICEs
+      Net n7614: 2 loads, 2 SLICEs
+      Net n7615: 2 loads, 2 SLICEs
+      Net n6987: 2 loads, 2 SLICEs
+      Net n6999: 2 loads, 2 SLICEs
+      Net n7592: 2 loads, 2 SLICEs
+      Net n7593: 2 loads, 2 SLICEs
+      Net n7570: 2 loads, 2 SLICEs
+      Net n7571: 2 loads, 2 SLICEs
+      Net n7548: 2 loads, 2 SLICEs
+      Net n7549: 2 loads, 2 SLICEs
+      Net n7526: 2 loads, 2 SLICEs
+      Net n7527: 2 loads, 2 SLICEs
+      Net n7504: 2 loads, 2 SLICEs
+      Net n7505: 2 loads, 2 SLICEs
+      Net n7482: 2 loads, 2 SLICEs
+      Net n7483: 2 loads, 2 SLICEs
+      Net n7460: 2 loads, 2 SLICEs
+      Net n7461: 2 loads, 2 SLICEs
+      Net n7438: 2 loads, 2 SLICEs
+      Net n7439: 2 loads, 2 SLICEs
+      Net n7416: 2 loads, 2 SLICEs
+      Net n7417: 2 loads, 2 SLICEs
+      Net n7383: 2 loads, 2 SLICEs
+      Net n7395: 2 loads, 2 SLICEs
+      Net n6977: 2 loads, 2 SLICEs
+      Net n6976: 2 loads, 2 SLICEs
+      Net n7361: 2 loads, 2 SLICEs
+      Net n7362: 2 loads, 2 SLICEs
+      Net n7339: 2 loads, 2 SLICEs
+      Net n7340: 2 loads, 2 SLICEs
+      Net n7317: 2 loads, 2 SLICEs
+      Net n7318: 2 loads, 2 SLICEs
+      Net n7295: 2 loads, 2 SLICEs
+      Net n7296: 2 loads, 2 SLICEs
+      Net n7284: 2 loads, 2 SLICEs
+      Net n7285: 2 loads, 2 SLICEs
+      Net n7262: 2 loads, 2 SLICEs
+      Net n7263: 2 loads, 2 SLICEs
+      Net n7240: 2 loads, 2 SLICEs
+      Net n7241: 2 loads, 2 SLICEs
+      Net n7218: 2 loads, 2 SLICEs
+      Net n7219: 2 loads, 2 SLICEs
+      Net n7185: 2 loads, 2 SLICEs
+      Net n7186: 2 loads, 2 SLICEs
+      Net n7163: 2 loads, 2 SLICEs
+      Net n7164: 2 loads, 2 SLICEs
+      Net n6955: 2 loads, 2 SLICEs
+      Net n6954: 2 loads, 2 SLICEs
+      Net n16224: 22 loads, 22 SLICEs
+      Net n8276: 1 loads, 1 SLICEs
+      Net n7858: 2 loads, 2 SLICEs
+      Net n7859: 2 loads, 2 SLICEs
+      Net n7836: 2 loads, 2 SLICEs
+      Net n7837: 2 loads, 2 SLICEs
+      Net n7814: 2 loads, 2 SLICEs
+      Net n7815: 2 loads, 2 SLICEs
+      Net n7792: 2 loads, 2 SLICEs
+      Net n7793: 2 loads, 2 SLICEs
+      Net n7770: 2 loads, 2 SLICEs
+      Net n7771: 2 loads, 2 SLICEs
+      Net n7748: 2 loads, 2 SLICEs
+      Net n7749: 2 loads, 2 SLICEs
+      Net n7726: 2 loads, 2 SLICEs
+      Net n7727: 2 loads, 2 SLICEs
+      Net n7704: 2 loads, 2 SLICEs
+      Net n7705: 2 loads, 2 SLICEs
+      Net n7682: 2 loads, 2 SLICEs
+      Net n7683: 2 loads, 2 SLICEs
+      Net n7661: 2 loads, 2 SLICEs
+      Net n7660: 2 loads, 2 SLICEs
+      Net n8156: 8 loads, 8 SLICEs
+      Net wmu.state[0]: 1 loads, 1 SLICEs
+   Top 10 highest fanout non-clock nets:
+      Net reset_c: 2336 loads
+      Net layer1_wma.input_index[1]: 864 loads
+      Net layer1_wma.input_index[0]: 837 loads
+      Net layer1_wma.n5352: 512 loads
+      Net layer1_wma.input_index[3]: 377 loads
+      Net layer1_wma.input_index[2]: 368 loads
+      Net layer2_wma.input_index[0]: 341 loads
+      Net layer2_wma.input_index[1]: 332 loads
+      Net layer1_wma.input_index[4]: 262 loads
+      Net layer1_wma.n5391: 256 loads
+Running physical design DRC...
 
-STA Runtime and Peak Memory Usage :
-Total CPU Time: 8 secs 
-Total REAL Time: 9 secs 
-Peak Memory Usage: 649 MB
+ 
 
- 8.466266s wall, 8.000000s user + 0.437500s system = 8.437500s CPU (99.7%)
 
+   Number of warnings:  0
+   Number of criticals: 0
+   Number of errors:    0
+
+Constraint Summary:
+   Total number of constraints: 1
+   Total number of constraints dropped: 0
+
+
+Total CPU Time: 5 secs  
+Total REAL Time: 6 secs  
+Peak Memory Usage: 458 MB
+
+Checksum -- map: f57ca09043c0792c4be7364ef93f7b92a558f209
+**** CMD map_run - CPU/Elapsed: 0 secs / 6 secs , MEM/Increased: 59.224 Mb/ 0.156 Mb, DATE: 20:56:36 08/26/26
+Thank you for using Radiant. Total CPU/Elapsed time: 0 secs /6 secs 

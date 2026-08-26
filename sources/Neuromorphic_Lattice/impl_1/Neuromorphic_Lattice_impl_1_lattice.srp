@@ -5,7 +5,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2026 Lattice Semiconductor Corporation,  All rights reserved.
-Tue Aug 25 20:11:03 2026
+Wed Aug 26 20:55:57 2026
 
 
 Command Line:  D:\lscc\radiant\2026.1\ispfpga\bin\nt64\synthesis.exe -f D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice/impl_1/Neuromorphic_Lattice_impl_1_lattice.synproj -logfile Neuromorphic_Lattice_impl_1_lattice.srp -gui -msgset D:/programs/Neuromophic_FPGA/sources/Neuromorphic_Lattice/promote.xml 
@@ -147,28 +147,31 @@ Analyzing Verilog file ../source/impl_1/spike_neuron.v. VERI-1482
 Analyzing Verilog file ../source/impl_1/spike_array.v. VERI-1482
 Top module name (Verilog): network_tb
 INFO <35901018> - synthesis: ../source/impl_1/network_tb.v(3): compiling module network_tb. VERI-1018
-INFO <35901018> - synthesis: ../source/impl_1/weight_manager_unit.v(3): compiling module weight_manager_unit(NUM_WEIGHTS=200). VERI-1018
-WARNING <35901209> - synthesis: ../source/impl_1/weight_manager_unit.v(39): expression size 32 truncated to fit in target size 16. VERI-1209
+INFO <35901018> - synthesis: ../source/impl_1/weight_manager_unit.v(3): compiling module weight_manager_unit(NUM_WEIGHTS=1344). VERI-1018
+WARNING <35901209> - synthesis: ../source/impl_1/weight_manager_unit.v(50): expression size 32 truncated to fit in target size 12. VERI-1209
 INFO <35901018> - synthesis: ../source/impl_1/ram.v(4): compiling module single_port_ram. VERI-1018
-INFO <35901018> - synthesis: ../source/impl_1/weight_multiply_array.v(3): compiling module weight_multiply_array(OUT_SIZE=20). VERI-1018
+INFO <35901018> - synthesis: ../source/impl_1/weight_multiply_array.v(3): compiling module weight_multiply_array(OUT_SIZE=32). VERI-1018
 INFO <35901018> - synthesis: ../source/impl_1/weight_multiply_unit.v(1): compiling module weight_multiply_unit. VERI-1018
-INFO <35901018> - synthesis: ../source/impl_1/spike_array.v(3): compiling module spike_array(SIZE=20). VERI-1018
+INFO <35901018> - synthesis: ../source/impl_1/spike_array.v(3): compiling module spike_array(SIZE=32). VERI-1018
 INFO <35901018> - synthesis: ../source/impl_1/spike_neuron.v(1): compiling module spike_neuron. VERI-1018
-INFO <35901018> - synthesis: ../source/impl_1/weight_multiply_array.v(3): compiling module weight_multiply_array(IN_SIZE=20). VERI-1018
+INFO <35901018> - synthesis: ../source/impl_1/weight_multiply_array.v(3): compiling module weight_multiply_array. VERI-1018
 INFO <35901018> - synthesis: ../source/impl_1/spike_array.v(3): compiling module spike_array. VERI-1018
 [Parameter Setting Section Start]
 
 	[Parameter Settings for top-level module]
 	(Module: network_tb)
-		HIDDEN_SIZE               20
+		HIDDEN_SIZE               32
 		INIT_ADDRESS              0
-		LAYER1_NUM_WEIGHTS        100
-		LAYER2_NUM_WEIGHTS        100
-		TOTAL_NUM_WEIGHTS         200
+		LAYER1_NUM_WEIGHTS        1024
+		LAYER2_NUM_WEIGHTS        320
+		TOTAL_NUM_WEIGHTS         1344
+		WAIT_WEIGHTS              2'b00
+		WAIT_LAYER1               2'b01
+		WAIT_LAYER2               2'b10
 
 	[Parameter Settings for Instance(s): wmu]
 	(Module: weight_manager_unit)
-		NUM_WEIGHTS               200
+		NUM_WEIGHTS               1344
 		INIT_ADDRESS              0
 		SET_ADDR                  2'b00
 		WAIT_RAM                  2'b01
@@ -178,237 +181,51 @@ INFO <35901018> - synthesis: ../source/impl_1/spike_array.v(3): compiling module
 	[Parameter Settings for Instance(s): ram]
 	(Module: single_port_ram)
 		DATA_WIDTH                8
-		ADDR_WIDTH                16
+		ADDR_WIDTH                12
 
 	[Parameter Settings for Instance(s): layer1_wma]
 	(Module: weight_multiply_array)
-		IN_SIZE                   5
-		OUT_SIZE                  20
-		NUM_UNITS                 100
-		GEN_WEIGHTS[0].i          0
-		GEN_WEIGHTS[1].i          1
-		GEN_WEIGHTS[2].i          2
-		GEN_WEIGHTS[3].i          3
-		GEN_WEIGHTS[4].i          4
-		GEN_WEIGHTS[5].i          5
-		GEN_WEIGHTS[6].i          6
-		GEN_WEIGHTS[7].i          7
-		GEN_WEIGHTS[8].i          8
-		GEN_WEIGHTS[9].i          9
-		GEN_WEIGHTS[10].i         10
-		GEN_WEIGHTS[11].i         11
-		GEN_WEIGHTS[12].i         12
-		GEN_WEIGHTS[13].i         13
-		GEN_WEIGHTS[14].i         14
-		GEN_WEIGHTS[15].i         15
-		GEN_WEIGHTS[16].i         16
-		GEN_WEIGHTS[17].i         17
-		GEN_WEIGHTS[18].i         18
-		GEN_WEIGHTS[19].i         19
-		GEN_WEIGHTS[20].i         20
-		GEN_WEIGHTS[21].i         21
-		GEN_WEIGHTS[22].i         22
-		GEN_WEIGHTS[23].i         23
-		GEN_WEIGHTS[24].i         24
-		GEN_WEIGHTS[25].i         25
-		GEN_WEIGHTS[26].i         26
-		GEN_WEIGHTS[27].i         27
-		GEN_WEIGHTS[28].i         28
-		GEN_WEIGHTS[29].i         29
-		GEN_WEIGHTS[30].i         30
-		GEN_WEIGHTS[31].i         31
-		GEN_WEIGHTS[32].i         32
-		GEN_WEIGHTS[33].i         33
-		GEN_WEIGHTS[34].i         34
-		GEN_WEIGHTS[35].i         35
-		GEN_WEIGHTS[36].i         36
-		GEN_WEIGHTS[37].i         37
-		GEN_WEIGHTS[38].i         38
-		GEN_WEIGHTS[39].i         39
-		GEN_WEIGHTS[40].i         40
-		GEN_WEIGHTS[41].i         41
-		GEN_WEIGHTS[42].i         42
-		GEN_WEIGHTS[43].i         43
-		GEN_WEIGHTS[44].i         44
-		GEN_WEIGHTS[45].i         45
-		GEN_WEIGHTS[46].i         46
-		GEN_WEIGHTS[47].i         47
-		GEN_WEIGHTS[48].i         48
-		GEN_WEIGHTS[49].i         49
-		GEN_WEIGHTS[50].i         50
-		GEN_WEIGHTS[51].i         51
-		GEN_WEIGHTS[52].i         52
-		GEN_WEIGHTS[53].i         53
-		GEN_WEIGHTS[54].i         54
-		GEN_WEIGHTS[55].i         55
-		GEN_WEIGHTS[56].i         56
-		GEN_WEIGHTS[57].i         57
-		GEN_WEIGHTS[58].i         58
-		GEN_WEIGHTS[59].i         59
-		GEN_WEIGHTS[60].i         60
-		GEN_WEIGHTS[61].i         61
-		GEN_WEIGHTS[62].i         62
-		GEN_WEIGHTS[63].i         63
-		GEN_WEIGHTS[64].i         64
-		GEN_WEIGHTS[65].i         65
-		GEN_WEIGHTS[66].i         66
-		GEN_WEIGHTS[67].i         67
-		GEN_WEIGHTS[68].i         68
-		GEN_WEIGHTS[69].i         69
-		GEN_WEIGHTS[70].i         70
-		GEN_WEIGHTS[71].i         71
-		GEN_WEIGHTS[72].i         72
-		GEN_WEIGHTS[73].i         73
-		GEN_WEIGHTS[74].i         74
-		GEN_WEIGHTS[75].i         75
-		GEN_WEIGHTS[76].i         76
-		GEN_WEIGHTS[77].i         77
-		GEN_WEIGHTS[78].i         78
-		GEN_WEIGHTS[79].i         79
-		GEN_WEIGHTS[80].i         80
-		GEN_WEIGHTS[81].i         81
-		GEN_WEIGHTS[82].i         82
-		GEN_WEIGHTS[83].i         83
-		GEN_WEIGHTS[84].i         84
-		GEN_WEIGHTS[85].i         85
-		GEN_WEIGHTS[86].i         86
-		GEN_WEIGHTS[87].i         87
-		GEN_WEIGHTS[88].i         88
-		GEN_WEIGHTS[89].i         89
-		GEN_WEIGHTS[90].i         90
-		GEN_WEIGHTS[91].i         91
-		GEN_WEIGHTS[92].i         92
-		GEN_WEIGHTS[93].i         93
-		GEN_WEIGHTS[94].i         94
-		GEN_WEIGHTS[95].i         95
-		GEN_WEIGHTS[96].i         96
-		GEN_WEIGHTS[97].i         97
-		GEN_WEIGHTS[98].i         98
-		GEN_WEIGHTS[99].i         99
-		GEN_OUTPUT[0].j           0
-		GEN_OUTPUT[0].GEN_INPUT[0].z 0
-		GEN_OUTPUT[0].GEN_INPUT[1].z 1
-		GEN_OUTPUT[0].GEN_INPUT[2].z 2
-		GEN_OUTPUT[0].GEN_INPUT[3].z 3
-		GEN_OUTPUT[0].GEN_INPUT[4].z 4
-		GEN_OUTPUT[1].j           1
-		GEN_OUTPUT[1].GEN_INPUT[0].z 0
-		GEN_OUTPUT[1].GEN_INPUT[1].z 1
-		GEN_OUTPUT[1].GEN_INPUT[2].z 2
-		GEN_OUTPUT[1].GEN_INPUT[3].z 3
-		GEN_OUTPUT[1].GEN_INPUT[4].z 4
-		GEN_OUTPUT[2].j           2
-		GEN_OUTPUT[2].GEN_INPUT[0].z 0
-		GEN_OUTPUT[2].GEN_INPUT[1].z 1
-		GEN_OUTPUT[2].GEN_INPUT[2].z 2
-		GEN_OUTPUT[2].GEN_INPUT[3].z 3
-		GEN_OUTPUT[2].GEN_INPUT[4].z 4
-		GEN_OUTPUT[3].j           3
-		GEN_OUTPUT[3].GEN_INPUT[0].z 0
-		GEN_OUTPUT[3].GEN_INPUT[1].z 1
-		GEN_OUTPUT[3].GEN_INPUT[2].z 2
-		GEN_OUTPUT[3].GEN_INPUT[3].z 3
-		GEN_OUTPUT[3].GEN_INPUT[4].z 4
-		GEN_OUTPUT[4].j           4
-		GEN_OUTPUT[4].GEN_INPUT[0].z 0
-		GEN_OUTPUT[4].GEN_INPUT[1].z 1
-		GEN_OUTPUT[4].GEN_INPUT[2].z 2
-		GEN_OUTPUT[4].GEN_INPUT[3].z 3
-		GEN_OUTPUT[4].GEN_INPUT[4].z 4
-		GEN_OUTPUT[5].j           5
-		GEN_OUTPUT[5].GEN_INPUT[0].z 0
-		GEN_OUTPUT[5].GEN_INPUT[1].z 1
-		GEN_OUTPUT[5].GEN_INPUT[2].z 2
-		GEN_OUTPUT[5].GEN_INPUT[3].z 3
-		GEN_OUTPUT[5].GEN_INPUT[4].z 4
-		GEN_OUTPUT[6].j           6
-		GEN_OUTPUT[6].GEN_INPUT[0].z 0
-		GEN_OUTPUT[6].GEN_INPUT[1].z 1
-		GEN_OUTPUT[6].GEN_INPUT[2].z 2
-		GEN_OUTPUT[6].GEN_INPUT[3].z 3
-		GEN_OUTPUT[6].GEN_INPUT[4].z 4
-		GEN_OUTPUT[7].j           7
-		GEN_OUTPUT[7].GEN_INPUT[0].z 0
-		GEN_OUTPUT[7].GEN_INPUT[1].z 1
-		GEN_OUTPUT[7].GEN_INPUT[2].z 2
-		GEN_OUTPUT[7].GEN_INPUT[3].z 3
-		GEN_OUTPUT[7].GEN_INPUT[4].z 4
-		GEN_OUTPUT[8].j           8
-		GEN_OUTPUT[8].GEN_INPUT[0].z 0
-		GEN_OUTPUT[8].GEN_INPUT[1].z 1
-		GEN_OUTPUT[8].GEN_INPUT[2].z 2
-		GEN_OUTPUT[8].GEN_INPUT[3].z 3
-		GEN_OUTPUT[8].GEN_INPUT[4].z 4
-		GEN_OUTPUT[9].j           9
-		GEN_OUTPUT[9].GEN_INPUT[0].z 0
-		GEN_OUTPUT[9].GEN_INPUT[1].z 1
-		GEN_OUTPUT[9].GEN_INPUT[2].z 2
-		GEN_OUTPUT[9].GEN_INPUT[3].z 3
-		GEN_OUTPUT[9].GEN_INPUT[4].z 4
-		GEN_OUTPUT[10].j          10
-		GEN_OUTPUT[10].GEN_INPUT[0].z 0
-		GEN_OUTPUT[10].GEN_INPUT[1].z 1
-		GEN_OUTPUT[10].GEN_INPUT[2].z 2
-		GEN_OUTPUT[10].GEN_INPUT[3].z 3
-		GEN_OUTPUT[10].GEN_INPUT[4].z 4
-		GEN_OUTPUT[11].j          11
-		GEN_OUTPUT[11].GEN_INPUT[0].z 0
-		GEN_OUTPUT[11].GEN_INPUT[1].z 1
-		GEN_OUTPUT[11].GEN_INPUT[2].z 2
-		GEN_OUTPUT[11].GEN_INPUT[3].z 3
-		GEN_OUTPUT[11].GEN_INPUT[4].z 4
-		GEN_OUTPUT[12].j          12
-		GEN_OUTPUT[12].GEN_INPUT[0].z 0
-		GEN_OUTPUT[12].GEN_INPUT[1].z 1
-		GEN_OUTPUT[12].GEN_INPUT[2].z 2
-		GEN_OUTPUT[12].GEN_INPUT[3].z 3
-		GEN_OUTPUT[12].GEN_INPUT[4].z 4
-		GEN_OUTPUT[13].j          13
-		GEN_OUTPUT[13].GEN_INPUT[0].z 0
-		GEN_OUTPUT[13].GEN_INPUT[1].z 1
-		GEN_OUTPUT[13].GEN_INPUT[2].z 2
-		GEN_OUTPUT[13].GEN_INPUT[3].z 3
-		GEN_OUTPUT[13].GEN_INPUT[4].z 4
-		GEN_OUTPUT[14].j          14
-		GEN_OUTPUT[14].GEN_INPUT[0].z 0
-		GEN_OUTPUT[14].GEN_INPUT[1].z 1
-		GEN_OUTPUT[14].GEN_INPUT[2].z 2
-		GEN_OUTPUT[14].GEN_INPUT[3].z 3
-		GEN_OUTPUT[14].GEN_INPUT[4].z 4
-		GEN_OUTPUT[15].j          15
-		GEN_OUTPUT[15].GEN_INPUT[0].z 0
-		GEN_OUTPUT[15].GEN_INPUT[1].z 1
-		GEN_OUTPUT[15].GEN_INPUT[2].z 2
-		GEN_OUTPUT[15].GEN_INPUT[3].z 3
-		GEN_OUTPUT[15].GEN_INPUT[4].z 4
-		GEN_OUTPUT[16].j          16
-		GEN_OUTPUT[16].GEN_INPUT[0].z 0
-		GEN_OUTPUT[16].GEN_INPUT[1].z 1
-		GEN_OUTPUT[16].GEN_INPUT[2].z 2
-		GEN_OUTPUT[16].GEN_INPUT[3].z 3
-		GEN_OUTPUT[16].GEN_INPUT[4].z 4
-		GEN_OUTPUT[17].j          17
-		GEN_OUTPUT[17].GEN_INPUT[0].z 0
-		GEN_OUTPUT[17].GEN_INPUT[1].z 1
-		GEN_OUTPUT[17].GEN_INPUT[2].z 2
-		GEN_OUTPUT[17].GEN_INPUT[3].z 3
-		GEN_OUTPUT[17].GEN_INPUT[4].z 4
-		GEN_OUTPUT[18].j          18
-		GEN_OUTPUT[18].GEN_INPUT[0].z 0
-		GEN_OUTPUT[18].GEN_INPUT[1].z 1
-		GEN_OUTPUT[18].GEN_INPUT[2].z 2
-		GEN_OUTPUT[18].GEN_INPUT[3].z 3
-		GEN_OUTPUT[18].GEN_INPUT[4].z 4
-		GEN_OUTPUT[19].j          19
-		GEN_OUTPUT[19].GEN_INPUT[0].z 0
-		GEN_OUTPUT[19].GEN_INPUT[1].z 1
-		GEN_OUTPUT[19].GEN_INPUT[2].z 2
-		GEN_OUTPUT[19].GEN_INPUT[3].z 3
-		GEN_OUTPUT[19].GEN_INPUT[4].z 4
+		IN_SIZE                   32
+		OUT_SIZE                  32
+		SUM_WIDTH                 16
+		IN_INDEX_WIDTH            5
+		OUT_INDEX_WIDTH           5
+		GEN_OUTPUT_UNITS[0].output_number 0
+		GEN_OUTPUT_UNITS[1].output_number 1
+		GEN_OUTPUT_UNITS[2].output_number 2
+		GEN_OUTPUT_UNITS[3].output_number 3
+		GEN_OUTPUT_UNITS[4].output_number 4
+		GEN_OUTPUT_UNITS[5].output_number 5
+		GEN_OUTPUT_UNITS[6].output_number 6
+		GEN_OUTPUT_UNITS[7].output_number 7
+		GEN_OUTPUT_UNITS[8].output_number 8
+		GEN_OUTPUT_UNITS[9].output_number 9
+		GEN_OUTPUT_UNITS[10].output_number 10
+		GEN_OUTPUT_UNITS[11].output_number 11
+		GEN_OUTPUT_UNITS[12].output_number 12
+		GEN_OUTPUT_UNITS[13].output_number 13
+		GEN_OUTPUT_UNITS[14].output_number 14
+		GEN_OUTPUT_UNITS[15].output_number 15
+		GEN_OUTPUT_UNITS[16].output_number 16
+		GEN_OUTPUT_UNITS[17].output_number 17
+		GEN_OUTPUT_UNITS[18].output_number 18
+		GEN_OUTPUT_UNITS[19].output_number 19
+		GEN_OUTPUT_UNITS[20].output_number 20
+		GEN_OUTPUT_UNITS[21].output_number 21
+		GEN_OUTPUT_UNITS[22].output_number 22
+		GEN_OUTPUT_UNITS[23].output_number 23
+		GEN_OUTPUT_UNITS[24].output_number 24
+		GEN_OUTPUT_UNITS[25].output_number 25
+		GEN_OUTPUT_UNITS[26].output_number 26
+		GEN_OUTPUT_UNITS[27].output_number 27
+		GEN_OUTPUT_UNITS[28].output_number 28
+		GEN_OUTPUT_UNITS[29].output_number 29
+		GEN_OUTPUT_UNITS[30].output_number 30
+		GEN_OUTPUT_UNITS[31].output_number 31
 
 	[Parameter Settings for Instance(s): hidden_neurons]
 	(Module: spike_array)
-		SIZE                      20
+		SIZE                      32
 		GEN_NEURONS[0].i          0
 		GEN_NEURONS[1].i          1
 		GEN_NEURONS[2].i          2
@@ -429,363 +246,300 @@ INFO <35901018> - synthesis: ../source/impl_1/spike_array.v(3): compiling module
 		GEN_NEURONS[17].i         17
 		GEN_NEURONS[18].i         18
 		GEN_NEURONS[19].i         19
+		GEN_NEURONS[20].i         20
+		GEN_NEURONS[21].i         21
+		GEN_NEURONS[22].i         22
+		GEN_NEURONS[23].i         23
+		GEN_NEURONS[24].i         24
+		GEN_NEURONS[25].i         25
+		GEN_NEURONS[26].i         26
+		GEN_NEURONS[27].i         27
+		GEN_NEURONS[28].i         28
+		GEN_NEURONS[29].i         29
+		GEN_NEURONS[30].i         30
+		GEN_NEURONS[31].i         31
 
 	[Parameter Settings for Instance(s): layer2_wma]
 	(Module: weight_multiply_array)
-		IN_SIZE                   20
-		OUT_SIZE                  5
-		NUM_UNITS                 100
-		GEN_WEIGHTS[0].i          0
-		GEN_WEIGHTS[1].i          1
-		GEN_WEIGHTS[2].i          2
-		GEN_WEIGHTS[3].i          3
-		GEN_WEIGHTS[4].i          4
-		GEN_WEIGHTS[5].i          5
-		GEN_WEIGHTS[6].i          6
-		GEN_WEIGHTS[7].i          7
-		GEN_WEIGHTS[8].i          8
-		GEN_WEIGHTS[9].i          9
-		GEN_WEIGHTS[10].i         10
-		GEN_WEIGHTS[11].i         11
-		GEN_WEIGHTS[12].i         12
-		GEN_WEIGHTS[13].i         13
-		GEN_WEIGHTS[14].i         14
-		GEN_WEIGHTS[15].i         15
-		GEN_WEIGHTS[16].i         16
-		GEN_WEIGHTS[17].i         17
-		GEN_WEIGHTS[18].i         18
-		GEN_WEIGHTS[19].i         19
-		GEN_WEIGHTS[20].i         20
-		GEN_WEIGHTS[21].i         21
-		GEN_WEIGHTS[22].i         22
-		GEN_WEIGHTS[23].i         23
-		GEN_WEIGHTS[24].i         24
-		GEN_WEIGHTS[25].i         25
-		GEN_WEIGHTS[26].i         26
-		GEN_WEIGHTS[27].i         27
-		GEN_WEIGHTS[28].i         28
-		GEN_WEIGHTS[29].i         29
-		GEN_WEIGHTS[30].i         30
-		GEN_WEIGHTS[31].i         31
-		GEN_WEIGHTS[32].i         32
-		GEN_WEIGHTS[33].i         33
-		GEN_WEIGHTS[34].i         34
-		GEN_WEIGHTS[35].i         35
-		GEN_WEIGHTS[36].i         36
-		GEN_WEIGHTS[37].i         37
-		GEN_WEIGHTS[38].i         38
-		GEN_WEIGHTS[39].i         39
-		GEN_WEIGHTS[40].i         40
-		GEN_WEIGHTS[41].i         41
-		GEN_WEIGHTS[42].i         42
-		GEN_WEIGHTS[43].i         43
-		GEN_WEIGHTS[44].i         44
-		GEN_WEIGHTS[45].i         45
-		GEN_WEIGHTS[46].i         46
-		GEN_WEIGHTS[47].i         47
-		GEN_WEIGHTS[48].i         48
-		GEN_WEIGHTS[49].i         49
-		GEN_WEIGHTS[50].i         50
-		GEN_WEIGHTS[51].i         51
-		GEN_WEIGHTS[52].i         52
-		GEN_WEIGHTS[53].i         53
-		GEN_WEIGHTS[54].i         54
-		GEN_WEIGHTS[55].i         55
-		GEN_WEIGHTS[56].i         56
-		GEN_WEIGHTS[57].i         57
-		GEN_WEIGHTS[58].i         58
-		GEN_WEIGHTS[59].i         59
-		GEN_WEIGHTS[60].i         60
-		GEN_WEIGHTS[61].i         61
-		GEN_WEIGHTS[62].i         62
-		GEN_WEIGHTS[63].i         63
-		GEN_WEIGHTS[64].i         64
-		GEN_WEIGHTS[65].i         65
-		GEN_WEIGHTS[66].i         66
-		GEN_WEIGHTS[67].i         67
-		GEN_WEIGHTS[68].i         68
-		GEN_WEIGHTS[69].i         69
-		GEN_WEIGHTS[70].i         70
-		GEN_WEIGHTS[71].i         71
-		GEN_WEIGHTS[72].i         72
-		GEN_WEIGHTS[73].i         73
-		GEN_WEIGHTS[74].i         74
-		GEN_WEIGHTS[75].i         75
-		GEN_WEIGHTS[76].i         76
-		GEN_WEIGHTS[77].i         77
-		GEN_WEIGHTS[78].i         78
-		GEN_WEIGHTS[79].i         79
-		GEN_WEIGHTS[80].i         80
-		GEN_WEIGHTS[81].i         81
-		GEN_WEIGHTS[82].i         82
-		GEN_WEIGHTS[83].i         83
-		GEN_WEIGHTS[84].i         84
-		GEN_WEIGHTS[85].i         85
-		GEN_WEIGHTS[86].i         86
-		GEN_WEIGHTS[87].i         87
-		GEN_WEIGHTS[88].i         88
-		GEN_WEIGHTS[89].i         89
-		GEN_WEIGHTS[90].i         90
-		GEN_WEIGHTS[91].i         91
-		GEN_WEIGHTS[92].i         92
-		GEN_WEIGHTS[93].i         93
-		GEN_WEIGHTS[94].i         94
-		GEN_WEIGHTS[95].i         95
-		GEN_WEIGHTS[96].i         96
-		GEN_WEIGHTS[97].i         97
-		GEN_WEIGHTS[98].i         98
-		GEN_WEIGHTS[99].i         99
-		GEN_OUTPUT[0].j           0
-		GEN_OUTPUT[0].GEN_INPUT[0].z 0
-		GEN_OUTPUT[0].GEN_INPUT[1].z 1
-		GEN_OUTPUT[0].GEN_INPUT[2].z 2
-		GEN_OUTPUT[0].GEN_INPUT[3].z 3
-		GEN_OUTPUT[0].GEN_INPUT[4].z 4
-		GEN_OUTPUT[0].GEN_INPUT[5].z 5
-		GEN_OUTPUT[0].GEN_INPUT[6].z 6
-		GEN_OUTPUT[0].GEN_INPUT[7].z 7
-		GEN_OUTPUT[0].GEN_INPUT[8].z 8
-		GEN_OUTPUT[0].GEN_INPUT[9].z 9
-		GEN_OUTPUT[0].GEN_INPUT[10].z 10
-		GEN_OUTPUT[0].GEN_INPUT[11].z 11
-		GEN_OUTPUT[0].GEN_INPUT[12].z 12
-		GEN_OUTPUT[0].GEN_INPUT[13].z 13
-		GEN_OUTPUT[0].GEN_INPUT[14].z 14
-		GEN_OUTPUT[0].GEN_INPUT[15].z 15
-		GEN_OUTPUT[0].GEN_INPUT[16].z 16
-		GEN_OUTPUT[0].GEN_INPUT[17].z 17
-		GEN_OUTPUT[0].GEN_INPUT[18].z 18
-		GEN_OUTPUT[0].GEN_INPUT[19].z 19
-		GEN_OUTPUT[1].j           1
-		GEN_OUTPUT[1].GEN_INPUT[0].z 0
-		GEN_OUTPUT[1].GEN_INPUT[1].z 1
-		GEN_OUTPUT[1].GEN_INPUT[2].z 2
-		GEN_OUTPUT[1].GEN_INPUT[3].z 3
-		GEN_OUTPUT[1].GEN_INPUT[4].z 4
-		GEN_OUTPUT[1].GEN_INPUT[5].z 5
-		GEN_OUTPUT[1].GEN_INPUT[6].z 6
-		GEN_OUTPUT[1].GEN_INPUT[7].z 7
-		GEN_OUTPUT[1].GEN_INPUT[8].z 8
-		GEN_OUTPUT[1].GEN_INPUT[9].z 9
-		GEN_OUTPUT[1].GEN_INPUT[10].z 10
-		GEN_OUTPUT[1].GEN_INPUT[11].z 11
-		GEN_OUTPUT[1].GEN_INPUT[12].z 12
-		GEN_OUTPUT[1].GEN_INPUT[13].z 13
-		GEN_OUTPUT[1].GEN_INPUT[14].z 14
-		GEN_OUTPUT[1].GEN_INPUT[15].z 15
-		GEN_OUTPUT[1].GEN_INPUT[16].z 16
-		GEN_OUTPUT[1].GEN_INPUT[17].z 17
-		GEN_OUTPUT[1].GEN_INPUT[18].z 18
-		GEN_OUTPUT[1].GEN_INPUT[19].z 19
-		GEN_OUTPUT[2].j           2
-		GEN_OUTPUT[2].GEN_INPUT[0].z 0
-		GEN_OUTPUT[2].GEN_INPUT[1].z 1
-		GEN_OUTPUT[2].GEN_INPUT[2].z 2
-		GEN_OUTPUT[2].GEN_INPUT[3].z 3
-		GEN_OUTPUT[2].GEN_INPUT[4].z 4
-		GEN_OUTPUT[2].GEN_INPUT[5].z 5
-		GEN_OUTPUT[2].GEN_INPUT[6].z 6
-		GEN_OUTPUT[2].GEN_INPUT[7].z 7
-		GEN_OUTPUT[2].GEN_INPUT[8].z 8
-		GEN_OUTPUT[2].GEN_INPUT[9].z 9
-		GEN_OUTPUT[2].GEN_INPUT[10].z 10
-		GEN_OUTPUT[2].GEN_INPUT[11].z 11
-		GEN_OUTPUT[2].GEN_INPUT[12].z 12
-		GEN_OUTPUT[2].GEN_INPUT[13].z 13
-		GEN_OUTPUT[2].GEN_INPUT[14].z 14
-		GEN_OUTPUT[2].GEN_INPUT[15].z 15
-		GEN_OUTPUT[2].GEN_INPUT[16].z 16
-		GEN_OUTPUT[2].GEN_INPUT[17].z 17
-		GEN_OUTPUT[2].GEN_INPUT[18].z 18
-		GEN_OUTPUT[2].GEN_INPUT[19].z 19
-		GEN_OUTPUT[3].j           3
-		GEN_OUTPUT[3].GEN_INPUT[0].z 0
-		GEN_OUTPUT[3].GEN_INPUT[1].z 1
-		GEN_OUTPUT[3].GEN_INPUT[2].z 2
-		GEN_OUTPUT[3].GEN_INPUT[3].z 3
-		GEN_OUTPUT[3].GEN_INPUT[4].z 4
-		GEN_OUTPUT[3].GEN_INPUT[5].z 5
-		GEN_OUTPUT[3].GEN_INPUT[6].z 6
-		GEN_OUTPUT[3].GEN_INPUT[7].z 7
-		GEN_OUTPUT[3].GEN_INPUT[8].z 8
-		GEN_OUTPUT[3].GEN_INPUT[9].z 9
-		GEN_OUTPUT[3].GEN_INPUT[10].z 10
-		GEN_OUTPUT[3].GEN_INPUT[11].z 11
-		GEN_OUTPUT[3].GEN_INPUT[12].z 12
-		GEN_OUTPUT[3].GEN_INPUT[13].z 13
-		GEN_OUTPUT[3].GEN_INPUT[14].z 14
-		GEN_OUTPUT[3].GEN_INPUT[15].z 15
-		GEN_OUTPUT[3].GEN_INPUT[16].z 16
-		GEN_OUTPUT[3].GEN_INPUT[17].z 17
-		GEN_OUTPUT[3].GEN_INPUT[18].z 18
-		GEN_OUTPUT[3].GEN_INPUT[19].z 19
-		GEN_OUTPUT[4].j           4
-		GEN_OUTPUT[4].GEN_INPUT[0].z 0
-		GEN_OUTPUT[4].GEN_INPUT[1].z 1
-		GEN_OUTPUT[4].GEN_INPUT[2].z 2
-		GEN_OUTPUT[4].GEN_INPUT[3].z 3
-		GEN_OUTPUT[4].GEN_INPUT[4].z 4
-		GEN_OUTPUT[4].GEN_INPUT[5].z 5
-		GEN_OUTPUT[4].GEN_INPUT[6].z 6
-		GEN_OUTPUT[4].GEN_INPUT[7].z 7
-		GEN_OUTPUT[4].GEN_INPUT[8].z 8
-		GEN_OUTPUT[4].GEN_INPUT[9].z 9
-		GEN_OUTPUT[4].GEN_INPUT[10].z 10
-		GEN_OUTPUT[4].GEN_INPUT[11].z 11
-		GEN_OUTPUT[4].GEN_INPUT[12].z 12
-		GEN_OUTPUT[4].GEN_INPUT[13].z 13
-		GEN_OUTPUT[4].GEN_INPUT[14].z 14
-		GEN_OUTPUT[4].GEN_INPUT[15].z 15
-		GEN_OUTPUT[4].GEN_INPUT[16].z 16
-		GEN_OUTPUT[4].GEN_INPUT[17].z 17
-		GEN_OUTPUT[4].GEN_INPUT[18].z 18
-		GEN_OUTPUT[4].GEN_INPUT[19].z 19
+		IN_SIZE                   32
+		OUT_SIZE                  10
+		SUM_WIDTH                 16
+		IN_INDEX_WIDTH            5
+		OUT_INDEX_WIDTH           4
+		GEN_OUTPUT_UNITS[0].output_number 0
+		GEN_OUTPUT_UNITS[1].output_number 1
+		GEN_OUTPUT_UNITS[2].output_number 2
+		GEN_OUTPUT_UNITS[3].output_number 3
+		GEN_OUTPUT_UNITS[4].output_number 4
+		GEN_OUTPUT_UNITS[5].output_number 5
+		GEN_OUTPUT_UNITS[6].output_number 6
+		GEN_OUTPUT_UNITS[7].output_number 7
+		GEN_OUTPUT_UNITS[8].output_number 8
+		GEN_OUTPUT_UNITS[9].output_number 9
 
 	[Parameter Settings for Instance(s): output_neurons]
 	(Module: spike_array)
-		SIZE                      5
+		SIZE                      10
 		GEN_NEURONS[0].i          0
 		GEN_NEURONS[1].i          1
 		GEN_NEURONS[2].i          2
 		GEN_NEURONS[3].i          3
 		GEN_NEURONS[4].i          4
+		GEN_NEURONS[5].i          5
+		GEN_NEURONS[6].i          6
+		GEN_NEURONS[7].i          7
+		GEN_NEURONS[8].i          8
+		GEN_NEURONS[9].i          9
 
-	[Parameter Settings for Instance(s): GEN_NEURONS[0].sn, GEN_NEURONS[1].sn, GEN_NEURONS[2].sn, GEN_NEURONS[3].sn, GEN_NEURONS[4].sn, GEN_NEURONS[0].sn, GEN_NEURONS[1].sn, GEN_NEURONS[2].sn, GEN_NEURONS[3].sn, GEN_NEURONS[4].sn, GEN_NEURONS[5].sn, GEN_NEURONS[6].sn, GEN_NEURONS[7].sn, GEN_NEURONS[8].sn, GEN_NEURONS[9].sn, GE   ....   ].sn, GEN_NEURONS[12].sn, GEN_NEURONS[13].sn, GEN_NEURONS[14].sn, GEN_NEURONS[15].sn, GEN_NEURONS[16].sn, GEN_NEURONS[17].sn, GEN_NEURONS[18].sn, GEN_NEURONS[19].sn]
+	[Parameter Settings for Instance(s): GEN_OUTPUT_UNITS[0].unit, GEN_OUTPUT_UNITS[1].unit, GEN_OUTPUT_UNITS[2].unit, GEN_OUTPUT_UNITS[3].unit, GEN_OUTPUT_UNITS[4].unit, GEN_OUTPUT_UNITS[5].unit, GEN_OUTPUT_UNITS[6].unit, GEN_OUTPUT_UNITS[7].unit, GEN_OUTPUT_UNITS[8].unit, GEN_OUTPUT_UNITS[9].unit, GEN_OUTPUT_UNITS[0].unit, G   ....   it, GEN_OUTPUT_UNITS[26].unit, GEN_OUTPUT_UNITS[27].unit, GEN_OUTPUT_UNITS[28].unit, GEN_OUTPUT_UNITS[29].unit, GEN_OUTPUT_UNITS[30].unit, GEN_OUTPUT_UNITS[31].unit]
+	(Module: weight_multiply_unit)
+		IN_SIZE                   32
+		SUM_WIDTH                 16
+		INDEX_WIDTH               5
+
+	[Parameter Settings for Instance(s): GEN_NEURONS[0].sn, GEN_NEURONS[1].sn, GEN_NEURONS[2].sn, GEN_NEURONS[3].sn, GEN_NEURONS[4].sn, GEN_NEURONS[5].sn, GEN_NEURONS[6].sn, GEN_NEURONS[7].sn, GEN_NEURONS[8].sn, GEN_NEURONS[9].sn, GEN_NEURONS[0].sn, GEN_NEURONS[1].sn, GEN_NEURONS[2].sn, GEN_NEURONS[3].sn, GEN_NEURONS[4].sn, GE   ....   ].sn, GEN_NEURONS[24].sn, GEN_NEURONS[25].sn, GEN_NEURONS[26].sn, GEN_NEURONS[27].sn, GEN_NEURONS[28].sn, GEN_NEURONS[29].sn, GEN_NEURONS[30].sn, GEN_NEURONS[31].sn]
 	(Module: spike_neuron)
-		threshold                 110
-		beta_shift                8
+		threshold                 120
+		beta_shift                3
 
 [Parameter Setting Section End]
-WARNING <35935040> - synthesis: Register write_enable clock is stuck at Zero. VDB-5040
+INFO <35001774> - synthesis: Extracted state machine for register '\layer2_wma/load_output_index' with one-hot encoding
+State machine has 16 reachable states with original encodings of:
+
+ 0000 
+
+ 0001 
+
+ 0010 
+
+ 0011 
+
+ 0100 
+
+ 0101 
+
+ 0110 
+
+ 0111 
+
+ 1000 
+
+ 1001 
+
+ 1010 
+
+ 1011 
+
+ 1100 
+
+ 1101 
+
+ 1110 
+
+ 1111 
+
+original encoding -> new encoding (one-hot encoding)
+
+ 0000 -> 0000000000000001
+
+ 0001 -> 0000000000000010
+
+ 0010 -> 0000000000000100
+
+ 0011 -> 0000000000001000
+
+ 0100 -> 0000000000010000
+
+ 0101 -> 0000000000100000
+
+ 0110 -> 0000000001000000
+
+ 0111 -> 0000000010000000
+
+ 1000 -> 0000000100000000
+
+ 1001 -> 0000001000000000
+
+ 1010 -> 0000010000000000
+
+ 1011 -> 0000100000000000
+
+ 1100 -> 0001000000000000
+
+ 1101 -> 0010000000000000
+
+ 1110 -> 0100000000000000
+
+ 1111 -> 1000000000000000
+
+INFO <35001774> - synthesis: Extracted state machine for register '\layer1_wma/load_output_index' with one-hot encoding
+State machine has 32 reachable states with original encodings of:
+
+ 00000 
+
+ 00001 
+
+ 00010 
+
+ 00011 
+
+ 00100 
+
+ 00101 
+
+ 00110 
+
+ 00111 
+
+ 01000 
+
+ 01001 
+
+ 01010 
+
+ 01011 
+
+ 01100 
+
+ 01101 
+
+ 01110 
+
+ 01111 
+
+ 10000 
+
+ 10001 
+
+ 10010 
+
+ 10011 
+
+ 10100 
+
+ 10101 
+
+ 10110 
+
+ 10111 
+
+ 11000 
+
+ 11001 
+
+ 11010 
+
+ 11011 
+
+ 11100 
+
+ 11101 
+
+ 11110 
+
+ 11111 
+
+original encoding -> new encoding (one-hot encoding)
+
+ 00000 -> 00000000000000000000000000000001
+
+ 00001 -> 00000000000000000000000000000010
+
+ 00010 -> 00000000000000000000000000000100
+
+ 00011 -> 00000000000000000000000000001000
+
+ 00100 -> 00000000000000000000000000010000
+
+ 00101 -> 00000000000000000000000000100000
+
+ 00110 -> 00000000000000000000000001000000
+
+ 00111 -> 00000000000000000000000010000000
+
+ 01000 -> 00000000000000000000000100000000
+
+ 01001 -> 00000000000000000000001000000000
+
+ 01010 -> 00000000000000000000010000000000
+
+ 01011 -> 00000000000000000000100000000000
+
+ 01100 -> 00000000000000000001000000000000
+
+ 01101 -> 00000000000000000010000000000000
+
+ 01110 -> 00000000000000000100000000000000
+
+ 01111 -> 00000000000000001000000000000000
+
+ 10000 -> 00000000000000010000000000000000
+
+ 10001 -> 00000000000000100000000000000000
+
+ 10010 -> 00000000000001000000000000000000
+
+ 10011 -> 00000000000010000000000000000000
+
+ 10100 -> 00000000000100000000000000000000
+
+ 10101 -> 00000000001000000000000000000000
+
+ 10110 -> 00000000010000000000000000000000
+
+ 10111 -> 00000000100000000000000000000000
+
+ 11000 -> 00000001000000000000000000000000
+
+ 11001 -> 00000010000000000000000000000000
+
+ 11010 -> 00000100000000000000000000000000
+
+ 11011 -> 00001000000000000000000000000000
+
+ 11100 -> 00010000000000000000000000000000
+
+ 11101 -> 00100000000000000000000000000000
+
+ 11110 -> 01000000000000000000000000000000
+
+ 11111 -> 10000000000000000000000000000000
 
 
 
-WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[10].sn/sub_5_add_2_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[9].sn/sub_5_add_2_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[9].sn/sub_5_add_2_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[8].sn/sub_5_add_2_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[8].sn/sub_5_add_2_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[7].sn/sub_5_add_2_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[7].sn/sub_5_add_2_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[6].sn/sub_5_add_2_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[6].sn/sub_5_add_2_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[5].sn/sub_5_add_2_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_112_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_114_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_114_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_115_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_115_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_120_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_120_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_122_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_122_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_124_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_124_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_125_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_125_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_126_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_126_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_127_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[2].sn/sub_5_add_2_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[4].sn/sub_5_add_2_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_127_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[3].sn/sub_5_add_2_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[5].sn/sub_5_add_2_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_129_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[4].sn/sub_5_add_2_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_129_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_130_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_130_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_131_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_131_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_132_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_132_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_134_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[2].sn/sub_5_add_2_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[3].sn/sub_5_add_2_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_134_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_135_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_135_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_121_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_121_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \output_neurons/GEN_NEURONS[0].sn/sub_5_add_2_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \output_neurons/GEN_NEURONS[0].sn/sub_5_add_2_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \wmu/add_3208_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \wmu/add_3208_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[0].sn/sub_5_add_2_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[0].sn/sub_5_add_2_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \output_neurons/GEN_NEURONS[4].sn/sub_5_add_2_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \output_neurons/GEN_NEURONS[4].sn/sub_5_add_2_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \output_neurons/GEN_NEURONS[3].sn/sub_5_add_2_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \output_neurons/GEN_NEURONS[3].sn/sub_5_add_2_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \output_neurons/GEN_NEURONS[2].sn/sub_5_add_2_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \output_neurons/GEN_NEURONS[2].sn/sub_5_add_2_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \output_neurons/GEN_NEURONS[1].sn/sub_5_add_2_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \output_neurons/GEN_NEURONS[1].sn/sub_5_add_2_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[19].sn/sub_5_add_2_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[19].sn/sub_5_add_2_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[18].sn/sub_5_add_2_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[18].sn/sub_5_add_2_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[17].sn/sub_5_add_2_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[17].sn/sub_5_add_2_i2 clock is stuck at Zero. VDB-5040
+
 WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[16].sn/sub_5_add_2_i17 clock is stuck at Zero. VDB-5040
 WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[16].sn/sub_5_add_2_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[15].sn/sub_5_add_2_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[15].sn/sub_5_add_2_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[14].sn/sub_5_add_2_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[14].sn/sub_5_add_2_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[13].sn/sub_5_add_2_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[13].sn/sub_5_add_2_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[12].sn/sub_5_add_2_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[12].sn/sub_5_add_2_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[11].sn/sub_5_add_2_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[11].sn/sub_5_add_2_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[10].sn/sub_5_add_2_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_112_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_119_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_119_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_111_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_111_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_110_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_110_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_109_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_109_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_117_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_117_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_116_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_116_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_107_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_107_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_106_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_106_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_105_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_105_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_104_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_104_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \output_neurons/GEN_NEURONS[0].sn/add_4_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \output_neurons/GEN_NEURONS[0].sn/add_4_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[0].sn/add_4_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[0].sn/add_4_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \output_neurons/GEN_NEURONS[4].sn/add_4_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \output_neurons/GEN_NEURONS[4].sn/add_4_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \output_neurons/GEN_NEURONS[3].sn/add_4_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \output_neurons/GEN_NEURONS[3].sn/add_4_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \output_neurons/GEN_NEURONS[2].sn/add_4_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \output_neurons/GEN_NEURONS[2].sn/add_4_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \output_neurons/GEN_NEURONS[1].sn/add_4_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \output_neurons/GEN_NEURONS[1].sn/add_4_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[19].sn/add_4_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[19].sn/add_4_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[18].sn/add_4_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[18].sn/add_4_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[17].sn/add_4_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[17].sn/add_4_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[16].sn/add_4_i2 clock is stuck at Zero. VDB-5040
 WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[16].sn/add_4_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[16].sn/add_4_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[17].sn/add_4_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[17].sn/add_4_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[17].sn/sub_5_add_2_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[19].sn/add_4_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[17].sn/sub_5_add_2_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[18].sn/sub_5_add_2_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[18].sn/add_4_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[18].sn/sub_5_add_2_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[20].sn/add_4_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[20].sn/add_4_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[21].sn/add_4_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[21].sn/add_4_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[19].sn/sub_5_add_2_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[19].sn/sub_5_add_2_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[22].sn/add_4_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[22].sn/add_4_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[23].sn/add_4_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[23].sn/add_4_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[18].sn/add_4_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[19].sn/add_4_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[20].sn/sub_5_add_2_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[20].sn/sub_5_add_2_i2 clock is stuck at Zero. VDB-5040
 WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[15].sn/add_4_i2 clock is stuck at Zero. VDB-5040
 WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[15].sn/add_4_i17 clock is stuck at Zero. VDB-5040
 WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[14].sn/add_4_i2 clock is stuck at Zero. VDB-5040
 WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[14].sn/add_4_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[15].sn/sub_5_add_2_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[15].sn/sub_5_add_2_i17 clock is stuck at Zero. VDB-5040
 WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[13].sn/add_4_i2 clock is stuck at Zero. VDB-5040
 WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[13].sn/add_4_i17 clock is stuck at Zero. VDB-5040
 WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[12].sn/add_4_i2 clock is stuck at Zero. VDB-5040
@@ -796,611 +550,575 @@ WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[10].sn/add_
 WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[10].sn/add_4_i17 clock is stuck at Zero. VDB-5040
 WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[9].sn/add_4_i2 clock is stuck at Zero. VDB-5040
 WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[9].sn/add_4_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[30].sn/sub_5_add_2_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[30].sn/sub_5_add_2_i17 clock is stuck at Zero. VDB-5040
 WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[8].sn/add_4_i2 clock is stuck at Zero. VDB-5040
 WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[8].sn/add_4_i17 clock is stuck at Zero. VDB-5040
 WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[7].sn/add_4_i2 clock is stuck at Zero. VDB-5040
 WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[7].sn/add_4_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \output_neurons/GEN_NEURONS[9].sn/sub_5_add_2_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \output_neurons/GEN_NEURONS[9].sn/sub_5_add_2_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[19].unit/add_6_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[19].unit/add_6_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[18].unit/add_6_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[18].unit/add_6_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[0].sn/sub_5_add_2_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[0].sn/sub_5_add_2_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[17].unit/add_6_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[17].unit/add_6_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[16].unit/add_6_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[16].unit/add_6_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \output_neurons/GEN_NEURONS[0].sn/sub_5_add_2_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \output_neurons/GEN_NEURONS[0].sn/sub_5_add_2_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[15].unit/add_6_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[15].unit/add_6_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[14].unit/add_6_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[14].unit/add_6_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[31].sn/sub_5_add_2_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[31].sn/sub_5_add_2_i17 clock is stuck at Zero. VDB-5040
 WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[6].sn/add_4_i2 clock is stuck at Zero. VDB-5040
 WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[6].sn/add_4_i17 clock is stuck at Zero. VDB-5040
 WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[5].sn/add_4_i2 clock is stuck at Zero. VDB-5040
 WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[5].sn/add_4_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[1].sn/sub_5_add_2_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[1].sn/sub_5_add_2_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[13].unit/add_6_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[13].unit/add_6_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[12].unit/add_6_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[12].unit/add_6_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[11].unit/add_6_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[11].unit/add_6_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[10].unit/add_6_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[10].unit/add_6_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[9].unit/add_6_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[9].unit/add_6_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \output_neurons/GEN_NEURONS[1].sn/sub_5_add_2_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \output_neurons/GEN_NEURONS[1].sn/sub_5_add_2_i17 clock is stuck at Zero. VDB-5040
 WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[4].sn/add_4_i2 clock is stuck at Zero. VDB-5040
 WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[4].sn/add_4_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[8].unit/add_6_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[8].unit/add_6_i17 clock is stuck at Zero. VDB-5040
 WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[3].sn/add_4_i2 clock is stuck at Zero. VDB-5040
 WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[3].sn/add_4_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \output_neurons/GEN_NEURONS[2].sn/sub_5_add_2_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \output_neurons/GEN_NEURONS[2].sn/sub_5_add_2_i17 clock is stuck at Zero. VDB-5040
 WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[2].sn/add_4_i2 clock is stuck at Zero. VDB-5040
 WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[2].sn/add_4_i17 clock is stuck at Zero. VDB-5040
 WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[1].sn/add_4_i2 clock is stuck at Zero. VDB-5040
 WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[1].sn/add_4_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_202_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_202_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_201_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_201_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_200_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_200_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_199_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_199_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_197_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_197_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_196_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_196_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_195_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_195_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_194_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_194_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_192_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_192_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_191_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_191_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_190_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_190_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_189_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_189_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_187_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_187_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_186_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_186_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_185_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_185_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \output_neurons/GEN_NEURONS[3].sn/sub_5_add_2_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \output_neurons/GEN_NEURONS[3].sn/sub_5_add_2_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[31].unit/add_6_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[31].unit/add_6_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[7].unit/add_6_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[7].unit/add_6_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[6].unit/add_6_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[6].unit/add_6_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[5].unit/add_6_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[5].unit/add_6_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[4].unit/add_6_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[4].unit/add_6_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[3].unit/add_6_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[3].unit/add_6_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[2].unit/add_6_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[2].unit/add_6_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[1].unit/add_6_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[1].unit/add_6_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[0].unit/add_6_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[0].unit/add_6_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[14].sn/sub_5_add_2_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[14].sn/sub_5_add_2_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[13].sn/sub_5_add_2_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[13].sn/sub_5_add_2_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[12].sn/sub_5_add_2_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[12].sn/sub_5_add_2_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[11].sn/sub_5_add_2_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[11].sn/sub_5_add_2_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[10].sn/sub_5_add_2_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[10].sn/sub_5_add_2_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer2_wma/add_74_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer2_wma/add_74_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer2_wma/add_63_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer2_wma/add_63_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[9].sn/sub_5_add_2_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[9].sn/sub_5_add_2_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[8].sn/sub_5_add_2_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[8].sn/sub_5_add_2_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[7].sn/sub_5_add_2_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[7].sn/sub_5_add_2_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[6].sn/sub_5_add_2_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[6].sn/sub_5_add_2_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[5].sn/sub_5_add_2_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[5].sn/sub_5_add_2_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[30].unit/add_6_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[30].unit/add_6_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \output_neurons/GEN_NEURONS[4].sn/sub_5_add_2_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \output_neurons/GEN_NEURONS[4].sn/sub_5_add_2_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[4].sn/sub_5_add_2_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[4].sn/sub_5_add_2_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[3].sn/sub_5_add_2_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[3].sn/sub_5_add_2_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[2].sn/sub_5_add_2_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[2].sn/sub_5_add_2_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[1].sn/sub_5_add_2_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[1].sn/sub_5_add_2_i17 clock is stuck at Zero. VDB-5040
 WARNING <35935040> - synthesis: Register \layer1_wma/add_184_i2 clock is stuck at Zero. VDB-5040
 WARNING <35935040> - synthesis: Register \layer1_wma/add_184_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_182_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_182_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_181_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_181_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_180_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_180_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_179_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_179_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_177_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_177_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_176_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_176_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_175_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_175_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_174_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_174_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_172_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_172_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_171_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_171_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_170_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_170_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_169_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_169_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_167_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_167_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_166_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_166_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_165_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_165_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_164_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_164_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_162_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_162_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_161_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_161_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_160_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_160_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_159_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_159_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_157_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_157_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_156_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_156_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_155_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_155_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_154_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_154_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_152_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_152_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_151_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_151_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_150_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_150_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_149_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_149_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_147_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_147_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_146_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_146_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_145_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_145_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_144_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_144_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_142_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_142_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_141_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_141_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_140_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_140_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_139_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_139_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_137_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_137_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_136_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_136_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_124_add_11_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_105_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \output_neurons/GEN_NEURONS[2].sn/add_4_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_104_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \output_neurons/GEN_NEURONS[1].sn/add_4_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_104_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \output_neurons/GEN_NEURONS[2].sn/add_4_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[19].sn/add_4_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \output_neurons/GEN_NEURONS[1].sn/add_4_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[19].sn/add_4_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[18].sn/add_4_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_124_add_11_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[17].sn/add_4_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[18].sn/add_4_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \output_neurons/GEN_NEURONS[0].sn/add_4_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[17].sn/add_4_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[15].sn/add_4_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_112_add_12_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/add_173_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/add_173_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \wmu/add_7_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \wmu/add_7_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[29].unit/add_6_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[29].unit/add_6_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[28].unit/add_6_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[28].unit/add_6_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \output_neurons/GEN_NEURONS[5].sn/sub_5_add_2_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \output_neurons/GEN_NEURONS[5].sn/sub_5_add_2_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[27].unit/add_6_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[27].unit/add_6_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[26].unit/add_6_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[26].unit/add_6_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \output_neurons/GEN_NEURONS[6].sn/sub_5_add_2_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \output_neurons/GEN_NEURONS[6].sn/sub_5_add_2_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[25].unit/add_6_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[25].unit/add_6_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \output_neurons/GEN_NEURONS[0].sn/add_4_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \output_neurons/GEN_NEURONS[0].sn/add_4_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[24].unit/add_6_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[24].unit/add_6_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[0].sn/add_4_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[0].sn/add_4_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \output_neurons/GEN_NEURONS[9].sn/add_4_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \output_neurons/GEN_NEURONS[9].sn/add_4_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[22].sn/sub_5_add_2_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[22].sn/sub_5_add_2_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \output_neurons/GEN_NEURONS[7].sn/sub_5_add_2_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \output_neurons/GEN_NEURONS[7].sn/sub_5_add_2_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \output_neurons/GEN_NEURONS[8].sn/add_4_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \output_neurons/GEN_NEURONS[8].sn/add_4_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \output_neurons/GEN_NEURONS[7].sn/add_4_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \output_neurons/GEN_NEURONS[7].sn/add_4_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[23].sn/sub_5_add_2_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[23].sn/sub_5_add_2_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[23].unit/add_6_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[23].unit/add_6_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \output_neurons/GEN_NEURONS[6].sn/add_4_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \output_neurons/GEN_NEURONS[6].sn/add_4_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \output_neurons/GEN_NEURONS[5].sn/add_4_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \output_neurons/GEN_NEURONS[5].sn/add_4_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[24].sn/sub_5_add_2_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[24].sn/sub_5_add_2_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[22].unit/add_6_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[22].unit/add_6_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \output_neurons/GEN_NEURONS[4].sn/add_4_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \output_neurons/GEN_NEURONS[4].sn/add_4_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \output_neurons/GEN_NEURONS[3].sn/add_4_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \output_neurons/GEN_NEURONS[3].sn/add_4_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[25].sn/sub_5_add_2_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[25].sn/sub_5_add_2_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \output_neurons/GEN_NEURONS[8].sn/sub_5_add_2_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \output_neurons/GEN_NEURONS[8].sn/sub_5_add_2_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \output_neurons/GEN_NEURONS[2].sn/add_4_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \output_neurons/GEN_NEURONS[2].sn/add_4_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \output_neurons/GEN_NEURONS[1].sn/add_4_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \output_neurons/GEN_NEURONS[1].sn/add_4_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[26].sn/sub_5_add_2_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[26].sn/sub_5_add_2_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer2_wma/GEN_OUTPUT_UNITS[9].unit/add_6_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer2_wma/GEN_OUTPUT_UNITS[9].unit/add_6_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer2_wma/GEN_OUTPUT_UNITS[8].unit/add_6_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer2_wma/GEN_OUTPUT_UNITS[8].unit/add_6_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[27].sn/sub_5_add_2_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[27].sn/sub_5_add_2_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer2_wma/GEN_OUTPUT_UNITS[7].unit/add_6_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer2_wma/GEN_OUTPUT_UNITS[7].unit/add_6_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer2_wma/GEN_OUTPUT_UNITS[6].unit/add_6_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer2_wma/GEN_OUTPUT_UNITS[6].unit/add_6_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[28].sn/sub_5_add_2_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[28].sn/sub_5_add_2_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer2_wma/GEN_OUTPUT_UNITS[5].unit/add_6_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer2_wma/GEN_OUTPUT_UNITS[5].unit/add_6_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer2_wma/GEN_OUTPUT_UNITS[4].unit/add_6_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer2_wma/GEN_OUTPUT_UNITS[4].unit/add_6_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer2_wma/GEN_OUTPUT_UNITS[3].unit/add_6_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer2_wma/GEN_OUTPUT_UNITS[3].unit/add_6_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer2_wma/GEN_OUTPUT_UNITS[2].unit/add_6_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer2_wma/GEN_OUTPUT_UNITS[2].unit/add_6_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[21].unit/add_6_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[21].unit/add_6_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer2_wma/GEN_OUTPUT_UNITS[1].unit/add_6_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer2_wma/GEN_OUTPUT_UNITS[1].unit/add_6_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer2_wma/GEN_OUTPUT_UNITS[0].unit/add_6_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer2_wma/GEN_OUTPUT_UNITS[0].unit/add_6_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[31].sn/add_4_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[31].sn/add_4_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[20].unit/add_6_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[20].unit/add_6_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[30].sn/add_4_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[30].sn/add_4_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[29].sn/add_4_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[29].sn/add_4_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[28].sn/add_4_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[28].sn/add_4_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[29].sn/sub_5_add_2_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[29].sn/sub_5_add_2_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[27].sn/add_4_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[27].sn/add_4_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[26].sn/add_4_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[26].sn/add_4_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[21].sn/sub_5_add_2_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[21].sn/sub_5_add_2_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[25].sn/add_4_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[25].sn/add_4_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[24].sn/add_4_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[24].sn/add_4_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer2_wma/add_63_add_12_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[31].unit/add_6_add_12_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[30].unit/add_6_add_12_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/add_184_add_12_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[30].unit/add_6_add_12_i2 clock is stuck at Zero. VDB-5040
 WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[16].sn/add_4_add_12_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/add_184_add_12_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[17].sn/add_4_add_12_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[19].unit/add_6_add_12_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/add_173_add_12_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[18].unit/add_6_add_12_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/add_173_add_12_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[17].sn/add_4_add_12_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[1].unit/add_6_add_12_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \wmu/add_7_add_12_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[27].unit/add_6_add_12_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[28].unit/add_6_add_12_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \wmu/add_7_add_12_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[29].unit/add_6_add_12_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[28].unit/add_6_add_12_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[29].unit/add_6_add_12_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[7].unit/add_6_add_12_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[1].unit/add_6_add_12_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[18].unit/add_6_add_12_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[0].unit/add_6_add_12_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[17].unit/add_6_add_12_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[27].unit/add_6_add_12_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[26].unit/add_6_add_12_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[0].unit/add_6_add_12_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer2_wma/add_74_add_12_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[26].unit/add_6_add_12_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[25].unit/add_6_add_12_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer2_wma/add_74_add_12_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer2_wma/add_63_add_12_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[22].unit/add_6_add_12_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[16].sn/add_4_add_12_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[25].unit/add_6_add_12_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \output_neurons/GEN_NEURONS[0].sn/add_4_add_12_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[17].unit/add_6_add_12_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \output_neurons/GEN_NEURONS[0].sn/add_4_add_12_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[24].unit/add_6_add_12_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[16].unit/add_6_add_12_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[0].sn/add_4_add_12_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[24].unit/add_6_add_12_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[0].sn/add_4_add_12_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \output_neurons/GEN_NEURONS[9].sn/add_4_add_12_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \output_neurons/GEN_NEURONS[9].sn/add_4_add_12_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \output_neurons/GEN_NEURONS[8].sn/add_4_add_12_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \output_neurons/GEN_NEURONS[7].sn/add_4_add_12_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[16].unit/add_6_add_12_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \output_neurons/GEN_NEURONS[8].sn/add_4_add_12_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \output_neurons/GEN_NEURONS[7].sn/add_4_add_12_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[15].unit/add_6_add_12_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[23].unit/add_6_add_12_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[23].unit/add_6_add_12_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \output_neurons/GEN_NEURONS[6].sn/add_4_add_12_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \output_neurons/GEN_NEURONS[5].sn/add_4_add_12_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \output_neurons/GEN_NEURONS[6].sn/add_4_add_12_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \output_neurons/GEN_NEURONS[5].sn/add_4_add_12_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[15].unit/add_6_add_12_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[22].unit/add_6_add_12_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[14].unit/add_6_add_12_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \output_neurons/GEN_NEURONS[4].sn/add_4_add_12_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \output_neurons/GEN_NEURONS[3].sn/add_4_add_12_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \output_neurons/GEN_NEURONS[2].sn/add_4_add_12_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \output_neurons/GEN_NEURONS[1].sn/add_4_add_12_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \output_neurons/GEN_NEURONS[3].sn/add_4_add_12_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \output_neurons/GEN_NEURONS[4].sn/add_4_add_12_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer2_wma/GEN_OUTPUT_UNITS[9].unit/add_6_add_12_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[14].unit/add_6_add_12_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \output_neurons/GEN_NEURONS[2].sn/add_4_add_12_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \output_neurons/GEN_NEURONS[1].sn/add_4_add_12_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[6].sn/add_4_add_12_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer2_wma/GEN_OUTPUT_UNITS[8].unit/add_6_add_12_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer2_wma/GEN_OUTPUT_UNITS[9].unit/add_6_add_12_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[7].unit/add_6_add_12_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer2_wma/GEN_OUTPUT_UNITS[6].unit/add_6_add_12_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer2_wma/GEN_OUTPUT_UNITS[5].unit/add_6_add_12_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer2_wma/GEN_OUTPUT_UNITS[8].unit/add_6_add_12_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer2_wma/GEN_OUTPUT_UNITS[7].unit/add_6_add_12_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[6].sn/add_4_add_12_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer2_wma/GEN_OUTPUT_UNITS[7].unit/add_6_add_12_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer2_wma/GEN_OUTPUT_UNITS[6].unit/add_6_add_12_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer2_wma/GEN_OUTPUT_UNITS[5].unit/add_6_add_12_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[5].sn/add_4_add_12_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[6].unit/add_6_add_12_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[18].sn/add_4_add_12_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[18].sn/add_4_add_12_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer2_wma/GEN_OUTPUT_UNITS[4].unit/add_6_add_12_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer2_wma/GEN_OUTPUT_UNITS[3].unit/add_6_add_12_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer2_wma/GEN_OUTPUT_UNITS[4].unit/add_6_add_12_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[5].sn/add_4_add_12_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer2_wma/GEN_OUTPUT_UNITS[2].unit/add_6_add_12_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[21].unit/add_6_add_12_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer2_wma/GEN_OUTPUT_UNITS[3].unit/add_6_add_12_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[13].unit/add_6_add_12_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer2_wma/GEN_OUTPUT_UNITS[2].unit/add_6_add_12_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register add_528_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register add_527_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register add_520_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer2_wma/GEN_OUTPUT_UNITS[1].unit/add_6_add_12_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[21].unit/add_6_add_12_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer2_wma/GEN_OUTPUT_UNITS[1].unit/add_6_add_12_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[13].unit/add_6_add_12_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer2_wma/GEN_OUTPUT_UNITS[0].unit/add_6_add_12_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[12].unit/add_6_add_12_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer2_wma/GEN_OUTPUT_UNITS[0].unit/add_6_add_12_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[31].sn/add_4_add_12_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register add_528_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[31].sn/add_4_add_12_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register add_527_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register add_526_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[12].unit/add_6_add_12_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register add_525_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register add_526_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[11].unit/add_6_add_12_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[20].unit/add_6_add_12_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register add_525_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[20].unit/add_6_add_12_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[20].sn/add_4_add_12_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[20].sn/add_4_add_12_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register add_524_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[11].unit/add_6_add_12_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register add_523_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register add_524_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[6].unit/add_6_add_12_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[10].unit/add_6_add_12_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register add_519_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register add_520_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register add_523_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register add_522_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register add_522_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register add_521_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[30].sn/add_4_add_12_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[10].unit/add_6_add_12_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register add_521_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[30].sn/add_4_add_12_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[9].unit/add_6_add_12_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[28].sn/add_4_add_12_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register add_515_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register add_516_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register add_518_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register add_519_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register add_517_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register add_518_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[9].unit/add_6_add_12_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[4].sn/add_4_add_12_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register add_517_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[29].sn/add_4_add_12_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register add_516_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[29].sn/add_4_add_12_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register add_512_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[28].sn/add_4_add_12_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[5].unit/add_6_add_12_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register add_515_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[4].sn/add_4_add_12_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[21].sn/add_4_add_12_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[8].unit/add_6_add_12_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[21].sn/add_4_add_12_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register add_514_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register add_513_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register add_514_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register add_513_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register add_512_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register add_511_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[8].unit/add_6_add_12_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register add_509_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[3].sn/add_4_add_12_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register add_511_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register add_510_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register add_508_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register add_507_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register add_506_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register add_510_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register add_509_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register add_507_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register add_508_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[3].sn/add_4_add_12_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[2].sn/add_4_add_12_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register add_505_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[27].sn/add_4_add_12_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register add_501_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register add_505_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register add_506_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[23].sn/add_4_add_12_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register add_500_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[27].sn/add_4_add_12_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[2].sn/add_4_add_12_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[1].sn/add_4_add_12_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[22].sn/add_4_add_12_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[22].sn/add_4_add_12_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register add_504_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register add_503_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register add_504_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register add_503_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[1].sn/add_4_add_12_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register add_502_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[31].unit/add_6_add_12_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register add_502_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register add_501_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register add_499_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register add_494_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[23].sn/add_4_add_12_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[26].sn/add_4_add_12_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[5].unit/add_6_add_12_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[26].sn/add_4_add_12_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register add_500_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register add_493_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register add_492_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register add_499_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register add_498_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register add_498_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register add_497_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register add_496_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register add_497_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register add_495_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register add_496_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[4].unit/add_6_add_12_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register add_495_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register add_494_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[25].sn/add_4_add_12_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register add_493_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[25].sn/add_4_add_12_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register add_492_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register add_491_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register add_490_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register add_490_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register add_491_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register add_489_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register add_489_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[24].sn/add_4_add_12_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register add_488_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[24].sn/add_4_add_12_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register add_488_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[19].sn/add_4_add_12_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[19].sn/add_4_add_12_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register add_487_i17 clock is stuck at Zero. VDB-5040
 WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[15].sn/add_4_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_104_add_12_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[7].sn/add_4_add_12_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[15].sn/add_4_add_12_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register add_487_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[19].unit/add_6_add_12_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[7].sn/add_4_add_12_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[4].unit/add_6_add_12_i2 clock is stuck at Zero. VDB-5040
 WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[14].sn/add_4_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_104_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[13].sn/add_4_add_12_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[3].unit/add_6_add_12_i17 clock is stuck at Zero. VDB-5040
 WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[14].sn/add_4_add_12_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[13].sn/add_4_add_12_i17 clock is stuck at Zero. VDB-5040
 WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[12].sn/add_4_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_112_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_104_add_9_i17 clock is stuck at Zero. VDB-5040
 WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[13].sn/add_4_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[12].sn/add_4_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_114_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[9].sn/add_4_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[11].sn/add_4_add_12_i2 clock is stuck at Zero. VDB-5040
 WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[11].sn/add_4_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[8].sn/add_4_add_12_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[12].sn/add_4_add_12_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[3].unit/add_6_add_12_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[2].unit/add_6_add_12_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[11].sn/add_4_add_12_i2 clock is stuck at Zero. VDB-5040
 WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[10].sn/add_4_add_12_i17 clock is stuck at Zero. VDB-5040
 WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[9].sn/add_4_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[7].sn/add_4_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_114_add_12_i2 clock is stuck at Zero. VDB-5040
 WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[10].sn/add_4_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_115_add_12_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[8].sn/add_4_add_12_i17 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[9].sn/add_4_add_12_i2 clock is stuck at Zero. VDB-5040
 WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[8].sn/add_4_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[7].sn/add_4_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[6].sn/add_4_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[4].sn/add_4_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_115_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[5].sn/add_4_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_104_add_9_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_104_add_8_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[3].sn/add_4_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[6].sn/add_4_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_120_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \output_neurons/GEN_NEURONS[0].sn/add_4_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[4].sn/add_4_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_104_add_8_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_104_add_7_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[5].sn/add_4_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_104_add_7_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_104_add_6_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_104_add_6_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_104_add_5_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[1].sn/add_4_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[2].sn/add_4_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[2].sn/add_4_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[3].sn/add_4_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_190_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_120_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_189_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[0].sn/add_4_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_104_add_10_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[1].sn/add_4_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_202_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_201_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_202_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_200_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_201_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_200_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_104_add_10_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_199_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_104_add_19_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_199_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_197_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_196_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_197_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_196_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_195_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_104_add_19_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_195_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_194_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_192_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_104_add_18_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_194_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_192_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_191_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_190_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_191_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[0].sn/add_4_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \output_neurons/GEN_NEURONS[4].sn/add_4_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \output_neurons/GEN_NEURONS[4].sn/add_4_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \output_neurons/GEN_NEURONS[3].sn/add_4_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \output_neurons/GEN_NEURONS[3].sn/add_4_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \hidden_neurons/GEN_NEURONS[16].sn/add_4_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_189_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_104_add_18_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_187_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_104_add_17_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_187_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_186_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_185_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_186_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_185_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_184_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_104_add_17_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_184_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_182_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_104_add_16_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_181_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_182_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_179_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_179_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_181_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_180_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_176_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_180_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_104_add_16_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_175_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_104_add_15_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_125_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_122_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_177_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_104_add_5_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_172_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_177_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_176_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_172_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_175_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_124_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_174_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_104_add_4_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_170_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_174_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_104_add_15_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_169_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_104_add_14_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_171_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_166_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_171_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_170_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_166_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_169_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_167_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_164_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_167_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_104_add_14_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_162_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_104_add_13_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_165_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_165_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_164_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_160_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_160_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_125_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_162_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_161_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_104_add_13_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_161_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_157_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_156_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_159_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_150_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_124_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_159_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_104_add_4_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_157_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_155_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_156_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_155_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_154_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_150_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_154_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_152_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_104_add_3_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_151_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_152_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_151_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_149_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_147_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_149_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_146_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_147_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_146_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_145_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_144_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_145_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register add_1328_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_144_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register add_1328_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register add_1322_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register add_1327_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register add_1326_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register add_1327_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_142_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register add_1326_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_142_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register add_1325_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register add_1325_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_104_add_3_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register add_1324_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register add_1323_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register add_1324_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register add_1323_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register add_1322_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_104_add_2_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_141_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register add_1321_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_141_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register add_1320_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register add_1321_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register add_1320_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register add_1319_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register add_1318_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register add_1319_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_140_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register add_1318_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_140_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register add_1317_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register add_1316_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register add_1317_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register add_1315_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register add_1316_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register add_1315_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register add_1314_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register add_1314_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_139_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register add_1313_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_139_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register add_1313_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register add_1312_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register add_1312_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_104_add_2_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register add_1311_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register add_1310_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register add_1311_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register add_1310_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_137_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_137_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_104_add_1_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register add_1309_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register add_1308_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register add_1309_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register add_1308_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register add_1307_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register add_1307_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register add_1306_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_136_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register add_1306_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_104_add_1_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_136_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_122_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register add_1305_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register add_1305_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register add_1304_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register add_1304_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_105_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_106_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_106_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_107_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_107_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_116_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_116_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_117_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_117_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_109_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_109_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_110_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_110_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_111_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_111_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_119_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_119_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \wmu/add_3208_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \wmu/add_3208_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_121_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_121_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_124_add_1_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_124_add_1_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_124_add_2_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_124_add_2_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_124_add_3_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_124_add_3_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_124_add_4_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_124_add_4_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_124_add_5_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_124_add_5_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_124_add_6_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_124_add_6_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_124_add_7_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_124_add_7_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_124_add_8_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_124_add_8_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_124_add_9_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_124_add_9_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_124_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_124_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_124_add_13_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_124_add_13_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_124_add_14_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_124_add_14_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_124_add_15_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_124_add_15_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_124_add_16_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_124_add_16_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_124_add_17_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_124_add_17_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_124_add_18_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_124_add_18_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_124_add_19_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_124_add_19_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_144_add_11_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_144_add_11_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_124_add_10_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_124_add_10_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_135_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_135_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_144_add_1_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_144_add_1_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_144_add_2_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_144_add_2_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_144_add_3_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_144_add_3_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_144_add_4_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_144_add_4_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_144_add_5_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_144_add_5_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_144_add_6_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_144_add_6_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_144_add_7_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_144_add_7_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_144_add_8_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_144_add_8_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_144_add_9_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_144_add_9_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_144_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_144_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_144_add_13_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_144_add_13_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_144_add_14_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_144_add_14_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_144_add_15_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_144_add_15_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_144_add_16_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_144_add_16_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_144_add_17_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_144_add_17_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_144_add_18_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_144_add_18_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_144_add_19_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_144_add_19_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_164_add_11_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_164_add_11_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_144_add_10_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_144_add_10_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_164_add_2_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_164_add_2_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_164_add_3_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_164_add_3_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_164_add_4_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_164_add_4_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_164_add_5_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_164_add_5_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_164_add_6_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_164_add_6_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_164_add_7_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_164_add_7_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_164_add_8_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_164_add_8_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_164_add_9_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_164_add_9_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_164_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_164_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_164_add_13_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_164_add_13_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_164_add_14_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_164_add_14_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_164_add_15_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_164_add_15_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_164_add_16_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_164_add_16_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_164_add_17_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_164_add_17_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_164_add_18_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_164_add_18_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_164_add_19_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_164_add_19_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_184_add_11_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_184_add_11_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_164_add_10_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_164_add_10_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_134_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_134_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_184_add_1_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_184_add_1_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_184_add_2_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_184_add_2_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_184_add_3_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_184_add_3_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_184_add_4_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_184_add_4_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_184_add_5_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_184_add_5_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_184_add_6_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_184_add_6_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_184_add_7_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_184_add_7_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_184_add_8_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_184_add_8_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_184_add_9_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_184_add_9_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_184_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_184_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_184_add_13_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_184_add_13_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_184_add_14_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_184_add_14_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_184_add_15_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_184_add_15_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_184_add_16_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_184_add_16_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_184_add_17_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_184_add_17_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_184_add_18_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_184_add_18_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_184_add_19_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_184_add_19_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_104_add_11_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_104_add_11_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_184_add_10_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_184_add_10_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_132_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_132_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_164_add_1_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer2_wma/add_164_add_1_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_131_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_131_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_130_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_130_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_129_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_129_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_127_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_127_add_12_i17 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_126_add_12_i2 clock is stuck at Zero. VDB-5040
-WARNING <35935040> - synthesis: Register \layer1_wma/add_126_add_12_i17 clock is stuck at Zero. VDB-5040
-######## Found 1 RTL RAMs in the design.
-######## Mapping RTL RAM \ram/memory to 32 EBR blocks in PSEUDO_DUAL_PORT Mode
+WARNING <35935040> - synthesis: Register \layer1_wma/GEN_OUTPUT_UNITS[2].unit/add_6_add_12_i2 clock is stuck at Zero. VDB-5040
+######## Found 43 RTL RAMs in the design.
+######## Mapping RTL RAM \ram/memory to 2 EBR blocks in PSEUDO_DUAL_PORT Mode
 
-Duplicate register/latch removal. i2626 is a one-to-one match with i2622.
-Duplicate register/latch removal. i2626 is a one-to-one match with i2618.
-Duplicate register/latch removal. i2626 is a one-to-one match with i2614.
-Duplicate register/latch removal. i2626 is a one-to-one match with i2610.
-Duplicate register/latch removal. i2626 is a one-to-one match with i2606.
-Duplicate register/latch removal. i2626 is a one-to-one match with i2602.
-Duplicate register/latch removal. i2626 is a one-to-one match with i2598.
-Duplicate register/latch removal. i2626 is a one-to-one match with i2590.
-Duplicate register/latch removal. i2594 is a one-to-one match with i2586.
-Duplicate register/latch removal. i2626 is a one-to-one match with i2582.
-Duplicate register/latch removal. i2594 is a one-to-one match with i2578.
-Duplicate register/latch removal. i2626 is a one-to-one match with i2574.
-Duplicate register/latch removal. i2594 is a one-to-one match with i2570.
-Duplicate register/latch removal. i2626 is a one-to-one match with i2566.
-Duplicate register/latch removal. i2594 is a one-to-one match with i2562.
-Duplicate register/latch removal. i2626 is a one-to-one match with i2558.
-Duplicate register/latch removal. i2626 is a one-to-one match with i2554.
-Duplicate register/latch removal. i2594 is a one-to-one match with i2550.
-Duplicate register/latch removal. i2626 is a one-to-one match with i2546.
-Duplicate register/latch removal. i2594 is a one-to-one match with i2542.
-Duplicate register/latch removal. i2626 is a one-to-one match with i2538.
-Duplicate register/latch removal. i2594 is a one-to-one match with i2532.
-Duplicate register/latch removal. \wmu/ram__0_i0 is a one-to-one match with \wmu/ram_addr___i14.
-Duplicate register/latch removal. \wmu/ram_addr___i15 is a one-to-one match with \wmu/ram__0_i1.
+######## Mapping RTL RAM \layer1_wma/GEN_OUTPUT_UNITS[0].unit/weight_memory to 4 Distributed blocks in PSEUDO_DUAL_PORT Mode
+
+######## Mapping RTL RAM \layer1_wma/GEN_OUTPUT_UNITS[1].unit/weight_memory to 4 Distributed blocks in PSEUDO_DUAL_PORT Mode
+
+######## Mapping RTL RAM \layer1_wma/GEN_OUTPUT_UNITS[2].unit/weight_memory to 4 Distributed blocks in PSEUDO_DUAL_PORT Mode
+
+######## Mapping RTL RAM \layer1_wma/GEN_OUTPUT_UNITS[3].unit/weight_memory to 4 Distributed blocks in PSEUDO_DUAL_PORT Mode
+
+######## Mapping RTL RAM \layer1_wma/GEN_OUTPUT_UNITS[4].unit/weight_memory to 4 Distributed blocks in PSEUDO_DUAL_PORT Mode
+
+######## Mapping RTL RAM \layer1_wma/GEN_OUTPUT_UNITS[5].unit/weight_memory to 4 Distributed blocks in PSEUDO_DUAL_PORT Mode
+
+######## Mapping RTL RAM \layer1_wma/GEN_OUTPUT_UNITS[6].unit/weight_memory to 4 Distributed blocks in PSEUDO_DUAL_PORT Mode
+
+######## Mapping RTL RAM \layer1_wma/GEN_OUTPUT_UNITS[7].unit/weight_memory to 4 Distributed blocks in PSEUDO_DUAL_PORT Mode
+
+######## Mapping RTL RAM \layer1_wma/GEN_OUTPUT_UNITS[8].unit/weight_memory to 4 Distributed blocks in PSEUDO_DUAL_PORT Mode
+
+######## Mapping RTL RAM \layer1_wma/GEN_OUTPUT_UNITS[9].unit/weight_memory to 4 Distributed blocks in PSEUDO_DUAL_PORT Mode
+
+######## Mapping RTL RAM \layer1_wma/GEN_OUTPUT_UNITS[10].unit/weight_memory to 4 Distributed blocks in PSEUDO_DUAL_PORT Mode
+
+######## Mapping RTL RAM \layer1_wma/GEN_OUTPUT_UNITS[11].unit/weight_memory to 4 Distributed blocks in PSEUDO_DUAL_PORT Mode
+
+######## Mapping RTL RAM \layer1_wma/GEN_OUTPUT_UNITS[12].unit/weight_memory to 4 Distributed blocks in PSEUDO_DUAL_PORT Mode
+
+######## Mapping RTL RAM \layer1_wma/GEN_OUTPUT_UNITS[13].unit/weight_memory to 4 Distributed blocks in PSEUDO_DUAL_PORT Mode
+
+######## Mapping RTL RAM \layer1_wma/GEN_OUTPUT_UNITS[14].unit/weight_memory to 4 Distributed blocks in PSEUDO_DUAL_PORT Mode
+
+######## Mapping RTL RAM \layer1_wma/GEN_OUTPUT_UNITS[15].unit/weight_memory to 4 Distributed blocks in PSEUDO_DUAL_PORT Mode
+
+######## Mapping RTL RAM \layer1_wma/GEN_OUTPUT_UNITS[16].unit/weight_memory to 4 Distributed blocks in PSEUDO_DUAL_PORT Mode
+
+######## Mapping RTL RAM \layer1_wma/GEN_OUTPUT_UNITS[17].unit/weight_memory to 4 Distributed blocks in PSEUDO_DUAL_PORT Mode
+
+######## Mapping RTL RAM \layer1_wma/GEN_OUTPUT_UNITS[18].unit/weight_memory to 4 Distributed blocks in PSEUDO_DUAL_PORT Mode
+
+######## Mapping RTL RAM \layer1_wma/GEN_OUTPUT_UNITS[19].unit/weight_memory to 4 Distributed blocks in PSEUDO_DUAL_PORT Mode
+
+######## Mapping RTL RAM \layer1_wma/GEN_OUTPUT_UNITS[20].unit/weight_memory to 4 Distributed blocks in PSEUDO_DUAL_PORT Mode
+
+######## Mapping RTL RAM \layer1_wma/GEN_OUTPUT_UNITS[21].unit/weight_memory to 4 Distributed blocks in PSEUDO_DUAL_PORT Mode
+
+######## Mapping RTL RAM \layer1_wma/GEN_OUTPUT_UNITS[22].unit/weight_memory to 4 Distributed blocks in PSEUDO_DUAL_PORT Mode
+
+######## Mapping RTL RAM \layer1_wma/GEN_OUTPUT_UNITS[23].unit/weight_memory to 4 Distributed blocks in PSEUDO_DUAL_PORT Mode
+
+######## Mapping RTL RAM \layer1_wma/GEN_OUTPUT_UNITS[24].unit/weight_memory to 4 Distributed blocks in PSEUDO_DUAL_PORT Mode
+
+######## Mapping RTL RAM \layer1_wma/GEN_OUTPUT_UNITS[25].unit/weight_memory to 4 Distributed blocks in PSEUDO_DUAL_PORT Mode
+
+######## Mapping RTL RAM \layer1_wma/GEN_OUTPUT_UNITS[26].unit/weight_memory to 4 Distributed blocks in PSEUDO_DUAL_PORT Mode
+
+######## Mapping RTL RAM \layer1_wma/GEN_OUTPUT_UNITS[27].unit/weight_memory to 4 Distributed blocks in PSEUDO_DUAL_PORT Mode
+
+######## Mapping RTL RAM \layer1_wma/GEN_OUTPUT_UNITS[28].unit/weight_memory to 4 Distributed blocks in PSEUDO_DUAL_PORT Mode
+
+######## Mapping RTL RAM \layer1_wma/GEN_OUTPUT_UNITS[29].unit/weight_memory to 4 Distributed blocks in PSEUDO_DUAL_PORT Mode
+
+######## Mapping RTL RAM \layer1_wma/GEN_OUTPUT_UNITS[30].unit/weight_memory to 4 Distributed blocks in PSEUDO_DUAL_PORT Mode
+
+######## Mapping RTL RAM \layer1_wma/GEN_OUTPUT_UNITS[31].unit/weight_memory to 4 Distributed blocks in PSEUDO_DUAL_PORT Mode
+
+######## Mapping RTL RAM \layer2_wma/GEN_OUTPUT_UNITS[0].unit/weight_memory to 4 Distributed blocks in PSEUDO_DUAL_PORT Mode
+
+######## Mapping RTL RAM \layer2_wma/GEN_OUTPUT_UNITS[1].unit/weight_memory to 4 Distributed blocks in PSEUDO_DUAL_PORT Mode
+
+######## Mapping RTL RAM \layer2_wma/GEN_OUTPUT_UNITS[2].unit/weight_memory to 4 Distributed blocks in PSEUDO_DUAL_PORT Mode
+
+######## Mapping RTL RAM \layer2_wma/GEN_OUTPUT_UNITS[3].unit/weight_memory to 4 Distributed blocks in PSEUDO_DUAL_PORT Mode
+
+######## Mapping RTL RAM \layer2_wma/GEN_OUTPUT_UNITS[4].unit/weight_memory to 4 Distributed blocks in PSEUDO_DUAL_PORT Mode
+
+######## Mapping RTL RAM \layer2_wma/GEN_OUTPUT_UNITS[5].unit/weight_memory to 4 Distributed blocks in PSEUDO_DUAL_PORT Mode
+
+######## Mapping RTL RAM \layer2_wma/GEN_OUTPUT_UNITS[6].unit/weight_memory to 4 Distributed blocks in PSEUDO_DUAL_PORT Mode
+
+######## Mapping RTL RAM \layer2_wma/GEN_OUTPUT_UNITS[7].unit/weight_memory to 4 Distributed blocks in PSEUDO_DUAL_PORT Mode
+
+######## Mapping RTL RAM \layer2_wma/GEN_OUTPUT_UNITS[8].unit/weight_memory to 4 Distributed blocks in PSEUDO_DUAL_PORT Mode
+
+######## Mapping RTL RAM \layer2_wma/GEN_OUTPUT_UNITS[9].unit/weight_memory to 4 Distributed blocks in PSEUDO_DUAL_PORT Mode
+
 Starting design annotation....
 WARNING <70009502> - synthesis: The preferred point for defining clocks is top level ports and driver pins. Pad delays will not be taken into consideration if clocks are defined on nets.
 
@@ -1415,49 +1133,50 @@ WARNING <70009502> - synthesis: The preferred point for defining clocks is top l
 Starting full timing analysis...
 
 ################### Begin Area Report (network_tb)######################
-Number of register bits => 4063 of 32256 (12 % )
-CCU2 => 2544
-FD1P3DX => 1616
-FD1P3IX => 2447
+Number of register bits => 2291 of 32256 (7 % )
+CCU2 => 1813
+DPR16X4 => 168
+FD1P3DX => 14
+FD1P3IX => 2277
 GSR => 1
-IB => 7
-LUT4 => 3582
-OB => 6
-PDPSC16K => 32
-WIDEFN9 => 8
+IB => 34
+LUT4 => 2946
+OB => 11
+PDPSC16K => 2
+WIDEFN9 => 20
 ################### End Area Report ##################
-Number of odd-length carry chains : 100
-Number of even-length carry chains : 151
+Number of odd-length carry chains : 0
+Number of even-length carry chains : 127
 
 ################### Begin Clock Report ######################
 Clock Nets
 Number of Clocks: 1
-  Net : clk_c, loads : 4095
+  Net : clk_c, loads : 2461
 Clock Enable Nets
-Number of Clock Enables: 431
+Number of Clock Enables: 108
 Top 10 highest fanout Clock Enables:
-  Net : ram/VCC_net, loads : 226
-  Net : hidden_neurons/GEN_NEURONS[19].sn/VCC_net, loads : 173
-  Net : hidden_neurons/GEN_NEURONS[18].sn/VCC_net, loads : 173
-  Net : output_neurons/GEN_NEURONS[2].sn/VCC_net, loads : 173
-  Net : hidden_neurons/GEN_NEURONS[17].sn/VCC_net, loads : 173
-  Net : output_neurons/GEN_NEURONS[0].sn/VCC_net, loads : 173
-  Net : hidden_neurons/GEN_NEURONS[16].sn/VCC_net, loads : 173
-  Net : hidden_neurons/GEN_NEURONS[8].sn/VCC_net, loads : 173
-  Net : hidden_neurons/GEN_NEURONS[15].sn/VCC_net, loads : 173
-  Net : hidden_neurons/GEN_NEURONS[6].sn/VCC_net, loads : 173
+  Net : hidden_neurons/GEN_NEURONS[31].sn/VCC_net, loads : 71
+  Net : hidden_neurons/GEN_NEURONS[2].sn/VCC_net, loads : 71
+  Net : hidden_neurons/GEN_NEURONS[29].sn/VCC_net, loads : 71
+  Net : output_neurons/GEN_NEURONS[9].sn/VCC_net, loads : 71
+  Net : hidden_neurons/GEN_NEURONS[28].sn/VCC_net, loads : 71
+  Net : output_neurons/GEN_NEURONS[7].sn/VCC_net, loads : 71
+  Net : hidden_neurons/GEN_NEURONS[27].sn/VCC_net, loads : 71
+  Net : output_neurons/GEN_NEURONS[5].sn/VCC_net, loads : 71
+  Net : hidden_neurons/GEN_NEURONS[26].sn/VCC_net, loads : 71
+  Net : output_neurons/GEN_NEURONS[3].sn/VCC_net, loads : 71
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : computation_reset, loads : 1651
-  Net : reset_c, loads : 1637
-  Net : layer2_wma/VCC_net, loads : 1080
-  Net : wmu/weights_loaded_c, loads : 999
-  Net : layer1_wma/VCC_net, loads : 740
-  Net : wmu/maxfan_replicated_net_401, loads : 401
-  Net : output_neurons/GEN_NEURONS[4].sn/VCC_net, loads : 346
-  Net : output_neurons/GEN_NEURONS[3].sn/VCC_net, loads : 346
-  Net : output_neurons/GEN_NEURONS[1].sn/VCC_net, loads : 346
-  Net : hidden_neurons/GEN_NEURONS[9].sn/VCC_net, loads : 346
+  Net : reset_c, loads : 2255
+  Net : layer1_wma/n5351, loads : 512
+  Net : layer1_wma/input_index[4], loads : 261
+  Net : layer1_wma/n5391, loads : 256
+  Net : layer2_wma/n5559, loads : 160
+  Net : output_neurons/GEN_NEURONS[8].sn/VCC_net, loads : 142
+  Net : output_neurons/GEN_NEURONS[6].sn/VCC_net, loads : 142
+  Net : output_neurons/GEN_NEURONS[4].sn/VCC_net, loads : 142
+  Net : output_neurons/GEN_NEURONS[2].sn/VCC_net, loads : 142
+  Net : output_neurons/GEN_NEURONS[1].sn/VCC_net, loads : 142
 ################### End Clock Report ##################
 
 ################### Begin Constraint Report ######################
@@ -1466,10 +1185,10 @@ Constraint Summary:
   Total number of constraints dropped: 0
 ###################  End Constraint Report  ######################
 
-Peak Memory Usage: 334 MB
+Peak Memory Usage: 284 MB
 
 --------------------------------------------------------------
-Total CPU Time: 14 secs 
+Total CPU Time: 13 secs 
 Total REAL Time: 14 secs 
 --------------------------------------------------------------
-Checksum -- synthesis -- netlist: 1ef7f8a3d00802b67cbc9db65b49c59e44270a10
+Checksum -- synthesis -- netlist: bef6dd6e495e431251b7f94b82d0f65282687aad
